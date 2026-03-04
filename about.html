@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>О компании — Рубикон</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+<style>
+:root{--dark:#0F1923;--navy:#1E3A5F;--red:#D42B2B;--red-light:rgba(212,43,43,.08);--white:#FFFFFF;--bg:#F8F9FB;--bg2:#F0F2F5;--text1:#1a1a1a;--text2:#5A6578;--text3:#8B95A5;--border:#E5E8ED;--radius:10px;--shadow:0 1px 3px rgba(0,0,0,.06);--shadow-md:0 4px 12px rgba(0,0,0,.08);--shadow-lg:0 8px 30px rgba(0,0,0,.12);--red-glow:rgba(212,43,43,.35)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;color:var(--text1);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+a{color:var(--red);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;height:auto}
+
+/* TOPBAR */
+.topbar{background:var(--dark);color:rgba(255,255,255,.7);font-size:12px;padding:8px 0}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:0 24px}
+.topbar a{color:rgba(255,255,255,.8);text-decoration:none}
+.social-icons{display:flex;gap:8px;align-items:center}
+.soc-icon{color:rgba(255,255,255,.5);transition:color .2s;display:flex;align-items:center}
+.soc-icon:hover{color:#fff}
+
+/* HEADER */
+.header{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:1px solid var(--border);padding:0}
+.header-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:14px 24px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.logo-img{height:38px;width:auto}
+.nav{display:flex;gap:24px;align-items:center}
+.nav a{color:var(--text2);text-decoration:none;font-size:16px;font-weight:600;transition:color .2s}
+.nav a:hover,.nav a.active{color:var(--dark)}
+.header-right{display:flex;gap:10px;align-items:center}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;border:none;cursor:pointer;text-decoration:none;border-radius:var(--radius);transition:all .2s;font-family:inherit;font-size:14px;letter-spacing:-.01em}
+.btn-red{background:var(--red);color:#fff;padding:12px 24px}
+.btn-red:hover{background:#b82525;text-decoration:none;color:#fff}
+.btn-outline{background:transparent;border:1.5px solid var(--border);color:var(--text1);padding:11px 23px}
+@keyframes pulse-ring{0%{box-shadow:0 0 0 0 var(--red-glow),0 0 8px var(--red-glow)}50%{box-shadow:0 0 0 14px rgba(212,43,43,0),0 0 22px rgba(212,43,43,.1)}100%{box-shadow:0 0 0 0 rgba(212,43,43,0),0 0 0 rgba(212,43,43,0)}}
+@keyframes glow-bright{0%,100%{filter:brightness(1)}50%{filter:brightness(1.15)}}
+.btn-pulse{animation:pulse-ring 1.6s infinite,glow-bright 1.6s infinite}
+
+/* PAGE HERO */
+.page-hero{background:var(--bg);padding:80px 0 60px;border-bottom:1px solid var(--border)}
+.page-hero .stag{color:var(--red);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.page-hero .stag::before{content:'';width:18px;height:2px;background:var(--red)}
+.page-hero h1{font-size:42px;font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-bottom:14px}
+.page-hero p{font-size:17px;color:var(--text2);max-width:640px;line-height:1.7}
+
+/* CONTENT */
+.content-section{padding:80px 0}
+.content-section:nth-child(even){background:var(--bg)}
+.content-section h2{font-size:32px;font-weight:800;margin-bottom:12px;letter-spacing:-.02em}
+.content-section h3{font-size:22px;font-weight:700;margin-bottom:8px}
+.content-section p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:16px}
+
+/* PRODUCT CARD */
+.product-block{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:64px}
+.product-block:nth-child(even){direction:rtl}
+.product-block:nth-child(even) > *{direction:ltr}
+.product-block:last-child{margin-bottom:0}
+.product-img{width:100%;border-radius:16px;background:var(--bg2);min-height:360px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.product-img .ph{border-radius:16px;min-height:360px}
+.product-info h2{margin-bottom:12px}
+.product-info .features{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.product-info .feat{font-size:12px;font-weight:600;padding:6px 12px;background:var(--red-light);color:var(--red);border-radius:100px}
+
+/* ARTICLE CARD */
+.articles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+.article-card{background:var(--white);border-radius:16px;border:1px solid var(--border);overflow:hidden;transition:all .2s}
+.article-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+.article-card-img{height:200px;background:var(--bg2);display:flex;align-items:center;justify-content:center}
+.article-card-body{padding:24px}
+.article-card-body h3{margin-bottom:8px}
+.article-card-body p{font-size:14px;color:var(--text2);line-height:1.7}
+.article-card-meta{display:flex;gap:12px;margin-top:12px;font-size:12px;color:var(--text3)}
+
+/* TEAM */
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px}
+.team-card{text-align:center}
+.team-photo{width:100%;aspect-ratio:1;border-radius:16px;background:var(--bg2);display:flex;align-items:center;justify-content:center;margin-bottom:12px;overflow:hidden;font-size:48px}
+.team-name{font-weight:700;font-size:15px;margin-bottom:2px}
+.team-role{font-size:13px;color:var(--text3)}
+
+/* TIMELINE */
+.timeline{display:flex;flex-direction:column;gap:0;margin-top:40px;position:relative}
+.timeline::before{content:'';position:absolute;left:24px;top:0;bottom:0;width:2px;background:var(--border)}
+.tl-item{display:flex;gap:24px;padding:24px 0}
+.tl-dot{width:12px;height:12px;border-radius:50%;background:var(--red);margin-top:6px;flex-shrink:0;z-index:1;margin-left:19px}
+.tl-content h3{font-size:18px;font-weight:700}
+.tl-content p{font-size:14px;color:var(--text2);margin-top:4px}
+.tl-year{font-size:12px;font-weight:700;color:var(--red);margin-bottom:2px}
+
+/* PH */
+.ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--text3);font-size:12px;font-weight:600;background:linear-gradient(135deg,#E8ECF1,#D8DFE8);width:100%;height:100%}
+
+/* FOOTER */
+.footer{background:var(--dark);color:rgba(255,255,255,.6);padding:48px 0 24px;font-size:13px}
+.footer a{color:rgba(255,255,255,.6)}
+.footer a:hover{color:#fff}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1.2fr;gap:32px;margin-bottom:32px}
+.footer h5{color:#fff;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px}
+.footer-links{display:flex;flex-direction:column;gap:6px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;font-size:11px}
+
+/* CTA BAR */
+.cta-bar{background:var(--red);padding:48px 0;text-align:center;color:#fff}
+.cta-bar h2{color:#fff;font-size:28px;font-weight:800;margin-bottom:8px}
+.cta-bar p{color:rgba(255,255,255,.8);margin-bottom:20px}
+.cta-bar .btn{background:#fff;color:var(--red);padding:14px 32px;font-size:16px}
+.cta-bar .btn:hover{background:rgba(255,255,255,.9)}
+
+@media(max-width:1024px){
+.product-block{grid-template-columns:1fr;gap:24px}
+.product-block:nth-child(even){direction:ltr}
+.articles-grid{grid-template-columns:1fr}
+.team-grid{grid-template-columns:repeat(2,1fr)}
+.footer-grid{grid-template-columns:repeat(2,1fr)}
+.page-hero h1{font-size:32px}
+}
+@media(max-width:640px){
+.nav{display:none}
+.team-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+<style>
+/* === SHARED STYLES FROM MAIN PAGE === */
+.topbar{position:sticky;top:0;z-index:1001;background:#0F1923;padding:8px 0;font-size:13px;color:rgba(255,255,255,.45)}
+.topbar-in{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+.soc{display:inline-flex;gap:6px;margin-left:8px}
+.si{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);text-decoration:none;transition:all .2s}
+.si:hover{background:rgba(255,255,255,.15);color:#fff}
+.hdr{position:sticky;top:36px;z-index:1000;background:#fff;border-bottom:1px solid #eee}
+.hdr-in{max-width:1200px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.hdr .nav{display:flex;gap:24px}
+.hdr .nav a{text-decoration:none;font-size:14px;font-weight:600;color:#1a1a1a;transition:color .2s}
+.hdr .nav a:hover{color:#D42B2B}
+.logo-img{height:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;border:none;cursor:pointer;transition:all .2s}
+.btn-red{background:#D42B2B;color:#fff}
+.btn-red:hover{background:#b52222}
+.btn-pulse{animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(212,43,43,.3)}50%{box-shadow:0 0 0 12px rgba(212,43,43,0)}}
+/* Contact section */
+.sec{padding:64px 0}
+.sec-alt{background:#F0F2F5}
+.stag{display:inline-block;background:rgba(212,43,43,.08);color:#D42B2B;padding:6px 14px;border-radius:100px;font-size:13px;font-weight:600;margin-bottom:12px}
+.stitle{font-size:clamp(24px,3vw,36px);font-weight:800;color:#1a1a1a;line-height:1.2;margin:0 0 8px}
+.sdesc{color:#6B7280;font-size:15px;line-height:1.7}
+.con-g{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.con-card{display:flex;gap:16px;align-items:center;padding:16px;border:1px solid #eee;border-radius:14px;margin-bottom:12px;transition:all .2s}
+.con-card:hover{border-color:#D42B2B}
+.con-ico{width:44px;height:44px;border-radius:12px;background:rgba(212,43,43,.06);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.con-card h4{font-size:15px;font-weight:700;margin:0 0 2px}
+.con-card p{font-size:13px;color:#6B7280;margin:0}
+.form-box{background:#fff;border-radius:20px;padding:32px;border:1px solid #eee}
+.form-box h3{font-size:20px;font-weight:800;margin:0 0 4px}
+.form-box .sub{color:#6B7280;font-size:14px;margin:0 0 20px}
+.form-box label{display:block;font-size:13px;font-weight:600;margin:12px 0 6px}
+.form-box input,.form-box select{width:100%;padding:12px 14px;border:1px solid #e5e7eb;border-radius:10px;font-size:14px;outline:none;box-sizing:border-box}
+.form-box input:focus,.form-box select:focus{border-color:#D42B2B}
+.form-ok{text-align:center;font-size:13px;color:#6B7280;margin-top:12px}
+/* Lightbox */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:10000;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+.lightbox.open{display:flex}
+.lightbox img{max-width:95%;max-height:90vh;border-radius:8px;object-fit:contain}
+.lightbox-close{position:absolute;top:16px;right:24px;color:#fff;font-size:32px;cursor:pointer;background:none;border:none;z-index:10001}
+.zoomable{cursor:zoom-in;transition:opacity .2s}
+.zoomable:hover{opacity:.9}
+/* Footer override to match index */
+.ftr{background:#0F1923;color:rgba(255,255,255,.5);padding:48px 0 24px;font-size:13px}
+.ftr .container{max-width:1200px;margin:0 auto;padding:0 24px}
+.ftr-g{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px}
+.ftr-l{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.ftr-l a{color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
+.ftr-l a:hover{color:#fff}
+.ftr h5{font-size:13px;font-weight:700;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.05em}
+@media(max-width:768px){
+.con-g{grid-template-columns:1fr}
+.ftr-g{grid-template-columns:1fr 1fr}
+.hdr-in{flex-wrap:wrap}
+.hdr .nav{gap:12px}
+}
+</style></head><body>
+<div class="topbar"><div class="topbar-in">
+<span style="display:flex;align-items:center;gap:14px">🇷🇺 Россия · <a href="mailto:info@kbbcompany.ru">info@kbbcompany.ru</a>
+<span class="soc">
+<a href="https://vk.com/pto_rubikon" title="ВКонтакте" class="si"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14C20.67 22 22 20.67 22 15.07V8.93C22 3.33 20.67 2 15.07 2m3.08 14.27h-1.46c-.55 0-.72-.44-1.71-1.45-.87-.83-1.24-.94-1.45-.94-.3 0-.38.08-.38.49v1.33c0 .35-.11.56-1.03.56-1.52 0-3.2-.92-4.39-2.64C5.83 10.74 5.4 8.96 5.4 8.57c0-.21.08-.4.49-.4h1.46c.37 0 .5.16.65.55.71 2.04 1.9 3.83 2.38 3.83.18 0 .27-.08.27-.54v-2.1c-.05-.95-.55-1.03-.55-1.37 0-.16.14-.33.35-.33h2.3c.3 0 .4.16.4.52v2.84c0 .3.13.4.22.4.18 0 .34-.1.68-.44 1.05-1.18 1.8-3 1.8-3 .1-.21.27-.4.63-.4h1.46c.44 0 .53.22.44.52-.18.83-1.94 3.33-1.94 3.33-.15.25-.21.36 0 .64.15.2.66.64 1 1.04.63.71 1.11 1.31 1.24 1.72.14.4-.07.61-.49.61"/></svg></a>
+<a href="https://t.me/+79681828346" title="Telegram" class="si"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg></a>
+<a href="https://vk.com/pto_rubikon" title="VK" class="si"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14C20.67 22 22 20.67 22 15.07V8.93C22 3.33 20.67 2 15.07 2zm3.08 14.27h-1.46c-.55 0-.72-.44-1.71-1.45-1.09-1.05-1.35-1.18-1.58-1.18-.32 0-.42.1-.42.56v1.33c0 .4-.12.64-1.15.64-1.7 0-3.58-1.03-4.9-2.95C9.87 13.99 9.32 11.88 9.32 11.44c0-.23.1-.44.56-.44h1.46c.42 0 .58.18.74.63.81 2.37 2.18 4.44 2.74 4.44.21 0 .31-.1.31-.64V9.47c-.06-1.12-.66-1.22-.66-1.62 0-.2.17-.4.44-.4h2.3c.36 0 .49.19.49.6v2.95c0 .36.16.49.26.49.21 0 .38-.13.77-.52 1.19-1.33 2.03-3.39 2.03-3.39.11-.23.3-.44.72-.44h1.46c.44 0 .53.23.44.6-.18.82-1.89 3.23-1.89 3.23-.15.24-.21.36 0 .64.15.2.64.64.97 1.03.61.71 1.07 1.31 1.2 1.72.12.41-.1.62-.52.62z"/></svg></a>
+</span></span>
+<span><a href="tel:+78003017978">8 (800) 301-79-78</a> · Бесплатно по РФ · Пн–Пт 9:00–18:00</span>
+</div></div>
+<header class="hdr"><div class="hdr-in">
+<a href="index.html" class="logo"><img src="data:image/png;base64,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" alt="Рубикон" class="logo-img"></a>
+<nav class="nav">
+<a href="products.html">Продукция</a>
+<a href="industries.html">Применение</a>
+<a href="#insights">Проекты</a>
+<a href="about.html">О компании</a>
+<a href="#contact">Контакты</a>
+</nav>
+<a href="https://kbb.expert/demo" target="_blank" class="btn btn-red btn-pulse" style="padding:13px 28px;font-size:15px">🖥️ Программа расчёта</a>
+</div></header>
+<section class="page-hero">
+  <div class="container">
+    <div class="stag">О компании</div>
+    <h1>ООО «КББ» — торговая марка «Рубикон»</h1>
+    <p>Российский производитель теплообменного оборудования. Собственное производство, программа расчёта, полный цикл поставки — от проектирования до ввода в эксплуатацию.</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+      <div>
+        <h2>Наша миссия</h2>
+        <p>Компания «КББ» (торговая марка «Рубикон») — российский производитель пластинчатых теплообменников и блочных тепловых пунктов. Мы создаём оборудование, идентичное по качеству ведущим европейским брендам, но доступное по цене и с минимальными сроками поставки.</p>
+        <p>Наша цель — обеспечить российский рынок надёжным теплообменным оборудованием с полной технической поддержкой, собственной программой расчёта и гарантией на каждое изделие.</p>
+        <p>Головной офис расположен в Санкт-Петербурге, производственная площадка — в Ростове-на-Дону. Оборудование «Рубикон» работает в 37 городах России.</p>
+      </div>
+      <div class="product-img">
+        <img src="img/about-team.jpg" alt="Команда Рубикон" style="width:100%;border-radius:16px">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section" style="background:var(--bg)">
+  <div class="container">
+    <h2 style="text-align:center;margin-bottom:8px">История компании</h2>
+    <p style="text-align:center;color:var(--text2);margin-bottom:0">Ключевые этапы развития</p>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">2011</div><h3>Основание компании</h3><p>Создание ООО «КББ» в Санкт-Петербурге. Начало деятельности в сфере теплообменного оборудования, поставки комплектующих для ПТО.</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">2014</div><h3>Запуск собственного производства</h3><p>Открытие производственной площадки в Ростове-на-Дону. Начало выпуска пластинчатых теплообменников под торговой маркой «Рубикон».</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">2017</div><h3>Производство БТП</h3><p>Расширение линейки — запуск производства блочных тепловых пунктов. Первые крупные проекты для ЖКХ и энергетики.</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">2020</div><h3>Программа расчёта KBB.expert</h3><p>Разработка и запуск собственной онлайн-программы подбора и расчёта теплообменников. Мгновенный подбор по параметрам с чертежом и стоимостью.</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">2022</div><h3>Проект для Минспорта РФ</h3><p>Поставка и ввод в эксплуатацию 25 блочных тепловых пунктов для спортивных объектов в 16 регионах России.</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">2024</div><h3>524+ единиц оборудования</h3><p>Оборудование «Рубикон» работает в 37 городах России. Расширение производственных мощностей и складской программы.</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">2026</div><h3>Развитие и масштабирование</h3><p>Выход на новые рынки, расширение продуктовой линейки, развитие сервисной сети по всей России.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <h2 style="text-align:center;margin-bottom:8px">Наша команда</h2>
+    <p style="text-align:center;color:var(--text2)">Специалисты с многолетним опытом в теплоэнергетике</p>
+    <div class="team-grid">
+      <div class="team-card"><div class="team-photo"><img src="img/team-kononov.jpg" alt="Кононов А.С." style="width:100%;height:100%;object-fit:cover"></div><div class="team-name">Кононов Алексей Сергеевич</div><div class="team-role">Генеральный директор</div></div>
+      <div class="team-card"><div class="team-photo"><img src="img/team-zhilin.jpg" alt="Жилин А.К." style="width:100%;height:100%;object-fit:cover"></div><div class="team-name">Жилин Александр Константинович</div><div class="team-role">Директор производства</div></div>
+      <div class="team-card"><div class="team-photo"><img src="img/team-konstantinova.jpg" alt="Константинова А." style="width:100%;height:100%;object-fit:cover"></div><div class="team-name">Константинова Алёна</div><div class="team-role">Руководитель отдела продаж</div></div>
+      <div class="team-card"><div class="team-photo"><img src="img/team-klimenko.jpg" alt="Клименко Р.Г." style="width:100%;height:100%;object-fit:cover"></div><div class="team-name">Клименко Роман Геннадьевич</div><div class="team-role">Руководитель сервисной службы</div></div>
+    </div>
+  </div>
+</section>
+<section class="cta-bar">
+  <div class="container">
+    <h2>Нужен расчёт теплообменника?</h2>
+    <p>Используйте нашу онлайн-программу — результат за 5 минут</p>
+    <a href="https://kbb.expert/demo" target="_blank" class="btn">🖥️ Открыть KBB.expert</a>
+  </div>
+</section>
+<section class="sec sec-alt" id="contact"><div class="container">
+<div class="stag">Свяжитесь с нами</div><h2 class="stitle">Запросите расчёт<br>или консультацию</h2>
+<div class="con-g" style="margin-top:32px">
+<div>
+<p class="sdesc" style="margin-bottom:24px">Инженер свяжется в течение 2 часов в рабочее время, уточнит параметры и подготовит предварительный расчёт с чертежом.</p>
+<div class="con-card"><div class="con-ico">📞</div><div><h4>8 (800) 301-79-78</h4><p>Бесплатно по России</p></div></div>
+<div class="con-card"><div class="con-ico">📧</div><div><h4><a href="mailto:info@kbbcompany.ru">info@kbbcompany.ru</a></h4><p>Ответ в течение часа</p></div></div>
+<a href="https://kbb.expert/demo" target="_blank" class="con-card" style="border-color:var(--red);text-decoration:none;color:inherit;transition:all .2s"><div class="con-ico" style="background:var(--red-lt)">🖥️</div><div><h4 style="color:var(--red)">KBB.expert — программа расчёта</h4><p>Онлайн-подбор теплообменника → открыть демо</p></div></a>
+</div>
+<div class="form-box">
+<form action="mailto:info@kbbcompany.ru" method="POST" enctype="text/plain">
+<h3>Получить расчёт с ценой</h3>
+<p class="sub">Заполните форму — ответим в течение 2 часов</p>
+<label>Имя</label><input type="text" name="name" placeholder="Как к вам обращаться?">
+<label>Телефон</label><input type="tel" name="phone" placeholder="+7 (___) ___-__-__">
+<label>E-mail</label><input type="email" name="email" placeholder="Для отправки расчёта">
+<label>Что нужно рассчитать?</label>
+<select name="subject"><option>Выберите</option><option>Пластинчатый теплообменник (ПТО)</option><option>Блочный тепловой пункт (БТП)</option><option>Запасные части / уплотнения</option><option>Другое</option></select>
+<button type="submit" class="btn btn-red" style="width:100%;margin-top:20px;padding:16px;font-size:16px">Отправить запрос →</button>
+</form>
+<div class="form-ok">✅ Среднее время ответа — 15 минут</div>
+</div></div></div></section>
+<footer class="ftr"><div class="container">
+<div class="ftr-g">
+<div><a href="index.html" class="logo" style="font-size:20px;font-weight:800;color:#fff;text-decoration:none;letter-spacing:-.02em">РУБИКОН</a><p style="margin-top:12px;line-height:1.6">Российский производитель пластинчатых теплообменников и блочных тепловых пунктов</p></div>
+<div><h5>Продукция</h5><div class="ftr-l"><a href="products.html">ПТО Рубикон</a><a href="products.html">БТП Рубикон</a><a href="https://kbb.expert/demo" target="_blank">KBB.expert</a></div></div>
+<div><h5>Применение</h5><div class="ftr-l"><a href="industries.html">ЖКХ</a><a href="industries.html">Судостроение</a><a href="industries.html">Промышленность</a></div></div>
+<div><h5>Компания</h5><div class="ftr-l"><a href="about.html">О компании</a><a href="#insights">Проекты</a><a href="#contact">Контакты</a></div></div>
+<div><h5>Контакты</h5><a href="tel:+78003017978" style="color:rgba(255,255,255,.8);font-weight:700">8 (800) 301-79-78</a><br><a href="mailto:info@kbbcompany.ru">info@kbbcompany.ru</a><p style="margin-top:8px;font-size:11px">ООО «КББ» · ИНН 7806286171<br>г. СПб, ул. Ванеева, д. 10, лит. Б</p></div>
+</div>
+<div class="ftr-b"><span>© 2026 ООО «КББ» — ТМ «Рубикон». Все права защищены.</span><a href="#" style="color:rgba(255,255,255,.3)">Политика конфиденциальности</a></div>
+</div></footer>
+
+<script src="/chat-widget.js"></script>
+</body>
+</html>
