@@ -184,6 +184,45 @@ img{max-width:100%;height:auto}
 .hdr-in{flex-wrap:wrap}
 .hdr .nav{gap:12px}
 }
+
+/* === MOBILE RESPONSIVE === */
+@media(max-width:768px){
+  .topbar{padding:6px 0;font-size:11px}
+  .topbar-in{flex-direction:column;gap:4px;padding:0 12px}
+  .topbar .soc{display:none}
+  .hdr{top:0!important}
+  .hdr-in{padding:10px 12px;gap:8px;flex-wrap:wrap}
+  .hdr .nav{display:none}
+  .logo-img{height:26px}
+  .btn-pulse{padding:8px 16px!important;font-size:12px!important}
+  .mob-menu-btn{display:flex!important}
+  .sec{padding:36px 0}
+  .stag{font-size:11px}
+  .stitle{font-size:clamp(20px,5vw,28px)!important}
+  .con-g{grid-template-columns:1fr!important;gap:24px}
+  .form-box{padding:20px}
+  .ftr{padding:32px 0 16px}
+  .ftr-g{grid-template-columns:1fr 1fr!important;gap:20px}
+  /* Page-specific */
+  .page-hero{padding:32px 0!important}
+  .product-block{flex-direction:column!important}
+  .product-img{width:100%!important}
+  .product-info{padding:16px!important}
+  .features{grid-template-columns:1fr!important}
+  .team-grid{grid-template-columns:1fr 1fr!important}
+  .article-card-grid{grid-template-columns:1fr!important}
+  .content-section{padding:32px 0!important}
+  .container{padding:0 16px}
+  .modal{padding:16px}
+  .modal-content{width:95%!important;max-height:85vh!important;padding:20px!important}
+}
+@media(max-width:480px){
+  .topbar{display:none}
+  .hdr{top:0!important}
+  .ftr-g{grid-template-columns:1fr!important}
+  .team-grid{grid-template-columns:1fr!important}
+  .features{grid-template-columns:1fr!important}
+}
 </style></head><body>
 <div class="topbar"><div class="topbar-in">
 <span style="display:flex;align-items:center;gap:14px">🇷🇺 Россия · <a href="mailto:info@kbbcompany.ru">info@kbbcompany.ru</a>
