@@ -200,7 +200,6 @@ img{max-width:100%;height:auto}
   .hdr .nav{display:none}
   .logo-img{height:26px}
   .btn-pulse{padding:8px 16px!important;font-size:12px!important}
-  .mob-menu-btn{display:flex!important}
   .sec{padding:36px 0}
   .stag{font-size:11px}
   .stitle{font-size:clamp(20px,5vw,28px)!important}
@@ -232,7 +231,16 @@ img{max-width:100%;height:auto}
 /* Mobile nav - hidden by default */
 .mob-nav{display:none;position:fixed;inset:0;top:56px;background:#fff;z-index:999;padding:24px;flex-direction:column}
 .mob-nav.open{display:flex}
-.mob-menu-btn{display:none!important}
+@media(max-width:768px){
+}
+
+/* === HAMBURGER & MOBILE NAV === */
+.mob-menu-btn{display:none;width:36px;height:36px;border:none;background:none;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px;padding:0}
+.mob-menu-btn span{display:block;width:22px;height:2px;background:#1a1a1a;border-radius:2px;transition:all .3s}
+.mob-nav{display:none;position:fixed;inset:0;top:56px;background:#fff;z-index:999;padding:24px;flex-direction:column}
+.mob-nav.open{display:flex}
+.mob-nav a{display:block;padding:16px 0;border-bottom:1px solid #eee;font-size:16px;font-weight:600;color:#1a1a1a;text-decoration:none}
+.mob-nav a:hover{color:#D42B2B}
 @media(max-width:768px){
 .mob-menu-btn{display:flex!important}
 }
@@ -256,7 +264,7 @@ img{max-width:100%;height:auto}
 <a href="#contact">Контакты</a>
 </nav>
 <a href="https://kbb.expert/demo" target="_blank" class="btn btn-red btn-pulse" style="padding:13px 28px;font-size:15px">🖥️ Программа расчёта</a>
-<button class="mob-menu-btn" id="mobMenuBtn" style="display:none" onclick="document.getElementById('mobNav').classList.toggle('open');this.classList.toggle('open')">
+<button class="mob-menu-btn" id="mobMenuBtn" onclick="document.getElementById('mobNav').classList.toggle('open');this.classList.toggle('open')">
 <span></span><span></span><span></span>
 </button>
 </div></header>
@@ -335,6 +343,8 @@ img{max-width:100%;height:auto}
 <div class="con-card"><div class="con-ico">📞</div><div><h4>8 (800) 301-79-78</h4><p>Бесплатно по России</p></div></div>
 <div class="con-card"><div class="con-ico">📧</div><div><h4><a href="mailto:info@kbbcompany.ru">info@kbbcompany.ru</a></h4><p>Ответ в течение часа</p></div></div>
 <a href="https://kbb.expert/demo" target="_blank" class="con-card" style="border-color:var(--red);text-decoration:none;color:inherit;transition:all .2s"><div class="con-ico" style="background:var(--red-lt)">🖥️</div><div><h4 style="color:var(--red)">KBB.expert — программа расчёта</h4><p>Онлайн-подбор теплообменника → открыть демо</p></div></a>
+<div class="con-card"><div class="con-ico">📍</div><div><h4>Главный офис</h4><p>г. Санкт-Петербург, ул. Ванеева д.10 лит Б</p></div></div>
+<div class="con-card"><div class="con-ico">🏭</div><div><h4>Производство</h4><p>г. Ростов-на-Дону, ул. Вавилова 78Е</p></div></div>
 </div>
 <div class="form-box">
 <form action="mailto:info@kbbcompany.ru" method="POST" enctype="text/plain">
