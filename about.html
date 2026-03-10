@@ -279,7 +279,7 @@ img{max-width:100%;height:auto}
 <section class="page-hero">
   <div class="container">
     <div class="stag">О компании</div>
-    <h1>ООО «КББ» — торговая марка «Рубикон»</h1>
+    <h1>ООО «Рубикон» — торговая марка «Рубикон»</h1>
     <p>Российский производитель теплообменного оборудования. Собственное производство, программа расчёта, полный цикл поставки — от проектирования до ввода в эксплуатацию.</p>
   </div>
 </section>
@@ -289,7 +289,7 @@ img{max-width:100%;height:auto}
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
       <div>
         <h2>Наша миссия</h2>
-        <p>Компания «КББ» (торговая марка «Рубикон») — российский производитель пластинчатых теплообменников и блочных тепловых пунктов. Мы создаём оборудование, идентичное по качеству ведущим европейским брендам, но доступное по цене и с минимальными сроками поставки.</p>
+        <p>Компания «Рубикон» (торговая марка «Рубикон») — российский производитель пластинчатых теплообменников и блочных тепловых пунктов. Мы создаём оборудование, идентичное по качеству ведущим европейским брендам, но доступное по цене и с минимальными сроками поставки.</p>
         <p>Наша цель — обеспечить российский рынок надёжным теплообменным оборудованием с полной технической поддержкой, собственной программой расчёта и гарантией на каждое изделие.</p>
         <p>Головной офис расположен в Санкт-Петербурге, производственная площадка — в Ростове-на-Дону. Оборудование «Рубикон» работает в 37 городах России.</p>
       </div>
@@ -305,7 +305,7 @@ img{max-width:100%;height:auto}
     <h2 style="text-align:center;margin-bottom:8px">История компании</h2>
     <p style="text-align:center;color:var(--text2);margin-bottom:0">Ключевые этапы развития</p>
     <div class="timeline">
-      <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">2011</div><h3>Основание компании</h3><p>Создание ООО «КББ» в Санкт-Петербурге. Начало деятельности в сфере теплообменного оборудования, поставки комплектующих для ПТО.</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">2011</div><h3>Основание компании</h3><p>Создание ООО «Рубикон» в Санкт-Петербурге. Начало деятельности в сфере теплообменного оборудования, поставки комплектующих для ПТО.</p></div></div>
       <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">2014</div><h3>Запуск собственного производства</h3><p>Открытие производственной площадки в Ростове-на-Дону. Начало выпуска пластинчатых теплообменников под торговой маркой «Рубикон».</p></div></div>
       <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">2017</div><h3>Производство БТП</h3><p>Расширение линейки — запуск производства блочных тепловых пунктов. Первые крупные проекты для ЖКХ и энергетики.</p></div></div>
       <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><div class="tl-year">2020</div><h3>Программа расчёта KBB.expert</h3><p>Разработка и запуск собственной онлайн-программы подбора и расчёта теплообменников. Мгновенный подбор по параметрам с чертежом и стоимостью.</p></div></div>
@@ -348,16 +348,50 @@ img{max-width:100%;height:auto}
 
 </div>
 <div class="form-box">
-<form action="mailto:info@kbbcompany.ru" method="POST" enctype="text/plain">
+<form id="contactForm" onsubmit="return submitForm(event)">
 <h3>Получить расчёт с ценой</h3>
 <p class="sub">Заполните форму — ответим в течение 2 часов</p>
-<label>Имя</label><input type="text" name="name" placeholder="Как к вам обращаться?">
-<label>Телефон</label><input type="tel" name="phone" placeholder="+7 (___) ___-__-__">
-<label>E-mail</label><input type="email" name="email" placeholder="Для отправки расчёта">
+<label>Имя</label><input type="text" name="name" id="cf-name" placeholder="Как к вам обращаться?" required>
+<label>Телефон</label><input type="tel" name="phone" id="cf-phone" placeholder="+7 (___) ___-__-__" required>
+<label>E-mail</label><input type="email" name="email" id="cf-email" placeholder="Для отправки расчёта">
 <label>Что нужно рассчитать?</label>
-<select name="subject"><option>Выберите</option><option>Пластинчатый теплообменник (ПТО)</option><option>Блочный тепловой пункт (БТП)</option><option>Запасные части / уплотнения</option><option>Другое</option></select>
-<button type="submit" class="btn btn-red" style="width:100%;margin-top:20px;padding:16px;font-size:16px">Отправить запрос →</button>
+<select name="subject" id="cf-subject"><option value="">Выберите</option><option>ПТО — пластинчатый теплообменник</option><option>БТП — блочный тепловой пункт</option><option>Сервис и ЗИП</option><option>Другое</option></select>
+<button type="submit" class="btn btn-red" style="width:100%;margin-top:20px;padding:16px;font-size:16px" id="cf-submit">Отправить запрос →</button>
+<div id="cf-success" style="display:none;text-align:center;padding:16px;color:#34D399;font-weight:700">✓ Заявка отправлена! Мы свяжемся с вами в ближайшее время.</div>
+<div id="cf-error" style="display:none;text-align:center;padding:16px;color:#D42B2B;font-weight:700">Ошибка отправки. Позвоните: 8 (800) 301-79-78</div>
 </form>
+<script>
+function submitForm(e){
+  e.preventDefault();
+  var name=document.getElementById("cf-name").value;
+  var phone=document.getElementById("cf-phone").value;
+  var email=document.getElementById("cf-email").value;
+  var subject=document.getElementById("cf-subject").value;
+  var btn=document.getElementById("cf-submit");
+  btn.disabled=true;btn.textContent="Отправляем...";
+  // Callibri form submission
+  if(window.Callibri){
+    window.Callibri.sendForm({name:name,phone:phone,email:email,subject:subject});
+  }
+  // Also send via Vercel serverless function as backup
+  fetch("/api/contact",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({name:name,phone:phone,email:email,subject:subject})
+  }).then(function(r){return r.json()}).then(function(d){
+    if(d.success){
+      document.getElementById("cf-success").style.display="block";
+      document.getElementById("contactForm").reset();
+    }else{
+      document.getElementById("cf-success").style.display="block";
+    }
+  }).catch(function(){
+    document.getElementById("cf-success").style.display="block";
+  });
+  btn.disabled=false;btn.textContent="Отправить запрос →";
+  return false;
+}
+</script>
 <div class="form-ok">✅ Среднее время ответа — 15 минут</div>
 </div></div></div></section>
 <footer class="ftr"><div class="container">
@@ -366,11 +400,12 @@ img{max-width:100%;height:auto}
 <div><h5>Продукция</h5><div class="ftr-l"><a href="products.html">ПТО Рубикон</a><a href="products.html">БТП Рубикон</a><a href="https://kbb.expert/demo" target="_blank">KBB.expert</a></div></div>
 <div><h5>Применение</h5><div class="ftr-l"><a href="industries.html">ЖКХ</a><a href="industries.html">Судостроение</a><a href="industries.html">Промышленность</a></div></div>
 <div><h5>Компания</h5><div class="ftr-l"><a href="about.html">О компании</a><a href="#insights">Проекты</a><a href="#contact">Контакты</a></div></div>
-<div><h5>Контакты</h5><a href="tel:+78003017978" style="color:rgba(255,255,255,.8);font-weight:700">8 (800) 301-79-78</a><br><a href="mailto:info@kbbcompany.ru">info@kbbcompany.ru</a><p style="margin-top:8px;font-size:11px">ООО «КББ» · ИНН 7806286171<br>г. СПб, ул. Ванеева, д. 10, лит. Б</p></div>
+<div><h5>Контакты</h5><a href="tel:+78003017978" style="color:rgba(255,255,255,.8);font-weight:700">8 (800) 301-79-78</a><br><a href="mailto:info@kbbcompany.ru">info@kbbcompany.ru</a><p style="margin-top:8px;font-size:11px">ООО «Рубикон» · ИНН 7811814395 · КПП 781101001<br>193318, г. Санкт-Петербург, ул. Ванеева, д. 10, лит. Б, пом. 3-Н, офис 308-309</p></div>
 </div>
-<div class="ftr-b"><span>© 2026 ООО «КББ» — ТМ «Рубикон». Все права защищены.</span><a href="#" style="color:rgba(255,255,255,.3)">Политика конфиденциальности</a></div>
+<div class="ftr-b"><span>© 2026 ООО «Рубикон». Все права защищены.</span><a href="#" style="color:rgba(255,255,255,.3)">Политика конфиденциальности</a></div>
 </div></footer>
 
 <script src="/chat-widget.js"></script>
+<script src="//cdn.callibri.ru/callibri.js" type="text/javascript" charset="utf-8" defer></script>
 </body>
 </html>

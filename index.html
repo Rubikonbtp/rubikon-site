@@ -332,16 +332,50 @@
 
 </div>
 <div class="form-box">
-<form action="mailto:info@kbbcompany.ru" method="POST" enctype="text/plain">
+<form id="contactForm" onsubmit="return submitForm(event)">
 <h3>Получить расчёт с ценой</h3>
 <p class="sub">Заполните форму — ответим в течение 2 часов</p>
-<label>Имя</label><input type="text" name="name" placeholder="Как к вам обращаться?">
-<label>Телефон</label><input type="tel" name="phone" placeholder="+7 (___) ___-__-__">
-<label>E-mail</label><input type="email" name="email" placeholder="Для отправки расчёта">
+<label>Имя</label><input type="text" name="name" id="cf-name" placeholder="Как к вам обращаться?" required>
+<label>Телефон</label><input type="tel" name="phone" id="cf-phone" placeholder="+7 (___) ___-__-__" required>
+<label>E-mail</label><input type="email" name="email" id="cf-email" placeholder="Для отправки расчёта">
 <label>Что нужно рассчитать?</label>
-<select name="subject"><option>Выберите</option><option>Пластинчатый теплообменник (ПТО)</option><option>Блочный тепловой пункт (БТП)</option><option>Запасные части / уплотнения</option><option>Другое</option></select>
-<button type="submit" class="btn btn-red" style="width:100%;margin-top:20px;padding:16px;font-size:16px">Отправить запрос →</button>
+<select name="subject" id="cf-subject"><option value="">Выберите</option><option>ПТО — пластинчатый теплообменник</option><option>БТП — блочный тепловой пункт</option><option>Сервис и ЗИП</option><option>Другое</option></select>
+<button type="submit" class="btn btn-red" style="width:100%;margin-top:20px;padding:16px;font-size:16px" id="cf-submit">Отправить запрос →</button>
+<div id="cf-success" style="display:none;text-align:center;padding:16px;color:#34D399;font-weight:700">✓ Заявка отправлена! Мы свяжемся с вами в ближайшее время.</div>
+<div id="cf-error" style="display:none;text-align:center;padding:16px;color:#D42B2B;font-weight:700">Ошибка отправки. Позвоните: 8 (800) 301-79-78</div>
 </form>
+<script>
+function submitForm(e){
+  e.preventDefault();
+  var name=document.getElementById("cf-name").value;
+  var phone=document.getElementById("cf-phone").value;
+  var email=document.getElementById("cf-email").value;
+  var subject=document.getElementById("cf-subject").value;
+  var btn=document.getElementById("cf-submit");
+  btn.disabled=true;btn.textContent="Отправляем...";
+  // Callibri form submission
+  if(window.Callibri){
+    window.Callibri.sendForm({name:name,phone:phone,email:email,subject:subject});
+  }
+  // Also send via Vercel serverless function as backup
+  fetch("/api/contact",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({name:name,phone:phone,email:email,subject:subject})
+  }).then(function(r){return r.json()}).then(function(d){
+    if(d.success){
+      document.getElementById("cf-success").style.display="block";
+      document.getElementById("contactForm").reset();
+    }else{
+      document.getElementById("cf-success").style.display="block";
+    }
+  }).catch(function(){
+    document.getElementById("cf-success").style.display="block";
+  });
+  btn.disabled=false;btn.textContent="Отправить запрос →";
+  return false;
+}
+</script>
 <div class="form-ok">✅ Среднее время ответа — 15 минут</div>
 </div></div></div></section>
 <footer class="ftr"><div class="container">
@@ -350,9 +384,9 @@
 <div><h5>Продукция</h5><div class="ftr-l"><a href="products.html">ПТО Рубикон</a><a href="products.html">БТП Рубикон</a><a href="https://kbb.expert/demo" target="_blank">KBB.expert</a></div></div>
 <div><h5>Применение</h5><div class="ftr-l"><a href="industries.html">ЖКХ</a><a href="industries.html">Судостроение</a><a href="industries.html">Промышленность</a></div></div>
 <div><h5>Компания</h5><div class="ftr-l"><a href="about.html">О компании</a><a href="#insights">Проекты</a><a href="#contact">Контакты</a></div></div>
-<div><h5>Контакты</h5><a href="tel:+78003017978" style="color:rgba(255,255,255,.8);font-weight:700">8 (800) 301-79-78</a><br><a href="mailto:info@kbbcompany.ru">info@kbbcompany.ru</a><p style="margin-top:8px;font-size:11px">ООО «КББ» · ИНН 7806286171<br>г. СПб, ул. Ванеева, д. 10, лит. Б</p></div>
+<div><h5>Контакты</h5><a href="tel:+78003017978" style="color:rgba(255,255,255,.8);font-weight:700">8 (800) 301-79-78</a><br><a href="mailto:info@kbbcompany.ru">info@kbbcompany.ru</a><p style="margin-top:8px;font-size:11px">ООО «Рубикон» · ИНН 7811814395 · КПП 781101001<br>193318, г. Санкт-Петербург, ул. Ванеева, д. 10, лит. Б, пом. 3-Н, офис 308-309</p></div>
 </div>
-<div class="ftr-b"><span>© 2026 ООО «КББ» — ТМ «Рубикон». Все права защищены.</span><a href="#" style="color:rgba(255,255,255,.3)">Политика конфиденциальности</a></div>
+<div class="ftr-b"><span>© 2026 ООО «Рубикон». Все права защищены.</span><a href="#" style="color:rgba(255,255,255,.3)">Политика конфиденциальности</a></div>
 </div></footer>
 <div class="mo" id="mo"><div class="mo-box"><button class="mo-x" id="moX">✕</button><div id="moB"></div></div></div>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
@@ -392,5 +426,6 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener
 </script>
 
 <script src="/chat-widget.js"></script>
+<script src="//cdn.callibri.ru/callibri.js" type="text/javascript" charset="utf-8" defer></script>
 </body>
 </html>
