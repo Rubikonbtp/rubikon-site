@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Применение — Рубикон</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+<style>
+:root{--dark:#0F1923;--navy:#1E3A5F;--red:#D42B2B;--red-light:rgba(212,43,43,.08);--white:#FFFFFF;--bg:#F8F9FB;--bg2:#F0F2F5;--text1:#1a1a1a;--text2:#5A6578;--text3:#8B95A5;--border:#E5E8ED;--radius:10px;--shadow:0 1px 3px rgba(0,0,0,.06);--shadow-md:0 4px 12px rgba(0,0,0,.08);--shadow-lg:0 8px 30px rgba(0,0,0,.12);--red-glow:rgba(212,43,43,.35)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;color:var(--text1);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+a{color:var(--red);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;height:auto}
+
+/* TOPBAR */
+.topbar{background:var(--dark);color:rgba(255,255,255,.7);font-size:12px;padding:8px 0}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:0 24px}
+.topbar a{color:rgba(255,255,255,.8);text-decoration:none}
+.social-icons{display:flex;gap:8px;align-items:center}
+.soc-icon{color:rgba(255,255,255,.5);transition:color .2s;display:flex;align-items:center}
+.soc-icon:hover{color:#fff}
+
+/* HEADER */
+.header{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:1px solid var(--border);padding:0}
+.header-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:14px 24px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.logo-img{height:38px;width:auto}
+.nav{display:flex;gap:24px;align-items:center}
+.nav a{color:var(--text2);text-decoration:none;font-size:16px;font-weight:600;transition:color .2s}
+.nav a:hover,.nav a.active{color:var(--dark)}
+.header-right{display:flex;gap:10px;align-items:center}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;border:none;cursor:pointer;text-decoration:none;border-radius:var(--radius);transition:all .2s;font-family:inherit;font-size:14px;letter-spacing:-.01em}
+.btn-red{background:var(--red);color:#fff;padding:12px 24px}
+.btn-red:hover{background:#b82525;text-decoration:none;color:#fff}
+.btn-outline{background:transparent;border:1.5px solid var(--border);color:var(--text1);padding:11px 23px}
+@keyframes pulse-ring{0%{box-shadow:0 0 0 0 var(--red-glow),0 0 8px var(--red-glow)}50%{box-shadow:0 0 0 14px rgba(212,43,43,0),0 0 22px rgba(212,43,43,.1)}100%{box-shadow:0 0 0 0 rgba(212,43,43,0),0 0 0 rgba(212,43,43,0)}}
+@keyframes glow-bright{0%,100%{filter:brightness(1)}50%{filter:brightness(1.15)}}
+.btn-pulse{animation:pulse-ring 1.6s infinite,glow-bright 1.6s infinite}
+
+/* PAGE HERO */
+.page-hero{background:var(--bg);padding:80px 0 60px;border-bottom:1px solid var(--border)}
+.page-hero .stag{color:var(--red);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.page-hero .stag::before{content:'';width:18px;height:2px;background:var(--red)}
+.page-hero h1{font-size:42px;font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-bottom:14px}
+.page-hero p{font-size:17px;color:var(--text2);max-width:640px;line-height:1.7}
+
+/* CONTENT */
+.content-section{padding:80px 0}
+.content-section:nth-child(even){background:var(--bg)}
+.content-section h2{font-size:32px;font-weight:800;margin-bottom:12px;letter-spacing:-.02em}
+.content-section h3{font-size:22px;font-weight:700;margin-bottom:8px}
+.content-section p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:16px}
+
+/* PRODUCT CARD */
+.product-block{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:64px}
+.product-block:nth-child(even){direction:rtl}
+.product-block:nth-child(even) > *{direction:ltr}
+.product-block:last-child{margin-bottom:0}
+.product-img{width:100%;border-radius:16px;background:var(--bg2);min-height:360px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.product-img .ph{border-radius:16px;min-height:360px}
+.product-info h2{margin-bottom:12px}
+.product-info .features{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.product-info .feat{font-size:12px;font-weight:600;padding:6px 12px;background:var(--red-light);color:var(--red);border-radius:100px}
+
+/* ARTICLE CARD */
+.articles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+.article-card{background:var(--white);border-radius:16px;border:1px solid var(--border);overflow:hidden;transition:all .2s}
+.article-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+.article-card-img{height:200px;background:var(--bg2);display:flex;align-items:center;justify-content:center}
+.article-card-body{padding:24px}
+.article-card-body h3{margin-bottom:8px}
+.article-card-body p{font-size:14px;color:var(--text2);line-height:1.7}
+.article-card-meta{display:flex;gap:12px;margin-top:12px;font-size:12px;color:var(--text3)}
+
+/* TEAM */
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px}
+.team-card{text-align:center}
+.team-photo{width:100%;aspect-ratio:1;border-radius:16px;background:var(--bg2);display:flex;align-items:center;justify-content:center;margin-bottom:12px;overflow:hidden;font-size:48px}
+.team-name{font-weight:700;font-size:15px;margin-bottom:2px}
+.team-role{font-size:13px;color:var(--text3)}
+
+/* TIMELINE */
+.timeline{display:flex;flex-direction:column;gap:0;margin-top:40px;position:relative}
+.timeline::before{content:'';position:absolute;left:24px;top:0;bottom:0;width:2px;background:var(--border)}
+.tl-item{display:flex;gap:24px;padding:24px 0}
+.tl-dot{width:12px;height:12px;border-radius:50%;background:var(--red);margin-top:6px;flex-shrink:0;z-index:1;margin-left:19px}
+.tl-content h3{font-size:18px;font-weight:700}
+.tl-content p{font-size:14px;color:var(--text2);margin-top:4px}
+.tl-year{font-size:12px;font-weight:700;color:var(--red);margin-bottom:2px}
+
+/* PH */
+.ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--text3);font-size:12px;font-weight:600;background:linear-gradient(135deg,#E8ECF1,#D8DFE8);width:100%;height:100%}
+
+/* FOOTER */
+.footer{background:var(--dark);color:rgba(255,255,255,.6);padding:48px 0 24px;font-size:13px}
+.footer a{color:rgba(255,255,255,.6)}
+.footer a:hover{color:#fff}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1.2fr;gap:32px;margin-bottom:32px}
+.footer h5{color:#fff;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px}
+.footer-links{display:flex;flex-direction:column;gap:6px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;font-size:11px}
+
+/* CTA BAR */
+.cta-bar{background:var(--red);padding:48px 0;text-align:center;color:#fff}
+.cta-bar h2{color:#fff;font-size:28px;font-weight:800;margin-bottom:8px}
+.cta-bar p{color:rgba(255,255,255,.8);margin-bottom:20px}
+.cta-bar .btn{background:#fff;color:var(--red);padding:14px 32px;font-size:16px}
+.cta-bar .btn:hover{background:rgba(255,255,255,.9)}
+
+@media(max-width:1024px){
+.product-block{grid-template-columns:1fr;gap:24px}
+.product-block:nth-child(even){direction:ltr}
+.articles-grid{grid-template-columns:1fr}
+.team-grid{grid-template-columns:repeat(2,1fr)}
+.footer-grid{grid-template-columns:repeat(2,1fr)}
+.page-hero h1{font-size:32px}
+}
+@media(max-width:640px){
+.nav{display:none}
+.team-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+<style>
+/* === SHARED STYLES FROM MAIN PAGE === */
+.topbar{position:sticky;top:0;z-index:1001;background:#0F1923;padding:8px 0;font-size:13px;color:rgba(255,255,255,.45)}
+.topbar-in{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+.soc{display:inline-flex;gap:6px;margin-left:8px}
+.si{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);text-decoration:none;transition:all .2s}
+.si:hover{background:rgba(255,255,255,.15);color:#fff}
+.hdr{position:sticky;top:36px;z-index:1000;background:#fff;border-bottom:1px solid #eee}
+.hdr-in{max-width:1200px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.hdr .nav{display:flex;gap:24px}
+.hdr .nav a{text-decoration:none;font-size:14px;font-weight:600;color:#1a1a1a;transition:color .2s}
+.hdr .nav a:hover{color:#D42B2B}
+.logo-img{height:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;border:none;cursor:pointer;transition:all .2s}
+.btn-red{background:#D42B2B;color:#fff}
+.btn-red:hover{background:#b52222}
+.btn-pulse{animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(212,43,43,.3)}50%{box-shadow:0 0 0 12px rgba(212,43,43,0)}}
+/* Contact section */
+.sec{padding:64px 0}
+.sec-alt{background:#F0F2F5}
+.stag{display:inline-block;background:rgba(212,43,43,.08);color:#D42B2B;padding:6px 14px;border-radius:100px;font-size:13px;font-weight:600;margin-bottom:12px}
+.stitle{font-size:clamp(24px,3vw,36px);font-weight:800;color:#1a1a1a;line-height:1.2;margin:0 0 8px}
+.sdesc{color:#6B7280;font-size:15px;line-height:1.7}
+.con-g{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.con-card{display:flex;gap:16px;align-items:center;padding:16px;border:1px solid #eee;border-radius:14px;margin-bottom:12px;transition:all .2s}
+.con-card:hover{border-color:#D42B2B}
+.con-ico{width:44px;height:44px;border-radius:12px;background:rgba(212,43,43,.06);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.con-card h4{font-size:15px;font-weight:700;margin:0 0 2px}
+.con-card p{font-size:13px;color:#6B7280;margin:0}
+.form-box{background:#fff;border-radius:20px;padding:32px;border:1px solid #eee}
+.form-box h3{font-size:20px;font-weight:800;margin:0 0 4px}
+.form-box .sub{color:#6B7280;font-size:14px;margin:0 0 20px}
+.form-box label{display:block;font-size:13px;font-weight:600;margin:12px 0 6px}
+.form-box input,.form-box select{width:100%;padding:12px 14px;border:1px solid #e5e7eb;border-radius:10px;font-size:14px;outline:none;box-sizing:border-box}
+.form-box input:focus,.form-box select:focus{border-color:#D42B2B}
+.form-ok{text-align:center;font-size:13px;color:#6B7280;margin-top:12px}
+/* Lightbox */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:10000;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+.lightbox.open{display:flex}
+.lightbox img{max-width:95%;max-height:90vh;border-radius:8px;object-fit:contain}
+.lightbox-close{position:absolute;top:16px;right:24px;color:#fff;font-size:32px;cursor:pointer;background:none;border:none;z-index:10001}
+.zoomable{cursor:zoom-in;transition:opacity .2s}
+.zoomable:hover{opacity:.9}
+/* Footer override to match index */
+.ftr{background:#0F1923;color:rgba(255,255,255,.5);padding:48px 0 24px;font-size:13px}
+.ftr .container{max-width:1200px;margin:0 auto;padding:0 24px}
+.ftr-g{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px}
+.ftr-l{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.ftr-l a{color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
+.ftr-l a:hover{color:#fff}
+.ftr h5{font-size:13px;font-weight:700;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.05em}
+@media(max-width:768px){
+.con-g{grid-template-columns:1fr}
+.ftr-g{grid-template-columns:1fr 1fr}
+.hdr-in{flex-wrap:wrap}
+.hdr .nav{gap:12px}
+}
+
+/* === MOBILE RESPONSIVE === */
+@media(max-width:768px){
+  .topbar{padding:6px 0;font-size:11px}
+  .topbar-in{flex-direction:column;gap:4px;padding:0 12px}
+  .topbar .soc{display:none}
+  .hdr{top:0!important}
+  .hdr-in{padding:10px 12px;gap:8px;flex-wrap:wrap}
+  .hdr .nav{display:none}
+  .logo-img{height:26px}
+  .btn-pulse{padding:8px 16px!important;font-size:12px!important}
+  .sec{padding:36px 0}
+  .stag{font-size:11px}
+  .stitle{font-size:clamp(20px,5vw,28px)!important}
+  .con-g{grid-template-columns:1fr!important;gap:24px}
+  .form-box{padding:20px}
+  .ftr{padding:32px 0 16px}
+  .ftr-g{grid-template-columns:1fr 1fr!important;gap:20px}
+  /* Page-specific */
+  .page-hero{padding:32px 0!important}
+  .product-block{flex-direction:column!important}
+  .product-img{width:100%!important}
+  .product-info{padding:16px!important}
+  .features{grid-template-columns:1fr!important}
+  .team-grid{grid-template-columns:1fr 1fr!important}
+  .article-card-grid{grid-template-columns:1fr!important}
+  .content-section{padding:32px 0!important}
+  .container{padding:0 16px}
+  .modal{padding:16px}
+  .modal-content{width:95%!important;max-height:85vh!important;padding:20px!important}
+}
+@media(max-width:480px){
+  .topbar{display:none}
+  .hdr{top:0!important}
+  .ftr-g{grid-template-columns:1fr!important}
+  .team-grid{grid-template-columns:1fr!important}
+  .features{grid-template-columns:1fr!important}
+}
+
+/* Mobile nav - hidden by default */
+.mob-nav{display:none;position:fixed;inset:0;top:56px;background:#fff;z-index:999;padding:24px;flex-direction:column}
+.mob-nav.open{display:flex}
+@media(max-width:768px){
+}
+
+/* === HAMBURGER & MOBILE NAV === */
+.mob-menu-btn{display:none;width:36px;height:36px;border:none;background:none;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px;padding:0}
+.mob-menu-btn span{display:block;width:22px;height:2px;background:#1a1a1a;border-radius:2px;transition:all .3s}
+.mob-nav{display:none;position:fixed;inset:0;top:56px;background:#fff;z-index:999;padding:24px;flex-direction:column}
+.mob-nav.open{display:flex}
+.mob-nav a{display:block;padding:16px 0;border-bottom:1px solid #eee;font-size:16px;font-weight:600;color:#1a1a1a;text-decoration:none}
+.mob-nav a:hover{color:#D42B2B}
+@media(max-width:768px){
+.mob-menu-btn{display:flex!important}
+}
+</style></head><body>
+<div class="topbar"><div class="topbar-in">
+<span style="display:flex;align-items:center;gap:14px">🇷🇺 Россия · <a href="mailto:info@kbbcompany.ru">info@kbbcompany.ru</a>
+<span class="soc">
+<a href="https://vk.com/pto_rubikon" title="ВКонтакте" class="si"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14C20.67 22 22 20.67 22 15.07V8.93C22 3.33 20.67 2 15.07 2m3.08 14.27h-1.46c-.55 0-.72-.44-1.71-1.45-.87-.83-1.24-.94-1.45-.94-.3 0-.38.08-.38.49v1.33c0 .35-.11.56-1.03.56-1.52 0-3.2-.92-4.39-2.64C5.83 10.74 5.4 8.96 5.4 8.57c0-.21.08-.4.49-.4h1.46c.37 0 .5.16.65.55.71 2.04 1.9 3.83 2.38 3.83.18 0 .27-.08.27-.54v-2.1c-.05-.95-.55-1.03-.55-1.37 0-.16.14-.33.35-.33h2.3c.3 0 .4.16.4.52v2.84c0 .3.13.4.22.4.18 0 .34-.1.68-.44 1.05-1.18 1.8-3 1.8-3 .1-.21.27-.4.63-.4h1.46c.44 0 .53.22.44.52-.18.83-1.94 3.33-1.94 3.33-.15.25-.21.36 0 .64.15.2.66.64 1 1.04.63.71 1.11 1.31 1.24 1.72.14.4-.07.61-.49.61"/></svg></a>
+<a href="https://t.me/+79681828346" title="Telegram" class="si"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg></a>
+<a href="https://vk.com/pto_rubikon" title="VK" class="si"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14C20.67 22 22 20.67 22 15.07V8.93C22 3.33 20.67 2 15.07 2zm3.08 14.27h-1.46c-.55 0-.72-.44-1.71-1.45-1.09-1.05-1.35-1.18-1.58-1.18-.32 0-.42.1-.42.56v1.33c0 .4-.12.64-1.15.64-1.7 0-3.58-1.03-4.9-2.95C9.87 13.99 9.32 11.88 9.32 11.44c0-.23.1-.44.56-.44h1.46c.42 0 .58.18.74.63.81 2.37 2.18 4.44 2.74 4.44.21 0 .31-.1.31-.64V9.47c-.06-1.12-.66-1.22-.66-1.62 0-.2.17-.4.44-.4h2.3c.36 0 .49.19.49.6v2.95c0 .36.16.49.26.49.21 0 .38-.13.77-.52 1.19-1.33 2.03-3.39 2.03-3.39.11-.23.3-.44.72-.44h1.46c.44 0 .53.23.44.6-.18.82-1.89 3.23-1.89 3.23-.15.24-.21.36 0 .64.15.2.64.64.97 1.03.61.71 1.07 1.31 1.2 1.72.12.41-.1.62-.52.62z"/></svg></a>
+</span></span>
+<span><a href="tel:+78003017978">8 (800) 301-79-78</a> · Бесплатно по РФ · Пн–Пт 9:00–18:00</span>
+</div></div>
+<header class="hdr"><div class="hdr-in">
+<a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none"><img src="/img/logo-icon.png" alt="Рубикон" style="height:36px;width:36px"><span style="font-size:22px;font-weight:900;color:#D42B2B;letter-spacing:-0.02em">РУБИКОН</span></a>
+<nav class="nav">
+<a href="products.html">Продукция</a>
+<a href="industries.html">Применение</a>
+<a href="#insights">Проекты</a>
+<a href="about.html">О компании</a>
+<a href="#contact">Контакты</a>
+</nav>
+<a href="https://kbb.expert/demo" target="_blank" class="btn btn-red btn-pulse" style="padding:13px 28px;font-size:15px">🖥️ Программа расчёта</a>
+<button class="mob-menu-btn" id="mobMenuBtn" onclick="document.getElementById('mobNav').classList.toggle('open');this.classList.toggle('open')">
+<span></span><span></span><span></span>
+</button>
+</div></header>
+<div class="mob-nav" id="mobNav">
+<a href="products.html">Продукция</a>
+<a href="industries.html">Применение</a>
+<a href="#insights">Проекты</a>
+<a href="about.html">О компании</a>
+<a href="#contact">Контакты</a>
+<a href="https://kbb.expert/demo" target="_blank" style="color:#D42B2B">🖥️ Программа расчёта</a>
+</div>
+<section class="page-hero">
+  <div class="container">
+    <div class="stag">Применение</div>
+    <h1>Решения для вашей отрасли</h1>
+    <p>Теплообменное оборудование «Рубикон» успешно работает в различных отраслях — от ЖКХ и строительства до энергетики и промышленного производства.</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="articles-grid">
+      <div class="article-card">
+        <div class="article-card-img"><img src="img/ind-zhkh.jpg" alt="" style="width:100%;height:200px;object-fit:cover;border-radius:12px 12px 0 0"></div>
+        <div class="article-card-body">
+          <h3>ЖКХ и строительство</h3>
+          <p>Обеспечение теплоснабжения многоквартирных домов, жилых комплексов и социальных объектов. ПТО и БТП «Рубикон» устанавливаются в ИТП и ЦТП жилых зданий, обеспечивая эффективную передачу тепла для систем отопления и горячего водоснабжения.</p>
+          <p>Наше оборудование отвечает всем требованиям СНиП и СП, сертифицировано для применения на территории РФ. Гарантия — 3 года.</p>
+          <div class="article-card-meta"><span>🏢 МКД, жилые комплексы</span><span>524+ единиц установлено</span></div>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="article-card-img"><img src="img/ind-sudostroenie.jpg" alt="" style="width:100%;height:200px;object-fit:cover;border-radius:12px 12px 0 0"></div>
+        <div class="article-card-body">
+          <h3>Энергетика</h3>
+          <p>Решения для тепловых сетей, электростанций и котельных. Пластинчатые теплообменники «Рубикон» применяются в системах утилизации тепла, контурах охлаждения генераторов, подогрева сетевой воды.</p>
+          <p>Материалы стойкие к агрессивным средам: AISI 316, титан, Hastelloy C-276. Рабочее давление до 1,6 МПа, температура до 150°C.</p>
+          <div class="article-card-meta"><span>⚡ Тепловые сети, ТЭЦ</span><span>Агрессивные среды</span></div>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="article-card-img"><img src="img/ind-promyshlennost.jpg" alt="" style="width:100%;height:200px;object-fit:cover;border-radius:12px 12px 0 0"></div>
+        <div class="article-card-body">
+          <h3>Промышленность</h3>
+          <p>Теплообменное оборудование для машиностроения, нефтегазовой и химической отрасли. Используются в технологических контурах, системах охлаждения, рекуперации тепла промышленных процессов.</p>
+          <p>Под каждый проект подбираем оптимальную конфигурацию с помощью собственной программы расчёта KBB.expert — точный подбор по параметрам заказчика.</p>
+          <div class="article-card-meta"><span>🏭 Нефтегаз, химия</span><span>Индивидуальный подбор</span></div>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="article-card-img"><img src="img/ind-sport.jpg" alt="" style="width:100%;height:200px;object-fit:cover;border-radius:12px 12px 0 0"></div>
+        <div class="article-card-body">
+          <h3>Спорт и социальные объекты</h3>
+          <p>Поставка и ввод в эксплуатацию теплового оборудования для спортивных сооружений, бассейнов, образовательных и медицинских учреждений. Реализован крупный проект для Минспорта РФ — 25 БТП в 16 регионах.</p>
+          <p>Полный цикл: проектирование, производство, доставка, шефмонтаж и пуско-наладка. Гарантийное и постгарантийное обслуживание.</p>
+          <div class="article-card-meta"><span>🏟️ 25 БТП для Минспорта</span><span>16 регионов России</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cta-bar">
+  <div class="container">
+    <h2>Нужен расчёт теплообменника?</h2>
+    <p>Используйте нашу онлайн-программу — результат за 5 минут</p>
+    <a href="https://kbb.expert/demo" target="_blank" class="btn">🖥️ Открыть KBB.expert</a>
+  </div>
+</section>
+<section class="sec sec-alt" id="contact"><div class="container">
+<div class="stag">Свяжитесь с нами</div><h2 class="stitle">Запросите расчёт<br>или консультацию</h2>
+<div class="con-g" style="margin-top:32px">
+<div>
+<p class="sdesc" style="margin-bottom:24px">Инженер свяжется в течение 2 часов в рабочее время, уточнит параметры и подготовит предварительный расчёт с чертежом.</p>
+<div class="con-card"><div class="con-ico">📍</div><div><h4>Главный офис</h4><p>г. Санкт-Петербург, ул. Ванеева д.10 лит Б</p></div></div>
+<div class="con-card"><div class="con-ico">🏭</div><div><h4>Производство</h4><p>г. Ростов-на-Дону, ул. Вавилова 78Е</p></div></div>
+<div class="con-card"><div class="con-ico">📞</div><div><h4>8 (800) 301-79-78</h4><p>Бесплатно по России</p></div></div>
+<div class="con-card"><div class="con-ico">📧</div><div><h4><a href="mailto:info@kbbcompany.ru">info@kbbcompany.ru</a></h4><p>Ответ в течение часа</p></div></div>
+<a href="https://kbb.expert/demo" target="_blank" class="con-card" style="border-color:var(--red);text-decoration:none;color:inherit;transition:all .2s"><div class="con-ico" style="background:var(--red-lt)">🖥️</div><div><h4 style="color:var(--red)">KBB.expert — программа расчёта</h4><p>Онлайн-подбор теплообменника → открыть демо</p></div></a>
+
+</div>
+<div class="form-box">
+<form action="mailto:info@kbbcompany.ru" method="POST" enctype="text/plain">
+<h3>Получить расчёт с ценой</h3>
+<p class="sub">Заполните форму — ответим в течение 2 часов</p>
+<label>Имя</label><input type="text" name="name" placeholder="Как к вам обращаться?">
+<label>Телефон</label><input type="tel" name="phone" placeholder="+7 (___) ___-__-__">
+<label>E-mail</label><input type="email" name="email" placeholder="Для отправки расчёта">
+<label>Что нужно рассчитать?</label>
+<select name="subject"><option>Выберите</option><option>Пластинчатый теплообменник (ПТО)</option><option>Блочный тепловой пункт (БТП)</option><option>Запасные части / уплотнения</option><option>Другое</option></select>
+<button type="submit" class="btn btn-red" style="width:100%;margin-top:20px;padding:16px;font-size:16px">Отправить запрос →</button>
+</form>
+<div class="form-ok">✅ Среднее время ответа — 15 минут</div>
+</div></div></div></section>
+<footer class="ftr"><div class="container">
+<div class="ftr-g">
+<div><a href="index.html" class="logo" style="font-size:20px;font-weight:800;color:#fff;text-decoration:none;letter-spacing:-.02em">РУБИКОН</a><p style="margin-top:12px;line-height:1.6">Российский производитель пластинчатых теплообменников и блочных тепловых пунктов</p></div>
+<div><h5>Продукция</h5><div class="ftr-l"><a href="products.html">ПТО Рубикон</a><a href="products.html">БТП Рубикон</a><a href="https://kbb.expert/demo" target="_blank">KBB.expert</a></div></div>
+<div><h5>Применение</h5><div class="ftr-l"><a href="industries.html">ЖКХ</a><a href="industries.html">Судостроение</a><a href="industries.html">Промышленность</a></div></div>
+<div><h5>Компания</h5><div class="ftr-l"><a href="about.html">О компании</a><a href="#insights">Проекты</a><a href="#contact">Контакты</a></div></div>
+<div><h5>Контакты</h5><a href="tel:+78003017978" style="color:rgba(255,255,255,.8);font-weight:700">8 (800) 301-79-78</a><br><a href="mailto:info@kbbcompany.ru">info@kbbcompany.ru</a><p style="margin-top:8px;font-size:11px">ООО «КББ» · ИНН 7806286171<br>г. СПб, ул. Ванеева, д. 10, лит. Б</p></div>
+</div>
+<div class="ftr-b"><span>© 2026 ООО «КББ» — ТМ «Рубикон». Все права защищены.</span><a href="#" style="color:rgba(255,255,255,.3)">Политика конфиденциальности</a></div>
+</div></footer>
+
+<script src="/chat-widget.js"></script>
+</body>
+</html>
