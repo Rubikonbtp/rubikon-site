@@ -26,7 +26,7 @@ COPY --from=api /app /app
 # Install Node.js in nginx container for API
 RUN apk add --no-cache nodejs npm
 
-EXPOSE 80
+EXPOSE 8080
 
 # Start both nginx and node API
 CMD sh -c "node /app/server.js & nginx -g 'daemon off;'"
