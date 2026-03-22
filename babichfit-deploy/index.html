@@ -711,7 +711,7 @@ a { color: inherit; text-decoration: none; }
 }
 .reviews__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
   margin-top: 60px;
 }
@@ -1314,7 +1314,7 @@ a { color: inherit; text-decoration: none; }
         </div>
         <div class="hero__buttons anim anim-delay-3">
           <a href="#booking" class="btn btn--primary" data-i18n="hero_btn_book">Записаться на тренировку</a>
-          <a href="#services" class="btn btn--outline" data-i18n="hero_btn_online">Стоимость услуг</a>
+          <a href="#promo" class="btn btn--outline" data-i18n="hero_btn_online">Стоимость услуг</a>
         </div>
       </div>
       <div class="hero__image anim anim-delay-2">
@@ -1542,19 +1542,24 @@ a { color: inherit; text-decoration: none; }
     </div>
     <div class="reviews__grid">
       <div class="review-card anim">
-        <p class="result-card__quote" data-i18n="rev1_quote">После двух месяцев тренировок я впервые за годы проснулась без боли в спине. Татьяна нашла причину, которую никто не видел.</p>
-        <p class="result-card__author" data-i18n="rev1_author">Мария, 34 года</p>
-        <p class="result-card__result" data-i18n="rev1_result">Уменьшилась боль в спине</p>
+        <p class="result-card__quote" data-i18n="rev1_quote">Большое спасибо Татьяне Бабич за то, что несмотря на мои проблемы со здоровьем, она смогла выстроить для меня грамотные и эффективные тренировки. Я узнала что такое жить без боли в спине (у меня был компрессионный перелом). Все к Татьяне!</p>
+        <p class="result-card__author" data-i18n="rev1_author">Настя Вальтер, 28 лет</p>
+        <p class="result-card__result" data-i18n="rev1_result">Жизнь без боли в спине</p>
       </div>
       <div class="review-card anim anim-delay-1">
-        <p class="result-card__quote" data-i18n="rev2_quote">Пришла после родов — не могла нормально ходить. Через три месяца вернулась к бегу. Очень бережный и грамотный подход.</p>
-        <p class="result-card__author" data-i18n="rev2_author">Анна, 29 лет</p>
+        <p class="result-card__quote" data-i18n="rev2_quote">Обратилась к Тане после рождения второго ребёнка. Вес застыл и что бы я ни делала — не сдвигался с мёртвой точки. Заниматься мы начали не так давно, но уже добились отличных результатов! Вернулась уверенность в себе, отличное самочувствие и желание сворачивать горы.</p>
+        <p class="result-card__author" data-i18n="rev2_author">Юлия Грандт, 39 лет</p>
         <p class="result-card__result" data-i18n="rev2_result">Восстановление после родов</p>
       </div>
       <div class="review-card anim anim-delay-2">
-        <p class="result-card__quote" data-i18n="rev3_quote">Я сидела по 10 часов в день и не понимала, почему всё болит. Татьяна объяснила связи в теле, которые я даже не подозревала.</p>
-        <p class="result-card__author" data-i18n="rev3_author">Елена, 41 год</p>
-        <p class="result-card__result" data-i18n="rev3_result">Улучшилась осанка и мобильность</p>
+        <p class="result-card__quote" data-i18n="rev3_quote">Хочу отметить как продумана каждая тренировка! В конце всегда находишь у себя новые мышцы. Частенько бывает вау-эффект: сделала вроде бы не трудные упражнения, а после этого — раз, и легко наклонилась, согнулась, то что в начале не получалось сделать.</p>
+        <p class="result-card__author" data-i18n="rev3_author">Анастасия П., 34 года</p>
+        <p class="result-card__result" data-i18n="rev3_result">Улучшение подвижности</p>
+      </div>
+      <div class="review-card anim anim-delay-3">
+        <p class="result-card__quote" data-i18n="rev4_quote">Искала хорошего тренера для восстановления после родов. Результат превзошёл ожидания: ощущаю результаты и в состоянии здоровья, и визуально. Грамотный специалист своего дела! С удовольствием рекомендую Татьяну друзьям и знакомым.</p>
+        <p class="result-card__author" data-i18n="rev4_author">Оксана Сергеевна, 40 лет</p>
+        <p class="result-card__result" data-i18n="rev4_result">Восстановление после родов</p>
       </div>
     </div>
   </div>
@@ -1648,6 +1653,7 @@ a { color: inherit; text-decoration: none; }
           <label class="form__label" for="format" data-i18n="form_format">Формат тренировки</label>
           <select class="form__select" id="format" name="format">
             <option value="" disabled selected data-i18n="form_format_ph">Выберите формат</option>
+            <option value="trial" data-i18n="form_opt_trial">Пробная тренировка — знакомство</option>
             <option value="personal" data-i18n="form_opt_personal">Персональная тренировка</option>
             <option value="pair" data-i18n="form_opt_pair">Тренировка в паре</option>
             <option value="group" data-i18n="form_opt_group">Мини-группа</option>
@@ -1775,12 +1781,14 @@ ru: {
   whom5_title: "Ограниченная подвижность", whom5_text: "Трудно наклониться, повернуться или поднять руки без дискомфорта",
   whom6_title: "Сидячий образ жизни", whom6_text: "Компенсация последствий офисной работы — зажимы, слабость, нарушение осанки",
   ba_label: "Результаты", ba_title: "До и после", ba_subtitle: "Реальные результаты клиенток", ba1_tag: "Коррекция фигуры", ba2_tag: "Восстановление после родов", ba3_tag: "Улучшение осанки", rev_label: "Отзывы", res_title: "Что говорят клиенты",
-  rev1_quote: "После двух месяцев тренировок я впервые за годы проснулась без боли в спине. Татьяна нашла причину, которую никто не видел.",
-  rev1_author: "Мария, 34 года", rev1_result: "Уменьшилась боль в спине",
-  rev2_quote: "Пришла после родов — не могла нормально ходить. Через три месяца вернулась к бегу. Очень бережный и грамотный подход.",
-  rev2_author: "Анна, 29 лет", rev2_result: "Восстановление после родов",
-  rev3_quote: "Я сидела по 10 часов в день и не понимала, почему всё болит. Татьяна объяснила связи в теле, которые я даже не подозревала.",
-  rev3_author: "Елена, 41 год", rev3_result: "Улучшилась осанка и мобильность",
+  rev1_quote: "Большое спасибо Татьяне Бабич за то, что несмотря на мои проблемы со здоровьем, она смогла выстроить для меня грамотные и эффективные тренировки. Я узнала что такое жить без боли в спине (у меня был компрессионный перелом). Все к Татьяне!",
+  rev1_author: "Настя Вальтер, 28 лет", rev1_result: "Жизнь без боли в спине",
+  rev2_quote: "Обратилась к Тане после рождения второго ребёнка. Вес застыл и что бы я ни делала — не сдвигался с мёртвой точки. Заниматься мы начали не так давно, но уже добились отличных результатов! Вернулась уверенность в себе, отличное самочувствие и желание сворачивать горы.",
+  rev2_author: "Юлия Грандт, 39 лет", rev2_result: "Восстановление после родов",
+  rev3_quote: "Хочу отметить как продумана каждая тренировка! В конце всегда находишь у себя новые мышцы. Частенько бывает вау-эффект: сделала вроде бы не трудные упражнения, а после этого — раз, и легко наклонилась, согнулась, то что в начале не получалось сделать.",
+  rev3_author: "Анастасия П., 34 года", rev3_result: "Улучшение подвижности",
+  rev4_quote: "Искала хорошего тренера для восстановления после родов. Результат превзошёл ожидания: ощущаю результаты и в состоянии здоровья, и визуально. Грамотный специалист своего дела! С удовольствием рекомендую Татьяну друзьям и знакомым.",
+  rev4_author: "Оксана Сергеевна, 40 лет", rev4_result: "Восстановление после родов",
   appr_label: "Философия", appr_title: "Мой подход к телу", appr_subtitle: "Тело — это единая система, где всё связано",
   appr1_title: "Тело как система", appr1_text: "Боль в одном месте часто вызвана проблемой в другом. Я работаю с телом целиком, а не с отдельными мышцами. Такой подход даёт устойчивый результат.",
   appr2_title: "Важность фасции", appr2_text: "Фасция — это соединительная ткань, которая связывает всё тело в единую сеть. Работа с фасциальными линиями позволяет снять напряжение и восстановить свободу движения.",
@@ -1794,7 +1802,7 @@ ru: {
   faq5_q: "Можно ли заниматься онлайн?", faq5_a: "Да, у меня есть готовые онлайн-программы для самостоятельной работы. Они подходят тем, кто хочет заниматься в своём темпе из любой точки мира. Программы направлены на конкретные задачи: шея, поясница, мобильность, восстановление.",
   book_label: "Запись", book_title: "Запишитесь на тренировку", book_text: "Заполните форму или напишите мне напрямую — я отвечу в течение дня и помогу выбрать подходящий формат.",
   form_name: "Ваше имя", form_name_ph: "Как вас зовут?", form_phone: "Телефон", form_format: "Формат тренировки",
-  form_format_ph: "Выберите формат", form_opt_personal: "Персональная тренировка", form_opt_pair: "Тренировка в паре", form_opt_group: "Мини-группа",
+  form_format_ph: "Выберите формат", form_opt_trial: "Пробная тренировка — знакомство", form_opt_personal: "Персональная тренировка", form_opt_pair: "Тренировка в паре", form_opt_group: "Мини-группа",
   form_comment: "Комментарий", form_comment_ph: "Расскажите о вашей ситуации или задачах...",
   map_label: "Расположение", map_title: "Где проходят тренировки", map_address: "Calpe, Av. Diputación s/n — Av. País Valencia, 2",
   footer_role: "Специалист по движению", footer_city: "Кальпе, Испания", footer_nav: "Навигация", footer_contact: "Связаться",
@@ -1855,12 +1863,14 @@ es: {
   whom5_title: "Movilidad limitada", whom5_text: "Dificultad para agacharse, girarse o levantar los brazos sin molestias",
   whom6_title: "Vida sedentaria", whom6_text: "Compensar las consecuencias del trabajo de oficina: tensiones, debilidad, problemas posturales",
   ba_label: "Resultados", ba_title: "Antes y después", ba_subtitle: "Resultados reales de clientas", ba1_tag: "Corrección de figura", ba2_tag: "Recuperación posparto", ba3_tag: "Mejora de postura", rev_label: "Opiniones", res_title: "Lo que dicen las clientas",
-  rev1_quote: "Después de dos meses de entrenamiento, por primera vez en años me desperté sin dolor de espalda. Tatiana encontró la causa que nadie veía.",
-  rev1_author: "María, 34 años", rev1_result: "Reducción del dolor de espalda",
-  rev2_quote: "Vine después del parto, no podía caminar bien. En tres meses volví a correr. Un enfoque muy cuidadoso y profesional.",
-  rev2_author: "Ana, 29 años", rev2_result: "Recuperación posparto",
-  rev3_quote: "Pasaba 10 horas sentada al día y no entendía por qué me dolía todo. Tatiana me explicó conexiones en el cuerpo que ni imaginaba.",
-  rev3_author: "Elena, 41 años", rev3_result: "Mejora de postura y movilidad",
+  rev1_quote: "Muchas gracias a Tatiana Babich por crear entrenamientos efectivos y adaptados a mis problemas de salud. Descubrí lo que es vivir sin dolor de espalda (tuve una fractura por compresión). ¡Todos a entrenar con Tatiana!",
+  rev1_author: "Nastya Walter, 28 años", rev1_result: "Vida sin dolor de espalda",
+  rev2_quote: "Acudí a Tanya después de tener mi segundo hijo. El peso se estancó y por más que hacía no se movía. Empezamos a entrenar hace poco, pero ya hemos logrado excelentes resultados. Volví a sentir confianza, bienestar y ganas de comerme el mundo.",
+  rev2_author: "Yulia Grandt, 39 años", rev2_result: "Recuperación posparto",
+  rev3_quote: "Quiero destacar lo pensado que está cada entrenamiento. Al final siempre descubres músculos nuevos. A menudo hay un efecto wow: haces ejercicios aparentemente fáciles y después te doblas y te inclinas con facilidad, algo que al principio no podías hacer.",
+  rev3_author: "Anastasia P., 34 años", rev3_result: "Mejora de movilidad",
+  rev4_quote: "Buscaba un buen entrenador para recuperarme después del parto. El resultado superó mis expectativas: noto los resultados tanto en mi salud como visualmente. ¡Una profesional! Recomiendo a Tatiana con mucho gusto.",
+  rev4_author: "Oksana Sergueevna, 40 años", rev4_result: "Recuperación posparto",
   appr_label: "Filosofía", appr_title: "Mi enfoque corporal", appr_subtitle: "El cuerpo es un sistema único donde todo está conectado",
   appr1_title: "El cuerpo como sistema", appr1_text: "El dolor en un lugar a menudo es causado por un problema en otro. Trabajo con el cuerpo en su conjunto, no con músculos aislados. Este enfoque da resultados duraderos.",
   appr2_title: "Importancia de la fascia", appr2_text: "La fascia es el tejido conectivo que une todo el cuerpo en una red. Trabajar con las líneas fasciales permite liberar tensión y restaurar la libertad de movimiento.",
@@ -1874,7 +1884,7 @@ es: {
   faq5_q: "¿Se puede entrenar online?", faq5_a: "Sí, tengo programas online para práctica autónoma. Son ideales para quienes quieren entrenar a su ritmo desde cualquier lugar. Los programas se enfocan en tareas concretas: cuello, lumbar, movilidad, recuperación.",
   book_label: "Reserva", book_title: "Reserva tu entrenamiento", book_text: "Rellena el formulario o escríbeme directamente. Respondo en el día y te ayudo a elegir el formato adecuado.",
   form_name: "Tu nombre", form_name_ph: "¿Cómo te llamas?", form_phone: "Teléfono", form_format: "Formato de entrenamiento",
-  form_format_ph: "Elige formato", form_opt_personal: "Entrenamiento personal", form_opt_pair: "Entrenamiento en pareja", form_opt_group: "Minigrupo",
+  form_format_ph: "Elige formato", form_opt_trial: "Sesión de prueba — conocernos", form_opt_personal: "Entrenamiento personal", form_opt_pair: "Entrenamiento en pareja", form_opt_group: "Minigrupo",
   form_comment: "Comentario", form_comment_ph: "Cuéntame tu situación u objetivos...",
   map_label: "Расположение", map_title: "Где проходят тренировки", map_address: "Calpe, Av. Diputación s/n — Av. País Valencia, 2",
   map_label: "Ubicación", map_title: "Dónde se realizan los entrenamientos", map_address: "Calpe, Av. Diputación s/n — Av. País Valencia, 2",
@@ -1935,12 +1945,14 @@ en: {
   whom5_title: "Limited mobility", whom5_text: "Difficulty bending, turning or raising your arms without discomfort",
   whom6_title: "Sedentary lifestyle", whom6_text: "Compensating for desk work consequences — tension, weakness, posture problems",
   ba_label: "Results", ba_title: "Before & After", ba_subtitle: "Real client results", ba1_tag: "Body correction", ba2_tag: "Postpartum recovery", ba3_tag: "Posture improvement", rev_label: "Testimonials", res_title: "What clients say",
-  rev1_quote: "After two months of training, for the first time in years I woke up without back pain. Tatiana found the cause that no one else could see.",
-  rev1_author: "Maria, 34", rev1_result: "Reduced back pain",
-  rev2_quote: "I came after giving birth — couldn't walk properly. Three months later I was back to running. A very careful and professional approach.",
-  rev2_author: "Anna, 29", rev2_result: "Postpartum recovery",
-  rev3_quote: "I sat 10 hours a day and didn't understand why everything hurt. Tatiana explained connections in my body I never suspected.",
-  rev3_author: "Elena, 41", rev3_result: "Improved posture and mobility",
+  rev1_quote: "A huge thank you to Tatiana Babich for building effective workouts despite my health issues. I learned what it means to live without back pain (I had a compression fracture). Everyone should train with Tatiana!",
+  rev1_author: "Nastya Walter, 28", rev1_result: "Life without back pain",
+  rev2_quote: "I came to Tanya after my second child. My weight was stuck and nothing I did would move it. We started training recently but already achieved great results! My confidence returned, I feel amazing and ready to take on the world.",
+  rev2_author: "Yulia Grandt, 39", rev2_result: "Postpartum recovery",
+  rev3_quote: "I want to highlight how thoughtfully each session is designed. You always discover new muscles by the end. There's often a wow effect: you do seemingly simple exercises and then suddenly bend and stretch easily — things you couldn't do at the start.",
+  rev3_author: "Anastasia P., 34", rev3_result: "Mobility improvement",
+  rev4_quote: "I was looking for a good trainer for postpartum recovery. The result exceeded expectations: I see results both in my health and visually. A true professional! I happily recommend Tatiana to friends and family.",
+  rev4_author: "Oksana Sergeevna, 40", rev4_result: "Postpartum recovery",
   appr_label: "Philosophy", appr_title: "My approach to the body", appr_subtitle: "The body is a unified system where everything is connected",
   appr1_title: "Body as a system", appr1_text: "Pain in one place is often caused by a problem elsewhere. I work with the body as a whole, not isolated muscles. This approach delivers lasting results.",
   appr2_title: "The importance of fascia", appr2_text: "Fascia is connective tissue linking the entire body into one network. Working with fascial lines releases tension and restores freedom of movement.",
@@ -1954,7 +1966,7 @@ en: {
   faq5_q: "Can I train online?", faq5_a: "Yes, I have ready-made online programs for independent practice. They're perfect for those who want to train at their own pace from anywhere. Programs target specific needs: neck, lower back, mobility, recovery.",
   book_label: "Book", book_title: "Book Your Session", book_text: "Fill out the form or message me directly — I'll respond within a day and help you choose the right format.",
   form_name: "Your name", form_name_ph: "What's your name?", form_phone: "Phone", form_format: "Training format",
-  form_format_ph: "Choose format", form_opt_personal: "Personal training", form_opt_pair: "Pair training", form_opt_group: "Small group",
+  form_format_ph: "Choose format", form_opt_trial: "Trial session — get to know each other", form_opt_personal: "Personal training", form_opt_pair: "Pair training", form_opt_group: "Small group",
   form_comment: "Comment", form_comment_ph: "Tell me about your situation or goals...",
   map_label: "Расположение", map_title: "Где проходят тренировки", map_address: "Calpe, Av. Diputación s/n — Av. País Valencia, 2",
   map_label: "Location", map_title: "Where training takes place", map_address: "Calpe, Av. Diputación s/n — Av. País Valencia, 2",
