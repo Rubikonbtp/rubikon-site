@@ -1,0 +1,2018 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta_title">Татьяна Бабич — Тренер по движению | Кальпе, Испания</title>
+<meta name="description" data-i18n-attr="content" data-i18n="meta_desc" content="Персональные тренировки, восстановление после родов, работа с осанкой и тазовым дном. Кальпе, Испания.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+
+/* ========== CSS VARIABLES ========== */
+:root {
+  --olive: #6B7C5E;
+  --olive-light: #8A9B7D;
+  --olive-pale: #E8EDE3;
+  --beige: #F5F0EB;
+  --beige-dark: #EBE4DB;
+  --cream: #FAF8F5;
+  --milk: #FDFCFA;
+  --dark: #2C2C2C;
+  --dark-soft: #3D3D3D;
+  --gray: #6B6B6B;
+  --gray-light: #9B9B9B;
+  --white: #FFFFFF;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Manrope', sans-serif;
+  --section-padding: clamp(80px, 10vw, 140px);
+  --container: min(1200px, 90vw);
+}
+
+/* ========== RESET & BASE ========== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  color: var(--dark);
+  background: var(--cream);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+.container { width: var(--container); margin: 0 auto; }
+
+/* ========== TYPOGRAPHY ========== */
+.t-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.15;
+}
+.t-display--lg { font-size: clamp(2.8rem, 5.5vw, 4.5rem); }
+.t-display--md { font-size: clamp(2rem, 3.5vw, 3rem); }
+.t-display--sm { font-size: clamp(1.6rem, 2.5vw, 2.2rem); }
+
+.t-body { font-family: var(--font-body); font-weight: 300; }
+.t-body--lg { font-size: clamp(1.05rem, 1.3vw, 1.2rem); }
+.t-body--md { font-size: clamp(0.95rem, 1.1vw, 1.05rem); }
+.t-body--sm { font-size: 0.9rem; }
+
+.t-label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--olive);
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes lineGrow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.anim { opacity: 0; }
+.anim.visible { animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.anim-delay-1 { animation-delay: 0.15s !important; }
+.anim-delay-2 { animation-delay: 0.3s !important; }
+.anim-delay-3 { animation-delay: 0.45s !important; }
+.anim-delay-4 { animation-delay: 0.6s !important; }
+
+/* ========== BUTTONS ========== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 36px;
+  border: none;
+  border-radius: 60px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  text-decoration: none;
+}
+.btn--primary {
+  background: var(--olive);
+  color: var(--white);
+}
+.btn--primary:hover {
+  background: var(--dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(107, 124, 94, 0.3);
+}
+.btn--outline {
+  background: transparent;
+  color: var(--olive);
+  border: 1.5px solid var(--olive);
+}
+.btn--outline:hover {
+  background: var(--olive);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* ========== HEADER / NAV ========== */
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 20px 0;
+  transition: all 0.4s ease;
+}
+.header.scrolled {
+  background: rgba(250, 248, 245, 0.92);
+  backdrop-filter: blur(20px);
+  padding: 14px 0;
+  box-shadow: 0 1px 20px rgba(0,0,0,0.05);
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+}
+.header__logo-img {
+  height: 42px;
+  width: auto;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+.header__logo-img:hover { transform: scale(1.08); }
+.header.scrolled .header__logo-img { height: 36px; }
+.header__nav { display: flex; gap: 32px; align-items: center; }
+.header__nav a {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--gray);
+  transition: color 0.3s;
+  letter-spacing: 0.02em;
+}
+.header__nav a:hover { color: var(--olive); }
+
+/* CTA button glow/pulse */
+@keyframes btnPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(107, 124, 94, 0.55); }
+  50% { box-shadow: 0 0 18px 6px rgba(107, 124, 94, 0.35); }
+}
+.btn--glow {
+  color: #fff !important;
+  animation: btnPulse 2.2s ease-in-out infinite;
+}
+.btn--glow:hover { animation: none; }
+
+/* Header extras */
+.header__extras {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.header__phone {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--dark);
+  white-space: nowrap;
+  transition: color 0.3s;
+}
+.header__phone:hover { color: var(--olive); }
+.header__socials {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.header__socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--olive-pale);
+  transition: all 0.3s;
+}
+.header__socials a:hover {
+  background: var(--olive);
+}
+.header__socials a:hover svg { fill: #fff; }
+.header__socials svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--olive);
+  transition: fill 0.3s;
+}
+
+.header__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.header__burger span {
+  width: 24px; height: 1.5px;
+  background: var(--dark);
+  transition: all 0.3s;
+}
+
+/* ========== SECTION 1: HERO ========== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -20%; right: -10%;
+  width: 60vw; height: 60vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--olive-pale) 0%, transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.hero__content { position: relative; z-index: 2; }
+.hero__label { margin-bottom: 24px; }
+.hero__title {
+  margin-bottom: 28px;
+  color: var(--dark);
+}
+.hero__title em {
+  font-style: italic;
+  color: var(--olive);
+}
+.hero__subtitle {
+  color: var(--gray);
+  margin-bottom: 20px;
+  max-width: 480px;
+}
+.hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.hero__tag {
+  padding: 8px 18px;
+  background: var(--olive-pale);
+  border-radius: 40px;
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--olive);
+}
+.hero__buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+.hero__image {
+  position: relative;
+  z-index: 2;
+}
+.hero__image-placeholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 240px 240px 40px 40px;
+  background: linear-gradient(145deg, var(--beige-dark), var(--olive-pale));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--gray-light);
+  text-align: center;
+  padding: 20px;
+}
+
+/* ========== SECTION 2: О ТРЕНЕРЕ ========== */
+.about {
+  padding: var(--section-padding) 0;
+  background: var(--white);
+}
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.about__image-placeholder {
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: 24px;
+  background: linear-gradient(160deg, var(--beige), var(--olive-pale));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: var(--gray-light);
+}
+.about__content { padding-top: 20px; }
+.about__name {
+  margin-top: 16px;
+  margin-bottom: 24px;
+  color: var(--dark);
+}
+.about__text {
+  color: var(--gray);
+  margin-bottom: 20px;
+}
+.about__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 32px;
+}
+.about__skill {
+  padding: 10px 20px;
+  border: 1px solid var(--beige-dark);
+  border-radius: 40px;
+  font-size: 0.82rem;
+  color: var(--dark-soft);
+  transition: all 0.3s;
+}
+.about__skill:hover {
+  border-color: var(--olive);
+  color: var(--olive);
+  background: var(--olive-pale);
+}
+
+/* ========== HOW IT WORKS ========== */
+.process {
+  padding: var(--section-padding) 0;
+  background: var(--cream);
+}
+.process__steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+}
+.process__step {
+  text-align: center;
+  padding: 40px 24px;
+  border-radius: 20px;
+  background: var(--white);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.process__step:hover { transform: translateY(-6px); }
+.process__step-num {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  color: var(--olive);
+  margin-bottom: 16px;
+  line-height: 1;
+}
+.process__step-title {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: var(--dark);
+}
+.process__step-text {
+  font-size: 0.88rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* ========== SECTION 3: ОТЛИЧИЕ ========== */
+.difference {
+  padding: var(--section-padding) 0;
+  background: var(--olive);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.difference::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.difference .container { position: relative; z-index: 2; }
+.difference__title { color: var(--white); margin-bottom: 16px; }
+.difference__subtitle {
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 60px;
+  max-width: 600px;
+}
+.difference__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.difference__card {
+  padding: 36px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.4s;
+}
+.difference__card:hover {
+  background: rgba(255,255,255,0.14);
+  transform: translateY(-3px);
+}
+.difference__card-icon {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+.difference__card-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+.difference__card-text {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.75);
+}
+
+/* ========== SECTION 4: УСЛУГИ ========== */
+.services {
+  padding: var(--section-padding) 0;
+  background: var(--white);
+}
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 60px;
+}
+.service-card {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--beige-dark);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  display: flex;
+  flex-direction: column;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(107, 124, 94, 0.12);
+  border-color: var(--olive-light);
+}
+.service-card__image {
+  aspect-ratio: 16/10;
+  background: linear-gradient(135deg, var(--beige), var(--olive-pale));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--gray-light);
+}
+.service-card__price {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  padding: 8px 18px;
+  background: var(--olive);
+  color: var(--white);
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.service-card__price span {
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+.service-card__tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 12px 16px;
+  background: var(--olive-pale);
+  border-radius: 12px;
+  font-size: 0.84rem;
+  color: var(--olive);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.service-card__body { padding: 32px; flex: 1; display: flex; flex-direction: column; }
+.service-card__label { margin-bottom: 12px; }
+.service-card__title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: var(--dark);
+}
+.service-card__text {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin-bottom: 20px;
+  flex: 1;
+}
+.service-card__features {
+  list-style: none;
+  margin-bottom: 28px;
+}
+.service-card__features li {
+  padding: 6px 0;
+  font-size: 0.88rem;
+  color: var(--dark-soft);
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+.service-card__features li::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--olive);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+/* ========== SECTION 5: ДЛЯ КОГО ========== */
+.for-whom {
+  padding: var(--section-padding) 0;
+  background: var(--beige);
+}
+.for-whom__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 60px;
+}
+.for-whom__card {
+  padding: 32px;
+  background: var(--white);
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.4s;
+}
+.for-whom__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+}
+.for-whom__card-icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+.for-whom__card-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+.for-whom__card-text {
+  font-size: 0.88rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* ========== SECTION 6a: ДО/ПОСЛЕ ========== */
+.before-after {
+  padding: var(--section-padding) 0;
+  background: var(--beige);
+}
+.before-after__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 60px;
+}
+.before-after__card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--beige-dark);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.before-after__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 50px rgba(0,0,0,0.08);
+}
+.before-after__img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.before-after__caption {
+  padding: 20px 24px;
+  text-align: center;
+}
+.before-after__tag {
+  display: inline-block;
+  padding: 5px 14px;
+  background: var(--olive-pale);
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--olive);
+}
+
+/* ========== SECTION 6b: ОТЗЫВЫ ========== */
+.reviews {
+  padding: var(--section-padding) 0;
+  background: var(--white);
+}
+.reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 60px;
+}
+.review-card {
+  padding: 36px;
+  border-radius: 20px;
+  background: var(--cream);
+  border: 1px solid var(--beige-dark);
+}
+
+/* ========== SECTION 6: РЕЗУЛЬТАТЫ (legacy, removed) ========== */
+.results {
+  padding: var(--section-padding) 0;
+  background: var(--white);
+}
+.results__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 60px;
+}
+.result-card {
+  padding: 0;
+  border-radius: 20px;
+  background: var(--cream);
+  border: 1px solid var(--beige-dark);
+  overflow: hidden;
+}
+.result-card__img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+.result-card__body {
+  padding: 28px 32px 32px;
+}
+.result-card__quote {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--dark-soft);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+.result-card__quote::before {
+  content: '\201C';
+  font-size: 3rem;
+  color: var(--olive);
+  line-height: 0.5;
+  display: block;
+  margin-bottom: 12px;
+}
+.result-card__author {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--olive);
+}
+.result-card__result {
+  font-size: 0.82rem;
+  color: var(--gray);
+  margin-top: 4px;
+}
+
+/* ========== SECTION 7: ПОДХОД К ТЕЛУ ========== */
+.approach {
+  padding: var(--section-padding) 0;
+  background: var(--cream);
+}
+.approach__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 60px;
+  align-items: start;
+}
+.approach__item { padding: 36px; border-radius: 20px; background: var(--white); }
+.approach__item-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--dark);
+  margin-bottom: 14px;
+}
+.approach__item-text {
+  font-size: 0.92rem;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+/* ========== SECTION 8: FAQ ========== */
+.faq {
+  padding: var(--section-padding) 0;
+  background: var(--white);
+}
+.faq__list {
+  max-width: 800px;
+  margin: 60px auto 0;
+}
+.faq__item {
+  border-bottom: 1px solid var(--beige-dark);
+}
+.faq__question {
+  width: 100%;
+  padding: 24px 0;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--dark);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s;
+}
+.faq__question:hover { color: var(--olive); }
+.faq__question::after {
+  content: '+';
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--olive);
+  transition: transform 0.3s;
+}
+.faq__item.open .faq__question::after { transform: rotate(45deg); }
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.faq__answer-inner {
+  padding-bottom: 24px;
+  font-size: 0.92rem;
+  color: var(--gray);
+  line-height: 1.7;
+}
+.faq__item.open .faq__answer { max-height: 300px; }
+
+/* ========== SECTION 9: ЗАПИСЬ ========== */
+.booking {
+  padding: var(--section-padding) 0;
+  background: var(--olive);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.booking::before {
+  content: '';
+  position: absolute;
+  bottom: -30%; right: -10%;
+  width: 50vw; height: 50vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+}
+.booking .container { position: relative; z-index: 2; }
+.booking__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.booking__title { color: var(--white); margin-bottom: 16px; }
+.booking__text {
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 32px;
+  max-width: 440px;
+}
+.booking__messengers {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+.booking__messenger {
+  padding: 12px 24px;
+  border-radius: 40px;
+  border: 1px solid rgba(255,255,255,0.25);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--white);
+  transition: all 0.3s;
+}
+.booking__messenger:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.5);
+}
+.booking__form {
+  background: var(--white);
+  border-radius: 24px;
+  padding: 40px;
+}
+.form__group { margin-bottom: 20px; }
+.form__label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--dark-soft);
+  margin-bottom: 8px;
+  letter-spacing: 0.03em;
+}
+.form__input,
+.form__select,
+.form__textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1.5px solid var(--beige-dark);
+  border-radius: 12px;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--dark);
+  background: var(--cream);
+  transition: border-color 0.3s;
+  outline: none;
+}
+.form__input:focus,
+.form__select:focus,
+.form__textarea:focus {
+  border-color: var(--olive);
+}
+.form__textarea { resize: vertical; min-height: 100px; }
+.form__submit {
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* ========== SECTION 10: КОНТАКТЫ / FOOTER ========== */
+.footer {
+  padding: 60px 0 40px;
+  background: var(--dark);
+  color: rgba(255,255,255,0.7);
+}
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+.footer__title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.footer__text { font-size: 0.9rem; line-height: 1.7; margin-bottom: 8px; }
+.footer__link {
+  display: block;
+  font-size: 0.9rem;
+  padding: 6px 0;
+  color: rgba(255,255,255,0.6);
+  transition: color 0.3s;
+}
+.footer__link:hover { color: var(--olive-light); }
+.footer__divider {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 24px;
+}
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.4);
+}
+
+/* ========== SKILL POPUP MODAL ========== */
+.about__skill--link {
+  cursor: pointer;
+  position: relative;
+  border-color: var(--olive);
+  color: var(--olive);
+}
+.about__skill--link::after {
+  content: '?';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: var(--olive);
+  color: var(--white);
+  font-size: 0.6rem;
+  font-weight: 600;
+  margin-left: 6px;
+  flex-shrink: 0;
+}
+.about__skill--link:hover {
+  background: var(--olive);
+  color: var(--white);
+}
+.about__skill--link:hover::after {
+  background: var(--white);
+  color: var(--olive);
+}
+
+.skill-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(44, 44, 44, 0.5);
+  backdrop-filter: blur(6px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.skill-modal-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.skill-modal {
+  background: var(--white);
+  border-radius: 24px;
+  padding: 44px 40px 36px;
+  max-width: 520px;
+  width: 100%;
+  position: relative;
+  transform: translateY(20px) scale(0.97);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+}
+.skill-modal-overlay.open .skill-modal {
+  transform: translateY(0) scale(1);
+}
+.skill-modal__close {
+  position: absolute;
+  top: 16px; right: 16px;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--cream);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--gray);
+  transition: all 0.3s;
+}
+.skill-modal__close:hover {
+  background: var(--olive-pale);
+  color: var(--dark);
+}
+.skill-modal__icon {
+  width: 48px; height: 48px;
+  border-radius: 14px;
+  background: var(--olive-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+.skill-modal__title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+.skill-modal__text {
+  font-size: 0.92rem;
+  color: var(--gray);
+  line-height: 1.75;
+}
+
+/* ========== SECTION HEADER (reusable) ========== */
+.section-header { text-align: center; max-width: 700px; margin: 0 auto; }
+.section-header .t-label { margin-bottom: 16px; display: block; }
+.section-header .t-display--md { margin-bottom: 16px; }
+.section-header .t-body--lg { color: var(--gray); }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .header__phone { display: none; }
+  .hero__grid { grid-template-columns: 1fr; text-align: center; }
+  .hero__subtitle { margin-left: auto; margin-right: auto; }
+  .hero__tags { justify-content: center; }
+  .hero__buttons { justify-content: center; }
+  .hero__image { max-width: 400px; margin: 40px auto 0; }
+  .about__grid { grid-template-columns: 1fr; gap: 40px; }
+  .about__image-placeholder { max-width: 400px; margin: 0 auto; }
+  .process__steps { grid-template-columns: repeat(2, 1fr); }
+  .difference__grid { grid-template-columns: 1fr; }
+  .services__grid { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
+  .for-whom__grid { grid-template-columns: repeat(2, 1fr); }
+  .results__grid { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
+  .before-after__grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+  .reviews__grid { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
+  .approach__grid { grid-template-columns: 1fr; }
+  .booking__inner { grid-template-columns: 1fr; gap: 40px; }
+  .footer__grid { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* Mobile menu overlay */
+.mobile-menu {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(250, 248, 245, 0.97);
+  backdrop-filter: blur(20px);
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.mobile-menu a {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--dark);
+  transition: color 0.3s;
+}
+.mobile-menu a:hover { color: var(--olive); }
+.mobile-menu__socials {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+}
+.mobile-menu__socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--olive-pale);
+  font-size: 0;
+}
+.mobile-menu__socials svg {
+  width: 18px; height: 18px;
+  fill: var(--olive);
+}
+.mobile-menu__phone {
+  font-family: var(--font-body) !important;
+  font-size: 1rem !important;
+  font-weight: 500;
+  color: var(--olive) !important;
+}
+
+/* Burger animation */
+.header__burger.active span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+.header__burger.active span:nth-child(2) { opacity: 0; }
+.header__burger.active span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+
+/* Mobile header right group: socials + phone + burger */
+.header__mobile-right {
+  display: none;
+  align-items: center;
+  gap: 12px;
+}
+.header__mobile-right .header__socials a {
+  width: 28px; height: 28px;
+}
+.header__mobile-right .header__socials svg {
+  width: 14px; height: 14px;
+}
+.header__mobile-phone {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--dark);
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .header__nav { display: none; }
+  .header__extras { display: none; }
+  .header__burger { display: flex; }
+  .header__mobile-right { display: flex; }
+  .process__steps { grid-template-columns: 1fr; max-width: 360px; margin-left: auto; margin-right: auto; }
+  .for-whom__grid { grid-template-columns: 1fr; max-width: 360px; margin-left: auto; margin-right: auto; }
+  .hero__buttons { flex-direction: column; align-items: center; }
+  .booking__messengers { flex-direction: column; }
+  .footer__bottom { flex-direction: column; gap: 8px; }
+}
+
+
+
+/* ========== LANG SWITCHER ========== */
+.lang-switch {
+  display: flex;
+  gap: 4px;
+  background: var(--beige);
+  border-radius: 30px;
+  padding: 3px;
+}
+.lang-switch__btn {
+  padding: 5px 12px;
+  border: none;
+  border-radius: 26px;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--gray);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.lang-switch__btn.active {
+  background: var(--olive);
+  color: #fff;
+}
+.lang-switch__btn:hover:not(.active) {
+  color: var(--olive);
+}
+
+</style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#" class="header__logo"><img src="logo.jpg" alt="Татьяна Бабич" class="header__logo-img"></a>
+    <nav class="header__nav">
+      <a href="#about" data-i18n="nav_about">Обо мне</a>
+      <a href="#services" data-i18n="nav_services">Услуги</a>
+      <a href="#results" data-i18n="nav_results">Результаты</a>
+      <a href="#faq" data-i18n="nav_faq">Вопросы</a>
+    </nav>
+    <div class="header__extras">
+      <div class="lang-switch">
+        <button class="lang-switch__btn active" data-lang="ru">RU</button>
+        <button class="lang-switch__btn" data-lang="es">ES</button>
+        <button class="lang-switch__btn" data-lang="en">EN</button>
+      </div>
+      <a href="tel:+34692917242" class="header__phone">+34 692 917 242</a>
+      <div class="header__socials">
+        <a href="https://t.me/tatibabich" target="_blank" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 1 0 24 12.056 12.01 12.01 0 0 0 11.944 0Zm5.573 8.192c-.21 1.978-.996 6.782-1.408 9-.174.937-.517 1.252-.85 1.283-.723.067-1.273-.478-1.972-.937l-2.752-1.816c-.753-.497-.265-.771.164-1.218.112-.116 2.07-1.897 2.107-2.06a.155.155 0 0 0-.036-.133.164.164 0 0 0-.15-.025c-.06.013-1.017.646-2.87 1.897a2.507 2.507 0 0 1-1.437.536 9.35 9.35 0 0 1-2.066-.608c-.638-.207-1.144-.317-1.1-.669.023-.183.282-.37.777-.563 3.044-1.326 5.074-2.201 6.09-2.624 2.9-1.207 3.504-1.417 3.896-1.423.087-.001.28.02.406.123.106.086.135.203.149.286.013.084.03.274.017.423Z"/></svg></a>
+        <a href="https://wa.me/34692917242" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></a>
+        <a href="https://instagram.com/tatibabich" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 1 0 0-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 1 1-2.882 0 1.441 1.441 0 0 1 2.882 0z"/></svg></a>
+      </div>
+      <a href="#booking" class="btn btn--primary btn--glow" style="padding: 10px 24px; font-size: 0.82rem;" data-i18n="nav_book">Записаться</a>
+    </div>
+    <div class="header__mobile-right">
+      <div class="lang-switch">
+        <button class="lang-switch__btn active" data-lang="ru">RU</button>
+        <button class="lang-switch__btn" data-lang="es">ES</button>
+        <button class="lang-switch__btn" data-lang="en">EN</button>
+      </div>
+      <div class="header__socials">
+        <a href="https://t.me/tatibabich" target="_blank" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 1 0 24 12.056 12.01 12.01 0 0 0 11.944 0Zm5.573 8.192c-.21 1.978-.996 6.782-1.408 9-.174.937-.517 1.252-.85 1.283-.723.067-1.273-.478-1.972-.937l-2.752-1.816c-.753-.497-.265-.771.164-1.218.112-.116 2.07-1.897 2.107-2.06a.155.155 0 0 0-.036-.133.164.164 0 0 0-.15-.025c-.06.013-1.017.646-2.87 1.897a2.507 2.507 0 0 1-1.437.536 9.35 9.35 0 0 1-2.066-.608c-.638-.207-1.144-.317-1.1-.669.023-.183.282-.37.777-.563 3.044-1.326 5.074-2.201 6.09-2.624 2.9-1.207 3.504-1.417 3.896-1.423.087-.001.28.02.406.123.106.086.135.203.149.286.013.084.03.274.017.423Z"/></svg></a>
+        <a href="https://wa.me/34692917242" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></a>
+        <a href="https://instagram.com/tatibabich" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 1 0 0-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 1 1-2.882 0 1.441 1.441 0 0 1 2.882 0z"/></svg></a>
+      </div>
+      <button class="header__burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile fullscreen menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" class="mobile-menu__link" data-i18n="nav_about">Обо мне</a>
+  <a href="#services" class="mobile-menu__link" data-i18n="nav_services">Услуги</a>
+  <a href="#results" class="mobile-menu__link" data-i18n="nav_results">Результаты</a>
+  <a href="#faq" class="mobile-menu__link" data-i18n="nav_faq">Вопросы</a>
+  <a href="#booking" class="btn btn--primary btn--glow" style="margin-top: 8px;" data-i18n="nav_book">Записаться</a>
+  <a href="tel:+34692917242" class="mobile-menu__phone">+34 692 917 242</a>
+  <div class="mobile-menu__socials">
+    <a href="https://t.me/tatibabich" target="_blank" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 1 0 24 12.056 12.01 12.01 0 0 0 11.944 0Zm5.573 8.192c-.21 1.978-.996 6.782-1.408 9-.174.937-.517 1.252-.85 1.283-.723.067-1.273-.478-1.972-.937l-2.752-1.816c-.753-.497-.265-.771.164-1.218.112-.116 2.07-1.897 2.107-2.06a.155.155 0 0 0-.036-.133.164.164 0 0 0-.15-.025c-.06.013-1.017.646-2.87 1.897a2.507 2.507 0 0 1-1.437.536 9.35 9.35 0 0 1-2.066-.608c-.638-.207-1.144-.317-1.1-.669.023-.183.282-.37.777-.563 3.044-1.326 5.074-2.201 6.09-2.624 2.9-1.207 3.504-1.417 3.896-1.423.087-.001.28.02.406.123.106.086.135.203.149.286.013.084.03.274.017.423Z"/></svg></a>
+    <a href="https://wa.me/34692917242" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></a>
+    <a href="https://instagram.com/tatibabich" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 1 0 0-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 1 1-2.882 0 1.441 1.441 0 0 1 2.882 0z"/></svg></a>
+  </div>
+</div>
+
+<!-- ========== 1. HERO ========== -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero__grid">
+      <div class="hero__content">
+        <span class="t-label hero__label anim" data-i18n="hero_label">Кальпе, Испания</span>
+        <h1 class="t-display t-display--lg hero__title anim anim-delay-1" data-i18n="hero_title" data-i18n-html="1">Тренировки для <em>здоровья</em>, восстановления и качественного движения</h1>
+        <p class="t-body t-body--lg hero__subtitle anim anim-delay-2" data-i18n="hero_subtitle">Помогаю восстановить движение, избавиться от боли и улучшить качество жизни через грамотную работу с телом</p>
+        <div class="hero__tags anim anim-delay-2">
+          <span class="hero__tag" data-i18n="tag_posture">Осанка</span>
+          <span class="hero__tag" data-i18n="tag_postpartum">Восстановление после родов</span>
+          <span class="hero__tag" data-i18n="tag_pelvic">Тазовое дно</span>
+          <span class="hero__tag" data-i18n="tag_pain">Устранение боли</span>
+        </div>
+        <div class="hero__buttons anim anim-delay-3">
+          <a href="#booking" class="btn btn--primary" data-i18n="hero_btn_book">Записаться на тренировку</a>
+          <a href="#services" class="btn btn--outline" data-i18n="hero_btn_online">Онлайн программа</a>
+        </div>
+      </div>
+      <div class="hero__image anim anim-delay-2">
+        <img src="IMG_1207.jpg" alt="Татьяна Бабич — тренер по движению" style="width:100%; border-radius: 240px 240px 40px 40px; object-fit: cover; aspect-ratio: 3/4;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 2. О ТРЕНЕРЕ ========== -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about__grid">
+      <img src="https://static.tildacdn.com/tild3762-3535-4136-a433-303934626166/photo_1_2025-09-09_1.jpg" alt="Татьяна Бабич" class="anim" style="width:100%; aspect-ratio: 4/5; border-radius: 24px; object-fit: cover;">
+      <div class="about__content">
+        <span class="t-label anim" data-i18n="about_label">Экспертность</span>
+        <h2 class="t-display t-display--md about__name anim anim-delay-1">Татьяна Бабич</h2>
+        <p class="t-body t-body--lg about__text anim anim-delay-1" data-i18n="about_text1">Специалист по движению, а не просто фитнес-тренер. Мой подход строится на глубоком понимании биомеханики тела, принципах кинезиологии и работе с фасциальными линиями.</p>
+        <p class="t-body t-body--md about__text anim anim-delay-2" data-i18n="about_text2">Прежде чем составить программу, я провожу детальную оценку опорно-двигательного аппарата. Это позволяет найти истинную причину проблемы — а не просто работать с симптомами.</p>
+        <p class="t-body t-body--md about__text anim anim-delay-2" data-i18n="about_text3">Работаю с восстановлением после родов, болевыми синдромами, ограничениями подвижности. Каждая тренировка — это шаг к здоровому, свободному движению.</p>
+        <div class="about__skills anim anim-delay-3">
+          <span class="about__skill about__skill--link" data-skill="oda" data-i18n="skill_oda">Оценка ОДА</span>
+          <span class="about__skill about__skill--link" data-skill="kinesiology" data-i18n="skill_kinesiology">Кинезиология</span>
+          <span class="about__skill about__skill--link" data-skill="fascia" data-i18n="skill_fascia">Работа с фасцией</span>
+          <span class="about__skill about__skill--link" data-skill="postpartum" data-i18n="skill_postpartum">Восстановление после родов</span>
+          <span class="about__skill about__skill--link" data-skill="pain" data-i18n="skill_pain">Болевые синдромы</span>
+          <span class="about__skill about__skill--link" data-skill="mobility" data-i18n="skill_mobility">Мобильность</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== КАК ПРОХОДИТ РАБОТА ========== -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-header">
+      <span class="t-label anim" data-i18n="process_label">Метод</span>
+      <h2 class="t-display t-display--md anim anim-delay-1" data-i18n="process_title">Как проходит работа</h2>
+    </div>
+    <div class="process__steps">
+      <div class="process__step anim">
+        <div class="process__step-num">01</div>
+        <div class="process__step-title" data-i18n="step1_title">Оценка тела и движения</div>
+        <p class="process__step-text" data-i18n="step1_text">Детальный анализ осанки, подвижности суставов и паттернов движения</p>
+      </div>
+      <div class="process__step anim anim-delay-1">
+        <div class="process__step-num">02</div>
+        <div class="process__step-title" data-i18n="step2_title">Определение ограничений</div>
+        <p class="process__step-text" data-i18n="step2_text">Выявляю причины боли, зажимов и ограничений в движении</p>
+      </div>
+      <div class="process__step anim anim-delay-2">
+        <div class="process__step-num">03</div>
+        <div class="process__step-title" data-i18n="step3_title">Индивидуальная программа</div>
+        <p class="process__step-text" data-i18n="step3_text">Составляю план тренировок под ваши задачи и особенности тела</p>
+      </div>
+      <div class="process__step anim anim-delay-3">
+        <div class="process__step-num">04</div>
+        <div class="process__step-title" data-i18n="step4_title">Работа и восстановление</div>
+        <p class="process__step-text" data-i18n="step4_text">Тренировки с постоянной обратной связью и корректировкой программы</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 3. ЧЕМ МОЙ ПОДХОД ОТЛИЧАЕТСЯ ========== -->
+<section class="difference" id="difference">
+  <div class="container">
+    <span class="t-label" style="color: rgba(255,255,255,0.6);" data-i18n="diff_label">Подход</span>
+    <h2 class="t-display t-display--md difference__title anim" data-i18n="diff_title">Чем мой подход отличается</h2>
+    <p class="t-body t-body--lg difference__subtitle anim anim-delay-1" data-i18n="diff_subtitle">Не просто тренировки — а система восстановления и улучшения качества движения</p>
+    <div class="difference__grid">
+      <div class="difference__card anim">
+        <div class="difference__card-icon">&#9678;</div>
+        <div class="difference__card-title" data-i18n="diff1_title">Работа с причиной</div>
+        <p class="difference__card-text" data-i18n="diff1_text">Нахожу источник проблемы, а не просто снимаю симптомы. Если болит спина — ищу причину в биомеханике всего тела.</p>
+      </div>
+      <div class="difference__card anim anim-delay-1">
+        <div class="difference__card-icon">&#9674;</div>
+        <div class="difference__card-title" data-i18n="diff2_title">Внимание к биомеханике</div>
+        <p class="difference__card-text" data-i18n="diff2_text">Каждое движение анализируется с точки зрения биомеханики. Правильный паттерн движения — основа здорового тела.</p>
+      </div>
+      <div class="difference__card anim anim-delay-2">
+        <div class="difference__card-icon">&#10023;</div>
+        <div class="difference__card-title" data-i18n="diff3_title">Персональный подход</div>
+        <p class="difference__card-text" data-i18n="diff3_text">Даже в мини-группах каждый участник получает внимание и коррекцию техники. Ваша программа — только ваша.</p>
+      </div>
+      <div class="difference__card anim anim-delay-3">
+        <div class="difference__card-icon">&#10047;</div>
+        <div class="difference__card-title" data-i18n="diff4_title">Безопасность и здоровье</div>
+        <p class="difference__card-text" data-i18n="diff4_text">Тренировки без боли и перегрузок. Акцент на восстановление, мобильность и долгосрочное здоровье тела.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 4. УСЛУГИ ========== -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="t-label anim" data-i18n="svc_label">Услуги</span>
+      <h2 class="t-display t-display--md anim anim-delay-1" data-i18n="svc_title">Форматы работы</h2>
+      <p class="t-body t-body--lg anim anim-delay-2" data-i18n="svc_subtitle">Выберите формат, который подходит вам</p>
+    </div>
+    <div class="services__grid">
+      <!-- Персональная -->
+      <div class="service-card anim">
+        <img src="IMG_1207.jpg" alt="Personal training" style="aspect-ratio: 16/10; object-fit: cover; width: 100%;">
+        <div class="service-card__body">
+          <span class="t-label service-card__label" data-i18n="svc1_label">Индивидуально</span>
+          <div class="service-card__price" data-i18n="svc1_price" data-i18n-html="1">50€ <span>/ час</span></div>
+          <h3 class="service-card__title" data-i18n="svc1_title">Персональная тренировка</h3>
+          <p class="service-card__text" data-i18n="svc1_text">Один клиент в студии — полностью индивидуальная работа с максимумом внимания.</p>
+          <ul class="service-card__features">
+            <li data-i18n="svc1_f1">Программа под ваши задачи и особенности</li>
+            <li data-i18n="svc1_f2">Быстрая коррекция техники</li>
+            <li data-i18n="svc1_f3">Подходит при боли и восстановлении</li>
+            <li data-i18n="svc1_f4">Идеально для сложных случаев</li>
+          </ul>
+          <div class="service-card__tip" data-i18n="svc1_tip">👉 Лучший вариант для старта или решения конкретной проблемы</div>
+          <a href="#booking" class="btn btn--primary" data-i18n="nav_book">Записаться</a>
+        </div>
+      </div>
+      <!-- В паре -->
+      <div class="service-card anim anim-delay-1">
+        <img src="https://static.tildacdn.com/tild3762-3535-4136-a433-303934626166/photo_1_2025-09-09_1.jpg" alt="Pair training" style="aspect-ratio: 16/10; object-fit: cover; object-position: top; width: 100%;">
+        <div class="service-card__body">
+          <span class="t-label service-card__label" data-i18n="svc2_label">Вдвоём</span>
+          <div class="service-card__price" data-i18n="svc2_price" data-i18n-html="1">35€ <span>/ чел.</span></div>
+          <h3 class="service-card__title" data-i18n="svc2_title">Тренировка в паре</h3>
+          <p class="service-card__text" data-i18n="svc2_text">Высокий уровень внимания к каждому клиенту с дополнительной мотивацией и поддержкой.</p>
+          <ul class="service-card__features">
+            <li data-i18n="svc2_f1">Внимание тренера к каждому</li>
+            <li data-i18n="svc2_f2">Дополнительная мотивация и поддержка</li>
+            <li data-i18n="svc2_f3">Более доступная стоимость</li>
+          </ul>
+          <div class="service-card__tip" data-i18n="svc2_tip">👉 Идеально для баланса: качество + цена + поддержка</div>
+          <a href="#booking" class="btn btn--primary" data-i18n="nav_book">Записаться</a>
+        </div>
+      </div>
+      <!-- Мини-группа -->
+      <div class="service-card anim anim-delay-2">
+        <img src="https://static.tildacdn.com/tild3831-3034-4166-b563-323230316562/Image.png" alt="Small group" style="aspect-ratio: 16/10; object-fit: cover; width: 100%;">
+        <div class="service-card__body">
+          <span class="t-label service-card__label" data-i18n="svc3_label">3–4 человека</span>
+          <div class="service-card__price" data-i18n="svc3_price" data-i18n-html="1">25€ <span>/ чел.</span></div>
+          <h3 class="service-card__title" data-i18n="svc3_title">Мини-группа</h3>
+          <p class="service-card__text" data-i18n="svc3_text">Внимание к технике и противопоказаниям сохраняется. Больше энергии, вовлечённости и регулярности.</p>
+          <ul class="service-card__features">
+            <li data-i18n="svc3_f1">Внимание к технике и противопоказаниям</li>
+            <li data-i18n="svc3_f2">Больше энергии и вовлечённости</li>
+            <li data-i18n="svc3_f3">Легче держать режим</li>
+            <li data-i18n="svc3_f4">Самый выгодный формат</li>
+          </ul>
+          <div class="service-card__tip" data-i18n="svc3_tip">👉 Лучший вариант для стабильных тренировок и поддержания формы</div>
+          <a href="#booking" class="btn btn--primary" data-i18n="nav_book">Записаться</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 5. ДЛЯ КОГО ========== -->
+<section class="for-whom" id="for-whom">
+  <div class="container">
+    <div class="section-header">
+      <span class="t-label anim" data-i18n="whom_label">Для вас</span>
+      <h2 class="t-display t-display--md anim anim-delay-1" data-i18n="whom_title">Для кого мои тренировки</h2>
+      <p class="t-body t-body--lg anim anim-delay-2" data-i18n="whom_subtitle">Если вы узнаёте себя — мы точно найдём решение</p>
+    </div>
+    <div class="for-whom__grid">
+      <div class="for-whom__card anim">
+        <div class="for-whom__card-icon">&#128172;</div>
+        <div class="for-whom__card-title" data-i18n="whom1_title">Боль в пояснице</div>
+        <p class="for-whom__card-text" data-i18n="whom1_text">Хроническая или периодическая боль, которая мешает жить и двигаться свободно</p>
+      </div>
+      <div class="for-whom__card anim anim-delay-1">
+        <div class="for-whom__card-icon">&#128161;</div>
+        <div class="for-whom__card-title" data-i18n="whom2_title">Напряжение в шее</div>
+        <p class="for-whom__card-text" data-i18n="whom2_text">Постоянное напряжение, головные боли и скованность от сидячей работы</p>
+      </div>
+      <div class="for-whom__card anim anim-delay-2">
+        <div class="for-whom__card-icon">&#127793;</div>
+        <div class="for-whom__card-title" data-i18n="whom3_title">Восстановление после родов</div>
+        <p class="for-whom__card-text" data-i18n="whom3_text">Бережное возвращение тела к активной жизни после беременности и родов</p>
+      </div>
+      <div class="for-whom__card anim anim-delay-1">
+        <div class="for-whom__card-icon">&#9883;</div>
+        <div class="for-whom__card-title" data-i18n="whom4_title">Слабость тазового дна</div>
+        <p class="for-whom__card-text" data-i18n="whom4_text">Укрепление глубоких мышц для здоровья и уверенности в повседневной жизни</p>
+      </div>
+      <div class="for-whom__card anim anim-delay-2">
+        <div class="for-whom__card-icon">&#128260;</div>
+        <div class="for-whom__card-title" data-i18n="whom5_title">Ограниченная подвижность</div>
+        <p class="for-whom__card-text" data-i18n="whom5_text">Трудно наклониться, повернуться или поднять руки без дискомфорта</p>
+      </div>
+      <div class="for-whom__card anim anim-delay-3">
+        <div class="for-whom__card-icon">&#128187;</div>
+        <div class="for-whom__card-title" data-i18n="whom6_title">Сидячий образ жизни</div>
+        <p class="for-whom__card-text" data-i18n="whom6_text">Компенсация последствий офисной работы — зажимы, слабость, нарушение осанки</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 6a. ДО / ПОСЛЕ ========== -->
+<section class="before-after" id="results">
+  <div class="container">
+    <div class="section-header">
+      <span class="t-label anim" data-i18n="ba_label">Результаты</span>
+      <h2 class="t-display t-display--md anim anim-delay-1" data-i18n="ba_title">До и после</h2>
+      <p class="t-body t-body--lg anim anim-delay-2" data-i18n="ba_subtitle">Реальные результаты клиенток</p>
+    </div>
+    <div class="before-after__grid">
+      <div class="before-after__card anim">
+        <img src="review1.jpg" alt="До и после" class="before-after__img">
+        <div class="before-after__caption">
+          <span class="before-after__tag" data-i18n="ba1_tag">Коррекция фигуры</span>
+        </div>
+      </div>
+      <div class="before-after__card anim anim-delay-1">
+        <img src="review2.svg" alt="До и после" class="before-after__img">
+        <div class="before-after__caption">
+          <span class="before-after__tag" data-i18n="ba2_tag">Восстановление после родов</span>
+        </div>
+      </div>
+      <div class="before-after__card anim anim-delay-2">
+        <img src="review3.jpg" alt="До и после" class="before-after__img">
+        <div class="before-after__caption">
+          <span class="before-after__tag" data-i18n="ba3_tag">Улучшение осанки</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 6b. ЧТО ГОВОРЯТ КЛИЕНТЫ ========== -->
+<section class="reviews">
+  <div class="container">
+    <div class="section-header">
+      <span class="t-label anim" data-i18n="rev_label">Отзывы</span>
+      <h2 class="t-display t-display--md anim anim-delay-1" data-i18n="res_title">Что говорят клиенты</h2>
+    </div>
+    <div class="reviews__grid">
+      <div class="review-card anim">
+        <p class="result-card__quote" data-i18n="rev1_quote">После двух месяцев тренировок я впервые за годы проснулась без боли в спине. Татьяна нашла причину, которую никто не видел.</p>
+        <p class="result-card__author" data-i18n="rev1_author">Мария, 34 года</p>
+        <p class="result-card__result" data-i18n="rev1_result">Уменьшилась боль в спине</p>
+      </div>
+      <div class="review-card anim anim-delay-1">
+        <p class="result-card__quote" data-i18n="rev2_quote">Пришла после родов — не могла нормально ходить. Через три месяца вернулась к бегу. Очень бережный и грамотный подход.</p>
+        <p class="result-card__author" data-i18n="rev2_author">Анна, 29 лет</p>
+        <p class="result-card__result" data-i18n="rev2_result">Восстановление после родов</p>
+      </div>
+      <div class="review-card anim anim-delay-2">
+        <p class="result-card__quote" data-i18n="rev3_quote">Я сидела по 10 часов в день и не понимала, почему всё болит. Татьяна объяснила связи в теле, которые я даже не подозревала.</p>
+        <p class="result-card__author" data-i18n="rev3_author">Елена, 41 год</p>
+        <p class="result-card__result" data-i18n="rev3_result">Улучшилась осанка и мобильность</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 7. ПОДХОД К ТЕЛУ ========== -->
+<section class="approach" id="approach">
+  <div class="container">
+    <div class="section-header">
+      <span class="t-label anim" data-i18n="appr_label">Философия</span>
+      <h2 class="t-display t-display--md anim anim-delay-1" data-i18n="appr_title">Мой подход к телу</h2>
+      <p class="t-body t-body--lg anim anim-delay-2" data-i18n="appr_subtitle">Тело — это единая система, где всё связано</p>
+    </div>
+    <div class="approach__grid">
+      <div class="approach__item anim">
+        <h3 class="approach__item-title" data-i18n="appr1_title">Тело как система</h3>
+        <p class="approach__item-text" data-i18n="appr1_text">Боль в одном месте часто вызвана проблемой в другом. Я работаю с телом целиком, а не с отдельными мышцами. Такой подход даёт устойчивый результат.</p>
+      </div>
+      <div class="approach__item anim anim-delay-1">
+        <h3 class="approach__item-title" data-i18n="appr2_title">Важность фасции</h3>
+        <p class="approach__item-text" data-i18n="appr2_text">Фасция — это соединительная ткань, которая связывает всё тело в единую сеть. Работа с фасциальными линиями позволяет снять напряжение и восстановить свободу движения.</p>
+      </div>
+      <div class="approach__item anim anim-delay-2">
+        <h3 class="approach__item-title" data-i18n="appr3_title">Биомеханика движения</h3>
+        <p class="approach__item-text" data-i18n="appr3_text">Каждое движение подчиняется законам биомеханики. Понимание этих законов позволяет тренироваться эффективно и безопасно — без перегрузок и компенсаций.</p>
+      </div>
+      <div class="approach__item anim anim-delay-3">
+        <h3 class="approach__item-title" data-i18n="appr4_title">Движение — это жизнь</h3>
+        <p class="approach__item-text" data-i18n="appr4_text">Качественное движение напрямую влияет на качество жизни. Когда тело двигается свободно — уходит боль, появляется энергия, улучшается настроение и самочувствие.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 8. FAQ ========== -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="t-label anim" data-i18n="faq_label">Вопросы</span>
+      <h2 class="t-display t-display--md anim anim-delay-1" data-i18n="faq_title">Часто задаваемые вопросы</h2>
+    </div>
+    <div class="faq__list">
+      <div class="faq__item anim">
+        <button class="faq__question" data-i18n="faq1_q">Можно ли тренироваться после родов?</button>
+        <div class="faq__answer"><p class="faq__answer-inner" data-i18n="faq1_a">Да, и это один из моих ключевых профилей работы. Я провожу оценку состояния тела и составляю программу бережного восстановления — с учётом диастаза, тазового дна и общего состояния. Начинать можно уже через 6-8 недель после родов (при отсутствии противопоказаний).</p></div>
+      </div>
+      <div class="faq__item anim anim-delay-1">
+        <button class="faq__question" data-i18n="faq2_q">Можно ли заниматься при боли в спине?</button>
+        <div class="faq__answer"><p class="faq__answer-inner" data-i18n="faq2_a">Не просто можно — в большинстве случаев нужно. Но важно заниматься грамотно. Я сначала определяю причину боли, а затем подбираю упражнения, которые помогут её устранить, а не усилить.</p></div>
+      </div>
+      <div class="faq__item anim anim-delay-2">
+        <button class="faq__question" data-i18n="faq3_q">Подойдут ли тренировки новичкам?</button>
+        <div class="faq__answer"><p class="faq__answer-inner" data-i18n="faq3_a">Абсолютно. Программа строится от вашего текущего уровня. Мы начинаем с базовых паттернов движения и постепенно увеличиваем сложность. Никакой предварительной подготовки не требуется.</p></div>
+      </div>
+      <div class="faq__item anim anim-delay-3">
+        <button class="faq__question" data-i18n="faq4_q">Как проходят персональные тренировки?</button>
+        <div class="faq__answer"><p class="faq__answer-inner" data-i18n="faq4_a">Первая встреча — это всегда диагностика: оцениваю осанку, подвижность, выявляю ограничения. На основе этого строю индивидуальную программу. Тренировки включают элементы пилатеса, силовой работы, мобильности — в зависимости от ваших задач.</p></div>
+      </div>
+      <div class="faq__item anim">
+        <button class="faq__question" data-i18n="faq5_q">Можно ли заниматься онлайн?</button>
+        <div class="faq__answer"><p class="faq__answer-inner" data-i18n="faq5_a">Да, у меня есть готовые онлайн-программы для самостоятельной работы. Они подходят тем, кто хочет заниматься в своём темпе из любой точки мира. Программы направлены на конкретные задачи: шея, поясница, мобильность, восстановление.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 9. ЗАПИСЬ ========== -->
+<section class="booking" id="booking">
+  <div class="container">
+    <div class="booking__inner">
+      <div>
+        <span class="t-label" style="color: rgba(255,255,255,0.6);" data-i18n="book_label">Запись</span>
+        <h2 class="t-display t-display--md booking__title anim" data-i18n="book_title">Запишитесь на тренировку</h2>
+        <p class="t-body t-body--lg booking__text anim anim-delay-1" data-i18n="book_text">Заполните форму или напишите мне напрямую — я отвечу в течение дня и помогу выбрать подходящий формат.</p>
+        <div class="booking__messengers anim anim-delay-2">
+          <a href="https://wa.me/34692917242" target="_blank" class="booking__messenger">WhatsApp</a>
+          <a href="https://t.me/tatibabich" target="_blank" class="booking__messenger">Telegram</a>
+          <a href="https://instagram.com/tatibabich" target="_blank" class="booking__messenger">Instagram</a>
+        </div>
+      </div>
+      <div class="booking__form anim anim-delay-1">
+        <div class="form__group">
+          <label class="form__label" for="name" data-i18n="form_name">Ваше имя</label>
+          <input class="form__input" type="text" id="name" name="name" data-i18n-attr="placeholder" data-i18n="form_name_ph" placeholder="Как вас зовут?">
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="phone" data-i18n="form_phone">Телефон</label>
+          <input class="form__input" type="tel" id="phone" name="phone" placeholder="+34 ...">
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="format" data-i18n="form_format">Формат тренировки</label>
+          <select class="form__select" id="format" name="format">
+            <option value="" disabled selected data-i18n="form_format_ph">Выберите формат</option>
+            <option value="personal" data-i18n="form_opt_personal">Персональная тренировка</option>
+            <option value="pair" data-i18n="form_opt_pair">Тренировка в паре</option>
+            <option value="group" data-i18n="form_opt_group">Мини-группа</option>
+          </select>
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="comment" data-i18n="form_comment">Комментарий</label>
+          <textarea class="form__textarea" id="comment" name="comment" data-i18n-attr="placeholder" data-i18n="form_comment_ph" placeholder="Расскажите о вашей ситуации или задачах..."></textarea>
+        </div>
+        <button type="button" class="btn btn--primary form__submit" data-i18n="nav_book">Записаться</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 10. FOOTER ========== -->
+<footer class="footer" id="contacts">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__title">Татьяна Бабич</div>
+        <p class="footer__text" data-i18n="footer_role">Специалист по движению</p>
+        <p class="footer__text" data-i18n="footer_city">Кальпе, Испания</p>
+        <p class="footer__text" style="margin-top: 12px;"><a href="tel:+34692917242" class="footer__link" style="display: inline;">+34 692 917 242</a></p>
+      </div>
+      <div>
+        <div class="footer__title" style="font-size: 1.1rem;" data-i18n="footer_nav">Навигация</div>
+        <a href="#about" class="footer__link" data-i18n="nav_about">Обо мне</a>
+        <a href="#services" class="footer__link" data-i18n="nav_services">Услуги</a>
+        <a href="#results" class="footer__link" data-i18n="nav_results">Результаты</a>
+        <a href="#faq" class="footer__link" data-i18n="nav_faq">Вопросы</a>
+        <a href="#booking" class="footer__link" data-i18n="nav_book">Запись</a>
+      </div>
+      <div>
+        <div class="footer__title" style="font-size: 1.1rem;" data-i18n="footer_contact">Связаться</div>
+        <a href="https://instagram.com/tatibabich" target="_blank" class="footer__link">Instagram</a>
+        <a href="https://wa.me/34692917242" target="_blank" class="footer__link">WhatsApp</a>
+        <a href="https://t.me/tatibabich" target="_blank" class="footer__link">Telegram</a>
+      </div>
+    </div>
+    <hr class="footer__divider">
+    <div class="footer__bottom">
+      <span data-i18n="footer_copy">&copy; 2026 Татьяна Бабич. Все права защищены.</span>
+      <span data-i18n="footer_location">Кальпе, Коста Бланка, Испания</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Skill popup modal -->
+<div class="skill-modal-overlay" id="skillModal">
+  <div class="skill-modal">
+    <button class="skill-modal__close" id="skillModalClose">&times;</button>
+    <div class="skill-modal__icon" id="skillModalIcon"></div>
+    <h3 class="skill-modal__title" id="skillModalTitle"></h3>
+    <p class="skill-modal__text" id="skillModalText"></p>
+  </div>
+</div>
+
+<!-- ========== SCRIPTS ========== -->
+<script>
+// =============================================
+// i18n TRANSLATIONS
+// =============================================
+const T = {
+ru: {
+  meta_title: "Татьяна Бабич — Тренер по движению | Кальпе, Испания",
+  meta_desc: "Персональные тренировки, восстановление после родов, работа с осанкой и тазовым дном. Кальпе, Испания.",
+  nav_about: "Обо мне", nav_services: "Услуги", nav_results: "Результаты", nav_faq: "Вопросы", nav_book: "Записаться",
+  hero_label: "Кальпе, Испания",
+  hero_title: 'Тренировки для <em>здоровья</em>, восстановления и качественного движения',
+  hero_subtitle: "Помогаю восстановить движение, избавиться от боли и улучшить качество жизни через грамотную работу с телом",
+  tag_posture: "Осанка", tag_postpartum: "Восстановление после родов", tag_pelvic: "Тазовое дно", tag_pain: "Устранение боли",
+  hero_btn_book: "Записаться на тренировку", hero_btn_online: "Онлайн программа",
+  about_label: "Экспертность",
+  about_text1: "Специалист по движению, а не просто фитнес-тренер. Мой подход строится на глубоком понимании биомеханики тела, принципах кинезиологии и работе с фасциальными линиями.",
+  about_text2: "Прежде чем составить программу, я провожу детальную оценку опорно-двигательного аппарата. Это позволяет найти истинную причину проблемы — а не просто работать с симптомами.",
+  about_text3: "Работаю с восстановлением после родов, болевыми синдромами, ограничениями подвижности. Каждая тренировка — это шаг к здоровому, свободному движению.",
+  skill_oda: "Оценка ОДА", skill_kinesiology: "Кинезиология", skill_fascia: "Работа с фасцией",
+  skill_postpartum: "Восстановление после родов", skill_pain: "Болевые синдромы", skill_mobility: "Мобильность",
+  process_label: "Метод", process_title: "Как проходит работа",
+  step1_title: "Оценка тела и движения", step1_text: "Детальный анализ осанки, подвижности суставов и паттернов движения",
+  step2_title: "Определение ограничений", step2_text: "Выявляю причины боли, зажимов и ограничений в движении",
+  step3_title: "Индивидуальная программа", step3_text: "Составляю план тренировок под ваши задачи и особенности тела",
+  step4_title: "Работа и восстановление", step4_text: "Тренировки с постоянной обратной связью и корректировкой программы",
+  diff_label: "Подход", diff_title: "Чем мой подход отличается",
+  diff_subtitle: "Не просто тренировки — а система восстановления и улучшения качества движения",
+  diff1_title: "Работа с причиной", diff1_text: "Нахожу источник проблемы, а не просто снимаю симптомы. Если болит спина — ищу причину в биомеханике всего тела.",
+  diff2_title: "Внимание к биомеханике", diff2_text: "Каждое движение анализируется с точки зрения биомеханики. Правильный паттерн движения — основа здорового тела.",
+  diff3_title: "Персональный подход", diff3_text: "Даже в мини-группах каждый участник получает внимание и коррекцию техники. Ваша программа — только ваша.",
+  diff4_title: "Безопасность и здоровье", diff4_text: "Тренировки без боли и перегрузок. Акцент на восстановление, мобильность и долгосрочное здоровье тела.",
+  svc_label: "Услуги", svc_title: "Форматы работы", svc_subtitle: "Выберите формат, который подходит вам",
+  svc1_label: "Индивидуально", svc1_title: "Персональная тренировка", svc1_price: '50€ <span>/ час</span>',
+  svc1_text: "Один клиент в студии — полностью индивидуальная работа с максимумом внимания.",
+  svc1_f1: "Программа под ваши задачи и особенности", svc1_f2: "Быстрая коррекция техники", svc1_f3: "Подходит при боли и восстановлении", svc1_f4: "Идеально для сложных случаев",
+  svc1_tip: "👉 Лучший вариант для старта или решения конкретной проблемы",
+  svc2_label: "Вдвоём", svc2_title: "Тренировка в паре", svc2_price: '35€ <span>/ чел.</span>',
+  svc2_text: "Высокий уровень внимания к каждому клиенту с дополнительной мотивацией и поддержкой.",
+  svc2_f1: "Внимание тренера к каждому", svc2_f2: "Дополнительная мотивация и поддержка", svc2_f3: "Более доступная стоимость",
+  svc2_tip: "👉 Идеально для баланса: качество + цена + поддержка",
+  svc3_label: "3–4 человека", svc3_title: "Мини-группа", svc3_price: '25€ <span>/ чел.</span>',
+  svc3_text: "Внимание к технике и противопоказаниям сохраняется. Больше энергии, вовлечённости и регулярности.",
+  svc3_f1: "Внимание к технике и противопоказаниям", svc3_f2: "Больше энергии и вовлечённости", svc3_f3: "Легче держать режим", svc3_f4: "Самый выгодный формат",
+  svc3_tip: "👉 Лучший вариант для стабильных тренировок и поддержания формы",
+  whom_label: "Для вас", whom_title: "Для кого мои тренировки", whom_subtitle: "Если вы узнаёте себя — мы точно найдём решение",
+  whom1_title: "Боль в пояснице", whom1_text: "Хроническая или периодическая боль, которая мешает жить и двигаться свободно",
+  whom2_title: "Напряжение в шее", whom2_text: "Постоянное напряжение, головные боли и скованность от сидячей работы",
+  whom3_title: "Восстановление после родов", whom3_text: "Бережное возвращение тела к активной жизни после беременности и родов",
+  whom4_title: "Слабость тазового дна", whom4_text: "Укрепление глубоких мышц для здоровья и уверенности в повседневной жизни",
+  whom5_title: "Ограниченная подвижность", whom5_text: "Трудно наклониться, повернуться или поднять руки без дискомфорта",
+  whom6_title: "Сидячий образ жизни", whom6_text: "Компенсация последствий офисной работы — зажимы, слабость, нарушение осанки",
+  ba_label: "Результаты", ba_title: "До и после", ba_subtitle: "Реальные результаты клиенток", ba1_tag: "Коррекция фигуры", ba2_tag: "Восстановление после родов", ba3_tag: "Улучшение осанки", rev_label: "Отзывы", res_title: "Что говорят клиенты",
+  rev1_quote: "После двух месяцев тренировок я впервые за годы проснулась без боли в спине. Татьяна нашла причину, которую никто не видел.",
+  rev1_author: "Мария, 34 года", rev1_result: "Уменьшилась боль в спине",
+  rev2_quote: "Пришла после родов — не могла нормально ходить. Через три месяца вернулась к бегу. Очень бережный и грамотный подход.",
+  rev2_author: "Анна, 29 лет", rev2_result: "Восстановление после родов",
+  rev3_quote: "Я сидела по 10 часов в день и не понимала, почему всё болит. Татьяна объяснила связи в теле, которые я даже не подозревала.",
+  rev3_author: "Елена, 41 год", rev3_result: "Улучшилась осанка и мобильность",
+  appr_label: "Философия", appr_title: "Мой подход к телу", appr_subtitle: "Тело — это единая система, где всё связано",
+  appr1_title: "Тело как система", appr1_text: "Боль в одном месте часто вызвана проблемой в другом. Я работаю с телом целиком, а не с отдельными мышцами. Такой подход даёт устойчивый результат.",
+  appr2_title: "Важность фасции", appr2_text: "Фасция — это соединительная ткань, которая связывает всё тело в единую сеть. Работа с фасциальными линиями позволяет снять напряжение и восстановить свободу движения.",
+  appr3_title: "Биомеханика движения", appr3_text: "Каждое движение подчиняется законам биомеханики. Понимание этих законов позволяет тренироваться эффективно и безопасно — без перегрузок и компенсаций.",
+  appr4_title: "Движение — это жизнь", appr4_text: "Качественное движение напрямую влияет на качество жизни. Когда тело двигается свободно — уходит боль, появляется энергия, улучшается настроение и самочувствие.",
+  faq_label: "Вопросы", faq_title: "Часто задаваемые вопросы",
+  faq1_q: "Можно ли тренироваться после родов?", faq1_a: "Да, и это один из моих ключевых профилей работы. Я провожу оценку состояния тела и составляю программу бережного восстановления — с учётом диастаза, тазового дна и общего состояния. Начинать можно уже через 6-8 недель после родов (при отсутствии противопоказаний).",
+  faq2_q: "Можно ли заниматься при боли в спине?", faq2_a: "Не просто можно — в большинстве случаев нужно. Но важно заниматься грамотно. Я сначала определяю причину боли, а затем подбираю упражнения, которые помогут её устранить, а не усилить.",
+  faq3_q: "Подойдут ли тренировки новичкам?", faq3_a: "Абсолютно. Программа строится от вашего текущего уровня. Мы начинаем с базовых паттернов движения и постепенно увеличиваем сложность. Никакой предварительной подготовки не требуется.",
+  faq4_q: "Как проходят персональные тренировки?", faq4_a: "Первая встреча — это всегда диагностика: оцениваю осанку, подвижность, выявляю ограничения. На основе этого строю индивидуальную программу. Тренировки включают элементы пилатеса, силовой работы, мобильности — в зависимости от ваших задач.",
+  faq5_q: "Можно ли заниматься онлайн?", faq5_a: "Да, у меня есть готовые онлайн-программы для самостоятельной работы. Они подходят тем, кто хочет заниматься в своём темпе из любой точки мира. Программы направлены на конкретные задачи: шея, поясница, мобильность, восстановление.",
+  book_label: "Запись", book_title: "Запишитесь на тренировку", book_text: "Заполните форму или напишите мне напрямую — я отвечу в течение дня и помогу выбрать подходящий формат.",
+  form_name: "Ваше имя", form_name_ph: "Как вас зовут?", form_phone: "Телефон", form_format: "Формат тренировки",
+  form_format_ph: "Выберите формат", form_opt_personal: "Персональная тренировка", form_opt_pair: "Тренировка в паре", form_opt_group: "Мини-группа",
+  form_comment: "Комментарий", form_comment_ph: "Расскажите о вашей ситуации или задачах...",
+  footer_role: "Специалист по движению", footer_city: "Кальпе, Испания", footer_nav: "Навигация", footer_contact: "Связаться",
+  footer_copy: "© 2026 Татьяна Бабич. Все права защищены.", footer_location: "Кальпе, Коста Бланка, Испания",
+  // Skill modals
+  sm_oda_t: "Оценка опорно-двигательного аппарата", sm_oda: "Перед началом тренировок я провожу детальную оценку состояния вашего тела: осанку, подвижность суставов, тонус мышц, наличие асимметрий и компенсаторных паттернов. Это позволяет точно определить, над чем нужно работать.",
+  sm_kin_t: "Кинезиология", sm_kin: "Кинезиология — наука о движении человека. Я изучаю, как работают ваши мышцы, суставы и нервная система в связке. Это помогает понять, почему возникает боль или ограничение.",
+  sm_fas_t: "Работа с фасцией", sm_fas: "Фасция — соединительная ткань, которая окутывает всё тело. Зажим в одном месте может вызывать боль в другом. Я работаю с фасциальными линиями, чтобы снять глубокое напряжение и восстановить свободу движения.",
+  sm_pp_t: "Восстановление после родов", sm_pp: "Беременность и роды серьёзно меняют тело: диастаз, ослабление тазового дна, изменения осанки. Я выстраиваю бережную программу восстановления — от глубоких мышц к поверхностным.",
+  sm_pain_t: "Работа с болевыми синдромами", sm_pain: "Хроническая боль в спине, шее, пояснице — чаще всего следствие неправильных двигательных паттернов. Я нахожу причину боли через диагностику движения и подбираю упражнения, устраняющие источник проблемы.",
+  sm_mob_t: "Улучшение мобильности", sm_mob: "Мобильность — способность свободно двигаться в полном объёме. Я работаю над подвижностью суставов, эластичностью мышц и координацией, чтобы тело было не только сильным, но и свободным."
+},
+es: {
+  meta_title: "Tatiana Babich — Entrenadora de movimiento | Calpe, España",
+  meta_desc: "Entrenamiento personal, recuperación posparto, trabajo con postura y suelo pélvico. Calpe, España.",
+  nav_about: "Sobre mí", nav_services: "Servicios", nav_results: "Resultados", nav_faq: "Preguntas", nav_book: "Reservar",
+  hero_label: "Calpe, España",
+  hero_title: 'Entrenamiento para la <em>salud</em>, la recuperación y el movimiento de calidad',
+  hero_subtitle: "Te ayudo a recuperar el movimiento, eliminar el dolor y mejorar tu calidad de vida a través del trabajo corporal inteligente",
+  tag_posture: "Postura", tag_postpartum: "Recuperación posparto", tag_pelvic: "Suelo pélvico", tag_pain: "Alivio del dolor",
+  hero_btn_book: "Reservar entrenamiento", hero_btn_online: "Programa online",
+  about_label: "Experiencia",
+  about_text1: "Especialista en movimiento, no simplemente una entrenadora de fitness. Mi enfoque se basa en un profundo conocimiento de la biomecánica corporal, los principios de kinesiología y el trabajo con las líneas fasciales.",
+  about_text2: "Antes de crear un programa, realizo una evaluación detallada del aparato locomotor. Esto permite encontrar la verdadera causa del problema, no solo tratar los síntomas.",
+  about_text3: "Trabajo con recuperación posparto, síndromes de dolor y limitaciones de movilidad. Cada entrenamiento es un paso hacia un movimiento saludable y libre.",
+  skill_oda: "Evaluación locomotora", skill_kinesiology: "Kinesiología", skill_fascia: "Trabajo fascial",
+  skill_postpartum: "Recuperación posparto", skill_pain: "Síndromes de dolor", skill_mobility: "Movilidad",
+  process_label: "Método", process_title: "Cómo trabajo",
+  step1_title: "Evaluación corporal", step1_text: "Análisis detallado de postura, movilidad articular y patrones de movimiento",
+  step2_title: "Identificar limitaciones", step2_text: "Descubro las causas del dolor, tensiones y restricciones en el movimiento",
+  step3_title: "Programa individual", step3_text: "Creo un plan de entrenamiento adaptado a tus objetivos y particularidades",
+  step4_title: "Trabajo y recuperación", step4_text: "Entrenamientos con retroalimentación constante y ajuste del programa",
+  diff_label: "Enfoque", diff_title: "En qué me diferencio",
+  diff_subtitle: "No son solo entrenamientos, es un sistema de recuperación y mejora de la calidad del movimiento",
+  diff1_title: "Trabajo con la causa", diff1_text: "Encuentro el origen del problema, no solo alivio los síntomas. Si duele la espalda, busco la causa en la biomecánica de todo el cuerpo.",
+  diff2_title: "Atención a la biomecánica", diff2_text: "Cada movimiento se analiza desde la biomecánica. Un patrón de movimiento correcto es la base de un cuerpo sano.",
+  diff3_title: "Enfoque personalizado", diff3_text: "Incluso en minigrupos, cada participante recibe atención y corrección técnica. Tu programa es solo tuyo.",
+  diff4_title: "Seguridad y salud", diff4_text: "Entrenamientos sin dolor ni sobrecarga. Énfasis en recuperación, movilidad y salud corporal a largo plazo.",
+  svc_label: "Servicios", svc_title: "Formatos de trabajo", svc_subtitle: "Elige el formato que más te convenga",
+  svc1_label: "Individual", svc1_title: "Entrenamiento personal", svc1_price: '50€ <span>/ hora</span>',
+  svc1_text: "Un solo cliente en el estudio — trabajo totalmente individual con máxima atención.",
+  svc1_f1: "Programa adaptado a tus objetivos", svc1_f2: "Corrección rápida de técnica", svc1_f3: "Apto para dolor y recuperación", svc1_f4: "Ideal para casos complejos",
+  svc1_tip: "👉 La mejor opción para empezar o resolver un problema concreto",
+  svc2_label: "En pareja", svc2_title: "Entrenamiento en pareja", svc2_price: '35€ <span>/ pers.</span>',
+  svc2_text: "Alto nivel de atención a cada cliente con motivación y apoyo adicional.",
+  svc2_f1: "Atención del entrenador a cada uno", svc2_f2: "Motivación y apoyo adicional", svc2_f3: "Precio más accesible",
+  svc2_tip: "👉 Ideal para equilibrar calidad + precio + apoyo",
+  svc3_label: "3–4 personas", svc3_title: "Minigrupo", svc3_price: '25€ <span>/ pers.</span>',
+  svc3_text: "Se mantiene la atención a la técnica y contraindicaciones. Más energía, implicación y regularidad.",
+  svc3_f1: "Atención a técnica y contraindicaciones", svc3_f2: "Más energía e implicación", svc3_f3: "Más fácil mantener la rutina", svc3_f4: "El formato más económico",
+  svc3_tip: "👉 La mejor opción para entrenamientos estables y mantenerse en forma",
+  whom_label: "Para ti", whom_title: "Para quién son mis entrenamientos", whom_subtitle: "Si te reconoces, seguro encontraremos la solución",
+  whom1_title: "Dolor lumbar", whom1_text: "Dolor crónico o periódico que dificulta vivir y moverse libremente",
+  whom2_title: "Tensión cervical", whom2_text: "Tensión constante, dolores de cabeza y rigidez por trabajo sedentario",
+  whom3_title: "Recuperación posparto", whom3_text: "Retorno cuidadoso del cuerpo a la vida activa después del embarazo y el parto",
+  whom4_title: "Debilidad del suelo pélvico", whom4_text: "Fortalecimiento de los músculos profundos para la salud y confianza diaria",
+  whom5_title: "Movilidad limitada", whom5_text: "Dificultad para agacharse, girarse o levantar los brazos sin molestias",
+  whom6_title: "Vida sedentaria", whom6_text: "Compensar las consecuencias del trabajo de oficina: tensiones, debilidad, problemas posturales",
+  ba_label: "Resultados", ba_title: "Antes y después", ba_subtitle: "Resultados reales de clientas", ba1_tag: "Corrección de figura", ba2_tag: "Recuperación posparto", ba3_tag: "Mejora de postura", rev_label: "Opiniones", res_title: "Lo que dicen las clientas",
+  rev1_quote: "Después de dos meses de entrenamiento, por primera vez en años me desperté sin dolor de espalda. Tatiana encontró la causa que nadie veía.",
+  rev1_author: "María, 34 años", rev1_result: "Reducción del dolor de espalda",
+  rev2_quote: "Vine después del parto, no podía caminar bien. En tres meses volví a correr. Un enfoque muy cuidadoso y profesional.",
+  rev2_author: "Ana, 29 años", rev2_result: "Recuperación posparto",
+  rev3_quote: "Pasaba 10 horas sentada al día y no entendía por qué me dolía todo. Tatiana me explicó conexiones en el cuerpo que ni imaginaba.",
+  rev3_author: "Elena, 41 años", rev3_result: "Mejora de postura y movilidad",
+  appr_label: "Filosofía", appr_title: "Mi enfoque corporal", appr_subtitle: "El cuerpo es un sistema único donde todo está conectado",
+  appr1_title: "El cuerpo como sistema", appr1_text: "El dolor en un lugar a menudo es causado por un problema en otro. Trabajo con el cuerpo en su conjunto, no con músculos aislados. Este enfoque da resultados duraderos.",
+  appr2_title: "Importancia de la fascia", appr2_text: "La fascia es el tejido conectivo que une todo el cuerpo en una red. Trabajar con las líneas fasciales permite liberar tensión y restaurar la libertad de movimiento.",
+  appr3_title: "Biomecánica del movimiento", appr3_text: "Cada movimiento obedece las leyes de la biomecánica. Comprenderlas permite entrenar de forma eficaz y segura, sin sobrecargas ni compensaciones.",
+  appr4_title: "El movimiento es vida", appr4_text: "El movimiento de calidad influye directamente en la calidad de vida. Cuando el cuerpo se mueve libremente, desaparece el dolor, llega la energía y mejora el bienestar.",
+  faq_label: "Preguntas", faq_title: "Preguntas frecuentes",
+  faq1_q: "¿Puedo entrenar después del parto?", faq1_a: "Sí, y es uno de mis perfiles clave. Evalúo el estado del cuerpo y diseño un programa de recuperación cuidadosa, considerando diástasis, suelo pélvico y estado general. Se puede empezar a las 6-8 semanas del parto (sin contraindicaciones).",
+  faq2_q: "¿Puedo entrenar con dolor de espalda?", faq2_a: "No solo puedes, en la mayoría de los casos debes. Pero es importante hacerlo bien. Primero identifico la causa del dolor y luego selecciono ejercicios que ayuden a eliminarlo, no a empeorarlo.",
+  faq3_q: "¿Son adecuados para principiantes?", faq3_a: "Por supuesto. El programa se construye desde tu nivel actual. Empezamos con patrones de movimiento básicos y aumentamos gradualmente la complejidad. No se necesita preparación previa.",
+  faq4_q: "¿Cómo son los entrenamientos personales?", faq4_a: "La primera sesión siempre es diagnóstica: evalúo postura, movilidad e identifico limitaciones. Sobre esa base construyo un programa individual. Los entrenamientos incluyen pilates, fuerza y movilidad según tus objetivos.",
+  faq5_q: "¿Se puede entrenar online?", faq5_a: "Sí, tengo programas online para práctica autónoma. Son ideales para quienes quieren entrenar a su ritmo desde cualquier lugar. Los programas se enfocan en tareas concretas: cuello, lumbar, movilidad, recuperación.",
+  book_label: "Reserva", book_title: "Reserva tu entrenamiento", book_text: "Rellena el formulario o escríbeme directamente. Respondo en el día y te ayudo a elegir el formato adecuado.",
+  form_name: "Tu nombre", form_name_ph: "¿Cómo te llamas?", form_phone: "Teléfono", form_format: "Formato de entrenamiento",
+  form_format_ph: "Elige formato", form_opt_personal: "Entrenamiento personal", form_opt_pair: "Entrenamiento en pareja", form_opt_group: "Minigrupo",
+  form_comment: "Comentario", form_comment_ph: "Cuéntame tu situación u objetivos...",
+  footer_role: "Especialista en movimiento", footer_city: "Calpe, España", footer_nav: "Navegación", footer_contact: "Contacto",
+  footer_copy: "© 2026 Tatiana Babich. Todos los derechos reservados.", footer_location: "Calpe, Costa Blanca, España",
+  sm_oda_t: "Evaluación del aparato locomotor", sm_oda: "Antes de entrenar, realizo una evaluación detallada de tu cuerpo: postura, movilidad articular, tono muscular, asimetrías y patrones compensatorios. Esto permite determinar exactamente en qué trabajar.",
+  sm_kin_t: "Kinesiología", sm_kin: "La kinesiología es la ciencia del movimiento humano. Estudio cómo funcionan tus músculos, articulaciones y sistema nervioso en conjunto para entender por qué aparece el dolor o la limitación.",
+  sm_fas_t: "Trabajo fascial", sm_fas: "La fascia es el tejido conectivo que envuelve todo el cuerpo. Una restricción en un punto puede causar dolor en otro. Trabajo con las líneas fasciales para liberar tensión profunda y restaurar la libertad de movimiento.",
+  sm_pp_t: "Recuperación posparto", sm_pp: "El embarazo y el parto cambian significativamente el cuerpo: diástasis, debilitamiento del suelo pélvico, cambios posturales. Diseño un programa de recuperación cuidadoso, desde los músculos profundos hasta los superficiales.",
+  sm_pain_t: "Síndromes de dolor", sm_pain: "El dolor crónico de espalda, cuello o lumbar suele ser consecuencia de patrones de movimiento incorrectos. Encuentro la causa mediante diagnóstico del movimiento y selecciono ejercicios que eliminan el origen del problema.",
+  sm_mob_t: "Mejora de la movilidad", sm_mob: "La movilidad es la capacidad de moverse libremente en todo el rango. Trabajo la movilidad articular, elasticidad muscular y coordinación para que tu cuerpo sea fuerte y libre."
+},
+en: {
+  meta_title: "Tatiana Babich — Movement Specialist | Calpe, Spain",
+  meta_desc: "Personal training, postpartum recovery, posture and pelvic floor work. Calpe, Spain.",
+  nav_about: "About", nav_services: "Services", nav_results: "Results", nav_faq: "FAQ", nav_book: "Book Now",
+  hero_label: "Calpe, Spain",
+  hero_title: 'Training for <em>health</em>, recovery and quality movement',
+  hero_subtitle: "I help restore movement, eliminate pain and improve quality of life through intelligent bodywork",
+  tag_posture: "Posture", tag_postpartum: "Postpartum recovery", tag_pelvic: "Pelvic floor", tag_pain: "Pain relief",
+  hero_btn_book: "Book a session", hero_btn_online: "Online program",
+  about_label: "Expertise",
+  about_text1: "A movement specialist, not just a fitness trainer. My approach is built on a deep understanding of body biomechanics, kinesiology principles and fascial line work.",
+  about_text2: "Before creating a program, I conduct a detailed assessment of the musculoskeletal system. This allows me to find the true cause of the problem — not just treat the symptoms.",
+  about_text3: "I work with postpartum recovery, pain syndromes and mobility limitations. Every session is a step toward healthy, free movement.",
+  skill_oda: "MSK Assessment", skill_kinesiology: "Kinesiology", skill_fascia: "Fascial Work",
+  skill_postpartum: "Postpartum Recovery", skill_pain: "Pain Syndromes", skill_mobility: "Mobility",
+  process_label: "Method", process_title: "How I Work",
+  step1_title: "Body & movement assessment", step1_text: "Detailed analysis of posture, joint mobility and movement patterns",
+  step2_title: "Identifying limitations", step2_text: "I find the causes of pain, tension and movement restrictions",
+  step3_title: "Individual program", step3_text: "I create a training plan tailored to your goals and body specifics",
+  step4_title: "Training & recovery", step4_text: "Sessions with constant feedback and program adjustment",
+  diff_label: "Approach", diff_title: "What makes my approach different",
+  diff_subtitle: "Not just workouts — a system for recovery and improving movement quality",
+  diff1_title: "Addressing the root cause", diff1_text: "I find the source of the problem, not just relieve symptoms. If your back hurts, I look for the cause in whole-body biomechanics.",
+  diff2_title: "Biomechanics focus", diff2_text: "Every movement is analyzed from a biomechanical perspective. Correct movement patterns are the foundation of a healthy body.",
+  diff3_title: "Personalized approach", diff3_text: "Even in small groups, every participant gets individual attention and technique correction. Your program is yours alone.",
+  diff4_title: "Safety & health", diff4_text: "Pain-free training without overload. Focus on recovery, mobility and long-term body health.",
+  svc_label: "Services", svc_title: "Training Formats", svc_subtitle: "Choose the format that suits you",
+  svc1_label: "One-on-one", svc1_title: "Personal Training", svc1_price: '50€ <span>/ hour</span>',
+  svc1_text: "One client in the studio — fully individual work with maximum attention.",
+  svc1_f1: "Program tailored to your goals", svc1_f2: "Quick technique correction", svc1_f3: "Suitable for pain & recovery", svc1_f4: "Ideal for complex cases",
+  svc1_tip: "👉 Best option to start or solve a specific problem",
+  svc2_label: "In pairs", svc2_title: "Pair Training", svc2_price: '35€ <span>/ person</span>',
+  svc2_text: "High level of attention to each client with extra motivation and support.",
+  svc2_f1: "Trainer attention for everyone", svc2_f2: "Extra motivation and support", svc2_f3: "More affordable price",
+  svc2_tip: "👉 Perfect balance of quality + price + support",
+  svc3_label: "3–4 people", svc3_title: "Small Group", svc3_price: '25€ <span>/ person</span>',
+  svc3_text: "Technique and contraindications still get full attention. More energy, engagement and consistency.",
+  svc3_f1: "Attention to technique & contraindications", svc3_f2: "More energy and engagement", svc3_f3: "Easier to stay consistent", svc3_f4: "Most affordable format",
+  svc3_tip: "👉 Best option for regular training and staying in shape",
+  whom_label: "For you", whom_title: "Who my training is for", whom_subtitle: "If you recognize yourself — we will definitely find a solution",
+  whom1_title: "Lower back pain", whom1_text: "Chronic or recurring pain that makes it hard to live and move freely",
+  whom2_title: "Neck tension", whom2_text: "Constant tension, headaches and stiffness from desk work",
+  whom3_title: "Postpartum recovery", whom3_text: "Gentle return to active life after pregnancy and childbirth",
+  whom4_title: "Weak pelvic floor", whom4_text: "Strengthening deep muscles for daily health and confidence",
+  whom5_title: "Limited mobility", whom5_text: "Difficulty bending, turning or raising your arms without discomfort",
+  whom6_title: "Sedentary lifestyle", whom6_text: "Compensating for desk work consequences — tension, weakness, posture problems",
+  ba_label: "Results", ba_title: "Before & After", ba_subtitle: "Real client results", ba1_tag: "Body correction", ba2_tag: "Postpartum recovery", ba3_tag: "Posture improvement", rev_label: "Testimonials", res_title: "What clients say",
+  rev1_quote: "After two months of training, for the first time in years I woke up without back pain. Tatiana found the cause that no one else could see.",
+  rev1_author: "Maria, 34", rev1_result: "Reduced back pain",
+  rev2_quote: "I came after giving birth — couldn't walk properly. Three months later I was back to running. A very careful and professional approach.",
+  rev2_author: "Anna, 29", rev2_result: "Postpartum recovery",
+  rev3_quote: "I sat 10 hours a day and didn't understand why everything hurt. Tatiana explained connections in my body I never suspected.",
+  rev3_author: "Elena, 41", rev3_result: "Improved posture and mobility",
+  appr_label: "Philosophy", appr_title: "My approach to the body", appr_subtitle: "The body is a unified system where everything is connected",
+  appr1_title: "Body as a system", appr1_text: "Pain in one place is often caused by a problem elsewhere. I work with the body as a whole, not isolated muscles. This approach delivers lasting results.",
+  appr2_title: "The importance of fascia", appr2_text: "Fascia is connective tissue linking the entire body into one network. Working with fascial lines releases tension and restores freedom of movement.",
+  appr3_title: "Movement biomechanics", appr3_text: "Every movement follows the laws of biomechanics. Understanding them allows you to train effectively and safely — without overload or compensation.",
+  appr4_title: "Movement is life", appr4_text: "Quality movement directly impacts quality of life. When the body moves freely, pain fades, energy arrives, and wellbeing improves.",
+  faq_label: "FAQ", faq_title: "Frequently Asked Questions",
+  faq1_q: "Can I train after giving birth?", faq1_a: "Yes, and it's one of my key specializations. I assess your body's condition and design a careful recovery program considering diastasis, pelvic floor and overall state. You can start 6-8 weeks postpartum (without contraindications).",
+  faq2_q: "Can I train with back pain?", faq2_a: "Not only can you — in most cases you should. But it's important to do it right. I first identify the cause of the pain, then select exercises that help eliminate it, not make it worse.",
+  faq3_q: "Is it suitable for beginners?", faq3_a: "Absolutely. The program is built from your current level. We start with basic movement patterns and gradually increase complexity. No prior preparation needed.",
+  faq4_q: "How do personal sessions work?", faq4_a: "The first session is always diagnostic: I assess posture, mobility and identify limitations. Based on this, I build an individual program. Sessions include pilates, strength work and mobility — depending on your goals.",
+  faq5_q: "Can I train online?", faq5_a: "Yes, I have ready-made online programs for independent practice. They're perfect for those who want to train at their own pace from anywhere. Programs target specific needs: neck, lower back, mobility, recovery.",
+  book_label: "Book", book_title: "Book Your Session", book_text: "Fill out the form or message me directly — I'll respond within a day and help you choose the right format.",
+  form_name: "Your name", form_name_ph: "What's your name?", form_phone: "Phone", form_format: "Training format",
+  form_format_ph: "Choose format", form_opt_personal: "Personal training", form_opt_pair: "Pair training", form_opt_group: "Small group",
+  form_comment: "Comment", form_comment_ph: "Tell me about your situation or goals...",
+  footer_role: "Movement Specialist", footer_city: "Calpe, Spain", footer_nav: "Navigation", footer_contact: "Contact",
+  footer_copy: "© 2026 Tatiana Babich. All rights reserved.", footer_location: "Calpe, Costa Blanca, Spain",
+  sm_oda_t: "Musculoskeletal Assessment", sm_oda: "Before training, I conduct a detailed assessment of your body: posture, joint mobility, muscle tone, asymmetries and compensatory patterns. This determines exactly what needs work.",
+  sm_kin_t: "Kinesiology", sm_kin: "Kinesiology is the science of human movement. I study how your muscles, joints and nervous system work together to understand why pain or limitation occurs.",
+  sm_fas_t: "Fascial Work", sm_fas: "Fascia is connective tissue that wraps the entire body. A restriction in one area can cause pain in another. I work with fascial lines to release deep tension and restore freedom of movement.",
+  sm_pp_t: "Postpartum Recovery", sm_pp: "Pregnancy and birth significantly change the body: diastasis, pelvic floor weakening, posture shifts. I design a careful recovery program from deep muscles to surface ones.",
+  sm_pain_t: "Pain Syndromes", sm_pain: "Chronic back, neck or lower back pain is usually a result of incorrect movement patterns. I find the cause through movement diagnostics and select exercises that address the root problem.",
+  sm_mob_t: "Mobility Improvement", sm_mob: "Mobility is the ability to move freely through full range. I work on joint mobility, muscle elasticity and coordination so your body is both strong and free."
+}
+};
+
+// Skill modal data map
+const skillMap = {
+  oda:        { icon: '\u25CE', tKey: 'sm_oda_t', dKey: 'sm_oda' },
+  kinesiology:{ icon: '\u25CA', tKey: 'sm_kin_t', dKey: 'sm_kin' },
+  fascia:     { icon: '\u2727', tKey: 'sm_fas_t', dKey: 'sm_fas' },
+  postpartum: { icon: '\u273F', tKey: 'sm_pp_t',  dKey: 'sm_pp' },
+  pain:       { icon: '\uD83D\uDCAC', tKey: 'sm_pain_t', dKey: 'sm_pain' },
+  mobility:   { icon: '\uD83D\uDD04', tKey: 'sm_mob_t', dKey: 'sm_mob' }
+};
+
+let currentLang = localStorage.getItem('lang') || 'ru';
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('lang', lang);
+  document.documentElement.lang = lang === 'ru' ? 'ru' : lang === 'es' ? 'es' : 'en';
+
+  // Update all data-i18n elements
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    const val = T[lang][key];
+    if (!val) return;
+
+    // Check if element uses attribute translation
+    const attr = el.dataset.i18nAttr;
+    if (attr) {
+      el.setAttribute(attr, val);
+    } else if (el.dataset.i18nHtml) {
+      el.innerHTML = val;
+    } else if (el.tagName === 'TITLE') {
+      document.title = val;
+    } else if (el.tagName === 'META') {
+      el.setAttribute('content', val);
+    } else {
+      el.textContent = val;
+    }
+  });
+
+  // Update lang switch buttons
+  document.querySelectorAll('.lang-switch__btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+}
+
+// Lang switcher click handlers
+document.querySelectorAll('.lang-switch__btn').forEach(btn => {
+  btn.addEventListener('click', () => setLang(btn.dataset.lang));
+});
+
+// Init language
+setLang(currentLang);
+
+// =============================================
+// EXISTING FUNCTIONALITY
+// =============================================
+
+// Header scroll
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// Scroll animations
+const animEls = document.querySelectorAll('.anim');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+animEls.forEach(el => observer.observe(el));
+
+// FAQ accordion
+document.querySelectorAll('.faq__question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq__item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
+// Burger menu
+const burger = document.querySelector('.header__burger');
+const mobileMenu = document.getElementById('mobileMenu');
+if (burger && mobileMenu) {
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      burger.classList.remove('active');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+}
+
+// Skill modals
+const modalOverlay = document.getElementById('skillModal');
+const modalClose = document.getElementById('skillModalClose');
+const modalIcon = document.getElementById('skillModalIcon');
+const modalTitle = document.getElementById('skillModalTitle');
+const modalText = document.getElementById('skillModalText');
+
+document.querySelectorAll('.about__skill--link').forEach(el => {
+  el.addEventListener('click', () => {
+    const key = el.dataset.skill;
+    const sm = skillMap[key];
+    if (!sm) return;
+    modalIcon.textContent = sm.icon;
+    modalTitle.textContent = T[currentLang][sm.tKey];
+    modalText.textContent = T[currentLang][sm.dKey];
+    modalOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+function closeSkillModal() {
+  modalOverlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+modalClose.addEventListener('click', closeSkillModal);
+modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeSkillModal(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSkillModal(); });
+</script>
+
+</body>
+</html>
