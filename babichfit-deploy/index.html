@@ -1558,7 +1558,8 @@ a { color: inherit; text-decoration: none; }
           <label class="form__label" for="comment" data-i18n="form_comment">Комментарий</label>
           <textarea class="form__textarea" id="comment" name="comment" data-i18n-attr="placeholder" data-i18n="form_comment_ph" placeholder="Расскажите о вашей ситуации или задачах..."></textarea>
         </div>
-        <button type="button" class="btn btn--primary form__submit" data-i18n="nav_book">Записаться</button>
+        <button type="button" class="btn btn--primary form__submit" id="submitLead" data-i18n="nav_book">Записаться</button>
+        <p class="form__status" id="formStatus" style="margin-top:12px; font-size:0.88rem; text-align:center; display:none;"></p>
       </div>
     </div>
   </div>
@@ -1976,6 +1977,63 @@ function closeSkillModal() {
 modalClose.addEventListener('click', closeSkillModal);
 modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeSkillModal(); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSkillModal(); });
+
+// =============================================
+// FORM SUBMISSION
+// =============================================
+const submitBtn = document.getElementById('submitLead');
+const formStatus = document.getElementById('formStatus');
+const statusMessages = {
+  ru: { sending: 'Отправка...', ok: 'Заявка отправлена! Я свяжусь с вами в ближайшее время.', err: 'Ошибка отправки. Попробуйте ещё раз или напишите в WhatsApp.', fill: 'Заполните имя и телефон' },
+  es: { sending: 'Enviando...', ok: '¡Solicitud enviada! Me pondré en contacto contigo pronto.', err: 'Error de envío. Inténtalo de nuevo o escríbeme por WhatsApp.', fill: 'Rellena nombre y teléfono' },
+  en: { sending: 'Sending...', ok: 'Request sent! I will contact you soon.', err: 'Sending error. Try again or message me on WhatsApp.', fill: 'Please fill in name and phone' }
+};
+
+if (submitBtn) {
+  submitBtn.addEventListener('click', async () => {
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const fmt = document.getElementById('format').value;
+    const comment = document.getElementById('comment').value.trim();
+    const msgs = statusMessages[currentLang] || statusMessages.en;
+
+    if (!name || !phone) {
+      formStatus.style.display = 'block';
+      formStatus.style.color = '#c0392b';
+      formStatus.textContent = msgs.fill;
+      return;
+    }
+
+    submitBtn.disabled = true;
+    formStatus.style.display = 'block';
+    formStatus.style.color = 'var(--gray)';
+    formStatus.textContent = msgs.sending;
+
+    try {
+      const resp = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, phone, format: fmt, comment })
+      });
+      const data = await resp.json();
+      if (data.ok) {
+        formStatus.style.color = 'var(--olive)';
+        formStatus.textContent = msgs.ok;
+        document.getElementById('name').value = '';
+        document.getElementById('phone').value = '';
+        document.getElementById('format').selectedIndex = 0;
+        document.getElementById('comment').value = '';
+      } else {
+        formStatus.style.color = '#c0392b';
+        formStatus.textContent = msgs.err;
+      }
+    } catch (e) {
+      formStatus.style.color = '#c0392b';
+      formStatus.textContent = msgs.err;
+    }
+    submitBtn.disabled = false;
+  });
+}
 </script>
 
 </body>

@@ -1,0 +1,14 @@
+[Unit]
+Description=BabichFit Lead Server
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/var/www/babichfit
+ExecStart=/usr/bin/python3 /var/www/babichfit/leads_server.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
