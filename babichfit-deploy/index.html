@@ -1024,7 +1024,8 @@ a { color: inherit; text-decoration: none; }
   .hero__buttons { justify-content: center; }
   .hero__image { max-width: 400px; margin: 40px auto 0; }
   .about__grid { grid-template-columns: 1fr; gap: 40px; }
-  .about__image-placeholder { max-width: 400px; margin: 0 auto; }
+  .about__grid > img { order: 2; max-width: 400px; margin: 0 auto; }
+  .about__grid > .about__content { order: 1; }
   .process__steps { grid-template-columns: repeat(2, 1fr); }
   .difference__grid { grid-template-columns: 1fr; }
   .services__grid { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
@@ -1418,7 +1419,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
       <div class="before-after__card anim anim-delay-1">
-        <img src="review2.svg" alt="До и после" class="before-after__img">
+        <img src="review2.png" alt="Результат клиентки — до и после" class="before-after__img">
         <div class="before-after__caption">
           <span class="before-after__tag" data-i18n="ba2_tag">Восстановление после родов</span>
         </div>
