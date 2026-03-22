@@ -460,6 +460,74 @@ a { color: inherit; text-decoration: none; }
   color: rgba(255,255,255,0.75);
 }
 
+/* ========== PROMO BLOCK ========== */
+.promo {
+  padding: var(--section-padding) 0;
+  background: var(--cream);
+}
+.promo__card {
+  background: linear-gradient(135deg, var(--olive), #4a5c3e);
+  border-radius: 28px;
+  padding: 60px;
+  position: relative;
+  overflow: hidden;
+  color: var(--white);
+}
+.promo__card::before {
+  content: '';
+  position: absolute;
+  top: -30%; right: -15%;
+  width: 50%; height: 160%;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  pointer-events: none;
+}
+.promo__badge {
+  position: absolute;
+  top: 28px; right: 32px;
+  background: #fff;
+  color: var(--olive);
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+.promo__content { position: relative; z-index: 2; max-width: 600px; }
+.promo__title { color: #fff; margin: 16px 0; }
+.promo__text { color: rgba(255,255,255,0.8); margin-bottom: 28px; }
+.promo__price { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; }
+.promo__price-old {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: rgba(255,255,255,0.4);
+  text-decoration: line-through;
+}
+.promo__price-new {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 600;
+  color: #fff;
+}
+.promo .btn--primary {
+  background: #fff;
+  color: var(--olive);
+}
+.promo .btn--primary:hover {
+  background: var(--beige);
+  color: var(--dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+@media (max-width: 640px) {
+  .promo__card { padding: 40px 28px; }
+  .promo__badge { width: 64px; height: 64px; font-size: 1.5rem; top: 20px; right: 20px; }
+}
+
 /* ========== SECTION 4: УСЛУГИ ========== */
 .services {
   padding: var(--section-padding) 0;
@@ -1009,6 +1077,18 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.75;
 }
 
+/* ========== MAP SECTION ========== */
+.map-section {
+  padding: var(--section-padding) 0;
+  background: var(--beige);
+}
+.map-section__frame {
+  margin-top: 40px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+}
+
 /* ========== SECTION HEADER (reusable) ========== */
 .section-header { text-align: center; max-width: 700px; margin: 0 auto; }
 .section-header .t-label { margin-bottom: 16px; display: block; }
@@ -1234,7 +1314,7 @@ a { color: inherit; text-decoration: none; }
         </div>
         <div class="hero__buttons anim anim-delay-3">
           <a href="#booking" class="btn btn--primary" data-i18n="hero_btn_book">Записаться на тренировку</a>
-          <a href="#services" class="btn btn--outline" data-i18n="hero_btn_online">Онлайн программа</a>
+          <a href="#services" class="btn btn--outline" data-i18n="hero_btn_online">Стоимость услуг</a>
         </div>
       </div>
       <div class="hero__image anim anim-delay-2">
@@ -1289,6 +1369,25 @@ a { color: inherit; text-decoration: none; }
         <div class="difference__card-icon">&#10047;</div>
         <div class="difference__card-title" data-i18n="diff4_title">Безопасность и здоровье</div>
         <p class="difference__card-text" data-i18n="diff4_text">Тренировки без боли и перегрузок. Акцент на восстановление, мобильность и долгосрочное здоровье тела.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ПЕРВОЕ ЗАНЯТИЕ (ПРОМО) ========== -->
+<section class="promo" id="promo">
+  <div class="container">
+    <div class="promo__card anim">
+      <div class="promo__badge" data-i18n="promo_badge">-50%</div>
+      <div class="promo__content">
+        <span class="t-label" style="color: var(--olive);" data-i18n="promo_label">Специальное предложение</span>
+        <h2 class="t-display t-display--md promo__title" data-i18n="promo_title">Первая тренировка — знакомство</h2>
+        <p class="t-body t-body--lg promo__text" data-i18n="promo_text">Познакомимся, оценю состояние вашего тела и покажу, как строится работа. Без обязательств — просто попробуйте.</p>
+        <div class="promo__price">
+          <span class="promo__price-old">50€</span>
+          <span class="promo__price-new">25€</span>
+        </div>
+        <a href="#booking" class="btn btn--primary" data-i18n="promo_btn">Записаться на пробную тренировку</a>
       </div>
     </div>
   </div>
@@ -1565,6 +1664,20 @@ a { color: inherit; text-decoration: none; }
   </div>
 </section>
 
+<!-- ========== КАРТА ========== -->
+<section class="map-section" id="map">
+  <div class="container">
+    <div class="section-header">
+      <span class="t-label anim" data-i18n="map_label">Расположение</span>
+      <h2 class="t-display t-display--md anim anim-delay-1" data-i18n="map_title">Где проходят тренировки</h2>
+      <p class="t-body t-body--lg anim anim-delay-2" data-i18n="map_address">Calpe, Av. Diputación s/n — Av. País Valencia, 2</p>
+    </div>
+    <div class="map-section__frame anim anim-delay-3">
+      <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Avenida+Pais+Valencia+2,+Calpe,+Spain&zoom=16" width="100%" height="450" style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
 <!-- ========== 10. FOOTER ========== -->
 <footer class="footer" id="contacts">
   <div class="container">
@@ -1622,7 +1735,7 @@ ru: {
   hero_title: 'Тренировки для <em>здоровья</em>, восстановления и качественного движения',
   hero_subtitle: "Помогаю восстановить движение, избавиться от боли и улучшить качество жизни через грамотную работу с телом",
   tag_posture: "Осанка", tag_postpartum: "Восстановление после родов", tag_pelvic: "Тазовое дно", tag_pain: "Устранение боли",
-  hero_btn_book: "Записаться на тренировку", hero_btn_online: "Онлайн программа",
+  hero_btn_book: "Записаться на тренировку", hero_btn_online: "Стоимость услуг",
   about_label: "Экспертность",
   about_text1: "Мой подход строится на понимании биомеханики тела, принципах единства, работе с фасциальными линиями.",
   about_text2: "Я детально оцениваю опорно-двигательный аппарат, выстраиваю наиболее подходящую тренировочную программу, учитывая ограничения и противопоказания.",
@@ -1640,6 +1753,7 @@ ru: {
   diff2_title: "Внимание к биомеханике", diff2_text: "Каждое движение анализируется с точки зрения биомеханики. Правильный паттерн движения — основа здорового тела.",
   diff3_title: "Персональный подход", diff3_text: "Даже в мини-группах каждый участник получает внимание и коррекцию техники.",
   diff4_title: "Безопасность и здоровье", diff4_text: "Тренировки без боли и перегрузок. Акцент на восстановление, мобильность и долгосрочное здоровье тела.",
+  promo_badge: "-50%", promo_label: "Специальное предложение", promo_title: "Первая тренировка — знакомство", promo_text: "Познакомимся, оценю состояние вашего тела и покажу, как строится работа. Без обязательств — просто попробуйте.", promo_btn: "Записаться на пробную тренировку",
   svc_label: "Услуги", svc_title: "Форматы работы", svc_subtitle: "Выберите формат, который подходит вам",
   svc1_label: "Индивидуально", svc1_title: "Персональная тренировка", svc1_price: '50€ <span>/ час</span>',
   svc1_text: "Один клиент в студии — полностью индивидуальная работа с максимумом внимания.",
@@ -1682,6 +1796,7 @@ ru: {
   form_name: "Ваше имя", form_name_ph: "Как вас зовут?", form_phone: "Телефон", form_format: "Формат тренировки",
   form_format_ph: "Выберите формат", form_opt_personal: "Персональная тренировка", form_opt_pair: "Тренировка в паре", form_opt_group: "Мини-группа",
   form_comment: "Комментарий", form_comment_ph: "Расскажите о вашей ситуации или задачах...",
+  map_label: "Расположение", map_title: "Где проходят тренировки", map_address: "Calpe, Av. Diputación s/n — Av. País Valencia, 2",
   footer_role: "Специалист по движению", footer_city: "Кальпе, Испания", footer_nav: "Навигация", footer_contact: "Связаться",
   footer_copy: "© 2026 Татьяна Бабич. Все права защищены.", footer_location: "Кальпе, Коста Бланка, Испания",
   // Skill modals
@@ -1700,7 +1815,7 @@ es: {
   hero_title: 'Entrenamiento para la <em>salud</em>, la recuperación y el movimiento de calidad',
   hero_subtitle: "Te ayudo a recuperar el movimiento, eliminar el dolor y mejorar tu calidad de vida a través del trabajo corporal inteligente",
   tag_posture: "Postura", tag_postpartum: "Recuperación posparto", tag_pelvic: "Suelo pélvico", tag_pain: "Alivio del dolor",
-  hero_btn_book: "Reservar entrenamiento", hero_btn_online: "Programa online",
+  hero_btn_book: "Reservar entrenamiento", hero_btn_online: "Precios",
   about_label: "Experiencia",
   about_text1: "Mi enfoque se basa en la comprensión de la biomecánica corporal, los principios de unidad y el trabajo con las líneas fasciales.",
   about_text2: "Evalúo detalladamente el aparato locomotor y diseño el programa de entrenamiento más adecuado, teniendo en cuenta limitaciones y contraindicaciones.",
@@ -1718,6 +1833,7 @@ es: {
   diff2_title: "Atención a la biomecánica", diff2_text: "Cada movimiento se analiza desde la biomecánica. Un patrón de movimiento correcto es la base de un cuerpo sano.",
   diff3_title: "Enfoque personalizado", diff3_text: "Incluso en minigrupos, cada participante recibe atención y corrección técnica.",
   diff4_title: "Seguridad y salud", diff4_text: "Entrenamientos sin dolor ni sobrecarga. Énfasis en recuperación, movilidad y salud corporal a largo plazo.",
+  promo_badge: "-50%", promo_label: "Oferta especial", promo_title: "Primera sesión — conocernos", promo_text: "Nos conocemos, evalúo el estado de tu cuerpo y te muestro cómo trabajo. Sin compromiso — solo prueba.", promo_btn: "Reservar sesión de prueba",
   svc_label: "Servicios", svc_title: "Formatos de trabajo", svc_subtitle: "Elige el formato que más te convenga",
   svc1_label: "Individual", svc1_title: "Entrenamiento personal", svc1_price: '50€ <span>/ hora</span>',
   svc1_text: "Un solo cliente en el estudio — trabajo totalmente individual con máxima atención.",
@@ -1760,6 +1876,8 @@ es: {
   form_name: "Tu nombre", form_name_ph: "¿Cómo te llamas?", form_phone: "Teléfono", form_format: "Formato de entrenamiento",
   form_format_ph: "Elige formato", form_opt_personal: "Entrenamiento personal", form_opt_pair: "Entrenamiento en pareja", form_opt_group: "Minigrupo",
   form_comment: "Comentario", form_comment_ph: "Cuéntame tu situación u objetivos...",
+  map_label: "Расположение", map_title: "Где проходят тренировки", map_address: "Calpe, Av. Diputación s/n — Av. País Valencia, 2",
+  map_label: "Ubicación", map_title: "Dónde se realizan los entrenamientos", map_address: "Calpe, Av. Diputación s/n — Av. País Valencia, 2",
   footer_role: "Especialista en movimiento", footer_city: "Calpe, España", footer_nav: "Navegación", footer_contact: "Contacto",
   footer_copy: "© 2026 Tatiana Babich. Todos los derechos reservados.", footer_location: "Calpe, Costa Blanca, España",
   sm_oda_t: "Evaluación del aparato locomotor", sm_oda: "Antes de entrenar, realizo una evaluación detallada de tu cuerpo: postura, movilidad articular, tono muscular, asimetrías y patrones compensatorios. Esto permite determinar exactamente en qué trabajar.",
@@ -1777,7 +1895,7 @@ en: {
   hero_title: 'Training for <em>health</em>, recovery and quality movement',
   hero_subtitle: "I help restore movement, eliminate pain and improve quality of life through intelligent bodywork",
   tag_posture: "Posture", tag_postpartum: "Postpartum recovery", tag_pelvic: "Pelvic floor", tag_pain: "Pain relief",
-  hero_btn_book: "Book a session", hero_btn_online: "Online program",
+  hero_btn_book: "Book a session", hero_btn_online: "Pricing",
   about_label: "Expertise",
   about_text1: "My approach is built on understanding body biomechanics, principles of unity and fascial line work.",
   about_text2: "I conduct a detailed assessment of the musculoskeletal system and design the most suitable training program, taking into account limitations and contraindications.",
@@ -1795,6 +1913,7 @@ en: {
   diff2_title: "Biomechanics focus", diff2_text: "Every movement is analyzed from a biomechanical perspective. Correct movement patterns are the foundation of a healthy body.",
   diff3_title: "Personalized approach", diff3_text: "Even in small groups, every participant gets individual attention and technique correction.",
   diff4_title: "Safety & health", diff4_text: "Pain-free training without overload. Focus on recovery, mobility and long-term body health.",
+  promo_badge: "-50%", promo_label: "Special offer", promo_title: "First session — get to know each other", promo_text: "We meet, I assess your body and show you how I work. No commitment — just try it.", promo_btn: "Book a trial session",
   svc_label: "Services", svc_title: "Training Formats", svc_subtitle: "Choose the format that suits you",
   svc1_label: "One-on-one", svc1_title: "Personal Training", svc1_price: '50€ <span>/ hour</span>',
   svc1_text: "One client in the studio — fully individual work with maximum attention.",
@@ -1837,6 +1956,8 @@ en: {
   form_name: "Your name", form_name_ph: "What's your name?", form_phone: "Phone", form_format: "Training format",
   form_format_ph: "Choose format", form_opt_personal: "Personal training", form_opt_pair: "Pair training", form_opt_group: "Small group",
   form_comment: "Comment", form_comment_ph: "Tell me about your situation or goals...",
+  map_label: "Расположение", map_title: "Где проходят тренировки", map_address: "Calpe, Av. Diputación s/n — Av. País Valencia, 2",
+  map_label: "Location", map_title: "Where training takes place", map_address: "Calpe, Av. Diputación s/n — Av. País Valencia, 2",
   footer_role: "Movement Specialist", footer_city: "Calpe, Spain", footer_nav: "Navigation", footer_contact: "Contact",
   footer_copy: "© 2026 Tatiana Babich. All rights reserved.", footer_location: "Calpe, Costa Blanca, Spain",
   sm_oda_t: "Musculoskeletal Assessment", sm_oda: "Before training, I conduct a detailed assessment of your body: posture, joint mobility, muscle tone, asymmetries and compensatory patterns. This determines exactly what needs work.",
