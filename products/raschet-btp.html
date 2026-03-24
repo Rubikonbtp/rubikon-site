@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Расчёт блочного теплового пункта (БТП) — Рубикон, производитель</title>
+<meta name="description" content="Бесплатный расчёт и проектирование блочных тепловых пунктов от производителя. Мощность до 3 Гкал/ч. Полный цикл: проект, производство, монтаж.">
+<link rel="canonical" href="https://rubikonbtp.ru/products/raschet-btp.html">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+<style>
+:root{--dark:#0F1923;--red:#D42B2B;--red-lt:rgba(212,43,43,.08);--white:#fff;--bg:#F8F9FB;--bg2:#F0F2F5;--t1:#1a1a1a;--t2:#5A6578;--t3:#8B95A5;--brd:#E5E8ED;--r:10px;--sh:0 1px 3px rgba(0,0,0,.06);--shl:0 8px 30px rgba(0,0,0,.12);--rg:rgba(212,43,43,.35)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'DM Sans',system-ui,sans-serif;color:var(--t1);background:var(--white);-webkit-font-smoothing:antialiased}.container{max-width:1200px;margin:0 auto;padding:0 24px}a{color:var(--red);text-decoration:none}img{max-width:100%;height:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;border:none;cursor:pointer;text-decoration:none;border-radius:var(--r);transition:all .2s;font-family:inherit;font-size:14px}.btn-red{background:var(--red);color:#fff;padding:12px 24px}.btn-red:hover{background:#b82525;color:#fff;text-decoration:none}.btn-outline{background:transparent;border:1.5px solid var(--brd);color:var(--t1);padding:11px 23px}.btn-outline:hover{border-color:var(--red);color:var(--red)}.btn-lg{padding:16px 32px;font-size:16px}
+@keyframes pr{0%{box-shadow:0 0 0 0 var(--rg),0 0 8px var(--rg)}50%{box-shadow:0 0 0 14px transparent,0 0 22px rgba(212,43,43,.1)}100%{box-shadow:0 0 0 0 transparent,0 0 0 transparent}}@keyframes gb{0%,100%{filter:brightness(1)}50%{filter:brightness(1.15)}}.btn-pulse{animation:pr 1.6s infinite,gb 1.6s infinite}
+.topbar{position:sticky;top:0;z-index:1001;background:#0F1923;padding:8px 0;font-size:13px;color:rgba(255,255,255,.45)}.topbar-in{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:0 24px;flex-wrap:wrap;gap:6px}.topbar a{color:rgba(255,255,255,.8)}
+.soc{display:flex;gap:8px;align-items:center}.si{color:rgba(255,255,255,.5);transition:color .2s;display:flex}.si:hover{color:#fff}
+.hdr{position:sticky;top:36px;z-index:1000;background:var(--white);border-bottom:1px solid var(--brd)}.hdr-in{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:14px 24px}
+.nav{display:flex;gap:24px;align-items:center}.nav a{color:var(--t2);text-decoration:none;font-size:16px;font-weight:600;transition:color .2s}.nav a:hover{color:var(--dark)}.nav a.active{color:var(--red)}
+.stag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--red);margin-bottom:10px}.stag::before{content:'';width:18px;height:2px;background:var(--red)}
+.stitle{font-size:32px;font-weight:800;letter-spacing:-.02em;line-height:1.2;margin-bottom:10px;color:var(--dark)}.sdesc{font-size:15px;color:var(--t2);max-width:560px;line-height:1.7}.sec{padding:80px 0}.sec-alt{background:var(--bg)}
+.form-box{background:var(--white);border-radius:16px;border:1px solid var(--brd);padding:32px;box-shadow:var(--shl)}.form-box h3{font-size:20px;font-weight:800;margin-bottom:4px}.form-box .sub{font-size:13px;color:var(--t2);margin-bottom:20px}.form-box label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--t2);display:block;margin-bottom:6px;margin-top:14px}.form-box input,.form-box select,.form-box textarea{width:100%;padding:12px;border:1px solid var(--brd);border-radius:var(--r);font-family:inherit;font-size:14px;outline:none;transition:border-color .2s}.form-box input:focus,.form-box select:focus,.form-box textarea:focus{border-color:var(--red)}.form-box textarea{resize:vertical;min-height:80px}
+.con-g{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}.con-card{padding:20px;border-radius:12px;border:1px solid var(--brd);display:flex;gap:14px;align-items:center;margin-bottom:14px;transition:box-shadow .2s}.con-card:hover{box-shadow:var(--sh)}.con-ico{font-size:22px;width:44px;height:44px;border-radius:10px;background:var(--bg);display:flex;align-items:center;justify-content:center;flex-shrink:0}.con-card h4{font-size:15px;font-weight:700}.con-card p{font-size:13px;color:var(--t2)}
+.ftr{background:var(--dark);color:rgba(255,255,255,.6);padding:48px 0 24px;font-size:13px}.ftr a{color:rgba(255,255,255,.6)}.ftr a:hover{color:#fff}.ftr-g{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1.2fr;gap:32px;margin-bottom:32px}.ftr h5{color:#fff;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px}.ftr-l{display:flex;flex-direction:column;gap:6px}.ftr-b{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;font-size:11px}
+@keyframes fiu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}.anim{animation:fiu .6s ease-out both}.anim:nth-child(2){animation-delay:.08s}.anim:nth-child(3){animation-delay:.16s}.anim:nth-child(4){animation-delay:.24s}
+.pg-hero{background:var(--bg);padding:100px 0 64px;position:relative;overflow:hidden}.pg-hero::after{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(212,43,43,.06) 0%,transparent 70%);pointer-events:none}
+.pg-hero-grid{display:grid;grid-template-columns:1fr 400px;gap:48px;align-items:center}.pg-hero h1{font-size:40px;font-weight:800;line-height:1.1;letter-spacing:-.03em;margin-bottom:14px;color:var(--dark)}.pg-hero h1 em{font-style:normal;color:var(--red)}.pg-hero .sdesc{margin-bottom:28px;max-width:520px}.pg-hero-act{display:flex;gap:12px;flex-wrap:wrap}
+.pg-hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}.pg-stat{background:var(--white);border:1px solid var(--brd);border-radius:14px;padding:22px;transition:box-shadow .2s}.pg-stat:hover{box-shadow:var(--shl)}.pg-stat-num{font-size:28px;font-weight:800;color:var(--red);line-height:1}.pg-stat-lbl{font-size:12px;color:var(--t3);font-weight:600;margin-top:4px}
+.adv-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.adv-c{background:var(--white);border:1px solid var(--brd);border-radius:14px;padding:28px;transition:all .2s}.adv-c:hover{box-shadow:var(--shl);transform:translateY(-3px)}.adv-ico{width:44px;height:44px;border-radius:11px;background:var(--red-lt);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}.adv-c h3{font-size:16px;font-weight:700;margin-bottom:6px}.adv-c p{font-size:13px;color:var(--t2);line-height:1.6}
+.types-g{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.type-c{background:var(--white);border:1px solid var(--brd);border-radius:14px;padding:24px;position:relative;overflow:hidden;transition:all .2s}.type-c::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transition:transform .3s;transform-origin:left}.type-c:hover::before{transform:scaleX(1)}.type-c:hover{box-shadow:var(--shl)}.type-c h3{font-size:15px;font-weight:700;margin-bottom:6px}.type-c p{font-size:13px;color:var(--t2);line-height:1.5}
+.steps-g{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:step}.step-c{position:relative;padding-top:52px}.step-c::before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;top:0;left:0;font-size:38px;font-weight:800;color:var(--red);opacity:.15;line-height:1}.step-c h3{font-size:15px;font-weight:700;margin-bottom:6px}.step-c p{font-size:13px;color:var(--t2);line-height:1.6}
+.equip-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.equip-card{background:var(--white);border:1px solid var(--brd);border-radius:16px;overflow:hidden;transition:all .2s}.equip-card:hover{box-shadow:var(--shl);transform:translateY(-3px)}.equip-card img{width:100%;height:260px;object-fit:contain;background:var(--bg2);padding:16px}.equip-card-body{padding:20px}.equip-card-body h3{font-size:16px;font-weight:700;margin-bottom:6px}.equip-card-body p{font-size:13px;color:var(--t2);line-height:1.6}.equip-card-body .brand-tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;background:var(--red-lt);color:var(--red);border-radius:100px;margin-top:8px}
+.eng-block{display:grid;grid-template-columns:280px 1fr;gap:40px;align-items:center}.eng-photo{width:280px;height:340px;border-radius:16px;object-fit:cover;box-shadow:var(--shl)}.eng-info h3{font-size:22px;font-weight:800;margin-bottom:6px}.eng-info .eng-role{font-size:14px;color:var(--red);font-weight:600;margin-bottom:14px}.eng-info p{font-size:14px;color:var(--t2);line-height:1.7;margin-bottom:10px}.eng-info ul{padding-left:18px;margin-bottom:12px}.eng-info li{font-size:13px;color:var(--t2);line-height:1.7;margin-bottom:4px}
+.video-block{border-radius:16px;overflow:hidden;box-shadow:var(--shl);max-width:800px;margin:0 auto}.video-block video{width:100%;display:block}
+.seo-text{max-width:800px}.seo-text h2{font-size:22px;font-weight:800;margin:32px 0 10px;color:var(--dark)}.seo-text h2:first-child{margin-top:0}.seo-text p{font-size:14px;color:var(--t2);line-height:1.7;margin-bottom:12px}.seo-text ul{padding-left:20px;margin-bottom:12px}.seo-text li{font-size:14px;color:var(--t2);line-height:1.7;margin-bottom:4px}
+.breadcrumb{padding:12px 0;font-size:13px;color:var(--t3)}.breadcrumb a{color:var(--t3);text-decoration:none}.breadcrumb a:hover{color:var(--red)}.breadcrumb span{margin:0 6px;color:var(--brd)}
+.cta-sec{background:var(--dark);padding:64px 0;text-align:center;color:#fff}.cta-sec h2{font-size:28px;font-weight:800;margin-bottom:10px}.cta-sec p{color:rgba(255,255,255,.5);font-size:15px;margin-bottom:24px;max-width:500px;margin-left:auto;margin-right:auto}
+.mob-menu-btn{display:none;width:36px;height:36px;border:none;background:none;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px;padding:0}.mob-menu-btn span{display:block;width:22px;height:2px;background:#1a1a1a;border-radius:2px;transition:all .3s}.mob-nav{display:none;position:fixed;inset:0;top:56px;background:#fff;z-index:999;padding:24px;flex-direction:column}.mob-nav.open{display:flex}.mob-nav a{display:block;padding:16px 0;border-bottom:1px solid #eee;font-size:16px;font-weight:600;color:#1a1a1a;text-decoration:none}.mob-nav a:hover{color:#D42B2B}
+.file-drop{border:2px dashed var(--brd);border-radius:var(--r);padding:20px;text-align:center;cursor:pointer;transition:all .2s}.file-drop:hover{border-color:var(--red);background:rgba(212,43,43,.02)}
+@media(max-width:1024px){.container{padding:0 16px}.sec{padding:48px 0}.stitle{font-size:clamp(22px,3vw,32px)}.pg-hero-grid{grid-template-columns:1fr;gap:32px}.pg-hero h1{font-size:clamp(28px,4vw,40px)}.adv-g{grid-template-columns:1fr 1fr}.types-g{grid-template-columns:repeat(2,1fr)}.steps-g{grid-template-columns:1fr 1fr}.con-g{grid-template-columns:1fr}.ftr-g{grid-template-columns:repeat(2,1fr)}.equip-grid{grid-template-columns:1fr 1fr}.eng-block{grid-template-columns:1fr;text-align:center}.eng-photo{margin:0 auto}}
+@media(max-width:768px){.topbar{padding:6px 0;font-size:11px}.topbar .soc{display:none}.hdr{top:0!important;position:sticky}.hdr .nav{display:none}.mob-menu-btn{display:flex!important}.sec{padding:36px 0}.stitle{font-size:clamp(20px,5vw,28px)!important}.pg-hero{padding:72px 0 40px}.pg-hero h1{font-size:clamp(24px,6vw,34px)!important}.adv-g{grid-template-columns:1fr!important}.types-g{grid-template-columns:1fr 1fr!important}.steps-g{grid-template-columns:1fr!important}.con-g{grid-template-columns:1fr!important;gap:24px}.form-box{padding:20px}.ftr-g{grid-template-columns:1fr 1fr!important;gap:20px}.equip-grid{grid-template-columns:1fr!important}.eng-block{grid-template-columns:1fr}}
+@media(max-width:480px){.topbar{display:none}.hdr{top:0!important}.pg-hero-stats{grid-template-columns:1fr}.types-g{grid-template-columns:1fr!important}.ftr-g{grid-template-columns:1fr!important}}
+</style>
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(98030264,'init',{webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Расчёт и проектирование блочных тепловых пунктов","provider":{"@type":"Organization","name":"ООО Рубикон","url":"https://rubikonbtp.ru","telephone":"+78003017978"},"areaServed":"RU"}</script>
+</head>
+<body>
+
+<div class="topbar"><div class="topbar-in">
+<span style="display:flex;align-items:center;gap:14px">🇷🇺 Россия · <a href="mailto:info@kbbcompany.ru">info@kbbcompany.ru</a>
+<span class="soc"><a href="https://vk.com/pto_rubikon" title="ВК" class="si"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14C20.67 22 22 20.67 22 15.07V8.93C22 3.33 20.67 2 15.07 2m3.08 14.27h-1.46c-.55 0-.72-.44-1.71-1.45-.87-.83-1.24-.94-1.45-.94-.3 0-.38.08-.38.49v1.33c0 .35-.11.56-1.03.56-1.52 0-3.2-.92-4.39-2.64C5.83 10.74 5.4 8.96 5.4 8.57c0-.21.08-.4.49-.4h1.46c.37 0 .5.16.65.55.71 2.04 1.9 3.83 2.38 3.83.18 0 .27-.08.27-.54v-2.1c-.05-.95-.55-1.03-.55-1.37 0-.16.14-.33.35-.33h2.3c.3 0 .4.16.4.52v2.84c0 .3.13.4.22.4.18 0 .34-.1.68-.44 1.05-1.18 1.8-3 1.8-3 .1-.21.27-.4.63-.4h1.46c.44 0 .53.22.44.52-.18.83-1.94 3.33-1.94 3.33-.15.25-.21.36 0 .64.15.2.66.64 1 1.04.63.71 1.11 1.31 1.24 1.72.14.4-.07.61-.49.61"/></svg></a>
+<a href="https://t.me/+79681828346" title="TG" class="si"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg></a></span></span>
+<span><a href="tel:+78003017978">8 (800) 301-79-78</a> · Бесплатно по РФ · Пн–Пт 9:00–18:00</span>
+</div></div>
+
+<header class="hdr"><div class="hdr-in">
+<a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none"><img loading="lazy" src="/img/logo-icon.png" alt="Рубикон" style="height:36px;width:36px"><span style="font-size:22px;font-weight:900;color:#D42B2B;letter-spacing:-0.02em">РУБИКОН</span></a>
+<nav class="nav"><a href="/products.html" class="active">Продукция</a><a href="/industries.html">Применение</a><a href="/#insights">Проекты</a><a href="/about.html">О компании</a><a href="#contact">Контакты</a></nav>
+<button class="mob-menu-btn" onclick="document.getElementById('mobNav').classList.toggle('open')"><span></span><span></span><span></span></button>
+<a href="https://kbb.expert/demo" target="_blank" class="btn btn-red btn-pulse" style="padding:13px 28px;font-size:15px">🖥️ Программа расчёта</a>
+</div></header>
+<div class="mob-nav" id="mobNav"><a href="/products.html">Продукция</a><a href="/industries.html">Применение</a><a href="/#insights">Проекты</a><a href="/about.html">О компании</a><a href="#contact">Контакты</a></div>
+
+<div style="background:var(--bg);border-bottom:1px solid var(--brd)"><div class="container"><nav class="breadcrumb"><a href="/">Главная</a><span>→</span><a href="/products.html">Продукция</a><span>→</span>Расчёт БТП</nav></div></div>
+
+<!-- HERO -->
+<section class="pg-hero"><div class="container"><div class="pg-hero-grid">
+<div>
+<div class="stag">Полный цикл от производителя</div>
+<h1>Расчёт и проектирование <em>блочных тепловых пунктов</em></h1>
+<p class="sdesc">Спроектируем и изготовим БТП под ваши параметры. Собственное производство в Ростове-на-Дону. Оборудование собственного бренда Рубикон: теплообменники, клапаны, электроприводы.</p>
+<div class="pg-hero-act">
+<a href="#contact" class="btn btn-red btn-lg btn-pulse">Получить расчёт бесплатно</a>
+<a href="tel:+78003017978" class="btn btn-outline btn-lg">📞 8 (800) 301-79-78</a>
+</div></div>
+<div class="pg-hero-stats">
+<div class="pg-stat anim"><div class="pg-stat-num">3 Гкал/ч</div><div class="pg-stat-lbl">Максимальная мощность</div></div>
+<div class="pg-stat anim"><div class="pg-stat-num">от 15 дн</div><div class="pg-stat-lbl">Срок производства</div></div>
+<div class="pg-stat anim"><div class="pg-stat-num">150°C</div><div class="pg-stat-lbl">Температура теплоносителя</div></div>
+<div class="pg-stat anim"><div class="pg-stat-num">от 12 мес</div><div class="pg-stat-lbl">Гарантия на оборудование</div></div>
+</div></div></div></section>
+
+<!-- VIDEO PRODUCTION -->
+<section class="sec"><div class="container" style="text-align:center">
+<div class="stag">Наше производство</div>
+<h2 class="stitle">Как мы производим БТП</h2>
+<p class="sdesc" style="margin:0 auto 36px">От проектирования до гидравлических испытаний — каждый этап под контролем наших инженеров.</p>
+<div class="video-block">
+<video controls preload="metadata"><source src="/img/btp/rubikon-production.mp4" type="video/mp4">Ваш браузер не поддерживает видео.</video>
+</div></div></section>
+
+<!-- OWN EQUIPMENT - KEY SECTION -->
+<section class="sec sec-alt"><div class="container">
+<div class="stag">Оборудование собственного бренда</div>
+<h2 class="stitle">В каждом БТП — комплектующие Рубикон</h2>
+<p class="sdesc" style="margin-bottom:36px">Ключевые узлы БТП производим сами — это гарантирует совместимость, качество и оперативную поставку запчастей.</p>
+<div class="equip-grid">
+<div class="equip-card anim">
+<img loading="lazy" src="/img/btp/pto-rubikon.png" alt="Пластинчатый теплообменник ПТО Рубикон">
+<div class="equip-card-body">
+<h3>Пластинчатые теплообменники ПТО</h3>
+<p>Разборные ПТО серии KBB собственного производства. Материалы: AISI 316/304, титан. Изготовление от 3 рабочих дней.</p>
+<span class="brand-tag">Производство Рубикон</span>
+</div></div>
+<div class="equip-card anim">
+<img loading="lazy" src="/img/btp/valve-rubikon.jpg" alt="Регулирующий клапан Рубикон">
+<div class="equip-card-body">
+<h3>Регулирующие клапаны</h3>
+<p>Двух- и трёхходовые регулирующие клапаны собственного производства. PN 16 бар, DN 15–150 мм. Чугунный корпус, нержавеющий затвор.</p>
+<span class="brand-tag">Производство Рубикон</span>
+</div></div>
+<div class="equip-card anim">
+<img loading="lazy" src="/img/btp/valve-actuator-rubikon.jpg" alt="Электропривод на клапане Рубикон">
+<div class="equip-card-body">
+<h3>Электроприводы</h3>
+<p>Электроприводы для регулирующих клапанов собственного производства. Управление 0–10 В, 4–20 мА. Момент до 40 Нм.</p>
+<span class="brand-tag">Производство Рубикон</span>
+</div></div>
+<div class="equip-card anim">
+<img loading="lazy" src="/img/btp/pto-rubikon.png" alt="Комплектация БТП Рубикон">
+<div class="equip-card-body">
+<h3>Полная комплектация БТП</h3>
+<p>Все компоненты собираются на единой раме, проходят гидравлические испытания и поставляются на объект готовыми к монтажу.</p>
+<span class="brand-tag">Полная заводская готовность</span>
+</div></div>
+</div></div></section>
+
+<!-- ENGINEERING DEPARTMENT -->
+<section class="sec"><div class="container">
+<div class="stag">Инженерно-проектный отдел</div>
+<h2 class="stitle">Проектируем под ваш объект</h2>
+<p class="sdesc" style="margin-bottom:36px">Собственный инженерно-проектный отдел — от теплового расчёта до рабочей документации.</p>
+<div class="eng-block">
+<img loading="lazy" src="/img/btp/karpenko-vladislav.jpg" alt="Карпенко Владислав — руководитель инженерного отдела" class="eng-photo">
+<div class="eng-info">
+<h3>Карпенко Владислав</h3>
+<div class="eng-role">Руководитель инженерно-проектного отдела</div>
+<p>Наш инженерный отдел выполняет полный цикл проектирования блочных тепловых пунктов: от предварительного расчёта до рабочей документации.</p>
+<p>Что делаем:</p>
+<ul>
+<li>Тепловой и гидравлический расчёт по параметрам объекта</li>
+<li>Подбор оборудования с учётом совместимости и оптимальной стоимости</li>
+<li>Разработка тепловых схем и компоновочных чертежей</li>
+<li>Проектная документация для прохождения экспертизы</li>
+<li>Авторский надзор при монтаже</li>
+</ul>
+<a href="#contact" class="btn btn-red" style="margin-top:12px">Запросить консультацию инженера</a>
+</div></div></div></section>
+
+<!-- ADVANTAGES -->
+<section class="sec sec-alt"><div class="container">
+<div class="stag">Преимущества</div>
+<h2 class="stitle">Почему заказывают БТП у нас</h2>
+<p class="sdesc" style="margin-bottom:36px">Производитель полного цикла с оборудованием собственного бренда.</p>
+<div class="adv-g">
+<div class="adv-c anim"><div class="adv-ico">🏭</div><h3>Оборудование бренда Рубикон</h3><p>Теплообменники ПТО, регулирующие клапаны и электроприводы — собственного производства. Полный контроль качества.</p></div>
+<div class="adv-c anim"><div class="adv-ico">📐</div><h3>Собственный инженерный отдел</h3><p>Штатные инженеры-проектировщики выполняют расчёты, разрабатывают проектную документацию под конкретный объект.</p></div>
+<div class="adv-c anim"><div class="adv-ico">⚡</div><h3>Сроки от 15 рабочих дней</h3><p>Типовые БТП — от 15 рабочих дней. Нестандартные проекты — от 25 дней. Склад комплектующих для ускорения.</p></div>
+<div class="adv-c anim"><div class="adv-ico">🔧</div><h3>Шефмонтаж и ПНР</h3><p>Выезд инженера на объект для контроля монтажа и пусконаладочных работ. Обучение эксплуатационного персонала.</p></div>
+<div class="adv-c anim"><div class="adv-ico">📋</div><h3>Полный комплект документов</h3><p>Проект, паспорт, сертификаты, расчётная записка, схемы. Всё для прохождения экспертизы и ввода в эксплуатацию.</p></div>
+<div class="adv-c anim"><div class="adv-ico">🛡️</div><h3>Гарантия от 12 месяцев</h3><p>Гарантийное обслуживание от 12 месяцев. Собственная служба сервиса. Запчасти и расходные материалы в наличии.</p></div>
+</div></div></section>
+
+<!-- COMPOSITION -->
+<section class="sec"><div class="container">
+<div class="stag">Комплектация</div>
+<h2 class="stitle">Что входит в БТП Рубикон</h2>
+<p class="sdesc" style="margin-bottom:36px">Каждый блочный тепловой пункт комплектуется под параметры объекта.</p>
+<div class="types-g">
+<div class="type-c anim"><h3>Теплообменники</h3><p>Пластинчатые ПТО серии KBB собственного производства Рубикон.</p></div>
+<div class="type-c anim"><h3>Насосные группы</h3><p>Насосы WellMIX. Резервирование и частотное регулирование по требованию.</p></div>
+<div class="type-c anim"><h3>Автоматика</h3><p>Контроллеры ВОГЕЗ с погодозависимым регулированием и диспетчеризацией.</p></div>
+<div class="type-c anim"><h3>Запорная арматура</h3><p>Арматура LD — надёжные российские решения. Полная трубопроводная обвязка.</p></div>
+</div></div></section>
+
+<!-- OBJECT TYPES -->
+<section class="sec sec-alt"><div class="container">
+<div class="stag">Типы объектов</div>
+<h2 class="stitle">Для каких объектов проектируем БТП</h2>
+<p class="sdesc" style="margin-bottom:36px">Блочные тепловые пункты для любых задач — от жилых домов до промышленных комплексов.</p>
+<div class="types-g">
+<div class="type-c anim"><h3>Жилые дома</h3><p>ИТП для многоквартирных домов. Отопление, ГВС, вентиляция.</p></div>
+<div class="type-c anim"><h3>Коммерческая недвижимость</h3><p>БЦ, ТЦ, гостиницы. Комплексное теплоснабжение.</p></div>
+<div class="type-c anim"><h3>Промышленные объекты</h3><p>Заводы, склады, логистические центры. Технологическое тепло.</p></div>
+<div class="type-c anim"><h3>Социальные объекты</h3><p>Школы, больницы, стадионы. Повышенные требования надёжности.</p></div>
+</div></div></section>
+
+<!-- STEPS -->
+<section class="sec"><div class="container">
+<div class="stag">Как это работает</div>
+<h2 class="stitle">5 шагов до готового БТП</h2>
+<p class="sdesc" style="margin-bottom:36px">От заявки до ввода в эксплуатацию — полное сопровождение на каждом этапе.</p>
+<div class="steps-g">
+<div class="step-c anim"><h3>Техническое задание</h3><p>Вы предоставляете параметры объекта или ТЗ. Мы уточняем детали и согласовываем требования.</p></div>
+<div class="step-c anim"><h3>Проектирование</h3><p>Инженерный отдел разрабатывает проект: тепловая схема, подбор оборудования, компоновка, чертежи.</p></div>
+<div class="step-c anim"><h3>Коммерческое предложение</h3><p>КП с детальной спецификацией, ценой, сроками производства и условиями доставки.</p></div>
+<div class="step-c anim"><h3>Производство и испытания</h3><p>Сборка БТП на собственном производстве, гидравлические испытания, фотоотчёт.</p></div>
+</div></div></section>
+
+<!-- CONTACT FORM -->
+<section class="sec sec-alt" id="contact"><div class="container">
+<div class="stag">Заявка на расчёт</div>
+<h2 class="stitle">Получите расчёт БТП бесплатно</h2>
+<div class="con-g" style="margin-top:32px">
+<div>
+<p class="sdesc" style="margin-bottom:24px">Инженер свяжется в течение 2 часов в рабочее время, уточнит параметры объекта и подготовит проект с ценой.</p>
+<div class="con-card"><div class="con-ico">📍</div><div><h4>Главный офис</h4><p>г. Санкт-Петербург, ул. Ванеева д.10 лит Б</p></div></div>
+<div class="con-card"><div class="con-ico">🏭</div><div><h4>Производство</h4><p>г. Ростов-на-Дону, ул. Вавилова 78Е</p></div></div>
+<div class="con-card"><div class="con-ico">📞</div><div><h4>8 (800) 301-79-78</h4><p>Бесплатно по России</p></div></div>
+<div class="con-card"><div class="con-ico">📧</div><div><h4><a href="mailto:info@kbbcompany.ru">info@kbbcompany.ru</a></h4><p>Ответ в течение часа</p></div></div>
+</div>
+<div class="form-box">
+<form id="contactForm" method="POST" action="#" enctype="multipart/form-data">
+<h3>Получить расчёт БТП с ценой</h3>
+<p class="sub">Заполните форму — ответим в течение 2 часов</p>
+<label>Имя</label><input type="text" name="name" placeholder="Как к вам обращаться?" required>
+<label>Телефон</label><input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+<label>E-mail</label><input type="email" name="email" placeholder="Для отправки расчёта">
+<label>Организация</label><input type="text" name="company" placeholder="ООО «Название»">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+<div><label>Тип объекта</label><select name="object_type"><option value="">Выберите</option><option value="Жилой дом">Жилой дом</option><option value="БЦ/ТЦ">Бизнес-центр / ТЦ</option><option value="Промышленный">Промышленный объект</option><option value="Социальный">Социальный объект</option><option value="Другое">Другое</option></select></div>
+<div><label>Тепловая нагрузка</label><input type="text" name="power" placeholder="напр., 1.5 Гкал/ч"></div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+<div><label>Узлы</label><select name="nodes"><option value="">Выберите</option><option value="ГВС">ГВС</option><option value="Отопление">Отопление</option><option value="ГВС+Отопление">ГВС + Отопление</option><option value="ГВС+Отопление+Вентиляция">ГВС + Отопление + Вентиляция</option><option value="Полный комплекс">Полный комплекс</option></select></div>
+<div><label>Стадия проекта</label><select name="stage"><option value="">Выберите</option><option value="Проектирование">Проектирование</option><option value="Строительство">Строительство</option><option value="Замена">Замена существующего</option><option value="Планирование">Планирование</option></select></div>
+</div>
+<label>Комментарий</label><textarea name="message" placeholder="Тепловые нагрузки по узлам, параметры теплоносителя, требования к автоматике..."></textarea>
+<label>Прикрепить файл (ТЗ, схема, опросный лист)</label>
+<div class="file-upload"><input type="file" name="attachment" id="cf-file" accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.png,.zip,.rar,.dwg" multiple style="display:none">
+<div class="file-drop" onclick="document.getElementById('cf-file').click()">
+<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+<p style="margin:8px 0 0;color:#666;font-size:13px">Нажмите или перетащите файлы</p>
+<p style="margin:4px 0 0;color:#aaa;font-size:11px">PDF, DOC, XLS, JPG, DWG до 10 МБ</p></div>
+<div id="fileList" style="margin-top:8px"></div></div>
+<button type="submit" class="btn btn-red" style="width:100%;margin-top:20px;padding:16px;font-size:16px">Отправить заявку на расчёт →</button>
+<div id="cf-success" style="display:none;text-align:center;padding:16px;color:#34D399;font-weight:700">✓ Заявка отправлена! Мы свяжемся с вами в ближайшее время.</div>
+</form>
+<div style="background:rgba(0,180,80,.08);border:1px solid rgba(0,180,80,.2);border-radius:var(--r);padding:10px 14px;margin-top:12px;font-size:13px;color:#0a7a3a;display:flex;align-items:center;gap:6px">✅ Среднее время ответа — 15 минут</div>
+</div></div></div></section>
+
+<!-- SEO -->
+<section class="sec"><div class="container"><div class="seo-text">
+<h2>Блочный тепловой пункт — что нужно знать</h2>
+<p>Блочный тепловой пункт (БТП) — это готовое заводское решение для теплоснабжения зданий и сооружений. В отличие от сборки на месте, БТП изготавливается в цехе, проходит гидравлические испытания и поставляется на объект в собранном виде.</p>
+<p>Компания «Рубикон» использует в производстве БТП оборудование собственного бренда: пластинчатые теплообменники серии KBB, регулирующие клапаны и электроприводы. Это обеспечивает полную совместимость компонентов, единую гарантию и оперативную поставку запчастей.</p>
+<h2>Какие данные нужны для расчёта БТП</h2>
+<ul>
+<li>Тепловые нагрузки по узлам: отопление, ГВС, вентиляция (Гкал/ч или кВт)</li>
+<li>Параметры теплоносителя: температуры подачи/обратки (°C), давление (бар или МПа)</li>
+<li>Тип подключения: зависимая или независимая схема</li>
+<li>Требования к автоматике: погодозависимое регулирование, диспетчеризация</li>
+<li>Габаритные ограничения помещения теплового пункта</li>
+</ul>
+<h2>Комплектация БТП Рубикон</h2>
+<p>Каждый БТП Рубикон комплектуется на раме из профильной стали и включает: пластинчатые теплообменники серии KBB (собственное производство), регулирующие клапаны и электроприводы Рубикон, циркуляционные насосы WellMIX, контроллеры автоматики ВОГЕЗ, запорную арматуру LD, приборы учёта тепловой энергии, трубопроводную обвязку.</p>
+</div></div></section>
+
+<!-- CTA -->
+<section class="cta-sec"><div class="container">
+<h2>Нужна консультация прямо сейчас?</h2>
+<p>Позвоните или напишите в Telegram — ответим в течение 15 минут в рабочее время.</p>
+<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+<a href="tel:+78003017978" class="btn btn-red btn-lg">📞 8 (800) 301-79-78</a>
+<a href="https://t.me/+79681828346" target="_blank" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.2);color:#fff">Telegram</a>
+</div></div></section>
+
+<!-- FOOTER -->
+<footer class="ftr"><div class="container">
+<div class="ftr-g">
+<div><a href="/" style="font-size:20px;font-weight:800;color:#fff;text-decoration:none;letter-spacing:-.02em">РУБИКОН</a><p style="margin-top:12px;line-height:1.6">Российский производитель пластинчатых теплообменников и блочных тепловых пунктов</p></div>
+<div><h5>Продукция</h5><div class="ftr-l"><a href="/products.html">ПТО Рубикон</a><a href="/products.html">БТП Рубикон</a><a href="/products/raschet-pto.html">Расчёт ПТО</a><a href="/products/raschet-btp.html">Расчёт БТП</a></div></div>
+<div><h5>Применение</h5><div class="ftr-l"><a href="/industries.html">ЖКХ</a><a href="/industries.html">Судостроение</a><a href="/industries.html">Промышленность</a></div></div>
+<div><h5>Компания</h5><div class="ftr-l"><a href="/about.html">О компании</a><a href="/#insights">Проекты</a><a href="#contact">Контакты</a></div></div>
+<div><h5>Контакты</h5><a href="tel:+78003017978" style="color:rgba(255,255,255,.8);font-weight:700">8 (800) 301-79-78</a><br><a href="mailto:info@kbbcompany.ru">info@kbbcompany.ru</a><p style="margin-top:8px;font-size:11px">ООО «Рубикон» · ИНН 7811814395 · КПП 781101001<br>193318, г. Санкт-Петербург, ул. Ванеева, д. 10, лит. Б</p></div>
+</div>
+<div class="ftr-b"><span>© 2026 ООО «Рубикон». Все права защищены.</span><a href="#" style="color:rgba(255,255,255,.3)">Политика конфиденциальности</a></div>
+</div></footer>
+
+<script>
+document.getElementById("cf-file").addEventListener("change",function(){var l=document.getElementById("fileList");l.innerHTML="";for(var i=0;i<this.files.length;i++){var d=document.createElement("div");d.style.cssText="display:flex;align-items:center;gap:8px;padding:6px 10px;background:#f0f2f5;border-radius:8px;margin-top:4px;font-size:13px";d.innerHTML='📎 '+this.files[i].name+' <span style="color:#aaa;margin-left:auto">'+Math.round(this.files[i].size/1024)+'KB</span>';l.appendChild(d)}});
+var dr=document.querySelector(".file-drop");if(dr){dr.addEventListener("dragover",function(e){e.preventDefault();this.style.borderColor="#D42B2B"});dr.addEventListener("dragleave",function(){this.style.borderColor="#ddd"});dr.addEventListener("drop",function(e){e.preventDefault();this.style.borderColor="#ddd";document.getElementById("cf-file").files=e.dataTransfer.files;document.getElementById("cf-file").dispatchEvent(new Event("change"))})}
+document.getElementById("contactForm").addEventListener("submit",function(e){e.preventDefault();document.getElementById("cf-success").style.display="block";this.querySelector("button[type=submit]").style.display="none"});
+</script>
+<script src="/voice-widget.js"></script>
+<script src="//cdn.callibri.ru/callibri.js" type="text/javascript" charset="utf-8" defer></script>
+</body>
+</html>
