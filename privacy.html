@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Политика конфиденциальности — ООО «Рубикон»</title>
+<meta name="description" content="Политика обработки персональных данных ООО Рубикон. Информация о сборе, хранении и защите персональных данных.">
+<link rel="canonical" href="https://rubikonbtp.ru/privacy.html">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+<style>
+:root{--dark:#0F1923;--red:#D42B2B;--red-lt:rgba(212,43,43,.08);--white:#fff;--bg:#F8F9FB;--t1:#1a1a1a;--t2:#5A6578;--t3:#8B95A5;--brd:#E5E8ED;--r:10px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'DM Sans',system-ui,sans-serif;color:var(--t1);background:var(--white);-webkit-font-smoothing:antialiased}.container{max-width:1200px;margin:0 auto;padding:0 24px}a{color:var(--red);text-decoration:none}
+.topbar{position:sticky;top:0;z-index:1001;background:#0F1923;padding:8px 0;font-size:13px;color:rgba(255,255,255,.45)}.topbar-in{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:0 24px;flex-wrap:wrap;gap:6px}.topbar a{color:rgba(255,255,255,.8)}
+.soc{display:flex;gap:8px;align-items:center}.si{color:rgba(255,255,255,.5);transition:color .2s;display:flex}.si:hover{color:#fff}
+.hdr{position:sticky;top:36px;z-index:1000;background:var(--white);border-bottom:1px solid var(--brd)}.hdr-in{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:14px 24px}
+.nav{display:flex;gap:24px;align-items:center}.nav a{color:var(--t2);text-decoration:none;font-size:16px;font-weight:600;transition:color .2s}.nav a:hover{color:var(--dark)}
+.nav-drop{position:relative}.nav-drop:hover .nav-sub{display:block}.nav-sub{display:none;position:absolute;top:100%;left:-12px;background:#fff;border:1px solid #E5E8ED;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.12);padding:8px 0;min-width:200px;z-index:100}.nav-sub a{display:block;padding:10px 20px;font-size:14px;color:#5A6578;font-weight:600;text-decoration:none;white-space:nowrap}.nav-sub a:hover{background:rgba(212,43,43,.05);color:#D42B2B}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;border:none;cursor:pointer;text-decoration:none;border-radius:var(--r);transition:all .2s;font-family:inherit;font-size:14px}.btn-red{background:var(--red);color:#fff;padding:12px 24px}.btn-red:hover{background:#b82525;color:#fff;text-decoration:none}
+@keyframes pr{0%{box-shadow:0 0 0 0 rgba(212,43,43,.35),0 0 8px rgba(212,43,43,.35)}50%{box-shadow:0 0 0 14px transparent,0 0 22px rgba(212,43,43,.1)}100%{box-shadow:0 0 0 0 transparent,0 0 0 transparent}}@keyframes gb{0%,100%{filter:brightness(1)}50%{filter:brightness(1.15)}}.btn-pulse{animation:pr 1.6s infinite,gb 1.6s infinite}
+.breadcrumb{padding:12px 0;font-size:13px;color:var(--t3)}.breadcrumb a{color:var(--t3);text-decoration:none}.breadcrumb a:hover{color:var(--red)}.breadcrumb span{margin:0 6px;color:var(--brd)}
+.content{padding:48px 0 80px;max-width:800px}
+.content h1{font-size:32px;font-weight:800;letter-spacing:-.02em;margin-bottom:8px;color:var(--dark)}
+.content .date{font-size:13px;color:var(--t3);margin-bottom:32px}
+.content h2{font-size:20px;font-weight:800;margin:32px 0 12px;color:var(--dark)}
+.content p{font-size:14px;color:var(--t2);line-height:1.8;margin-bottom:12px}
+.content ul,.content ol{padding-left:24px;margin-bottom:12px}
+.content li{font-size:14px;color:var(--t2);line-height:1.8;margin-bottom:4px}
+.ftr{background:var(--dark);color:rgba(255,255,255,.6);padding:48px 0 24px;font-size:13px}.ftr a{color:rgba(255,255,255,.6)}.ftr a:hover{color:#fff}.ftr-g{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1.2fr;gap:32px;margin-bottom:32px}.ftr h5{color:#fff;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px}.ftr-l{display:flex;flex-direction:column;gap:6px}.ftr-b{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;font-size:11px}
+.mob-menu-btn{display:none;width:36px;height:36px;border:none;background:none;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px}.mob-menu-btn span{display:block;width:22px;height:2px;background:#1a1a1a;border-radius:2px}.mob-nav{display:none;position:fixed;inset:0;top:56px;background:#fff;z-index:999;padding:24px;flex-direction:column}.mob-nav.open{display:flex}.mob-nav a{display:block;padding:16px 0;border-bottom:1px solid #eee;font-size:16px;font-weight:600;color:#1a1a1a;text-decoration:none}
+@media(max-width:768px){.topbar{padding:6px 0;font-size:11px}.topbar .soc{display:none}.hdr{top:0!important}.hdr .nav{display:none}.mob-menu-btn{display:flex!important}.content h1{font-size:24px}.ftr-g{grid-template-columns:1fr 1fr;gap:20px}}
+@media(max-width:480px){.topbar{display:none}.ftr-g{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="topbar-in">
+<span style="display:flex;align-items:center;gap:14px">🇷🇺 Россия · <a href="mailto:info@kbbcompany.ru">info@kbbcompany.ru</a>
+<span class="soc"><a href="https://vk.com/pto_rubikon" title="ВК" class="si"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14C20.67 22 22 20.67 22 15.07V8.93C22 3.33 20.67 2 15.07 2m3.08 14.27h-1.46c-.55 0-.72-.44-1.71-1.45-.87-.83-1.24-.94-1.45-.94-.3 0-.38.08-.38.49v1.33c0 .35-.11.56-1.03.56-1.52 0-3.2-.92-4.39-2.64C5.83 10.74 5.4 8.96 5.4 8.57c0-.21.08-.4.49-.4h1.46c.37 0 .5.16.65.55.71 2.04 1.9 3.83 2.38 3.83.18 0 .27-.08.27-.54v-2.1c-.05-.95-.55-1.03-.55-1.37 0-.16.14-.33.35-.33h2.3c.3 0 .4.16.4.52v2.84c0 .3.13.4.22.4.18 0 .34-.1.68-.44 1.05-1.18 1.8-3 1.8-3 .1-.21.27-.4.63-.4h1.46c.44 0 .53.22.44.52-.18.83-1.94 3.33-1.94 3.33-.15.25-.21.36 0 .64.15.2.66.64 1 1.04.63.71 1.11 1.31 1.24 1.72.14.4-.07.61-.49.61"/></svg></a>
+<a href="https://t.me/+79681828346" title="TG" class="si"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg></a></span></span>
+<span><a href="tel:+78003017978">8 (800) 301-79-78</a> · Бесплатно по РФ · Пн–Пт 9:00–18:00</span>
+</div></div>
+<header class="hdr"><div class="hdr-in">
+<a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none"><img loading="lazy" src="/img/logo-icon.png" alt="Рубикон" style="height:36px;width:36px"><span style="font-size:22px;font-weight:900;color:#D42B2B;letter-spacing:-0.02em">РУБИКОН</span></a>
+<nav class="nav"><div class="nav-drop"><a href="/products.html">Продукция</a><div class="nav-sub"><a href="/products/raschet-pto.html">Расчёт ПТО</a><a href="/products/raschet-btp.html">Расчёт БТП</a></div></div><a href="/industries.html">Применение</a><a href="/#insights">Проекты</a><a href="/about.html">О компании</a><a href="/#contact">Контакты</a></nav>
+<button class="mob-menu-btn" onclick="document.getElementById('mobNav').classList.toggle('open')"><span></span><span></span><span></span></button>
+<a href="https://kbb.expert/demo" target="_blank" class="btn btn-red btn-pulse" style="padding:13px 28px;font-size:15px">🖥️ Программа расчёта</a>
+</div></header>
+<div class="mob-nav" id="mobNav"><a href="/products.html">Продукция</a><a href="/industries.html">Применение</a><a href="/#insights">Проекты</a><a href="/about.html">О компании</a><a href="/#contact">Контакты</a></div>
+<div style="background:var(--bg);border-bottom:1px solid var(--brd)"><div class="container"><nav class="breadcrumb"><a href="/">Главная</a><span>→</span>Политика конфиденциальности</nav></div></div>
+
+<div class="container"><div class="content">
+<h1>Политика конфиденциальности</h1>
+<p class="date">Дата последнего обновления: 24 марта 2026 г.</p>
+
+<h2>1. Общие положения</h2>
+<p>Настоящая Политика конфиденциальности (далее — Политика) определяет порядок обработки и защиты персональных данных физических лиц, которые предоставляют свои данные при использовании сайта rubikonbtp.ru (далее — Сайт).</p>
+<p>Оператором персональных данных является ООО «Рубикон» (ИНН 7811814395, КПП 781101001), зарегистрированное по адресу: 193318, г. Санкт-Петербург, ул. Ванеева, д. 10, лит. Б, пом. 3-Н, офис 308-309 (далее — Оператор).</p>
+<p>Заполняя формы на Сайте и/или используя голосовой чат, Пользователь выражает согласие с условиями настоящей Политики.</p>
+
+<h2>2. Цели обработки персональных данных</h2>
+<p>Оператор обрабатывает персональные данные Пользователя в следующих целях:</p>
+<ul>
+<li>Обработка входящих запросов и заявок на расчёт оборудования</li>
+<li>Подготовка и направление коммерческих предложений</li>
+<li>Связь с Пользователем по телефону, электронной почте или через мессенджеры</li>
+<li>Улучшение качества обслуживания и работы Сайта</li>
+</ul>
+
+<h2>3. Перечень обрабатываемых персональных данных</h2>
+<p>Оператор может обрабатывать следующие персональные данные Пользователя:</p>
+<ul>
+<li>Фамилия, имя, отчество</li>
+<li>Номер контактного телефона</li>
+<li>Адрес электронной почты</li>
+<li>Наименование организации</li>
+<li>Содержание обращений и заявок</li>
+<li>Данные, получаемые при использовании голосового чата (аудиозаписи обращений)</li>
+<li>Данные об IP-адресе, типе браузера, времени доступа (автоматически)</li>
+</ul>
+
+<h2>4. Правовые основания обработки</h2>
+<p>Обработка персональных данных осуществляется на основании:</p>
+<ul>
+<li>Согласия субъекта персональных данных (п. 1 ч. 1 ст. 6 Федерального закона № 152-ФЗ)</li>
+<li>Необходимости исполнения договора, стороной которого является субъект (п. 5 ч. 1 ст. 6 ФЗ-152)</li>
+</ul>
+
+<h2>5. Порядок обработки персональных данных</h2>
+<p>Обработка персональных данных осуществляется с использованием средств автоматизации и без таковых, включая сбор, запись, систематизацию, накопление, хранение, уточнение, извлечение, использование, передачу, обезличивание, блокирование, удаление и уничтожение.</p>
+<p>Оператор принимает необходимые организационные и технические меры для защиты персональных данных от неправомерного доступа, уничтожения, изменения, блокирования, копирования, распространения.</p>
+
+<h2>6. Хранение персональных данных</h2>
+<p>Персональные данные хранятся на серверах, расположенных на территории Российской Федерации. Срок хранения персональных данных — до момента отзыва согласия субъектом персональных данных или до истечения 3 (трёх) лет с момента последнего обращения Пользователя.</p>
+
+<h2>7. Передача персональных данных третьим лицам</h2>
+<p>Оператор не передаёт персональные данные третьим лицам, за исключением случаев:</p>
+<ul>
+<li>Наличие согласия Пользователя</li>
+<li>Требование законодательства Российской Федерации</li>
+<li>Необходимость для исполнения заключённого договора</li>
+</ul>
+
+<h2>8. Использование файлов cookie и аналитика</h2>
+<p>Сайт использует файлы cookie и сервисы веб-аналитики (Яндекс.Метрика) для сбора статистических данных о посещении Сайта. Данные инструменты могут автоматически собирать информацию о действиях Пользователя на Сайте (посещённые страницы, время визита, источник перехода). Эти данные используются в обезличенном виде для улучшения работы Сайта.</p>
+
+<h2>9. Голосовой чат (AI-менеджер)</h2>
+<p>На Сайте используется голосовой AI-менеджер для консультирования Пользователей. При использовании голосового чата:</p>
+<ul>
+<li>Аудиозаписи речи Пользователя обрабатываются с использованием сервиса распознавания речи Яндекс SpeechKit для преобразования в текст</li>
+<li>Текстовое содержание диалогов может сохраняться для целей обработки заявок</li>
+<li>Контактные данные, озвученные Пользователем в ходе диалога, обрабатываются в соответствии с настоящей Политикой</li>
+</ul>
+
+<h2>10. Права субъекта персональных данных</h2>
+<p>Пользователь имеет право:</p>
+<ul>
+<li>Получить информацию об обработке своих персональных данных</li>
+<li>Потребовать уточнения, блокирования или уничтожения персональных данных</li>
+<li>Отозвать своё согласие на обработку персональных данных</li>
+</ul>
+<p>Для реализации указанных прав направьте запрос на <a href="mailto:info@kbbcompany.ru">info@kbbcompany.ru</a> или по адресу: 193318, г. Санкт-Петербург, ул. Ванеева, д. 10, лит. Б, пом. 3-Н, офис 308-309.</p>
+
+<h2>11. Контактная информация Оператора</h2>
+<p>ООО «Рубикон»<br>
+ИНН 7811814395, КПП 781101001<br>
+193318, г. Санкт-Петербург, ул. Ванеева, д. 10, лит. Б, пом. 3-Н, офис 308-309<br>
+Телефон: <a href="tel:+78003017978">8 (800) 301-79-78</a><br>
+Email: <a href="mailto:info@kbbcompany.ru">info@kbbcompany.ru</a></p>
+
+<h2>12. Заключительные положения</h2>
+<p>Оператор вправе вносить изменения в настоящую Политику. Новая редакция вступает в силу с момента её размещения на Сайте. Продолжение использования Сайта после внесения изменений означает согласие Пользователя с новой редакцией Политики.</p>
+</div></div>
+
+<footer class="ftr"><div class="container">
+<div class="ftr-g">
+<div><a href="/" style="font-size:20px;font-weight:800;color:#fff;text-decoration:none;letter-spacing:-.02em">РУБИКОН</a><p style="margin-top:12px;line-height:1.6">Российский производитель пластинчатых теплообменников и блочных тепловых пунктов</p></div>
+<div><h5>Продукция</h5><div class="ftr-l"><a href="/products.html">ПТО Рубикон</a><a href="/products.html">БТП Рубикон</a><a href="/products/raschet-pto.html">Расчёт ПТО</a><a href="/products/raschet-btp.html">Расчёт БТП</a></div></div>
+<div><h5>Применение</h5><div class="ftr-l"><a href="/industries.html">ЖКХ</a><a href="/industries.html">Судостроение</a><a href="/industries.html">Промышленность</a></div></div>
+<div><h5>Компания</h5><div class="ftr-l"><a href="/about.html">О компании</a><a href="/#insights">Проекты</a><a href="/#contact">Контакты</a></div></div>
+<div><h5>Контакты</h5><a href="tel:+78003017978" style="color:rgba(255,255,255,.8);font-weight:700">8 (800) 301-79-78</a><br><a href="mailto:info@kbbcompany.ru">info@kbbcompany.ru</a><p style="margin-top:8px;font-size:11px">ООО «Рубикон» · ИНН 7811814395 · КПП 781101001<br>193318, г. Санкт-Петербург, ул. Ванеева, д. 10, лит. Б</p></div>
+</div>
+<div class="ftr-b"><span>© 2026 ООО «Рубикон». Все права защищены.</span><a href="/privacy.html">Политика конфиденциальности</a></div>
+</div></footer>
+<script src="/voice-widget.js"></script>
+</body>
+</html>
