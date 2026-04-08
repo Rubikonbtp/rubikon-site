@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="yandex-verification" content="ec725703b645a836" />
+<title>Узел ввода и учёта тепла БТП — состав, назначение, схема | Рубикон</title>
+<meta name="description" content="Узел ввода и учёта тепловой энергии в составе БТП Рубикон. Теплосчётчик, расходомер, датчики температуры и давления, фильтры. Полный состав, назначение каждого элемента, схема подключения.">
+<link rel="canonical" href="https://rubikonbtp.ru/products/btp-uzel-vvoda.html">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TechArticle","headline":"Узел ввода и учёта тепла в БТП: состав, назначение, принцип работы","description":"Подробное описание узла ввода и учёта тепловой энергии в составе блочного теплового пункта. Состав оборудования, назначение каждого элемента, схемы подключения.","author":{"@type":"Organization","name":"ООО «Рубикон»","url":"https://rubikonbtp.ru"},"publisher":{"@type":"Organization","name":"ООО «Рубикон»"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://rubikonbtp.ru/"},{"@type":"ListItem","position":2,"name":"Продукция","item":"https://rubikonbtp.ru/products.html"},{"@type":"ListItem","position":3,"name":"БТП Рубикон","item":"https://rubikonbtp.ru/products/btp.html"},{"@type":"ListItem","position":4,"name":"Узел ввода и учёта тепла","item":"https://rubikonbtp.ru/products/btp-uzel-vvoda.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Что входит в узел ввода тепла?","acceptedAnswer":{"@type":"Answer","text":"Узел ввода и учёта тепла включает: запорную арматуру (шаровые краны), грязевой и магнитный фильтры, расходомер (электромагнитный или ультразвуковой), датчики температуры подачи и обратки, датчики давления, теплосчётчик-вычислитель, манометры и термометры местные. Дополнительно: клапан перепада давления (при высоком давлении в сети) и узел подпитки вторичного контура."}},
+{"@type":"Question","name":"Обязателен ли теплосчётчик в узле ввода?","acceptedAnswer":{"@type":"Answer","text":"Да. Коммерческий учёт тепловой энергии обязателен согласно Федеральному закону №261-ФЗ «Об энергосбережении» и Правилам учёта тепловой энергии. Теплосчётчик входит в стандартную поставку БТП Рубикон."}},
+{"@type":"Question","name":"Какой расходомер лучше — электромагнитный или ультразвуковой?","acceptedAnswer":{"@type":"Answer","text":"Электромагнитный расходомер точнее при загрязнённом теплоносителе, ультразвуковой — предпочтителен при высоком качестве воды и не требует врезки в трубопровод. Выбор зависит от параметров тепловой сети и требований теплоснабжающей организации."}},
+{"@type":"Question","name":"Зачем нужен клапан перепада давления в узле ввода?","acceptedAnswer":{"@type":"Answer","text":"Клапан перепада давления (регулятор DP) устанавливается в узле ввода при высоком или нестабильном давлении в тепловой сети. Он поддерживает постоянный перепад давления на вводе в БТП, защищает оборудование от гидроударов и обеспечивает стабильную работу регулирующих клапанов узлов отопления и ГВС."}},
+{"@type":"Question","name":"Что такое узел подпитки в БТП?","acceptedAnswer":{"@type":"Answer","text":"Узел подпитки восполняет потери теплоносителя во вторичном (внутреннем) контуре БТП, возникающие при естественных утечках через уплотнения и при технических работах. Он поддерживает рабочее давление в замкнутом контуре отопления. Входит в состав узла ввода и включает подпиточный клапан, обратный клапан и регулятор давления подпитки."}}
+]}
+</script>
+
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(98030264,'init',{webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script>
+
+<style>
+:root{--dark:#0F1923;--red:#D42B2B;--red-lt:rgba(212,43,43,.08);--white:#fff;--bg:#F8F9FB;--bg2:#F0F2F5;--t1:#1a1a1a;--t2:#5A6578;--t3:#8B95A5;--brd:#E5E8ED;--r:10px;--sh:0 1px 3px rgba(0,0,0,.06);--shl:0 8px 30px rgba(0,0,0,.12)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'DM Sans',system-ui,sans-serif;color:var(--t1);background:var(--white);-webkit-font-smoothing:antialiased}.container{max-width:1200px;margin:0 auto;padding:0 24px}a{color:var(--red);text-decoration:none}a:hover{text-decoration:underline}img{max-width:100%;height:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;border:none;cursor:pointer;text-decoration:none;border-radius:var(--r);transition:all .2s;font-family:inherit;font-size:14px}.btn-red{background:var(--red);color:#fff;padding:12px 24px}.btn-red:hover{background:#b82525;color:#fff;text-decoration:none}.btn-lg{padding:16px 32px;font-size:16px}.btn-outline{background:transparent;border:2px solid rgba(255,255,255,.35);color:#fff;padding:14px 28px}
+@keyframes pr{0%{box-shadow:0 0 0 0 rgba(212,43,43,.35)}50%{box-shadow:0 0 0 14px transparent}100%{box-shadow:0 0 0 0 transparent}}.btn-pulse{animation:pr 1.6s infinite}
+.topbar{position:sticky;top:0;z-index:1001;background:#0F1923;padding:8px 0;font-size:13px;color:rgba(255,255,255,.45)}.topbar-in{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:0 24px;flex-wrap:wrap;gap:6px}.topbar a{color:rgba(255,255,255,.8)}
+.soc{display:flex;gap:8px;align-items:center}.si{color:rgba(255,255,255,.5);transition:color .2s;display:flex}.si:hover{color:#fff}
+.hdr{position:sticky;top:36px;z-index:1000;background:var(--white);border-bottom:1px solid var(--brd)}.hdr-in{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:14px 24px}
+.nav{display:flex;gap:24px;align-items:center}.nav a{color:var(--t2);text-decoration:none;font-size:16px;font-weight:600;transition:color .2s}.nav a:hover{color:var(--dark)}.nav a.active{color:var(--red)}
+.nav-drop{position:relative}.nav-drop:hover .nav-sub{display:block}.nav-sub{display:none;position:absolute;top:100%;left:-12px;background:#fff;border:1px solid var(--brd);border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.12);padding:8px 0;min-width:240px;z-index:100}.nav-sub a{display:block;padding:10px 20px;font-size:14px;color:var(--t2);font-weight:600;text-decoration:none;white-space:nowrap}.nav-sub a:hover{background:var(--red-lt);color:var(--red)}.nav-sub a.active{color:var(--red)}
+.mob-menu-btn{display:none;width:36px;height:36px;border:none;background:none;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px}.mob-menu-btn span{display:block;width:22px;height:2px;background:#1a1a1a;border-radius:2px}.mob-nav{display:none;position:fixed;inset:0;top:56px;background:#fff;z-index:999;padding:24px;flex-direction:column}.mob-nav.open{display:flex}.mob-nav a{display:block;padding:16px 0;border-bottom:1px solid #eee;font-size:16px;font-weight:600;color:#1a1a1a;text-decoration:none}
+.stag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--red);margin-bottom:10px}.stag::before{content:'';width:18px;height:2px;background:var(--red)}
+.stitle{font-size:32px;font-weight:800;letter-spacing:-.02em;line-height:1.2;margin-bottom:10px;color:var(--dark)}.sdesc{font-size:15px;color:var(--t2);line-height:1.7}.sec{padding:80px 0}.sec-alt{background:var(--bg)}
+.breadcrumb{padding:12px 0;font-size:13px;color:var(--t3)}.breadcrumb a{color:var(--t3);text-decoration:none}.breadcrumb a:hover{color:var(--red)}.breadcrumb span{margin:0 6px}
+@keyframes fiu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}.anim{animation:fiu .6s ease-out both}.anim:nth-child(2){animation-delay:.08s}.anim:nth-child(3){animation-delay:.16s}.anim:nth-child(4){animation-delay:.24s}
+.prose{font-size:15px;color:var(--t2);line-height:1.85}.prose p{margin-bottom:16px}.prose h3{font-size:18px;font-weight:700;color:var(--dark);margin:28px 0 10px}.prose ul{padding-left:20px;margin-bottom:16px}.prose ul li{margin-bottom:8px}.prose strong{color:var(--t1)}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--dark) 0%,#1a2d42 100%);padding:80px 0 70px;color:#fff;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;top:-120px;right:-120px;width:400px;height:400px;background:radial-gradient(circle,rgba(212,43,43,.12) 0%,transparent 70%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.hero h1{font-size:38px;font-weight:800;line-height:1.1;letter-spacing:-.03em;margin-bottom:16px}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero .sdesc{color:rgba(255,255,255,.6);font-size:15px;line-height:1.8;margin-bottom:28px}
+.hero-img{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;height:320px;display:flex;align-items:center;justify-content:center}
+.hero-img img{width:100%;height:100%;object-fit:contain;padding:20px}
+.hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+.hero-tag{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:6px 14px;font-size:12px;font-weight:600;color:rgba(255,255,255,.7)}
+
+/* НАЗНАЧЕНИЕ */
+.purpose-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.purpose-card{background:var(--white);border:1px solid var(--brd);border-radius:14px;padding:24px;transition:all .2s}
+.purpose-card:hover{box-shadow:var(--shl);transform:translateY(-2px)}
+.purpose-ico{width:48px;height:48px;border-radius:12px;background:var(--red-lt);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:14px}
+.purpose-card h3{font-size:15px;font-weight:700;color:var(--dark);margin-bottom:8px}
+.purpose-card p{font-size:13px;color:var(--t2);line-height:1.65}
+
+/* СОСТАВ — ДЕТАЛЬНЫЙ */
+.comp-item{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:56px 0;border-bottom:1px solid var(--brd)}
+.comp-item:last-child{border-bottom:none}
+.comp-item.rev{direction:rtl}.comp-item.rev>*{direction:ltr}
+.comp-num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--red);color:#fff;font-size:13px;font-weight:800;border-radius:8px;margin-bottom:12px}
+.comp-tag{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--red);background:var(--red-lt);padding:3px 10px;border-radius:20px;margin-bottom:12px;margin-left:8px}
+.comp-item h3{font-size:22px;font-weight:800;color:var(--dark);margin-bottom:14px;letter-spacing:-.02em;line-height:1.2}
+.comp-img{background:var(--bg);border-radius:16px;overflow:hidden;height:280px;display:flex;align-items:center;justify-content:center}
+.comp-img img{width:100%;height:100%;object-fit:contain;padding:20px}
+.comp-img-ph{text-align:center;color:var(--t3);padding:32px}
+.comp-img-ph div{font-size:56px;margin-bottom:10px;opacity:.4}
+.comp-img-ph p{font-size:13px;font-weight:600}
+.comp-specs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.comp-spec{background:var(--bg);border-radius:8px;padding:12px 14px}
+.comp-spec dt{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--t3);margin-bottom:3px}
+.comp-spec dd{font-size:13px;font-weight:700;color:var(--dark)}
+
+/* СХЕМА */
+.scheme-wrap{background:var(--dark);border-radius:20px;padding:40px;position:relative;overflow:hidden}
+.scheme-wrap::before{content:'';position:absolute;inset:0;border:1px solid rgba(255,255,255,.06);border-radius:20px;pointer-events:none}
+.scheme-flow{display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;margin:32px 0}
+.sf-box{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:14px 16px;text-align:center;min-width:110px;transition:background .2s;cursor:default}
+.sf-box:hover{background:rgba(255,255,255,.12)}
+.sf-box .sf-ico{font-size:22px;margin-bottom:6px}
+.sf-box .sf-name{font-size:11px;font-weight:700;color:#fff;line-height:1.3}
+.sf-box .sf-sub{font-size:10px;color:rgba(255,255,255,.4);margin-top:2px}
+.sf-arrow{color:rgba(255,255,255,.25);font-size:20px;padding:0 6px;flex-shrink:0}
+.sf-highlight{border-color:var(--red);background:rgba(212,43,43,.15)}
+.sf-highlight .sf-name{color:#ff8080}
+
+/* ЗАКОН */
+.law-block{background:linear-gradient(135deg,#1a2d42 0%,#0F1923 100%);border-radius:16px;padding:32px 36px;border-left:4px solid var(--red);color:#fff;position:relative;overflow:hidden}
+.law-block::after{content:'§';position:absolute;right:24px;top:50%;transform:translateY(-50%);font-size:120px;font-weight:800;color:rgba(255,255,255,.04);line-height:1}
+.law-block h3{font-size:18px;font-weight:800;margin-bottom:12px}
+.law-block p{font-size:14px;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:10px}
+.law-block p:last-child{margin-bottom:0}
+.law-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--red);background:rgba(212,43,43,.15);padding:4px 12px;border-radius:20px;margin-bottom:14px}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:10px}
+.faq-item{border:1px solid var(--brd);border-radius:12px;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;padding:18px 20px;text-align:left;font-size:15px;font-weight:700;color:var(--dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit;transition:background .15s;gap:16px}
+.faq-q:hover,.faq-q.open{background:var(--bg)}
+.faq-arr{font-size:20px;color:var(--red);transition:transform .2s;flex-shrink:0}.faq-q.open .faq-arr{transform:rotate(45deg)}
+.faq-a{display:none;padding:4px 20px 18px;font-size:14px;color:var(--t2);line-height:1.75}.faq-a.open{display:block}
+.faq-a p{margin-bottom:10px}.faq-a p:last-child{margin-bottom:0}
+.faq-a ul{padding-left:20px;margin-bottom:10px}.faq-a ul li{margin-bottom:6px}
+
+/* NAV УЗЛОВ */
+.nodes-nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:40px;padding-top:32px;border-top:1px solid var(--brd)}
+.node-nav-item{display:flex;align-items:center;gap:8px;padding:10px 16px;background:var(--bg);border:1px solid var(--brd);border-radius:10px;font-size:13px;font-weight:600;color:var(--t2);text-decoration:none;transition:all .15s}
+.node-nav-item:hover{border-color:var(--red);color:var(--red);background:var(--red-lt);text-decoration:none}
+.node-nav-item.active{border-color:var(--red);color:var(--red);background:var(--red-lt)}
+
+/* CTA / FORM */
+.form-sec{background:linear-gradient(135deg,var(--dark) 0%,#1a2d42 100%);padding:72px 0}
+.form-wrap{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:44px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ff{display:flex;flex-direction:column;gap:6px}.ff label{font-size:13px;font-weight:600;color:rgba(255,255,255,.6)}
+.ff input,.ff select,.ff textarea{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:12px 16px;font-size:14px;color:#fff;font-family:inherit;transition:border .15s}
+.ff input::placeholder,.ff textarea::placeholder{color:rgba(255,255,255,.3)}
+.ff input:focus,.ff select:focus,.ff textarea:focus{outline:none;border-color:var(--red)}
+.ff select option{background:#1a2d42}.ff-full{grid-column:1/-1}
+
+/* FOOTER */
+.cta-sec{background:var(--red);padding:56px 0;text-align:center;color:#fff}
+.cta-sec h2{font-size:26px;font-weight:800;margin-bottom:8px}
+.cta-sec p{color:rgba(255,255,255,.8);font-size:15px;margin-bottom:22px;max-width:480px;margin-left:auto;margin-right:auto}
+.ftr{background:var(--dark);color:rgba(255,255,255,.6);padding:48px 0 24px;font-size:13px}.ftr a{color:rgba(255,255,255,.6);text-decoration:none}.ftr a:hover{color:#fff}.ftr-g{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1.2fr;gap:32px;margin-bottom:32px}.ftr h5{color:#fff;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px}.ftr-l{display:flex;flex-direction:column;gap:6px}.ftr-b{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;font-size:11px}
+
+@media(max-width:1024px){.hero-grid{grid-template-columns:1fr}.hero-img{display:none}.comp-item{grid-template-columns:1fr}.comp-item.rev{direction:ltr}.purpose-grid{grid-template-columns:1fr 1fr}.ftr-g{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.topbar{padding:6px 0;font-size:11px}.topbar .soc{display:none}.hdr{top:0!important}.hdr .nav{display:none}.mob-menu-btn{display:flex!important}.sec{padding:48px 0}.stitle{font-size:clamp(20px,5vw,28px)!important}.purpose-grid{grid-template-columns:1fr!important}.form-grid{grid-template-columns:1fr!important}.form-wrap{padding:24px}.hero{padding:56px 0 48px}.hero h1{font-size:clamp(24px,6vw,34px)!important}.comp-specs{grid-template-columns:1fr!important}.ftr-g{grid-template-columns:1fr 1fr!important;gap:20px}}
+@media(max-width:480px){.topbar{display:none}.ftr-g{grid-template-columns:1fr!important}}
+
+.mob-phone{display:none!important}@media(max-width:768px){a[aria-label="Позвонить"]{display:flex!important}}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar"><div class="topbar-in">
+<span style="display:flex;align-items:center;gap:14px">🇷🇺 Россия · &#105;&#110;&#102;&#111;&#64;&#107;&#98;&#98;&#99;&#111;&#109;&#112;&#97;&#110;&#121;&#46;&#114;&#117;
+<span class="soc">
+<a href="https://vk.com/pto_rubikon" title="ВК" class="si"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14C20.67 22 22 20.67 22 15.07V8.93C22 3.33 20.67 2 15.07 2m3.08 14.27h-1.46c-.55 0-.72-.44-1.71-1.45-.87-.83-1.24-.94-1.45-.94-.3 0-.38.08-.38.49v1.33c0 .35-.11.56-1.03.56-1.52 0-3.2-.92-4.39-2.64C5.83 10.74 5.4 8.96 5.4 8.57c0-.21.08-.4.49-.4h1.46c.37 0 .5.16.65.55.71 2.04 1.9 3.83 2.38 3.83.18 0 .27-.08.27-.54v-2.1c-.05-.95-.55-1.03-.55-1.37 0-.16.14-.33.35-.33h2.3c.3 0 .4.16.4.52v2.84c0 .3.13.4.22.4.18 0 .34-.1.68-.44 1.05-1.18 1.8-3 1.8-3 .1-.21.27-.4.63-.4h1.46c.44 0 .53.22.44.52-.18.83-1.94 3.33-1.94 3.33-.15.25-.21.36 0 .64.15.2.66.64 1 1.04.63.71 1.11 1.31 1.24 1.72.14.4-.07.61-.49.61"/></svg></a>
+<a href="https://t.me/+79681828346" title="TG" class="si"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg></a>
+</span></span>
+<span><a href="tel:+78003017978">8 (800) 301-79-78</a> · Бесплатно по РФ · Пн–Пт 9:00–18:00</span>
+</div></div>
+
+<!-- HEADER -->
+<header class="hdr"><div class="hdr-in">
+<a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none"><img loading="lazy" src="/img/logo-icon.png" alt="Рубикон" style="height:36px;width:36px"><span style="font-size:22px;font-weight:900;color:#D42B2B;letter-spacing:-0.02em">РУБИКОН</span></a>
+<nav class="nav">
+<div class="nav-drop"><a href="/products.html" class="active">Продукция</a><div class="nav-sub">
+<a href="/products/btp.html">БТП — блочные тепловые пункты</a>
+<a href="/products/btp-uzel-vvoda.html" class="active">Узел ввода и учёта тепла</a>
+<a href="/products/btp-otoplenie.html">Узел отопления</a>
+<a href="/products/btp-gvs.html">Узел ГВС</a>
+<a href="/products/btp-ventilyaciya.html">Узел вентиляции</a>
+<a href="/products/raschet-pto.html">Расчёт ПТО</a>
+<a href="/products/raschet-btp.html">Расчёт БТП</a>
+</div></div>
+<a href="/industries.html">Применение</a>
+<a href="/#insights">Проекты</a>
+<a href="/about.html">О компании</a>
+<a href="/contacts.html">Контакты</a>
+</nav>
+<button class="mob-menu-btn" onclick="document.getElementById('mobNav').classList.toggle('open')"><span></span><span></span><span></span></button>
+<a href="tel:+78003017978" class="btn" style="padding:13px 14px;background:var(--bg);color:var(--dark);border:1px solid var(--brd);display:none" aria-label="Позвонить">📞</a>
+<a href="https://kbb.expert/demo" target="_blank" class="btn btn-red btn-pulse" style="padding:13px 28px;font-size:15px">🖥️ Программа расчёта</a>
+</div></header>
+<div class="mob-nav" id="mobNav"><a href="/products.html">Продукция</a><a href="/industries.html">Применение</a><a href="/#insights">Проекты</a><a href="/about.html">О компании</a><a href="/contacts.html">Контакты</a><a href="https://kbb.expert/demo" target="_blank" style="color:#D42B2B">🖥️ Программа расчёта</a></div>
+
+<!-- BREADCRUMB -->
+<div style="background:var(--bg);border-bottom:1px solid var(--brd)"><div class="container">
+<div class="breadcrumb">
+<a href="/">Главная</a><span>›</span>
+<a href="/products.html">Продукция</a><span>›</span>
+<a href="/products/btp.html">БТП Рубикон</a><span>›</span>
+Узел ввода и учёта тепла
+</div>
+</div></div>
+
+<!-- HERO -->
+<section class="hero">
+<div class="container">
+<div class="hero-grid">
+<div>
+<div class="stag" style="color:rgba(255,255,255,.45)">Состав БТП · Узел 1 из 6</div>
+<h1>Узел ввода и учёта <em>тепловой энергии</em></h1>
+<p class="sdesc">Первый и обязательный узел любого блочного теплового пункта. Принимает теплоноситель из тепловой сети, защищает оборудование от загрязнений и фиксирует количество потреблённой тепловой энергии для коммерческих расчётов с теплоснабжающей организацией.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<a href="#sostav" class="btn btn-red btn-lg">Смотреть состав →</a>
+<a href="tel:+78003017978" class="btn btn-outline btn-lg">📞 Консультация</a>
+</div>
+<div class="hero-tags">
+<span class="hero-tag">✓ Входит в стандартную поставку БТП</span>
+<span class="hero-tag">✓ Теплосчётчик в комплекте</span>
+<span class="hero-tag">✓ Узел подпитки в составе</span>
+<span class="hero-tag">✓ Согласно ФЗ-261</span>
+</div>
+</div>
+<div class="hero-img">
+<img src="/img/btp-node-vvod.jpg" alt="Узел ввода и учёта тепла БТП Рубикон"
+  onerror="this.style.display='none';this.parentNode.innerHTML='<div style=\'text-align:center;color:rgba(255,255,255,.3)\'><div style=\'font-size:64px;margin-bottom:12px\'>🌡️</div><div style=\'font-size:13px;font-weight:600\'>Фото узла ввода</div><div style=\'font-size:11px;margin-top:4px\'>Рубикон</div></div>'">
+</div>
+</div>
+</div>
+</section>
+
+<!-- НАЗНАЧЕНИЕ -->
+<section class="sec"><div class="container">
+<div class="stag">Назначение</div>
+<h2 class="stitle">Зачем нужен узел ввода тепла</h2>
+<p class="sdesc" style="margin-bottom:36px">Узел ввода решает три принципиальные задачи — без него ни один блочный тепловой пункт не может работать в правовом и техническом отношении.</p>
+<div class="purpose-grid">
+<div class="purpose-card anim">
+<div class="purpose-ico">🚪</div>
+<h3>Ввод теплоносителя в здание</h3>
+<p>Обеспечивает физическое подключение внутренней системы теплопотребления здания к централизованной тепловой сети. Включает запорную арматуру для полного отключения при плановых или аварийных работах на любом из узлов БТП.</p>
+</div>
+<div class="purpose-card anim">
+<div class="purpose-ico">🔍</div>
+<h3>Защита оборудования от загрязнений</h3>
+<p>Теплоноситель из городских тепловых сетей содержит механические взвеси, окалину и магнитные частицы от коррозии трубопроводов. Грязевой и магнитный фильтры задерживают эти загрязнения и предохраняют теплообменники, расходомеры и клапаны от преждевременного износа.</p>
+</div>
+<div class="purpose-card anim">
+<div class="purpose-ico">📊</div>
+<h3>Коммерческий учёт тепловой энергии</h3>
+<p>Теплосчётчик фиксирует фактически потреблённое количество тепла в Гкал. Данные используются для расчётов с теплоснабжающей организацией — здание платит только за реально потреблённое тепло, а не по нормативу. Требование обязательного учёта закреплено в ФЗ-261.</p>
+</div>
+</div>
+
+<!-- ПРАВОВОЙ БЛОК -->
+<div class="law-block" style="margin-top:40px">
+<span class="law-badge">Федеральный закон</span>
+<h3>Коммерческий учёт тепла — требование закона</h3>
+<p>Согласно Федеральному закону № 261-ФЗ «Об энергосбережении и о повышении энергетической эффективности» все здания площадью свыше 50 м² обязаны иметь приборы коммерческого учёта тепловой энергии. Эксплуатация теплового пункта без узла учёта влечёт расчёт по нормативу потребления, который, как правило, превышает фактическое потребление на 20–40%.</p>
+<p>Узел учёта тепловой энергии подлежит обязательному согласованию с теплоснабжающей организацией и поверке приборов учёта в соответствии с Правилами коммерческого учёта тепловой энергии (Приказ Минстроя № 99/пр). Рубикон поставляет узел учёта с комплектом документации для согласования с теплоснабжающей организацией.</p>
+</div>
+</div></section>
+
+<!-- СОСТАВ — ДЕТАЛЬНЫЙ -->
+<section class="sec sec-alt" id="sostav"><div class="container">
+<div class="stag">Подробный состав</div>
+<h2 class="stitle">Каждый элемент узла ввода — и зачем он нужен</h2>
+<p class="sdesc" style="margin-bottom:8px">Рубикон включает в стандартную поставку полный комплект узла ввода и учёта. Ниже — описание каждого компонента: назначение, принцип работы, технические характеристики.</p>
+
+<!-- 1. ЗАПОРНАЯ АРМАТУРА -->
+<div class="comp-item">
+<div>
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+<div class="comp-num">1</div>
+<span class="comp-tag">Запорная арматура</span>
+</div>
+<h3>Шаровые краны на подаче и обратке</h3>
+<div class="prose">
+<p>На вводе в БТП устанавливается по одному шаровому крану на подающем (Т1) и обратном (Т2) трубопроводах. Это первые элементы, которые встречает теплоноситель, поступающий из тепловой сети.</p>
+<p><strong>Назначение:</strong> полное отключение здания от тепловой сети при проведении технического обслуживания, ремонте или замене оборудования внутри БТП, а также при аварийном отключении по команде теплоснабжающей организации.</p>
+<p><strong>Требования:</strong> шаровые краны должны обеспечивать <strong>полное перекрытие потока</strong> (запорные, а не регулирующие). В БТП Рубикон применяются краны с фиксацией положения «открыто/закрыто» для исключения самопроизвольного перемещения рукоятки.</p>
+</div>
+<div class="comp-specs">
+<dl class="comp-spec"><dt>Рабочее давление</dt><dd>до PN 16 (16 бар)</dd></dl>
+<dl class="comp-spec"><dt>Температура среды</dt><dd>до 150°C</dd></dl>
+<dl class="comp-spec"><dt>Материал корпуса</dt><dd>Нержавеющая сталь / латунь</dd></dl>
+<dl class="comp-spec"><dt>Присоединение</dt><dd>Фланцевое или муфтовое</dd></dl>
+</div>
+</div>
+<div class="comp-img">
+<img src="/img/comp-valve.jpg" alt="Шаровые краны запорной арматуры БТП"
+  onerror="this.style.display='none';this.parentNode.innerHTML='<div class=\'comp-img-ph\'><div>🔒</div><p>Запорная<br>арматура</p></div>'">
+</div>
+</div>
+
+<!-- 2. ФИЛЬТРЫ -->
+<div class="comp-item rev">
+<div>
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+<div class="comp-num">2</div>
+<span class="comp-tag">Защита оборудования</span>
+</div>
+<h3>Грязевой фильтр и магнитный фильтр</h3>
+<div class="prose">
+<p>Устанавливаются непосредственно после запорной арматуры на подающем трубопроводе — до расходомера и теплообменника. Это ключевой элемент защиты всего дорогостоящего оборудования БТП.</p>
+<p><strong>Грязевой (сетчатый) фильтр</strong> задерживает механические взвеси — частицы окалины, песок, фрагменты прокладок, — которые присутствуют в теплоносителе любой городской тепловой сети. Сетка фильтра изготавливается из нержавеющей стали с размером ячейки 0,5–1,0 мм.</p>
+<p><strong>Магнитный фильтр</strong> улавливает ферромагнитные частицы — продукты коррозии стальных трубопроводов тепловой сети. Эти частицы невидимы невооружённым глазом, но при попадании в расходомер или теплообменник вызывают преждевременный износ и снижение точности измерений.</p>
+<p><strong>Почему важно не пренебрегать фильтрами:</strong> замена пластин теплообменника из-за абразивного износа обходится в 3–5 раз дороже, чем плановое обслуживание фильтров. Промывка грязевика рекомендуется 1–2 раза в год.</p>
+</div>
+<div class="comp-specs">
+<dl class="comp-spec"><dt>Размер ячейки сетки</dt><dd>0,5–1,0 мм</dd></dl>
+<dl class="comp-spec"><dt>Материал сетки</dt><dd>Нержавеющая сталь AISI 304</dd></dl>
+<dl class="comp-spec"><dt>Промывка</dt><dd>Без снятия с трубопровода</dd></dl>
+<dl class="comp-spec"><dt>Магнитный вкладыш</dt><dd>Неодимовый магнит</dd></dl>
+</div>
+</div>
+<div class="comp-img">
+<img src="/img/comp-filter.jpg" alt="Грязевой и магнитный фильтр БТП"
+  onerror="this.style.display='none';this.parentNode.innerHTML='<div class=\'comp-img-ph\'><div>🔍</div><p>Грязевой и<br>магнитный фильтр</p></div>'">
+</div>
+</div>
+
+<!-- 3. РАСХОДОМЕР -->
+<div class="comp-item">
+<div>
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+<div class="comp-num">3</div>
+<span class="comp-tag">Измерение расхода</span>
+</div>
+<h3>Расходомер: электромагнитный или ультразвуковой</h3>
+<div class="prose">
+<p>Расходомер измеряет объёмный расход теплоносителя и передаёт сигнал в вычислитель теплосчётчика. Это один из ключевых первичных преобразователей системы коммерческого учёта.</p>
+
+<h3>Электромагнитный расходомер</h3>
+<p>Работает по принципу электромагнитной индукции: движущийся проводящий теплоноситель создаёт ЭДС в поперечном магнитном поле, величина которой пропорциональна скорости потока. Требует врезки в трубопровод.</p>
+<p><strong>Преимущества:</strong> высокая точность (±0,5–1%), стабильность показаний при загрязнённом теплоносителе, нет движущихся частей и механического износа. <strong>Рекомендуется</strong> для большинства объектов с типовым качеством воды городских теплосетей.</p>
+
+<h3>Ультразвуковой расходомер</h3>
+<p>Измеряет скорость потока по времени прохождения ультразвукового сигнала между излучателями. Может монтироваться накладным способом — без врезки в трубопровод.</p>
+<p><strong>Преимущества:</strong> монтаж без остановки работы теплосети, отсутствие гидравлического сопротивления. <strong>Рекомендуется</strong> при высоком качестве теплоносителя и при реконструкции действующих систем учёта без остановки теплоснабжения.</p>
+</div>
+<div class="comp-specs">
+<dl class="comp-spec"><dt>Погрешность измерения</dt><dd>±0,5–1% от значения</dd></dl>
+<dl class="comp-spec"><dt>Диапазон диаметров</dt><dd>DN 15–300 мм</dd></dl>
+<dl class="comp-spec"><dt>Температура среды</dt><dd>до 150°C</dd></dl>
+<dl class="comp-spec"><dt>Интерфейс</dt><dd>RS-485, Modbus, M-Bus</dd></dl>
+</div>
+</div>
+<div class="comp-img">
+<img src="/img/comp-flowmeter.jpg" alt="Электромагнитный расходомер БТП"
+  onerror="this.style.display='none';this.parentNode.innerHTML='<div class=\'comp-img-ph\'><div>⚡</div><p>Расходомер<br>электромагнитный</p></div>'">
+</div>
+</div>
+
+<!-- 4. ДАТЧИКИ -->
+<div class="comp-item rev">
+<div>
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+<div class="comp-num">4</div>
+<span class="comp-tag">Измерение параметров</span>
+</div>
+<h3>Датчики температуры и давления</h3>
+<div class="prose">
+<p>Для расчёта количества тепловой энергии теплосчётчику необходимо знать разность температур между подачей и обраткой — именно эта разность температур при известном расходе определяет тепловую мощность. Датчики давления контролируют гидравлический режим на вводе.</p>
+
+<h3>Термопреобразователи сопротивления (ТПС)</h3>
+<p>Устанавливаются в гильзы на подающем (Т1) и обратном (Т2) трубопроводах в виде парного комплекта. Передают сигнал в вычислитель теплосчётчика. Применяются платиновые термопреобразователи класса точности B или А (±0,3°C).</p>
+<p><strong>Важно:</strong> термопреобразователи для коммерческого учёта должны быть подобраны и поверены в паре — это требование Правил учёта тепловой энергии.</p>
+
+<h3>Датчики (преобразователи) давления</h3>
+<p>Измеряют давление теплоносителя на подаче и обратке. Данные используются для контроля гидравлического режима, диагностики состояния системы и сигнализации при отклонении давления от допустимых пределов.</p>
+</div>
+<div class="comp-specs">
+<dl class="comp-spec"><dt>Тип датчика температуры</dt><dd>Pt100 / Pt500 / Pt1000</dd></dl>
+<dl class="comp-spec"><dt>Класс точности</dt><dd>Класс B (±0,3°C)</dd></dl>
+<dl class="comp-spec"><dt>Диапазон измерения</dt><dd>0–150°C</dd></dl>
+<dl class="comp-spec"><dt>Давление, датчик</dt><dd>0–25 бар</dd></dl>
+</div>
+</div>
+<div class="comp-img">
+<img src="/img/comp-sensor.jpg" alt="Датчики температуры и давления БТП"
+  onerror="this.style.display='none';this.parentNode.innerHTML='<div class=\'comp-img-ph\'><div>🌡️</div><p>Датчики температуры<br>и давления</p></div>'">
+</div>
+</div>
+
+<!-- 5. ТЕПЛОСЧЁТЧИК -->
+<div class="comp-item">
+<div>
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+<div class="comp-num">5</div>
+<span class="comp-tag">Коммерческий учёт · В комплекте</span>
+</div>
+<h3>Теплосчётчик-вычислитель</h3>
+<div class="prose">
+<p>Вычислитель — «мозг» узла учёта тепловой энергии. Принимает сигналы от расходомера, датчиков температуры и давления, вычисляет потреблённое количество тепловой энергии в Гкал и накапливает архив данных.</p>
+<p><strong>Формула расчёта тепловой энергии:</strong></p>
+<div style="background:var(--bg);border-radius:10px;padding:16px 20px;margin:12px 0;font-family:monospace;font-size:14px;color:var(--dark);border-left:3px solid var(--red)">
+Q = G × (T₁ − T₂) × c
+</div>
+<p>где Q — количество тепла (Гкал), G — расход теплоносителя (т/ч), T₁ — температура подачи (°C), T₂ — температура обратки (°C), c — удельная теплоёмкость воды (≈ 1 ккал/кг·°C).</p>
+<p><strong>Что фиксирует теплосчётчик:</strong></p>
+<ul>
+<li>Суммарное потребление тепловой энергии нарастающим итогом (Гкал)</li>
+<li>Часовые и суточные архивы потребления</li>
+<li>Температуру теплоносителя на подаче и обратке</li>
+<li>Расход теплоносителя (т/ч, м³/ч)</li>
+<li>Давление в подающем и обратном трубопроводах</li>
+<li>Время работы и нештатные ситуации (коды ошибок)</li>
+</ul>
+<p>Теплосчётчик в составе БТП Рубикон <strong>включён в стандартную поставку</strong> и согласован с теплоснабжающими организациями. Поставляется с паспортом, свидетельством о поверке и комплектом документации для сдачи в эксплуатацию.</p>
+</div>
+<div class="comp-specs">
+<dl class="comp-spec"><dt>Класс точности</dt><dd>Класс 2 по ГОСТ Р ЕН 1434</dd></dl>
+<dl class="comp-spec"><dt>Архив данных</dt><dd>Часовой, суточный, месячный</dd></dl>
+<dl class="comp-spec"><dt>Интерфейс передачи данных</dt><dd>RS-485, M-Bus, Modbus RTU</dd></dl>
+<dl class="comp-spec"><dt>Межповерочный интервал</dt><dd>4 года</dd></dl>
+</div>
+</div>
+<div class="comp-img">
+<img src="/img/comp-heatmeter.jpg" alt="Теплосчётчик вычислитель в БТП"
+  onerror="this.style.display='none';this.parentNode.innerHTML='<div class=\'comp-img-ph\'><div>📊</div><p>Теплосчётчик<br>вычислитель</p></div>'">
+</div>
+</div>
+
+<!-- 6. МАНОМЕТРЫ -->
+<div class="comp-item rev">
+<div>
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+<div class="comp-num">6</div>
+<span class="comp-tag">Местный контроль</span>
+</div>
+<h3>Манометры и термометры местные</h3>
+<div class="prose">
+<p>В дополнение к электронным датчикам давления и температуры в узле ввода устанавливаются местные показывающие приборы — манометры и термометры. Они позволяют оперативно оценить параметры теплоносителя визуально, без подключения к системе автоматики.</p>
+<p><strong>Манометры</strong> устанавливаются на подающем и обратном трубопроводах. По разности показаний манометров оценивается перепад давления на вводе — важный параметр для диагностики состояния тепловой сети и гидравлического режима БТП.</p>
+<p><strong>Термометры биметаллические</strong> показывают температуру теплоносителя непосредственно на месте, без необходимости обращаться к контроллеру. Незаменимы при первичном пуске, промывке и регулировке системы.</p>
+<p>Местные приборы являются обязательным требованием Правил технической эксплуатации тепловых энергоустановок (ПТЭ ТЭ) и включаются в состав каждого БТП Рубикон.</p>
+</div>
+<div class="comp-specs">
+<dl class="comp-spec"><dt>Манометр, диапазон</dt><dd>0–16 бар (0–25 бар)</dd></dl>
+<dl class="comp-spec"><dt>Класс точности манометра</dt><dd>1,5</dd></dl>
+<dl class="comp-spec"><dt>Термометр, диапазон</dt><dd>0–150°C</dd></dl>
+<dl class="comp-spec"><dt>Погружная гильза</dt><dd>Нержавеющая сталь</dd></dl>
+</div>
+</div>
+<div class="comp-img">
+<img src="/img/comp-gauge.jpg" alt="Манометры и термометры местные БТП"
+  onerror="this.style.display='none';this.parentNode.innerHTML='<div class=\'comp-img-ph\'><div>⏱️</div><p>Манометры и<br>термометры</p></div>'">
+</div>
+</div>
+
+<!-- 7. КЛАПАН ПЕРЕПАДА ДАВЛЕНИЯ -->
+<div class="comp-item rev">
+<div>
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+<div class="comp-num">7</div>
+<span class="comp-tag">Опционально</span>
+</div>
+<h3>Клапан перепада давления (регулятор DP)</h3>
+<div class="prose">
+<p>Клапан перепада давления — регулятор, который поддерживает постоянный перепад давления между подающим и обратным трубопроводами на вводе в БТП. Устанавливается в узле ввода при повышенном или нестабильном давлении в тепловой сети.</p>
+<p><strong>Когда необходим:</strong> если давление в тепловой сети нестабильно или значительно превышает расчётное рабочее давление внутренних систем здания. Особенно актуально для объектов, подключённых к тепловым сетям с давлением выше 6–8 бар, а также при наличии требования теплоснабжающей организации об ограничении перепада давления на вводе.</p>
+<p><strong>Принцип работы:</strong> клапан автоматически дросселирует поток теплоносителя, поддерживая заданный перепад давления (ΔP) между Т1 и Т2 независимо от изменений давления в магистральной сети. Это обеспечивает стабильную работу регулирующих клапанов в узлах отопления и ГВС — они рассчитаны на определённый перепад давления, и его колебания ухудшают качество регулирования.</p>
+<p><strong>Дополнительная функция:</strong> защита оборудования БТП от гидроударов при резких изменениях давления в тепловой сети (включение/отключение насосных станций, переключения задвижек на ЦТП).</p>
+</div>
+<div class="comp-specs">
+<dl class="comp-spec"><dt>Тип</dt><dd>Регулятор перепада давления (прямого действия)</dd></dl>
+<dl class="comp-spec"><dt>Диапазон настройки ΔP</dt><dd>0,05–0,6 МПа</dd></dl>
+<dl class="comp-spec"><dt>Рабочее давление</dt><dd>до PN 16 / PN 25</dd></dl>
+<dl class="comp-spec"><dt>Наличие в БТП</dt><dd>По требованию ТУ или проекта</dd></dl>
+</div>
+</div>
+<div class="comp-img">
+<img src="/img/comp-dp-valve.jpg" alt="Клапан перепада давления регулятор DP БТП"
+  onerror="this.style.display='none';this.parentNode.innerHTML='<div class='comp-img-ph'><div>⚖️</div><p>Клапан перепада<br>давления (DP)</p></div>'">
+</div>
+</div>
+
+<!-- 8. УЗЕЛ ПОДПИТКИ -->
+<div class="comp-item">
+<div>
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+<div class="comp-num">8</div>
+<span class="comp-tag">В составе узла ввода</span>
+</div>
+<h3>Узел подпитки вторичного контура</h3>
+<div class="prose">
+<p>Узел подпитки предназначен для автоматического восполнения потерь теплоносителя во <strong>вторичном (внутреннем) замкнутом контуре</strong> БТП — системе отопления здания. В замкнутых системах объём теплоносителя неизбежно уменьшается из-за микроутечек через уплотнения насосов, арматуры и расширительных баков, а также при проведении технических работ.</p>
+<p><strong>Что происходит без подпитки:</strong> давление во вторичном контуре падает ниже минимально допустимого. Контроллер управления фиксирует аварийный сигнал и отключает циркуляционные насосы для предотвращения их работы «всухую». Здание остаётся без отопления до ручного восстановления давления.</p>
+<p><strong>Состав узла подпитки:</strong></p>
+<ul>
+<li><strong>Регулятор давления подпитки</strong> — поддерживает постоянное давление в точке подпитки на уровне 0,05–0,15 МПа выше атмосферного (или по проектному заданию)</li>
+<li><strong>Обратный клапан</strong> — предотвращает обратный ток теплоносителя из вторичного контура в тепловую сеть</li>
+<li><strong>Запорный вентиль</strong> — для отключения подпитки при обслуживании</li>
+<li><strong>Счётчик подпитки</strong> (опционально) — учёт объёма подпиточной воды при требовании теплоснабжающей организации</li>
+</ul>
+<p><strong>Источник подпиточной воды:</strong> в большинстве схем подпитка осуществляется из подающего трубопровода тепловой сети (Т1) через редуктор давления. В системах с закрытой схемой теплоснабжения — из холодного водопровода через подогреватель.</p>
+</div>
+<div class="comp-specs">
+<dl class="comp-spec"><dt>Давление подпитки</dt><dd>По проекту, обычно 0,2–0,4 МПа</dd></dl>
+<dl class="comp-spec"><dt>Регулятор давления</dt><dd>Прямого действия, без электроники</dd></dl>
+<dl class="comp-spec"><dt>Обратный клапан</dt><dd>Пружинный, нержавеющая сталь</dd></dl>
+<dl class="comp-spec"><dt>Автоматизация</dt><dd>Контроль низкого давления — контроллер управления</dd></dl>
+</div>
+</div>
+<div class="comp-img">
+<img src="/img/comp-makeup.jpg" alt="Узел подпитки вторичного контура БТП"
+  onerror="this.style.display='none';this.parentNode.innerHTML='<div class='comp-img-ph'><div>💧</div><p>Узел подпитки<br>вторичного контура</p></div>'">
+</div>
+</div>
+
+</div></section>
+
+<!-- СХЕМА ПОТОКА -->
+<section class="sec" style="background:var(--dark);color:#fff;padding:80px 0"><div class="container">
+<div style="text-align:center;margin-bottom:40px">
+<div class="stag" style="justify-content:center;color:rgba(255,255,255,.4)">Принцип работы</div>
+<h2 style="font-size:32px;font-weight:800;color:#fff;margin-bottom:10px;letter-spacing:-.02em">Движение теплоносителя через узел ввода</h2>
+<p style="color:rgba(255,255,255,.5);font-size:15px">Теплоноситель из тепловой сети последовательно проходит через все элементы узла — от запорной арматуры до вычислителя учёта</p>
+</div>
+<div class="scheme-wrap">
+<p style="font-size:13px;font-weight:600;color:rgba(255,255,255,.4);margin-bottom:20px;text-align:center">ПОДАЮЩИЙ ТРУБОПРОВОД Т1 (тепловая сеть → БТП)</p>
+<div class="scheme-flow">
+<div class="sf-box"><div class="sf-ico">🌊</div><div class="sf-name">Тепловая сеть</div><div class="sf-sub">Т1, до 150°C</div></div>
+<div class="sf-arrow">→</div>
+<div class="sf-box sf-highlight"><div class="sf-ico">🔒</div><div class="sf-name">Шаровой кран</div><div class="sf-sub">Запорная арматура</div></div>
+<div class="sf-arrow">→</div>
+<div class="sf-box sf-highlight"><div class="sf-ico">🔍</div><div class="sf-name">Грязевик + Магн. фильтр</div><div class="sf-sub">Очистка теплоносителя</div></div>
+<div class="sf-arrow">→</div>
+<div class="sf-box sf-highlight"><div class="sf-ico">⚡</div><div class="sf-name">Расходомер</div><div class="sf-sub">Измерение расхода</div></div>
+<div class="sf-arrow">→</div>
+<div class="sf-box sf-highlight"><div class="sf-ico">🌡️</div><div class="sf-name">Датчик T₁</div><div class="sf-sub">Температура подачи</div></div>
+<div class="sf-arrow">→</div>
+<div class="sf-box"><div class="sf-ico">🔧</div><div class="sf-name">Узлы БТП</div><div class="sf-sub">Отопление, ГВС, вент.</div></div>
+</div>
+<div style="margin:16px 0;text-align:center;color:rgba(255,255,255,.2);font-size:20px">↕</div>
+<p style="font-size:13px;font-weight:600;color:rgba(255,255,255,.4);margin-bottom:20px;text-align:center">ОБРАТНЫЙ ТРУБОПРОВОД Т2 (БТП → тепловая сеть)</p>
+<div class="scheme-flow">
+<div class="sf-box"><div class="sf-ico">🌊</div><div class="sf-name">Тепловая сеть</div><div class="sf-sub">Т2, обратка</div></div>
+<div class="sf-arrow">←</div>
+<div class="sf-box sf-highlight"><div class="sf-ico">🔒</div><div class="sf-name">Шаровой кран</div><div class="sf-sub">Запорная арматура</div></div>
+<div class="sf-arrow">←</div>
+<div class="sf-box sf-highlight"><div class="sf-ico">⚡</div><div class="sf-name">Расходомер T2</div><div class="sf-sub">Расход обратки</div></div>
+<div class="sf-arrow">←</div>
+<div class="sf-box sf-highlight"><div class="sf-ico">🌡️</div><div class="sf-name">Датчик T₂</div><div class="sf-sub">Температура обратки</div></div>
+<div class="sf-arrow">←</div>
+<div class="sf-box"><div class="sf-ico">🔧</div><div class="sf-name">Узлы БТП</div><div class="sf-sub">Возврат теплоносителя</div></div>
+</div>
+<div style="margin-top:24px;padding:16px 20px;background:rgba(255,255,255,.04);border-radius:12px;border:1px solid rgba(255,255,255,.08);display:flex;gap:32px;flex-wrap:wrap;justify-content:center">
+<div style="text-align:center"><div style="font-size:11px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">⚖️ Клапан перепада давления (опц.)</div><div style="font-size:12px;color:rgba(255,255,255,.4)">Стабилизирует ΔP на вводе → защита от гидроударов</div></div>
+<div style="text-align:center"><div style="font-size:11px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">💧 Узел подпитки</div><div style="font-size:12px;color:rgba(255,255,255,.4)">Т1 → регулятор давления → обратный клапан → вторичный контур</div></div>
+</div>
+<div style="margin-top:12px;padding:20px;background:rgba(212,43,43,.12);border-radius:12px;border:1px solid rgba(212,43,43,.25);text-align:center">
+<div style="font-size:13px;font-weight:700;color:#ff8080;margin-bottom:6px">📊 Теплосчётчик-вычислитель</div>
+<div style="font-size:13px;color:rgba(255,255,255,.55)">Получает данные от расходомера и обоих датчиков температуры → вычисляет Q = G × (T₁ − T₂) × c → записывает в архив → передаёт в систему диспетчеризации</div>
+</div>
+</div>
+</div></section>
+
+<!-- FAQ -->
+<section class="sec sec-alt"><div class="container">
+<div class="stag">Вопросы и ответы</div>
+<h2 class="stitle">Часто задаваемые вопросы</h2>
+<p class="sdesc" style="margin-bottom:36px">Вопросы от инженеров, эксплуатационщиков и проектировщиков по узлу ввода и учёта тепла.</p>
+<div class="faq-list">
+
+<div class="faq-item"><button class="faq-q" onclick="faq(this)">Обязателен ли теплосчётчик в узле ввода БТП?<span class="faq-arr">+</span></button>
+<div class="faq-a"><p>Да, обязателен. Согласно Федеральному закону № 261-ФЗ «Об энергосбережении» все здания обязаны оснащаться приборами коммерческого учёта тепловой энергии. Требование распространяется на все здания с потреблением тепловой энергии свыше установленного порога. Исключения крайне редки и должны быть согласованы с органами государственного надзора.</p><p>Эксплуатация теплового пункта без узла учёта приводит к расчётам по нормативу, который обычно на 20–40% превышает фактическое потребление. Установка теплосчётчика окупается в среднем за 1–2 отопительных сезона за счёт оплаты только фактически потреблённого тепла.</p></div></div>
+
+<div class="faq-item"><button class="faq-q" onclick="faq(this)">Какой расходомер выбрать — электромагнитный или ультразвуковой?<span class="faq-arr">+</span></button>
+<div class="faq-a"><p><strong>Электромагнитный расходомер</strong> — предпочтительный выбор для большинства объектов с централизованным теплоснабжением. Требует врезки в трубопровод, но обеспечивает высокую точность (±0,5–1%) и стабильно работает при загрязнённом теплоносителе, характерном для городских тепловых сетей. Нет движущихся частей — минимальный износ.</p><p><strong>Ультразвуковой расходомер</strong> монтируется накладным способом (без врезки) — это удобно при реконструкции действующих тепловых пунктов без остановки теплоснабжения. Также применяется при высоком качестве теплоносителя.</p><p>Выбор конкретного типа расходомера для коммерческого учёта согласовывается с теплоснабжающей организацией при разработке проекта узла учёта.</p></div></div>
+
+<div class="faq-item"><button class="faq-q" onclick="faq(this)">Как часто нужно обслуживать узел ввода?<span class="faq-arr">+</span></button>
+<div class="faq-a"><p>Рекомендуемое регламентное обслуживание узла ввода:</p><ul><li><strong>Грязевой фильтр:</strong> промывка 1–2 раза в год (в конце и начале отопительного сезона). Промывка выполняется без снятия с трубопровода через дренажный вентиль.</li><li><strong>Магнитный фильтр:</strong> очистка магнитного вкладыша 1 раз в год. Извлекается вручную.</li><li><strong>Теплосчётчик:</strong> государственная поверка 1 раз в 4 года. Выполняется в аккредитованных метрологических центрах.</li><li><strong>Датчики температуры и давления:</strong> проверка показаний и визуальный осмотр 1 раз в год при плановом ТО.</li></ul><p>Документы о проведённом обслуживании фиксируются в паспорте узла учёта тепловой энергии.</p></div></div>
+
+<div class="faq-item"><button class="faq-q" onclick="faq(this)">Нужно ли согласовывать проект узла учёта с теплоснабжающей организацией?<span class="faq-arr">+</span></button>
+<div class="faq-a"><p>Да. Согласно Правилам коммерческого учёта тепловой энергии (Приказ Минстроя и ЖКХ РФ № 99/пр), проект узла учёта тепловой энергии подлежит обязательному согласованию с теплоснабжающей организацией до монтажа оборудования.</p><p>Рубикон поставляет узел учёта с полным комплектом технической документации, необходимой для согласования: принципиальная схема узла учёта, паспорта на теплосчётчик и расходомер, свидетельства о поверке. По запросу оказываем техническое сопровождение при согласовании с теплоснабжающей организацией.</p></div></div>
+
+<div class="faq-item"><button class="faq-q" onclick="faq(this)">Что происходит при отказе теплосчётчика?<span class="faq-arr">+</span></button>
+<div class="faq-a"><p>При отказе или нештатной работе теплосчётчика расчёты с теплоснабжающей организацией переходят на договорную (расчётную) нагрузку — как правило, это максимальная нагрузка из договора теплоснабжения, которая выше фактического потребления.</p><p>Теплосчётчик-вычислитель в составе БТП Рубикон фиксирует все нештатные ситуации кодами ошибок в архиве с метками времени — это позволяет точно определить период нештатной работы при урегулировании расчётов. Вычислитель продолжает архивировать данные при отказе отдельных первичных преобразователей, переключаясь на резервные алгоритмы расчёта.</p></div></div>
+
+<div class="faq-item"><button class="faq-q" onclick="faq(this)">Зачем в узле ввода нужен клапан перепада давления?<span class="faq-arr">+</span></button>
+<div class="faq-a"><p>Клапан перепада давления (регулятор DP) устанавливается в узле ввода, когда давление в тепловой сети нестабильно или превышает расчётное рабочее давление внутренних систем здания. Он поддерживает постоянный перепад давления между подачей и обраткой на вводе в БТП.</p><p><strong>Зачем это важно:</strong> регулирующие клапаны Рубикон в узлах отопления и ГВС рассчитаны на определённый перепад давления — если он колеблется, клапаны работают нестабильно, нарушается регулирование температуры. Клапан DP устраняет эту проблему, фиксируя ΔP на заданном уровне независимо от изменений в тепловой сети.</p><p>Кроме того, регулятор DP защищает оборудование БТП от гидравлических ударов при резких изменениях давления в магистральной сети. Необходимость установки клапана определяется при проектировании на основании параметров тепловой сети и требований теплоснабжающей организации.</p></div></div>
+
+<div class="faq-item"><button class="faq-q" onclick="faq(this)">Что такое узел подпитки и когда без него не обойтись?<span class="faq-arr">+</span></button>
+<div class="faq-a"><p>Узел подпитки восполняет потери теплоносителя во вторичном (внутреннем) замкнутом контуре БТП — системе отопления здания. Даже в исправной системе теплоноситель постепенно убывает через микроутечки в уплотнениях насосов, арматуры и расширительных баков.</p><p><strong>Без узла подпитки:</strong> давление во вторичном контуре снижается, контроллер фиксирует аварийный сигнал и отключает насосы. Здание остаётся без отопления. Персонал вынужден вручную доливать теплоноситель и восстанавливать давление.</p><p><strong>С узлом подпитки:</strong> регулятор давления автоматически поддерживает давление в контуре на заданном уровне, подавая теплоноситель из подающего трубопровода тепловой сети. Процесс происходит автоматически, без участия персонала. Обратный клапан исключает попадание загрязнений из вторичного контура обратно в тепловую сеть.</p><p>Узел подпитки входит в состав узла ввода БТП Рубикон для всех схем с независимым подключением отопления.</p></div></div>
+
+<div class="faq-item"><button class="faq-q" onclick="faq(this)">Можно ли дистанционно снимать показания теплосчётчика?<span class="faq-arr">+</span></button>
+<div class="faq-a"><p>Да. Теплосчётчик в составе БТП Рубикон оснащён цифровыми интерфейсами RS-485, M-Bus или Modbus RTU для передачи данных в системы диспетчеризации и АСКУТ (автоматизированные системы коммерческого учёта тепла). Это позволяет:</p><ul><li>Снимать показания дистанционно без выхода на объект</li><li>Получать суточные и часовые архивы потребления в цифровом формате</li><li>Передавать данные напрямую в биллинговую систему теплоснабжающей организации</li><li>Настраивать автоматические оповещения при нештатных режимах</li></ul><p>При необходимости возможна интеграция с SCADA-системами и облачными платформами мониторинга теплопотребления.</p></div></div>
+
+</div>
+
+<!-- НАВИГАЦИЯ ПО УЗЛАМ -->
+<div class="nodes-nav">
+<span style="font-size:13px;font-weight:700;color:var(--t3);align-self:center;white-space:nowrap">Другие узлы БТП:</span>
+<a href="/products/btp-otoplenie.html" class="node-nav-item">🔥 Узел отопления</a>
+<a href="/products/btp-gvs.html" class="node-nav-item">💧 Узел ГВС</a>
+<a href="/products/btp-ventilyaciya.html" class="node-nav-item">💨 Узел вентиляции</a>
+<a href="/products/btp.html" class="node-nav-item">← Все о БТП Рубикон</a>
+</div>
+</div></section>
+
+<!-- ФОРМА -->
+<section class="form-sec" id="calc"><div class="container">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+<div>
+<div class="stag" style="color:rgba(255,255,255,.4)">Заказать БТП</div>
+<h2 style="font-size:30px;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-.02em">Получите расчёт стоимости БТП с узлом ввода и учёта</h2>
+<p style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.7;margin-bottom:24px">Теплосчётчик, расходомер, датчики, фильтры и запорная арматура входят в стандартную поставку. Инженер рассчитает полную комплектацию под параметры вашего объекта.</p>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,.6)"><div style="width:20px;height:20px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0">✓</div>Теплосчётчик в стандартной поставке</div>
+<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,.6)"><div style="width:20px;height:20px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0">✓</div>Документация для согласования с теплосетью</div>
+<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,.6)"><div style="width:20px;height:20px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0">✓</div>Ответ инженера за 1 рабочий день</div>
+</div>
+</div>
+<div class="form-wrap" style="padding:36px">
+<form id="btpForm" onsubmit="submitForm(event)">
+<div class="form-grid">
+<div class="ff"><label>Тип объекта</label><select name="object_type"><option value="">Выберите...</option><option>МКД / ЖКХ</option><option>Промышленное предприятие</option><option>Торговый центр / офис</option><option>Новое строительство</option><option>Замена существующего БТП</option></select></div>
+<div class="ff"><label>Тепловая нагрузка, кВт</label><input type="text" name="power" placeholder="Например: 300 кВт"></div>
+<div class="ff"><label>Ваше имя *</label><input type="text" name="name" placeholder="Имя и фамилия" required></div>
+<div class="ff"><label>Телефон *</label><input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required></div>
+<div class="ff-full"><button type="submit" id="btnSubmit" class="btn btn-red btn-lg" style="width:100%;font-size:16px">Получить расчёт →</button></div>
+</div>
+</form>
+<div id="formOk" style="display:none;text-align:center;padding:24px 0"><div style="font-size:40px;margin-bottom:12px">✅</div><div style="font-size:18px;font-weight:800;color:#fff;margin-bottom:6px">Заявка отправлена!</div><div style="font-size:13px;color:rgba(255,255,255,.5)">Инженер свяжется в течение рабочего дня</div></div>
+</div>
+</div>
+</div></section>
+
+<!-- CTA -->
+<section class="cta-sec"><div class="container">
+<h2>Вопросы по узлу ввода тепла?</h2>
+<p>Инженер Рубикон бесплатно проконсультирует по составу, схеме и документации узла учёта для вашего объекта</p>
+<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+<a href="tel:+78003017978" class="btn btn-lg" style="background:#fff;color:var(--red);font-weight:800">📞 8 (800) 301-79-78</a>
+<a href="https://t.me/+79681828346" target="_blank" class="btn btn-lg" style="border:2px solid rgba(255,255,255,.4);color:#fff;background:transparent">Telegram</a>
+</div>
+</div></section>
+
+<!-- FOOTER -->
+<footer class="ftr"><div class="container">
+<div class="ftr-g">
+<div><a href="/" style="font-size:20px;font-weight:800;color:#fff;text-decoration:none;letter-spacing:-.02em">РУБИКОН</a><p style="margin-top:12px;line-height:1.6">Российский производитель пластинчатых теплообменников и блочных тепловых пунктов</p></div>
+<div><h5>Продукция</h5><div class="ftr-l"><a href="/products/btp.html">БТП Рубикон</a><a href="/products.html">ПТО Рубикон</a><a href="/products/raschet-pto.html">Расчёт ПТО</a><a href="/products/raschet-btp.html">Расчёт БТП</a></div></div>
+<div><h5>Узлы БТП</h5><div class="ftr-l"><a href="/products/btp-uzel-vvoda.html">Узел ввода тепла</a><a href="/products/btp-otoplenie.html">Узел отопления</a><a href="/products/btp-gvs.html">Узел ГВС</a><a href="/products/btp-ventilyaciya.html">Узел вентиляции</a></div></div>
+<div><h5>Компания</h5><div class="ftr-l"><a href="/about.html">О компании</a><a href="/contacts.html">Контакты</a><a href="/contacts.html">Партнёры</a></div></div>
+<div><h5>Связаться</h5><div class="ftr-l"><a href="tel:+78003017978">8 (800) 301-79-78</a><a href="mailto:info@kbbcompany.ru">info@kbbcompany.ru</a><a href="https://t.me/+79681828346" target="_blank">Telegram</a><a href="https://vk.com/pto_rubikon" target="_blank">ВКонтакте</a></div></div>
+</div>
+<div class="ftr-b"><span>© 2026 ООО «Рубикон» · ИНН 7811814395</span><span>Производитель БТП и ПТО · Ростов-на-Дону</span></div>
+</div></footer>
+
+<script>
+function faq(btn){
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+  btn.querySelector('.faq-arr').textContent = btn.classList.contains('open') ? '×' : '+';
+}
+function submitForm(e){
+  e.preventDefault();
+  var btn=document.getElementById('btnSubmit');
+  btn.textContent='Отправляем...';btn.disabled=true;
+  var data={};new FormData(e.target).forEach(function(v,k){data[k]=v});
+  if(typeof ym!=='undefined') ym(98030264,'reachGoal','btp_form_submit');
+  fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(Object.assign(data,{access_key:'283ede66-9643-4130-8a57-98297969f200',subject:'Заявка — узел ввода БТП — rubikonbtp.ru'}))
+  }).then(function(){
+    document.getElementById('btpForm').style.display='none';
+    document.getElementById('formOk').style.display='block';
+  }).catch(function(){
+    btn.textContent='Получить расчёт →';btn.disabled=false;
+    alert('Ошибка. Позвоните: 8 (800) 301-79-78');
+  });
+}
+</script>
+</body>
+</html>
