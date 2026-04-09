@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title data-i18n="meta_title">Татьяна Бабич — Тренер по движению | Кальпе, Испания</title>
 <meta name="description" data-i18n-attr="content" data-i18n="meta_desc" content="Персональные тренировки, восстановление после родов, работа с осанкой и тазовым дном. Кальпе, Испания.">
+<link rel="icon" type="image/jpeg" href="logo.jpg">
+<meta property="og:title" content="Татьяна Бабич — Тренер по движению | Кальпе, Испания">
+<meta property="og:description" content="Персональные тренировки, восстановление после родов, работа с осанкой и тазовым дном. Кальпе, Испания.">
+<meta property="og:image" content="https://babichfit.pro/IMG_1207.jpg">
+<meta property="og:url" content="https://babichfit.pro">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -535,7 +542,7 @@ a { color: inherit; text-decoration: none; }
 }
 .services__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
   margin-top: 60px;
 }
@@ -1208,6 +1215,68 @@ a { color: inherit; text-decoration: none; }
 
 
 
+/* ========== LEGAL & COOKIES ========== */
+.footer__legal {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.footer__legal a {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  transition: color 0.3s;
+}
+.footer__legal a:hover { color: var(--olive-light); }
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: var(--dark);
+  color: rgba(255,255,255,0.85);
+  padding: 16px 0;
+  z-index: 300;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+}
+.cookie-banner__inner {
+  width: var(--container);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.cookie-banner__inner p { font-size: 0.84rem; flex: 1; }
+.cookie-banner__buttons { display: flex; align-items: center; gap: 16px; }
+
+.legal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(44,44,44,0.6);
+  backdrop-filter: blur(6px);
+  z-index: 250;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 20px;
+  overflow-y: auto;
+}
+.legal-overlay.open { display: flex; }
+.legal-modal {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 48px 44px;
+  max-width: 720px;
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
+}
+.legal-modal__content h2 { font-family: var(--font-display); font-size: 1.6rem; margin: 24px 0 12px; color: var(--dark); }
+.legal-modal__content h3 { font-size: 1rem; font-weight: 600; margin: 20px 0 8px; color: var(--dark-soft); }
+.legal-modal__content p { font-size: 0.88rem; color: var(--gray); line-height: 1.7; margin-bottom: 12px; }
+.legal-modal__content ul { padding-left: 20px; margin-bottom: 12px; }
+.legal-modal__content li { font-size: 0.88rem; color: var(--gray); line-height: 1.7; margin-bottom: 4px; }
+
 /* ========== LANG SWITCHER ========== */
 .lang-switch {
   display: flex;
@@ -1304,7 +1373,7 @@ a { color: inherit; text-decoration: none; }
     <div class="hero__grid">
       <div class="hero__content">
         <span class="t-label hero__label anim" data-i18n="hero_label">Кальпе, Испания</span>
-        <h1 class="t-display t-display--lg hero__title anim anim-delay-1" data-i18n="hero_title" data-i18n-html="1">Тренировки для <em>здоровья</em>, восстановления и качественного движения</h1>
+        <h1 class="t-display t-display--lg hero__title anim anim-delay-1" data-i18n="hero_title" data-i18n-html="1"><em>Стройное тело</em>, здоровая спина и энергия каждый день</h1>
         <p class="t-body t-body--lg hero__subtitle anim anim-delay-2" data-i18n="hero_subtitle">Помогаю полюбить движение, улучшить качество жизни, повысить энергию и приобрести стройность и гармонию тела</p>
         <div class="hero__tags anim anim-delay-2">
           <span class="hero__tag" data-i18n="tag_posture">Осанка</span>
@@ -1336,7 +1405,7 @@ a { color: inherit; text-decoration: none; }
         <span class="t-label anim" data-i18n="about_label">Экспертность</span>
         <h2 class="t-display t-display--md about__name anim anim-delay-1">Татьяна Бабич</h2>
         <p class="t-body t-body--lg about__text anim anim-delay-1" data-i18n="about_text1">Мой подход строится на сочетании нескольких методов и инструментов, для того чтобы достигать наиболее качественных, устойчивых и безопасных результатов. Сочетание пилатеса, силовых, мобилизаций, дыхательных техник, работы с фасцией.</p>
-        <p class="t-body t-body--md about__text anim anim-delay-2" data-i18n="about_text2">Также я использую методы диагностики из прикладной кинезиологии и помогаю улучшить движение через нахождение причины, а не просто работаю со следствием.</p>
+        <p class="t-body t-body--md about__text anim anim-delay-2" data-i18n="about_text2">Также я использую методы диагностики и двигательные тесты, чтобы улучшить движение через нахождение причины, а не просто работаю со следствием.</p>
         <p class="t-body t-body--md about__text anim anim-delay-2" data-i18n="about_text3">При необходимости рекомендую определённого специалиста или дополнительную диагностику, так как есть проблемы, которые решаются только при помощи врача или помощи другого специалиста.</p>
         <p class="t-body t-body--md about__text anim anim-delay-3" data-i18n="about_text4">Более 10 лет работаю с женщинами и в частности с восстановлением после родов, нормализацией тонуса мышц тазового дна, улучшением качества жизни через движение.</p>
         <div class="about__skills anim anim-delay-3">
@@ -1386,7 +1455,7 @@ a { color: inherit; text-decoration: none; }
       <div class="promo__content">
         <span class="t-label" style="color: var(--olive);" data-i18n="promo_label">Специальное предложение</span>
         <h2 class="t-display t-display--md promo__title" data-i18n="promo_title">Первая тренировка — знакомство</h2>
-        <p class="t-body t-body--lg promo__text" data-i18n="promo_text">Познакомимся, оценю состояние вашего тела и покажу, как строится работа. Без обязательств — просто попробуйте.</p>
+        <p class="t-body t-body--lg promo__text" data-i18n="promo_text">Познакомимся, оценю состояние вашего тела и покажу, как строится работа. Без обязательств — просто попробуйте. <strong>Предложение действует до конца месяца.</strong></p>
         <div class="promo__price">
           <span class="promo__price-old">50€</span>
           <span class="promo__price-new">25€</span>
@@ -1459,6 +1528,30 @@ a { color: inherit; text-decoration: none; }
           <a href="#booking" class="btn btn--primary" data-i18n="nav_book">Записаться</a>
         </div>
       </div>
+      <!-- Онлайн продукт -->
+      <div class="service-card anim anim-delay-3" style="border-color: var(--olive); border-width: 2px;">
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, var(--olive), #4a5c3e); display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; padding: 20px; text-align: center;">
+          <div style="font-size: 2.4rem; margin-bottom: 8px;">🎬</div>
+          <div style="font-family: var(--font-display); font-size: 1.4rem;">Онлайн</div>
+        </div>
+        <div class="service-card__body">
+          <span class="t-label service-card__label" data-i18n="svc4_label">Видеотренировки</span>
+          <div class="service-card__price" data-i18n="svc4_price" data-i18n-html="1">1990₽ / 21€</div>
+          <h3 class="service-card__title" data-i18n="svc4_title">Тренировки на все случаи жизни</h3>
+          <p class="service-card__text" data-i18n="svc4_text">14 разнонаправленных видеотренировок — от пилатеса и силовых до массажа с мячиками и тренировки для чёткого овала лица. Короткие на 15 минут и полноценные на 45. Стопы, мобильность, кор, верх, низ — всё в одном пакете. Доступ на почту сразу после оплаты. Ваши навсегда.</p>
+          <ul class="service-card__features">
+            <li data-i18n="svc4_f1">14 тренировок: пилатес, силовые, мобильность</li>
+            <li data-i18n="svc4_f2">Массаж с мячиками и тренировка для овала лица</li>
+            <li data-i18n="svc4_f3">От 15 до 45 минут — под любое расписание</li>
+            <li data-i18n="svc4_f4">Доступ навсегда, сразу после оплаты</li>
+          </ul>
+          <div class="service-card__tip" data-i18n="svc4_tip">👉 Идеально для самостоятельных тренировок дома</div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="https://payform.ru/is9Fpx4/" target="_blank" class="btn btn--primary" style="flex: 1; text-align: center; justify-content: center;" data-i18n="svc4_btn_rub">Оплатить ₽</a>
+            <a href="https://payform.ru/4a9FpDO/" target="_blank" class="btn btn--outline" style="flex: 1; text-align: center; justify-content: center; color: var(--olive); border-color: var(--olive);" data-i18n="svc4_btn_eur">Оплатить €</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1473,34 +1566,34 @@ a { color: inherit; text-decoration: none; }
     </div>
     <div class="for-whom__grid">
       <div class="for-whom__card anim">
-        <div class="for-whom__card-icon">&#128172;</div>
-        <div class="for-whom__card-title" data-i18n="whom1_title">Боль в пояснице</div>
-        <p class="for-whom__card-text" data-i18n="whom1_text">Хроническая или периодическая боль, которая мешает жить и двигаться свободно</p>
+        <div class="for-whom__card-icon">&#128118;</div>
+        <div class="for-whom__card-title" data-i18n="whom1_title">После родов не могу вернуться в форму</div>
+        <p class="for-whom__card-text" data-i18n="whom1_text">Тело изменилось, живот не уходит, спина болит — знакомо? Я помогу восстановиться бережно и эффективно</p>
       </div>
       <div class="for-whom__card anim anim-delay-1">
-        <div class="for-whom__card-icon">&#128161;</div>
-        <div class="for-whom__card-title" data-i18n="whom2_title">Напряжение в шее</div>
-        <p class="for-whom__card-text" data-i18n="whom2_text">Постоянное напряжение, головные боли и скованность от сидячей работы</p>
+        <div class="for-whom__card-icon">&#9888;</div>
+        <div class="for-whom__card-title" data-i18n="whom2_title">Врач сказал — в обычный зал нельзя</div>
+        <p class="for-whom__card-text" data-i18n="whom2_text">Грыжи, протрузии, проблемы с суставами — я учитываю все ограничения и подбираю безопасную нагрузку</p>
       </div>
       <div class="for-whom__card anim anim-delay-2">
-        <div class="for-whom__card-icon">&#127793;</div>
-        <div class="for-whom__card-title" data-i18n="whom3_title">Восстановление после родов</div>
-        <p class="for-whom__card-text" data-i18n="whom3_text">Бережное возвращение тела к активной жизни после беременности и родов</p>
+        <div class="for-whom__card-icon">&#128170;</div>
+        <div class="for-whom__card-title" data-i18n="whom3_title">Хочу тренироваться, но боюсь навредить</div>
+        <p class="for-whom__card-text" data-i18n="whom3_text">Боль в спине, шее или пояснице? Я найду причину и подберу упражнения, которые помогут, а не усилят проблему</p>
       </div>
       <div class="for-whom__card anim anim-delay-1">
-        <div class="for-whom__card-icon">&#9883;</div>
-        <div class="for-whom__card-title" data-i18n="whom4_title">Слабость тазового дна</div>
-        <p class="for-whom__card-text" data-i18n="whom4_text">Укрепление глубоких мышц для здоровья и уверенности в повседневной жизни</p>
+        <div class="for-whom__card-icon">&#128187;</div>
+        <div class="for-whom__card-title" data-i18n="whom4_title">Сижу весь день — тело затекает</div>
+        <p class="for-whom__card-text" data-i18n="whom4_text">Офис, машина, диван — и тело забывает как двигаться. Верну подвижность, лёгкость и энергию</p>
       </div>
       <div class="for-whom__card anim anim-delay-2">
-        <div class="for-whom__card-icon">&#128260;</div>
-        <div class="for-whom__card-title" data-i18n="whom5_title">Ограниченная подвижность</div>
-        <p class="for-whom__card-text" data-i18n="whom5_text">Трудно наклониться, повернуться или поднять руки без дискомфорта</p>
+        <div class="for-whom__card-icon">&#10024;</div>
+        <div class="for-whom__card-title" data-i18n="whom5_title">Хочу стройное тело без жёстких диет</div>
+        <p class="for-whom__card-text" data-i18n="whom5_text">Грамотные тренировки дают устойчивый результат — без голодания и перегрузок</p>
       </div>
       <div class="for-whom__card anim anim-delay-3">
-        <div class="for-whom__card-icon">&#128187;</div>
-        <div class="for-whom__card-title" data-i18n="whom6_title">Сидячий образ жизни</div>
-        <p class="for-whom__card-text" data-i18n="whom6_text">Компенсация последствий офисной работы — зажимы, слабость, нарушение осанки</p>
+        <div class="for-whom__card-icon">&#127793;</div>
+        <div class="for-whom__card-title" data-i18n="whom6_title">Чувствую слабость тазового дна</div>
+        <p class="for-whom__card-text" data-i18n="whom6_text">Деликатная проблема, о которой не принято говорить. Я работаю с этим профессионально и бережно</p>
       </div>
     </div>
   </div>
@@ -1569,30 +1662,30 @@ a { color: inherit; text-decoration: none; }
   </div>
 </section>
 
-<!-- ========== 7. ПОДХОД К ТЕЛУ ========== -->
+<!-- ========== 7. КАК ПРОХОДИТ ПЕРВАЯ ТРЕНИРОВКА ========== -->
 <section class="approach" id="approach">
   <div class="container">
     <div class="section-header">
-      <span class="t-label anim" data-i18n="appr_label">Философия</span>
-      <h2 class="t-display t-display--md anim anim-delay-1" data-i18n="appr_title">Мой подход к телу</h2>
-      <p class="t-body t-body--lg anim anim-delay-2" data-i18n="appr_subtitle">Тело — это единая система, где всё связано</p>
+      <span class="t-label anim" data-i18n="appr_label">Первая встреча</span>
+      <h2 class="t-display t-display--md anim anim-delay-1" data-i18n="appr_title">Как проходит первая тренировка</h2>
+      <p class="t-body t-body--lg anim anim-delay-2" data-i18n="appr_subtitle">4 шага от знакомства до результата</p>
     </div>
     <div class="approach__grid">
       <div class="approach__item anim">
-        <h3 class="approach__item-title" data-i18n="appr1_title">Тело как система</h3>
-        <p class="approach__item-text" data-i18n="appr1_text">Боль в одном месте часто вызвана проблемой в другом. Я работаю с телом целиком, а не с отдельными мышцами. Такой подход даёт устойчивый результат.</p>
+        <h3 class="approach__item-title" data-i18n="appr1_title">01 — Знакомство и диагностика</h3>
+        <p class="approach__item-text" data-i18n="appr1_text">Оцениваю осанку, подвижность суставов, мышечный тонус и паттерны движения. Выясняю цели, ограничения и историю здоровья.</p>
       </div>
       <div class="approach__item anim anim-delay-1">
-        <h3 class="approach__item-title" data-i18n="appr2_title">Важность фасции</h3>
-        <p class="approach__item-text" data-i18n="appr2_text">Фасция — это соединительная ткань, которая связывает всё тело в единую сеть. Работа с фасциальными линиями позволяет снять напряжение и восстановить свободу движения.</p>
+        <h3 class="approach__item-title" data-i18n="appr2_title">02 — Индивидуальная программа</h3>
+        <p class="approach__item-text" data-i18n="appr2_text">На основе диагностики составляю программу именно под вас — с учётом всех особенностей тела и противопоказаний.</p>
       </div>
       <div class="approach__item anim anim-delay-2">
-        <h3 class="approach__item-title" data-i18n="appr3_title">Биомеханика движения</h3>
-        <p class="approach__item-text" data-i18n="appr3_text">Каждое движение подчиняется законам биомеханики. Понимание этих законов позволяет тренироваться эффективно и безопасно — без перегрузок и компенсаций.</p>
+        <h3 class="approach__item-title" data-i18n="appr3_title">03 — Тренировка с обратной связью</h3>
+        <p class="approach__item-text" data-i18n="appr3_text">Работаем по программе. Я контролирую технику, корректирую движения и объясняю, что и зачем мы делаем.</p>
       </div>
       <div class="approach__item anim anim-delay-3">
-        <h3 class="approach__item-title" data-i18n="appr4_title">Движение — это жизнь</h3>
-        <p class="approach__item-text" data-i18n="appr4_text">Качественное движение напрямую влияет на качество жизни. Когда тело двигается свободно — уходит боль, появляется энергия, улучшается настроение и самочувствие.</p>
+        <h3 class="approach__item-title" data-i18n="appr4_title">04 — Результат и план дальше</h3>
+        <p class="approach__item-text" data-i18n="appr4_text">После тренировки обсуждаем ощущения и намечаем план. Вы уже с первого занятия почувствуете разницу.</p>
       </div>
     </div>
   </div>
@@ -1608,7 +1701,7 @@ a { color: inherit; text-decoration: none; }
     <div class="faq__list">
       <div class="faq__item anim">
         <button class="faq__question" data-i18n="faq2_q">Можно ли заниматься при боли в спине?</button>
-        <div class="faq__answer"><p class="faq__answer-inner" data-i18n="faq2_a">Не просто можно — в большинстве случаев нужно. Но важно заниматься грамотно. Я сначала определяю причину боли, а затем подбираю упражнения, которые помогут её устранить, а не усилить.</p></div>
+        <div class="faq__answer"><p class="faq__answer-inner" data-i18n="faq2_a">Если боль острая, то необходим покой и тренироваться пока нельзя. Но когда острая фаза пройдёт, тренироваться не просто можно, а нужно! Регулярные тренировки, такие как на моих занятиях — мобильность, контроль движения, силовые — помогут значительно сократить количество случаев возникновения боли и дискомфорта в спине, а в некоторых случаях и полностью избавиться от боли.</p></div>
       </div>
       <div class="faq__item anim anim-delay-2">
         <button class="faq__question" data-i18n="faq3_q">Подойдут ли тренировки новичкам?</button>
@@ -1622,7 +1715,29 @@ a { color: inherit; text-decoration: none; }
         <button class="faq__question" data-i18n="faq5_q">Можно ли заниматься онлайн?</button>
         <div class="faq__answer"><p class="faq__answer-inner" data-i18n="faq5_a">Да, я тренирую онлайн и у меня есть готовые онлайн-программы для самостоятельной работы. Они подходят тем, кто хочет заниматься в своём темпе из любой точки мира.</p></div>
       </div>
+      <div class="faq__item anim anim-delay-1">
+        <button class="faq__question" data-i18n="faq6_q">Сколько раз в неделю нужно заниматься?</button>
+        <div class="faq__answer"><p class="faq__answer-inner" data-i18n="faq6_a">Оптимально 2–3 раза в неделю. Но даже одна тренировка в неделю даёт результат, если заниматься регулярно. Мы подберём частоту под ваш ритм жизни.</p></div>
+      </div>
+      <div class="faq__item anim anim-delay-2">
+        <button class="faq__question" data-i18n="faq7_q">Через сколько будут результаты?</button>
+        <div class="faq__answer"><p class="faq__answer-inner" data-i18n="faq7_a">Первые изменения в ощущениях — уже после 1–2 тренировок. Видимые результаты — через 4–6 недель при регулярных занятиях. Всё зависит от задачи и исходного состояния.</p></div>
+      </div>
+      <div class="faq__item anim anim-delay-3">
+        <button class="faq__question" data-i18n="faq8_q">Нужно ли приносить свой коврик или оборудование?</button>
+        <div class="faq__answer"><p class="faq__answer-inner" data-i18n="faq8_a">Нет, в студии есть всё необходимое оборудование. Вам нужна только удобная спортивная одежда.</p></div>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- ========== РАСПИСАНИЕ ========== -->
+<section class="schedule" id="schedule" style="padding: var(--section-padding) 0; background: var(--olive); color: #fff; text-align: center;">
+  <div class="container">
+    <span class="t-label anim" style="color: rgba(255,255,255,0.6);" data-i18n="sched_label">Расписание</span>
+    <h2 class="t-display t-display--md anim anim-delay-1" style="color: #fff; margin: 16px 0;" data-i18n="sched_title">Часы работы студии</h2>
+    <p class="t-body t-body--lg anim anim-delay-2" style="color: rgba(255,255,255,0.8); max-width: 500px; margin: 0 auto;" data-i18n="sched_hours">Пн — Пт: 9:00–14:00 и 17:00–21:00</p>
+    <p class="t-body t-body--md anim anim-delay-3" style="color: rgba(255,255,255,0.6); margin-top: 12px;" data-i18n="sched_address">Calpe, Av. Diputación s/n — Av. País Valencia, 2</p>
   </div>
 </section>
 
@@ -1712,10 +1827,34 @@ a { color: inherit; text-decoration: none; }
     <hr class="footer__divider">
     <div class="footer__bottom">
       <span data-i18n="footer_copy">&copy; 2026 Татьяна Бабич. Все права защищены.</span>
-      <span data-i18n="footer_location">Кальпе, Коста Бланка, Испания</span>
+      <div class="footer__legal">
+        <a href="#" onclick="openLegal('privacy'); return false;" data-i18n="legal_privacy">Политика конфиденциальности</a>
+        <a href="#" onclick="openLegal('terms'); return false;" data-i18n="legal_terms">Условия использования</a>
+        <a href="#" onclick="openLegal('aviso'); return false;" data-i18n="legal_aviso">Aviso Legal</a>
+        <a href="#" onclick="openLegal('cookies'); return false;" data-i18n="legal_cookies">Cookies</a>
+      </div>
     </div>
   </div>
 </footer>
+
+<!-- Cookie Banner -->
+<div class="cookie-banner" id="cookieBanner" style="display:none;">
+  <div class="cookie-banner__inner">
+    <p data-i18n="cookie_text">Este sitio utiliza cookies técnicas para mejorar su experiencia. Al continuar navegando, acepta su uso.</p>
+    <div class="cookie-banner__buttons">
+      <button class="btn btn--primary" style="padding: 10px 24px; font-size: 0.82rem;" onclick="acceptCookies()">OK</button>
+      <a href="#" onclick="openLegal('cookies'); return false;" style="font-size: 0.82rem; color: var(--olive);" data-i18n="cookie_more">Más información</a>
+    </div>
+  </div>
+</div>
+
+<!-- Legal Modal -->
+<div class="legal-overlay" id="legalOverlay">
+  <div class="legal-modal">
+    <button class="skill-modal__close" onclick="closeLegal()">&times;</button>
+    <div class="legal-modal__content" id="legalContent"></div>
+  </div>
+</div>
 
 <!-- Skill popup modal -->
 <div class="skill-modal-overlay" id="skillModal">
@@ -1738,13 +1877,13 @@ ru: {
   meta_desc: "Персональные тренировки, восстановление после родов, работа с осанкой и тазовым дном. Кальпе, Испания.",
   nav_about: "Обо мне", nav_services: "Услуги", nav_results: "Результаты", nav_faq: "Вопросы", nav_book: "Записаться",
   hero_label: "Кальпе, Испания",
-  hero_title: 'Тренировки для <em>здоровья</em>, восстановления и качественного движения',
+  hero_title: '<em>Стройное тело</em>, здоровая спина и энергия каждый день',
   hero_subtitle: "Помогаю полюбить движение, улучшить качество жизни, повысить энергию и приобрести стройность и гармонию тела",
   tag_posture: "Осанка", tag_postpartum: "Восстановление после родов", tag_pelvic: "Тазовое дно", tag_mobility: "Мобильность", tag_coord: "Координация", tag_core: "Сильный кор", tag_body: "Стройное и здоровое тело",
   hero_btn_book: "Записаться на тренировку", hero_btn_online: "Стоимость услуг",
   about_label: "Экспертность",
   about_text1: "Мой подход строится на сочетании нескольких методов и инструментов, для того чтобы достигать наиболее качественных, устойчивых и безопасных результатов. Сочетание пилатеса, силовых, мобилизаций, дыхательных техник, работы с фасцией.",
-  about_text2: "Также я использую методы диагностики из прикладной кинезиологии и помогаю улучшить движение через нахождение причины, а не просто работаю со следствием.",
+  about_text2: "Также я использую методы диагностики и двигательные тесты, чтобы улучшить движение через нахождение причины, а не просто работаю со следствием.",
   about_text3: "При необходимости рекомендую определённого специалиста или дополнительную диагностику, так как есть проблемы, которые решаются только при помощи врача или помощи другого специалиста.",
   about_text4: "Более 10 лет работаю с женщинами и в частности с восстановлением после родов, нормализацией тонуса мышц тазового дна, улучшением качества жизни через движение.",
   skill_oda: "Оценка ОДА", skill_kinesiology: "Кинезиология", skill_fascia: "Работа с фасцией",
@@ -1760,7 +1899,7 @@ ru: {
   diff2_title: "Внимание к биомеханике", diff2_text: "Каждое движение анализируется с точки зрения биомеханики. Правильный паттерн движения — основа здорового тела.",
   diff3_title: "Персональный подход", diff3_text: "Даже в мини-группах каждый участник получает внимание и коррекцию техники.",
   diff4_title: "Безопасность и здоровье", diff4_text: "Тренировки без боли и перегрузок. Акцент на восстановление, мобильность и долгосрочное здоровье тела.",
-  promo_badge: "-50%", promo_label: "Специальное предложение", promo_title: "Первая тренировка — знакомство", promo_text: "Познакомимся, оценю состояние вашего тела и покажу, как строится работа. Без обязательств — просто попробуйте.", promo_btn: "Записаться на пробную тренировку",
+  promo_badge: "-50%", promo_label: "Специальное предложение", promo_title: "Первая тренировка — знакомство", promo_text: "Познакомимся, оценю состояние вашего тела и покажу, как строится работа. Без обязательств — просто попробуйте. Предложение действует до конца месяца.", promo_btn: "Записаться на пробную тренировку",
   svc_label: "Услуги", svc_title: "Форматы работы", svc_subtitle: "Выберите формат, который подходит вам",
   svc1_label: "Индивидуально", svc1_title: "Персональная тренировка", svc1_price: '50€ <span>/ час</span>',
   svc1_text: "Один клиент в студии — полностью индивидуальная работа с максимумом внимания.",
@@ -1774,13 +1913,14 @@ ru: {
   svc3_text: "Внимание к технике и противопоказаниям сохраняется. Больше энергии, вовлечённости и регулярности.",
   svc3_f1: "Внимание к технике и противопоказаниям", svc3_f2: "Больше энергии и вовлечённости", svc3_f3: "Легче держать режим", svc3_f4: "Самый выгодный формат",
   svc3_tip: "👉 Лучший вариант для стабильных тренировок и поддержания формы",
+  svc4_label: "Видеотренировки", svc4_title: "Тренировки на все случаи жизни", svc4_price: '1990₽ / 21€', svc4_text: "14 разнонаправленных видеотренировок — от пилатеса и силовых до массажа с мячиками и тренировки для чёткого овала лица. Короткие на 15 минут и полноценные на 45. Стопы, мобильность, кор, верх, низ — всё в одном пакете. Доступ на почту сразу после оплаты. Ваши навсегда.", svc4_f1: "14 тренировок: пилатес, силовые, мобильность", svc4_f2: "Массаж с мячиками и тренировка для овала лица", svc4_f3: "От 15 до 45 минут — под любое расписание", svc4_f4: "Доступ навсегда, сразу после оплаты", svc4_tip: "👉 Идеально для самостоятельных тренировок дома", svc4_btn_rub: "Оплатить ₽", svc4_btn_eur: "Оплатить €",
   whom_label: "Для вас", whom_title: "Для кого мои тренировки", whom_subtitle: "Если вы узнаёте себя — мы точно найдём решение",
-  whom1_title: "Боль в пояснице", whom1_text: "Хроническая или периодическая боль, которая мешает жить и двигаться свободно",
-  whom2_title: "Напряжение в шее", whom2_text: "Постоянное напряжение, головные боли и скованность от сидячей работы",
-  whom3_title: "Восстановление после родов", whom3_text: "Бережное возвращение тела к активной жизни после беременности и родов",
-  whom4_title: "Слабость тазового дна", whom4_text: "Укрепление глубоких мышц для здоровья и уверенности в повседневной жизни",
-  whom5_title: "Ограниченная подвижность", whom5_text: "Трудно наклониться, повернуться или поднять руки без дискомфорта",
-  whom6_title: "Сидячий образ жизни", whom6_text: "Компенсация последствий офисной работы — зажимы, слабость, нарушение осанки",
+  whom1_title: "После родов не могу вернуться в форму", whom1_text: "Тело изменилось, живот не уходит, спина болит — знакомо? Я помогу восстановиться бережно и эффективно",
+  whom2_title: "Врач сказал — в обычный зал нельзя", whom2_text: "Грыжи, протрузии, проблемы с суставами — я учитываю все ограничения и подбираю безопасную нагрузку",
+  whom3_title: "Хочу тренироваться, но боюсь навредить", whom3_text: "Боль в спине, шее или пояснице? Я найду причину и подберу упражнения, которые помогут, а не усилят проблему",
+  whom4_title: "Сижу весь день — тело затекает", whom4_text: "Офис, машина, диван — и тело забывает как двигаться. Верну подвижность, лёгкость и энергию",
+  whom5_title: "Хочу стройное тело без жёстких диет", whom5_text: "Грамотные тренировки дают устойчивый результат — без голодания и перегрузок",
+  whom6_title: "Чувствую слабость тазового дна", whom6_text: "Деликатная проблема, о которой не принято говорить. Я работаю с этим профессионально и бережно",
   ba_label: "Результаты", ba_title: "До и после", ba_subtitle: "Реальные результаты клиенток", ba1_tag: "Коррекция фигуры", ba2_tag: "Восстановление после родов", ba3_tag: "Улучшение осанки", rev_label: "Отзывы", res_title: "Что говорят клиенты",
   rev1_quote: "Большое спасибо Татьяне Бабич за то, что несмотря на мои проблемы со здоровьем, она смогла выстроить для меня грамотные и эффективные тренировки. Я узнала что такое жить без боли в спине (у меня был компрессионный перелом). Все к Татьяне!",
   rev1_author: "Настя Вальтер, 28 лет", rev1_result: "Жизнь без боли в спине",
@@ -1790,17 +1930,21 @@ ru: {
   rev3_author: "Анастасия П., 34 года", rev3_result: "Улучшение подвижности",
   rev4_quote: "Искала хорошего тренера для восстановления после родов. Результат превзошёл ожидания: ощущаю результаты и в состоянии здоровья, и визуально. Грамотный специалист своего дела! С удовольствием рекомендую Татьяну друзьям и знакомым.",
   rev4_author: "Оксана Сергеевна, 40 лет", rev4_result: "Восстановление после родов",
-  appr_label: "Философия", appr_title: "Мой подход к телу", appr_subtitle: "Тело — это единая система, где всё связано",
-  appr1_title: "Тело как система", appr1_text: "Боль в одном месте часто вызвана проблемой в другом. Я работаю с телом целиком, а не с отдельными мышцами. Такой подход даёт устойчивый результат.",
-  appr2_title: "Важность фасции", appr2_text: "Фасция — это соединительная ткань, которая связывает всё тело в единую сеть. Работа с фасциальными линиями позволяет снять напряжение и восстановить свободу движения.",
-  appr3_title: "Биомеханика движения", appr3_text: "Каждое движение подчиняется законам биомеханики. Понимание этих законов позволяет тренироваться эффективно и безопасно — без перегрузок и компенсаций.",
-  appr4_title: "Движение — это жизнь", appr4_text: "Качественное движение напрямую влияет на качество жизни. Когда тело двигается свободно — уходит боль, появляется энергия, улучшается настроение и самочувствие.",
+  appr_label: "Первая встреча", appr_title: "Как проходит первая тренировка", appr_subtitle: "4 шага от знакомства до результата",
+  appr1_title: "01 — Знакомство и диагностика", appr1_text: "Оцениваю осанку, подвижность суставов, мышечный тонус и паттерны движения. Выясняю цели, ограничения и историю здоровья.",
+  appr2_title: "02 — Индивидуальная программа", appr2_text: "На основе диагностики составляю программу именно под вас — с учётом всех особенностей тела и противопоказаний.",
+  appr3_title: "03 — Тренировка с обратной связью", appr3_text: "Работаем по программе. Я контролирую технику, корректирую движения и объясняю, что и зачем мы делаем.",
+  appr4_title: "04 — Результат и план дальше", appr4_text: "После тренировки обсуждаем ощущения и намечаем план. Вы уже с первого занятия почувствуете разницу.",
   faq_label: "Вопросы", faq_title: "Часто задаваемые вопросы",
   faq1_q: "Можно ли тренироваться после родов?", faq1_a: "Да, и это один из моих ключевых профилей работы. Я провожу оценку состояния тела и составляю программу бережного восстановления — с учётом диастаза, тазового дна и общего состояния. Начинать можно уже через 6-8 недель после родов (при отсутствии противопоказаний).",
-  faq2_q: "Можно ли заниматься при боли в спине?", faq2_a: "Не просто можно — в большинстве случаев нужно. Но важно заниматься грамотно. Я сначала определяю причину боли, а затем подбираю упражнения, которые помогут её устранить, а не усилить.",
+  faq2_q: "Можно ли заниматься при боли в спине?", faq2_a: "Если боль острая, то необходим покой и тренироваться пока нельзя. Но когда острая фаза пройдёт, тренироваться не просто можно, а нужно! Регулярные тренировки, такие как на моих занятиях — мобильность, контроль движения, силовые — помогут значительно сократить количество случаев возникновения боли и дискомфорта в спине, а в некоторых случаях и полностью избавиться от боли.",
   faq3_q: "Подойдут ли тренировки новичкам?", faq3_a: "Абсолютно. Программа строится от вашего текущего уровня. Мы начинаем с базовых паттернов движения и постепенно увеличиваем сложность. Никакой предварительной подготовки не требуется.",
   faq4_q: "Как проходят персональные тренировки?", faq4_a: "Первая встреча — это всегда диагностика: оцениваю осанку, подвижность, выявляю ограничения. На основе этого строю индивидуальную программу. Тренировки включают элементы пилатеса, силовой работы, мобильности — в зависимости от ваших задач.",
-  faq5_q: "Можно ли заниматься онлайн?", faq5_a: "Да, я тренирую онлайн и у меня есть готовые онлайн-программы для самостоятельной работы. Они подходят тем, кто хочет заниматься в своём темпе из любой точки мира.",
+  faq5_q: "Можно ли заниматься онлайн?",
+  faq6_q: "Сколько раз в неделю нужно заниматься?", faq6_a: "Оптимально 2–3 раза в неделю. Но даже одна тренировка в неделю даёт результат, если заниматься регулярно. Мы подберём частоту под ваш ритм жизни.",
+  faq7_q: "Через сколько будут результаты?", faq7_a: "Первые изменения в ощущениях — уже после 1–2 тренировок. Видимые результаты — через 4–6 недель при регулярных занятиях.",
+  faq8_q: "Нужно ли приносить свой коврик или оборудование?", faq8_a: "Нет, в студии есть всё необходимое оборудование. Вам нужна только удобная спортивная одежда.",
+  sched_label: "Расписание", sched_title: "Часы работы студии", sched_hours: "Пн — Пт: 9:00–14:00 и 17:00–21:00", sched_address: "Calpe, Av. Diputación s/n — Av. País Valencia, 2", faq5_a: "Да, я тренирую онлайн и у меня есть готовые онлайн-программы для самостоятельной работы. Они подходят тем, кто хочет заниматься в своём темпе из любой точки мира.",
   book_label: "Запись", book_title: "Запишитесь на тренировку", book_text: "Заполните форму или напишите мне напрямую — я отвечу в течение дня и помогу выбрать подходящий формат.",
   form_name: "Ваше имя", form_name_ph: "Как вас зовут?", form_phone: "Телефон", form_format: "Формат тренировки",
   form_format_ph: "Выберите формат", form_opt_trial: "Пробная тренировка — знакомство", form_opt_personal: "Персональная тренировка", form_opt_pair: "Тренировка в паре", form_opt_group: "Мини-группа",
@@ -1808,6 +1952,7 @@ ru: {
   map_label: "Расположение", map_title: "Где проходят тренировки", map_address: "Calpe, Av. Diputación s/n — Av. País Valencia, 2",
   footer_role: "Специалист по движению", footer_city: "Кальпе, Испания", footer_nav: "Навигация", footer_contact: "Связаться",
   footer_copy: "© 2026 Татьяна Бабич. Все права защищены.", footer_location: "Кальпе, Коста Бланка, Испания",
+  legal_privacy: "Политика конфиденциальности", legal_terms: "Условия использования", legal_aviso: "Aviso Legal", legal_cookies: "Cookies", cookie_text: "Этот сайт использует технические cookies для улучшения работы. Продолжая просмотр, вы соглашаетесь с их использованием.", cookie_more: "Подробнее",
   // Skill modals
   sm_oda_t: "Оценка опорно-двигательного аппарата", sm_oda: "Перед началом тренировок я провожу детальную оценку состояния вашего тела: осанку, подвижность суставов, тонус мышц, наличие асимметрий и компенсаторных паттернов. Это позволяет точно определить, над чем нужно работать.",
   sm_kin_t: "Кинезиология", sm_kin: "Кинезиология — наука о движении человека. Я изучаю, как работают ваши мышцы, суставы и нервная система в связке. Это помогает понять, почему возникает боль или ограничение.",
@@ -1821,13 +1966,13 @@ es: {
   meta_desc: "Entrenamiento personal, recuperación posparto, trabajo con postura y suelo pélvico. Calpe, España.",
   nav_about: "Sobre mí", nav_services: "Servicios", nav_results: "Resultados", nav_faq: "Preguntas", nav_book: "Reservar",
   hero_label: "Calpe, España",
-  hero_title: 'Entrenamiento para la <em>salud</em>, la recuperación y el movimiento de calidad',
+  hero_title: '<em>Cuerpo esbelto</em>, espalda sana y energía cada día',
   hero_subtitle: "Te ayudo a enamorarte del movimiento, mejorar tu calidad de vida, aumentar tu energía y lograr un cuerpo esbelto y armonioso",
   tag_posture: "Postura", tag_postpartum: "Recuperación posparto", tag_pelvic: "Suelo pélvico", tag_mobility: "Movilidad", tag_coord: "Coordinación", tag_core: "Core fuerte", tag_body: "Cuerpo esbelto y sano",
   hero_btn_book: "Reservar entrenamiento", hero_btn_online: "Precios",
   about_label: "Experiencia",
   about_text1: "Mi enfoque se basa en la combinación de varios métodos e instrumentos para lograr los resultados más cualitativos, sostenibles y seguros. Combinación de pilates, fuerza, movilizaciones, técnicas de respiración y trabajo fascial.",
-  about_text2: "También utilizo métodos de diagnóstico de kinesiología aplicada y ayudo a mejorar el movimiento encontrando la causa, no solo trabajando con la consecuencia.",
+  about_text2: "También utilizo métodos de diagnóstico y tests de movimiento para mejorar el movimiento encontrando la causa, no solo trabajando con la consecuencia.",
   about_text3: "Cuando es necesario, recomiendo un especialista concreto o diagnóstico adicional, ya que hay problemas que solo se resuelven con ayuda médica o de otro profesional.",
   about_text4: "Más de 10 años trabajando con mujeres, en particular con recuperación posparto, normalización del tono del suelo pélvico y mejora de la calidad de vida a través del movimiento.",
   skill_oda: "Evaluación locomotora", skill_kinesiology: "Kinesiología", skill_fascia: "Trabajo fascial",
@@ -1843,7 +1988,7 @@ es: {
   diff2_title: "Atención a la biomecánica", diff2_text: "Cada movimiento se analiza desde la biomecánica. Un patrón de movimiento correcto es la base de un cuerpo sano.",
   diff3_title: "Enfoque personalizado", diff3_text: "Incluso en minigrupos, cada participante recibe atención y corrección técnica.",
   diff4_title: "Seguridad y salud", diff4_text: "Entrenamientos sin dolor ni sobrecarga. Énfasis en recuperación, movilidad y salud corporal a largo plazo.",
-  promo_badge: "-50%", promo_label: "Oferta especial", promo_title: "Primera sesión — conocernos", promo_text: "Nos conocemos, evalúo el estado de tu cuerpo y te muestro cómo trabajo. Sin compromiso — solo prueba.", promo_btn: "Reservar sesión de prueba",
+  promo_badge: "-50%", promo_label: "Oferta especial", promo_title: "Primera sesión — conocernos", promo_text: "Nos conocemos, evalúo el estado de tu cuerpo y te muestro cómo trabajo. Sin compromiso — solo prueba. Oferta válida hasta fin de mes.", promo_btn: "Reservar sesión de prueba",
   svc_label: "Servicios", svc_title: "Formatos de trabajo", svc_subtitle: "Elige el formato que más te convenga",
   svc1_label: "Individual", svc1_title: "Entrenamiento personal", svc1_price: '50€ <span>/ hora</span>',
   svc1_text: "Un solo cliente en el estudio — trabajo totalmente individual con máxima atención.",
@@ -1857,13 +2002,14 @@ es: {
   svc3_text: "Se mantiene la atención a la técnica y contraindicaciones. Más energía, implicación y regularidad.",
   svc3_f1: "Atención a técnica y contraindicaciones", svc3_f2: "Más energía e implicación", svc3_f3: "Más fácil mantener la rutina", svc3_f4: "El formato más económico",
   svc3_tip: "👉 La mejor opción para entrenamientos estables y mantenerse en forma",
+  svc4_label: "Video entrenamientos", svc4_title: "Entrenamientos para todas las ocasiones", svc4_price: '1990₽ / 21€', svc4_text: "14 videoentrenamientos variados: desde pilates y fuerza hasta masaje con pelotas y entrenamiento para un óvalo facial definido. Sesiones cortas de 15 min y completas de 45. Pies, movilidad, core, tren superior e inferior — todo en un paquete. Acceso inmediato por email. Tuyos para siempre.", svc4_f1: "14 sesiones: pilates, fuerza, movilidad", svc4_f2: "Masaje con pelotas y fitness facial", svc4_f3: "De 15 a 45 min — para cualquier horario", svc4_f4: "Acceso para siempre, inmediato tras el pago", svc4_tip: "👉 Ideal para entrenar en casa por tu cuenta", svc4_btn_rub: "Pagar ₽", svc4_btn_eur: "Pagar €",
   whom_label: "Para ti", whom_title: "Para quién son mis entrenamientos", whom_subtitle: "Si te reconoces, seguro encontraremos la solución",
-  whom1_title: "Dolor lumbar", whom1_text: "Dolor crónico o periódico que dificulta vivir y moverse libremente",
-  whom2_title: "Tensión cervical", whom2_text: "Tensión constante, dolores de cabeza y rigidez por trabajo sedentario",
-  whom3_title: "Recuperación posparto", whom3_text: "Retorno cuidadoso del cuerpo a la vida activa después del embarazo y el parto",
-  whom4_title: "Debilidad del suelo pélvico", whom4_text: "Fortalecimiento de los músculos profundos para la salud y confianza diaria",
-  whom5_title: "Movilidad limitada", whom5_text: "Dificultad para agacharse, girarse o levantar los brazos sin molestias",
-  whom6_title: "Vida sedentaria", whom6_text: "Compensar las consecuencias del trabajo de oficina: tensiones, debilidad, problemas posturales",
+  whom1_title: "Después del parto no puedo recuperar mi forma", whom1_text: "El cuerpo cambió, la barriga no baja, la espalda duele. Te ayudo a recuperarte de forma segura y efectiva",
+  whom2_title: "El médico dijo que no puedo ir al gym normal", whom2_text: "Hernias, protrusiones, problemas articulares — tengo en cuenta todas las limitaciones y adapto la carga",
+  whom3_title: "Quiero entrenar pero tengo miedo de lesionarme", whom3_text: "Dolor de espalda, cuello o lumbar? Encuentro la causa y selecciono ejercicios que ayudan, no empeoran",
+  whom4_title: "Paso todo el día sentada — el cuerpo se entumece", whom4_text: "Oficina, coche, sofá — y el cuerpo olvida cómo moverse. Devuelvo movilidad, ligereza y energía",
+  whom5_title: "Quiero un cuerpo esbelto sin dietas estrictas", whom5_text: "El entrenamiento inteligente da resultados sostenibles — sin hambre ni sobrecarga",
+  whom6_title: "Siento debilidad en el suelo pélvico", whom6_text: "Un problema delicado del que no se suele hablar. Trabajo con ello de forma profesional y cuidadosa",
   ba_label: "Resultados", ba_title: "Antes y después", ba_subtitle: "Resultados reales de clientas", ba1_tag: "Corrección de figura", ba2_tag: "Recuperación posparto", ba3_tag: "Mejora de postura", rev_label: "Opiniones", res_title: "Lo que dicen las clientas",
   rev1_quote: "Muchas gracias a Tatiana Babich por crear entrenamientos efectivos y adaptados a mis problemas de salud. Descubrí lo que es vivir sin dolor de espalda (tuve una fractura por compresión). ¡Todos a entrenar con Tatiana!",
   rev1_author: "Nastya Walter, 28 años", rev1_result: "Vida sin dolor de espalda",
@@ -1873,17 +2019,21 @@ es: {
   rev3_author: "Anastasia P., 34 años", rev3_result: "Mejora de movilidad",
   rev4_quote: "Buscaba un buen entrenador para recuperarme después del parto. El resultado superó mis expectativas: noto los resultados tanto en mi salud como visualmente. ¡Una profesional! Recomiendo a Tatiana con mucho gusto.",
   rev4_author: "Oksana Sergueevna, 40 años", rev4_result: "Recuperación posparto",
-  appr_label: "Filosofía", appr_title: "Mi enfoque corporal", appr_subtitle: "El cuerpo es un sistema único donde todo está conectado",
-  appr1_title: "El cuerpo como sistema", appr1_text: "El dolor en un lugar a menudo es causado por un problema en otro. Trabajo con el cuerpo en su conjunto, no con músculos aislados. Este enfoque da resultados duraderos.",
-  appr2_title: "Importancia de la fascia", appr2_text: "La fascia es el tejido conectivo que une todo el cuerpo en una red. Trabajar con las líneas fasciales permite liberar tensión y restaurar la libertad de movimiento.",
-  appr3_title: "Biomecánica del movimiento", appr3_text: "Cada movimiento obedece las leyes de la biomecánica. Comprenderlas permite entrenar de forma eficaz y segura, sin sobrecargas ni compensaciones.",
-  appr4_title: "El movimiento es vida", appr4_text: "El movimiento de calidad influye directamente en la calidad de vida. Cuando el cuerpo se mueve libremente, desaparece el dolor, llega la energía y mejora el bienestar.",
+  appr_label: "Primera sesión", appr_title: "Cómo es la primera sesión", appr_subtitle: "4 pasos del conocimiento al resultado",
+  appr1_title: "01 — Conocimiento y diagnóstico", appr1_text: "Evalúo postura, movilidad articular, tono muscular y patrones de movimiento. Conozco tus objetivos, limitaciones e historial de salud.",
+  appr2_title: "02 — Programa individual", appr2_text: "Basándome en el diagnóstico, creo un programa específico para ti — considerando todas las particularidades y contraindicaciones.",
+  appr3_title: "03 — Entrenamiento con retroalimentación", appr3_text: "Trabajamos según el programa. Controlo la técnica, corrijo movimientos y explico qué hacemos y por qué.",
+  appr4_title: "04 — Resultado y plan a seguir", appr4_text: "Después de la sesión comentamos las sensaciones y trazamos un plan. Ya desde la primera sesión sentirás la diferencia.",
   faq_label: "Preguntas", faq_title: "Preguntas frecuentes",
   faq1_q: "¿Puedo entrenar después del parto?", faq1_a: "Sí, y es uno de mis perfiles clave. Evalúo el estado del cuerpo y diseño un programa de recuperación cuidadosa, considerando diástasis, suelo pélvico y estado general. Se puede empezar a las 6-8 semanas del parto (sin contraindicaciones).",
-  faq2_q: "¿Puedo entrenar con dolor de espalda?", faq2_a: "No solo puedes, en la mayoría de los casos debes. Pero es importante hacerlo bien. Primero identifico la causa del dolor y luego selecciono ejercicios que ayuden a eliminarlo, no a empeorarlo.",
+  faq2_q: "¿Puedo entrenar con dolor de espalda?", faq2_a: "Si el dolor es agudo, necesitas reposo y no puedes entrenar todavía. Pero cuando pase la fase aguda, no solo puedes sino que debes entrenar. El entrenamiento regular como en mis sesiones — movilidad, control motor y fuerza — ayuda a reducir significativamente los episodios de dolor de espalda y, en algunos casos, a eliminarlo por completo.",
   faq3_q: "¿Son adecuados para principiantes?", faq3_a: "Por supuesto. El programa se construye desde tu nivel actual. Empezamos con patrones de movimiento básicos y aumentamos gradualmente la complejidad. No se necesita preparación previa.",
   faq4_q: "¿Cómo son los entrenamientos personales?", faq4_a: "La primera sesión siempre es diagnóstica: evalúo postura, movilidad e identifico limitaciones. Sobre esa base construyo un programa individual. Los entrenamientos incluyen pilates, fuerza y movilidad según tus objetivos.",
-  faq5_q: "¿Se puede entrenar online?", faq5_a: "Sí, entreno online y tengo programas listos para práctica autónoma. Son ideales para quienes quieren entrenar a su ritmo desde cualquier lugar del mundo.",
+  faq5_q: "¿Se puede entrenar online?",
+  faq6_q: "¿Cuántas veces a la semana hay que entrenar?", faq6_a: "Lo óptimo es 2-3 veces por semana. Pero incluso una sesión semanal da resultados si se entrena con regularidad.",
+  faq7_q: "¿Cuándo se ven los resultados?", faq7_a: "Los primeros cambios se sienten tras 1-2 sesiones. Resultados visibles en 4-6 semanas con entrenamiento regular.",
+  faq8_q: "¿Necesito traer mi propia esterilla o equipamiento?", faq8_a: "No, el estudio tiene todo el equipamiento necesario. Solo necesitas ropa deportiva cómoda.",
+  sched_label: "Horario", sched_title: "Horario del estudio", sched_hours: "Lun — Vie: 9:00–14:00 y 17:00–21:00", sched_address: "Calpe, Av. Diputación s/n — Av. País Valencia, 2", faq5_a: "Sí, entreno online y tengo programas listos para práctica autónoma. Son ideales para quienes quieren entrenar a su ritmo desde cualquier lugar del mundo.",
   book_label: "Reserva", book_title: "Reserva tu entrenamiento", book_text: "Rellena el formulario o escríbeme directamente. Respondo en el día y te ayudo a elegir el formato adecuado.",
   form_name: "Tu nombre", form_name_ph: "¿Cómo te llamas?", form_phone: "Teléfono", form_format: "Formato de entrenamiento",
   form_format_ph: "Elige formato", form_opt_trial: "Sesión de prueba — conocernos", form_opt_personal: "Entrenamiento personal", form_opt_pair: "Entrenamiento en pareja", form_opt_group: "Minigrupo",
@@ -1892,6 +2042,8 @@ es: {
   map_label: "Ubicación", map_title: "Dónde se realizan los entrenamientos", map_address: "Calpe, Av. Diputación s/n — Av. País Valencia, 2",
   footer_role: "Especialista en movimiento", footer_city: "Calpe, España", footer_nav: "Navegación", footer_contact: "Contacto",
   footer_copy: "© 2026 Tatiana Babich. Todos los derechos reservados.", footer_location: "Calpe, Costa Blanca, España",
+  legal_privacy: "Política de privacidad", legal_terms: "Términos y condiciones", legal_aviso: "Aviso Legal", legal_cookies: "Cookies", cookie_text: "Este sitio utiliza cookies técnicas para mejorar su experiencia. Al continuar navegando, acepta su uso.", cookie_more: "Más información",
+  legal_privacy: "Политика конфиденциальности", legal_terms: "Условия использования", legal_aviso: "Aviso Legal", legal_cookies: "Cookies", cookie_text: "Этот сайт использует технические cookies для улучшения работы. Продолжая просмотр, вы соглашаетесь с их использованием.", cookie_more: "Подробнее",
   sm_oda_t: "Evaluación del aparato locomotor", sm_oda: "Antes de entrenar, realizo una evaluación detallada de tu cuerpo: postura, movilidad articular, tono muscular, asimetrías y patrones compensatorios. Esto permite determinar exactamente en qué trabajar.",
   sm_kin_t: "Kinesiología", sm_kin: "La kinesiología es la ciencia del movimiento humano. Estudio cómo funcionan tus músculos, articulaciones y sistema nervioso en conjunto para entender por qué aparece el dolor o la limitación.",
   sm_fas_t: "Trabajo fascial", sm_fas: "La fascia es el tejido conectivo que envuelve todo el cuerpo. Una restricción en un punto puede causar dolor en otro. Trabajo con las líneas fasciales para liberar tensión profunda y restaurar la libertad de movimiento.",
@@ -1904,13 +2056,13 @@ en: {
   meta_desc: "Personal training, postpartum recovery, posture and pelvic floor work. Calpe, Spain.",
   nav_about: "About", nav_services: "Services", nav_results: "Results", nav_faq: "FAQ", nav_book: "Book Now",
   hero_label: "Calpe, Spain",
-  hero_title: 'Training for <em>health</em>, recovery and quality movement',
+  hero_title: '<em>Lean body</em>, healthy back and energy every day',
   hero_subtitle: "I help you fall in love with movement, improve your quality of life, boost energy and achieve a lean, harmonious body",
   tag_posture: "Posture", tag_postpartum: "Postpartum recovery", tag_pelvic: "Pelvic floor", tag_mobility: "Mobility", tag_coord: "Coordination", tag_core: "Strong core", tag_body: "Lean and healthy body",
   hero_btn_book: "Book a session", hero_btn_online: "Pricing",
   about_label: "Expertise",
   about_text1: "My approach combines several methods and tools to achieve the highest quality, sustainable and safe results. A blend of pilates, strength training, mobilizations, breathing techniques and fascial work.",
-  about_text2: "I also use diagnostic methods from applied kinesiology and help improve movement by finding the root cause, not just addressing the symptoms.",
+  about_text2: "I also use diagnostic methods and movement tests to improve movement by finding the root cause, not just addressing the symptoms.",
   about_text3: "When necessary, I recommend a specific specialist or additional diagnostics, as some issues can only be resolved with medical help or another professional.",
   about_text4: "Over 10 years working with women, particularly in postpartum recovery, pelvic floor muscle tone normalization and improving quality of life through movement.",
   skill_oda: "MSK Assessment", skill_kinesiology: "Kinesiology", skill_fascia: "Fascial Work",
@@ -1926,7 +2078,7 @@ en: {
   diff2_title: "Biomechanics focus", diff2_text: "Every movement is analyzed from a biomechanical perspective. Correct movement patterns are the foundation of a healthy body.",
   diff3_title: "Personalized approach", diff3_text: "Even in small groups, every participant gets individual attention and technique correction.",
   diff4_title: "Safety & health", diff4_text: "Pain-free training without overload. Focus on recovery, mobility and long-term body health.",
-  promo_badge: "-50%", promo_label: "Special offer", promo_title: "First session — get to know each other", promo_text: "We meet, I assess your body and show you how I work. No commitment — just try it.", promo_btn: "Book a trial session",
+  promo_badge: "-50%", promo_label: "Special offer", promo_title: "First session — get to know each other", promo_text: "We meet, I assess your body and show you how I work. No commitment — just try it. Offer valid until end of month.", promo_btn: "Book a trial session",
   svc_label: "Services", svc_title: "Training Formats", svc_subtitle: "Choose the format that suits you",
   svc1_label: "One-on-one", svc1_title: "Personal Training", svc1_price: '50€ <span>/ hour</span>',
   svc1_text: "One client in the studio — fully individual work with maximum attention.",
@@ -1940,13 +2092,14 @@ en: {
   svc3_text: "Technique and contraindications still get full attention. More energy, engagement and consistency.",
   svc3_f1: "Attention to technique & contraindications", svc3_f2: "More energy and engagement", svc3_f3: "Easier to stay consistent", svc3_f4: "Most affordable format",
   svc3_tip: "👉 Best option for regular training and staying in shape",
+  svc4_label: "Video workouts", svc4_title: "Workouts for every occasion", svc4_price: '1990₽ / 21€', svc4_text: "14 diverse video workouts: from pilates and strength to ball massage and facial contour training. Quick 15-min sessions and full 45-min ones. Feet, mobility, core, upper and lower body — all in one package. Instant email access after payment. Yours forever.", svc4_f1: "14 workouts: pilates, strength, mobility", svc4_f2: "Ball massage and face fitness", svc4_f3: "15 to 45 min — fits any schedule", svc4_f4: "Lifetime access, instant after payment", svc4_tip: "👉 Perfect for independent home workouts", svc4_btn_rub: "Pay ₽", svc4_btn_eur: "Pay €",
   whom_label: "For you", whom_title: "Who my training is for", whom_subtitle: "If you recognize yourself — we will definitely find a solution",
-  whom1_title: "Lower back pain", whom1_text: "Chronic or recurring pain that makes it hard to live and move freely",
-  whom2_title: "Neck tension", whom2_text: "Constant tension, headaches and stiffness from desk work",
-  whom3_title: "Postpartum recovery", whom3_text: "Gentle return to active life after pregnancy and childbirth",
-  whom4_title: "Weak pelvic floor", whom4_text: "Strengthening deep muscles for daily health and confidence",
-  whom5_title: "Limited mobility", whom5_text: "Difficulty bending, turning or raising your arms without discomfort",
-  whom6_title: "Sedentary lifestyle", whom6_text: "Compensating for desk work consequences — tension, weakness, posture problems",
+  whom1_title: "Can't get back in shape after giving birth", whom1_text: "Body changed, belly won't go away, back hurts. I'll help you recover safely and effectively",
+  whom2_title: "Doctor said no regular gym", whom2_text: "Hernias, protrusions, joint issues — I account for all limitations and adapt the load",
+  whom3_title: "Want to train but afraid of injury", whom3_text: "Back, neck or lower back pain? I find the cause and select exercises that help, not worsen",
+  whom4_title: "Sitting all day — body is stiff", whom4_text: "Office, car, couch — your body forgets how to move. I restore mobility, lightness and energy",
+  whom5_title: "Want a lean body without strict diets", whom5_text: "Smart training delivers sustainable results — no starving, no overload",
+  whom6_title: "Feeling pelvic floor weakness", whom6_text: "A delicate issue people don't talk about. I work with it professionally and carefully",
   ba_label: "Results", ba_title: "Before & After", ba_subtitle: "Real client results", ba1_tag: "Body correction", ba2_tag: "Postpartum recovery", ba3_tag: "Posture improvement", rev_label: "Testimonials", res_title: "What clients say",
   rev1_quote: "A huge thank you to Tatiana Babich for building effective workouts despite my health issues. I learned what it means to live without back pain (I had a compression fracture). Everyone should train with Tatiana!",
   rev1_author: "Nastya Walter, 28", rev1_result: "Life without back pain",
@@ -1956,17 +2109,21 @@ en: {
   rev3_author: "Anastasia P., 34", rev3_result: "Mobility improvement",
   rev4_quote: "I was looking for a good trainer for postpartum recovery. The result exceeded expectations: I see results both in my health and visually. A true professional! I happily recommend Tatiana to friends and family.",
   rev4_author: "Oksana Sergeevna, 40", rev4_result: "Postpartum recovery",
-  appr_label: "Philosophy", appr_title: "My approach to the body", appr_subtitle: "The body is a unified system where everything is connected",
-  appr1_title: "Body as a system", appr1_text: "Pain in one place is often caused by a problem elsewhere. I work with the body as a whole, not isolated muscles. This approach delivers lasting results.",
-  appr2_title: "The importance of fascia", appr2_text: "Fascia is connective tissue linking the entire body into one network. Working with fascial lines releases tension and restores freedom of movement.",
-  appr3_title: "Movement biomechanics", appr3_text: "Every movement follows the laws of biomechanics. Understanding them allows you to train effectively and safely — without overload or compensation.",
-  appr4_title: "Movement is life", appr4_text: "Quality movement directly impacts quality of life. When the body moves freely, pain fades, energy arrives, and wellbeing improves.",
+  appr_label: "First session", appr_title: "How the first session works", appr_subtitle: "4 steps from meeting to results",
+  appr1_title: "01 — Meeting and assessment", appr1_text: "I assess posture, joint mobility, muscle tone and movement patterns. I learn your goals, limitations and health history.",
+  appr2_title: "02 — Individual program", appr2_text: "Based on the assessment, I create a program specifically for you — considering all body features and contraindications.",
+  appr3_title: "03 — Training with feedback", appr3_text: "We work through the program. I monitor technique, correct movements and explain what we do and why.",
+  appr4_title: "04 — Results and next steps", appr4_text: "After the session we discuss how you feel and outline a plan. You will feel the difference from the very first session.",
   faq_label: "FAQ", faq_title: "Frequently Asked Questions",
   faq1_q: "Can I train after giving birth?", faq1_a: "Yes, and it's one of my key specializations. I assess your body's condition and design a careful recovery program considering diastasis, pelvic floor and overall state. You can start 6-8 weeks postpartum (without contraindications).",
-  faq2_q: "Can I train with back pain?", faq2_a: "Not only can you — in most cases you should. But it's important to do it right. I first identify the cause of the pain, then select exercises that help eliminate it, not make it worse.",
+  faq2_q: "Can I train with back pain?", faq2_a: "If the pain is acute, you need rest and cannot train yet. But once the acute phase passes, you not only can but should train! Regular training like in my sessions — mobility, motor control and strength — will significantly reduce episodes of back pain and discomfort, and in some cases eliminate it completely.",
   faq3_q: "Is it suitable for beginners?", faq3_a: "Absolutely. The program is built from your current level. We start with basic movement patterns and gradually increase complexity. No prior preparation needed.",
   faq4_q: "How do personal sessions work?", faq4_a: "The first session is always diagnostic: I assess posture, mobility and identify limitations. Based on this, I build an individual program. Sessions include pilates, strength work and mobility — depending on your goals.",
-  faq5_q: "Can I train online?", faq5_a: "Yes, I train online and have ready-made programs for independent practice. They are perfect for those who want to train at their own pace from anywhere in the world.",
+  faq5_q: "Can I train online?",
+  faq6_q: "How many times a week should I train?", faq6_a: "Ideally 2-3 times a week. But even once a week gives results with consistency. We will find the right frequency for your lifestyle.",
+  faq7_q: "How soon will I see results?", faq7_a: "First changes in how you feel — after just 1-2 sessions. Visible results in 4-6 weeks with regular training.",
+  faq8_q: "Do I need to bring my own mat or equipment?", faq8_a: "No, the studio has all necessary equipment. You just need comfortable sportswear.",
+  sched_label: "Schedule", sched_title: "Studio Hours", sched_hours: "Mon — Fri: 9:00–14:00 and 17:00–21:00", sched_address: "Calpe, Av. Diputación s/n — Av. País Valencia, 2", faq5_a: "Yes, I train online and have ready-made programs for independent practice. They are perfect for those who want to train at their own pace from anywhere in the world.",
   book_label: "Book", book_title: "Book Your Session", book_text: "Fill out the form or message me directly — I'll respond within a day and help you choose the right format.",
   form_name: "Your name", form_name_ph: "What's your name?", form_phone: "Phone", form_format: "Training format",
   form_format_ph: "Choose format", form_opt_trial: "Trial session — get to know each other", form_opt_personal: "Personal training", form_opt_pair: "Pair training", form_opt_group: "Small group",
@@ -1975,6 +2132,8 @@ en: {
   map_label: "Location", map_title: "Where training takes place", map_address: "Calpe, Av. Diputación s/n — Av. País Valencia, 2",
   footer_role: "Movement Specialist", footer_city: "Calpe, Spain", footer_nav: "Navigation", footer_contact: "Contact",
   footer_copy: "© 2026 Tatiana Babich. All rights reserved.", footer_location: "Calpe, Costa Blanca, Spain",
+  legal_privacy: "Privacy Policy", legal_terms: "Terms  Conditions", legal_aviso: "Legal Notice", legal_cookies: "Cookies", cookie_text: "This site uses technical cookies to improve your experience. By continuing to browse, you accept their use.", cookie_more: "Learn more",
+  legal_privacy: "Политика конфиденциальности", legal_terms: "Условия использования", legal_aviso: "Aviso Legal", legal_cookies: "Cookies", cookie_text: "Этот сайт использует технические cookies для улучшения работы. Продолжая просмотр, вы соглашаетесь с их использованием.", cookie_more: "Подробнее",
   sm_oda_t: "Musculoskeletal Assessment", sm_oda: "Before training, I conduct a detailed assessment of your body: posture, joint mobility, muscle tone, asymmetries and compensatory patterns. This determines exactly what needs work.",
   sm_kin_t: "Kinesiology", sm_kin: "Kinesiology is the science of human movement. I study how your muscles, joints and nervous system work together to understand why pain or limitation occurs.",
   sm_fas_t: "Fascial Work", sm_fas: "Fascia is connective tissue that wraps the entire body. A restriction in one area can cause pain in another. I work with fascial lines to release deep tension and restore freedom of movement.",
@@ -2169,6 +2328,205 @@ if (submitBtn) {
     }
     submitBtn.disabled = false;
   });
+}
+// =============================================
+// LEGAL DOCUMENTS
+// =============================================
+const legalDocs = {
+  privacy: {
+    ru: `<h2>Política de Privacidad / Политика конфиденциальности</h2>
+<p><strong>Ответственный:</strong> Татьяна Бабич (Tatiana Babich), NIE: Y8454138L</p>
+<p><strong>Контактный email:</strong> tatibabich1343@gmail.com</p>
+<p><strong>Адрес:</strong> Calpe, Av. Diputación s/n — Av. País Valencia, 2, España</p>
+<h3>1. Какие данные мы собираем</h3>
+<p>Через форму записи на сайте мы собираем: имя, номер телефона, выбранный формат тренировки и комментарий. Эти данные необходимы исключительно для связи с вами и организации тренировок.</p>
+<h3>2. Цель обработки данных</h3>
+<p>Ваши данные используются для: ответа на вашу заявку, организации тренировок, информирования об услугах (только с вашего согласия).</p>
+<h3>3. Правовая основа</h3>
+<p>Обработка данных основана на вашем согласии (ст. 6.1.a GDPR), которое вы даёте при отправке формы.</p>
+<h3>4. Срок хранения</h3>
+<p>Данные хранятся до момента вашего запроса на удаление или до прекращения деловых отношений.</p>
+<h3>5. Ваши права</h3>
+<p>Вы имеете право на: доступ к своим данным, их исправление, удаление, ограничение обработки, переносимость данных. Для реализации прав напишите на tatibabich1343@gmail.com.</p>
+<h3>6. Передача данных третьим лицам</h3>
+<p>Мы не передаём ваши данные третьим лицам, за исключением случаев, предусмотренных законом. Уведомления о заявках отправляются через защищённый канал (Telegram Bot API).</p>
+<h3>7. Безопасность</h3>
+<p>Мы принимаем технические и организационные меры для защиты ваших данных от несанкционированного доступа, потери или изменения.</p>`,
+    es: `<h2>Política de Privacidad</h2>
+<p><strong>Responsable:</strong> Tatiana Babich, NIE: Y8454138L</p>
+<p><strong>Email de contacto:</strong> tatibabich1343@gmail.com</p>
+<p><strong>Dirección:</strong> Calpe, Av. Diputación s/n — Av. País Valencia, 2, España</p>
+<h3>1. Datos que recopilamos</h3>
+<p>A través del formulario de contacto recopilamos: nombre, teléfono, formato de entrenamiento y comentario. Estos datos son necesarios exclusivamente para contactar con usted y organizar los entrenamientos.</p>
+<h3>2. Finalidad del tratamiento</h3>
+<p>Sus datos se utilizan para: responder a su solicitud, organizar entrenamientos, informarle sobre servicios (solo con su consentimiento).</p>
+<h3>3. Base legal</h3>
+<p>El tratamiento se basa en su consentimiento (art. 6.1.a RGPD), otorgado al enviar el formulario.</p>
+<h3>4. Plazo de conservación</h3>
+<p>Los datos se conservan hasta que solicite su supresión o hasta el fin de la relación comercial.</p>
+<h3>5. Sus derechos</h3>
+<p>Tiene derecho a: acceso, rectificación, supresión, limitación del tratamiento y portabilidad. Para ejercer sus derechos, escriba a tatibabich1343@gmail.com.</p>
+<h3>6. Cesión a terceros</h3>
+<p>No cedemos sus datos a terceros, salvo obligación legal. Las notificaciones se envían mediante canal seguro (Telegram Bot API).</p>
+<h3>7. Seguridad</h3>
+<p>Adoptamos medidas técnicas y organizativas para proteger sus datos contra acceso no autorizado, pérdida o alteración.</p>`,
+    en: `<h2>Privacy Policy</h2>
+<p><strong>Responsible:</strong> Tatiana Babich, NIE: Y8454138L</p>
+<p><strong>Contact email:</strong> tatibabich1343@gmail.com</p>
+<p><strong>Address:</strong> Calpe, Av. Diputación s/n — Av. País Valencia, 2, Spain</p>
+<h3>1. Data we collect</h3>
+<p>Through the contact form we collect: name, phone number, training format and comment. This data is used exclusively to contact you and organize training sessions.</p>
+<h3>2. Purpose of processing</h3>
+<p>Your data is used to: respond to your request, organize training, inform you about services (only with your consent).</p>
+<h3>3. Legal basis</h3>
+<p>Processing is based on your consent (Art. 6.1.a GDPR), given when you submit the form.</p>
+<h3>4. Retention period</h3>
+<p>Data is stored until you request deletion or until the end of the business relationship.</p>
+<h3>5. Your rights</h3>
+<p>You have the right to: access, rectification, erasure, restriction of processing and data portability. To exercise your rights, write to tatibabich1343@gmail.com.</p>
+<h3>6. Third-party sharing</h3>
+<p>We do not share your data with third parties, except as required by law. Notifications are sent via a secure channel (Telegram Bot API).</p>
+<h3>7. Security</h3>
+<p>We take technical and organizational measures to protect your data against unauthorized access, loss or alteration.</p>`
+  },
+  terms: {
+    ru: `<h2>Условия использования / Términos y Condiciones</h2>
+<h3>1. Общие положения</h3>
+<p>Настоящие условия регулируют использование сайта babichfit.pro и приобретение услуг и цифровых продуктов, предлагаемых Татьяной Бабич (NIE: Y8454138L).</p>
+<h3>2. Услуги</h3>
+<p>Сайт предлагает: персональные тренировки, тренировки в паре, мини-группы (офлайн в Кальпе, Испания) и цифровые продукты (видеотренировки).</p>
+<h3>3. Оплата</h3>
+<p>Оплата офлайн-тренировок производится по согласованию с тренером. Оплата цифровых продуктов — через платёжный сервис Payform.ru. Цены указаны на сайте и могут быть изменены.</p>
+<h3>4. Цифровые продукты</h3>
+<p>Доступ к видеотренировкам предоставляется на email сразу после оплаты. Доступ является бессрочным. Контент предназначен для личного использования и не подлежит распространению.</p>
+<h3>5. Право на отказ</h3>
+<p>Согласно ст. 103 TRLGDCU, право на отказ не применяется к цифровому контенту, доступ к которому предоставлен сразу после покупки с согласия потребителя.</p>
+<h3>6. Ответственность</h3>
+<p>Тренировки не являются медицинской услугой. При наличии противопоказаний рекомендуется консультация врача. Тренер не несёт ответственности за травмы при самостоятельном выполнении упражнений из видеопрограмм.</p>
+<h3>7. Применимое право</h3>
+<p>Настоящие условия регулируются законодательством Испании.</p>`,
+    es: `<h2>Términos y Condiciones</h2>
+<h3>1. Generalidades</h3>
+<p>Estos términos regulan el uso del sitio babichfit.pro y la adquisición de servicios y productos digitales ofrecidos por Tatiana Babich (NIE: Y8454138L).</p>
+<h3>2. Servicios</h3>
+<p>El sitio ofrece: entrenamiento personal, en pareja, minigrupos (presencial en Calpe, España) y productos digitales (videoentrenamientos).</p>
+<h3>3. Pago</h3>
+<p>El pago de entrenamientos presenciales se acuerda con la entrenadora. El pago de productos digitales se realiza a través de Payform.ru. Los precios están indicados en el sitio y pueden modificarse.</p>
+<h3>4. Productos digitales</h3>
+<p>El acceso a los videoentrenamientos se envía al email inmediatamente después del pago. El acceso es permanente. El contenido es para uso personal y no puede ser redistribuido.</p>
+<h3>5. Derecho de desistimiento</h3>
+<p>Según el art. 103 TRLGDCU, el derecho de desistimiento no se aplica al contenido digital cuyo acceso se proporciona inmediatamente después de la compra con el consentimiento del consumidor.</p>
+<h3>6. Responsabilidad</h3>
+<p>Los entrenamientos no constituyen un servicio médico. Se recomienda consultar a un médico en caso de contraindicaciones. La entrenadora no se responsabiliza de lesiones durante la práctica autónoma de los videoprogramas.</p>
+<h3>7. Legislación aplicable</h3>
+<p>Estos términos se rigen por la legislación española.</p>`,
+    en: `<h2>Terms and Conditions</h2>
+<h3>1. General</h3>
+<p>These terms govern the use of babichfit.pro and the acquisition of services and digital products offered by Tatiana Babich (NIE: Y8454138L).</p>
+<h3>2. Services</h3>
+<p>The site offers: personal training, pair training, small groups (in-person in Calpe, Spain) and digital products (video workouts).</p>
+<h3>3. Payment</h3>
+<p>Payment for in-person sessions is arranged with the trainer. Digital product payment is processed through Payform.ru. Prices are listed on the site and may change.</p>
+<h3>4. Digital products</h3>
+<p>Access to video workouts is sent to your email immediately after payment. Access is permanent. Content is for personal use and may not be redistributed.</p>
+<h3>5. Right of withdrawal</h3>
+<p>According to Art. 103 TRLGDCU, the right of withdrawal does not apply to digital content accessed immediately after purchase with consumer consent.</p>
+<h3>6. Liability</h3>
+<p>Training is not a medical service. Medical consultation is recommended if you have contraindications. The trainer is not liable for injuries during independent practice of video programs.</p>
+<h3>7. Applicable law</h3>
+<p>These terms are governed by Spanish law.</p>`
+  },
+  aviso: {
+    ru: `<h2>Aviso Legal / Правовая информация</h2>
+<p>В соответствии с Законом 34/2002 от 11 июля об услугах информационного общества и электронной коммерции (LSSI-CE), сообщаем следующую информацию:</p>
+<p><strong>Владелец сайта:</strong> Татьяна Бабич (Tatiana Babich)</p>
+<p><strong>NIE:</strong> Y8454138L</p>
+<p><strong>Адрес:</strong> Calpe, Av. Diputación s/n — Av. País Valencia, 2, Alicante, España</p>
+<p><strong>Email:</strong> tatibabich1343@gmail.com</p>
+<p><strong>Телефон:</strong> +34 692 917 242</p>
+<p><strong>Деятельность:</strong> Персональные фитнес-тренировки и продажа цифровых продуктов</p>
+<h3>Интеллектуальная собственность</h3>
+<p>Весь контент сайта (тексты, изображения, логотипы, видео) является собственностью Татьяны Бабич и защищён законами об интеллектуальной собственности. Воспроизведение без письменного разрешения запрещено.</p>
+<h3>Ограничение ответственности</h3>
+<p>Владелец не несёт ответственности за технические сбои, временную недоступность сайта или неточности в содержании.</p>`,
+    es: `<h2>Aviso Legal</h2>
+<p>En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se facilita la siguiente información:</p>
+<p><strong>Titular del sitio:</strong> Tatiana Babich</p>
+<p><strong>NIE:</strong> Y8454138L</p>
+<p><strong>Dirección:</strong> Calpe, Av. Diputación s/n — Av. País Valencia, 2, Alicante, España</p>
+<p><strong>Email:</strong> tatibabich1343@gmail.com</p>
+<p><strong>Teléfono:</strong> +34 692 917 242</p>
+<p><strong>Actividad:</strong> Entrenamiento personal de fitness y venta de productos digitales</p>
+<h3>Propiedad intelectual</h3>
+<p>Todo el contenido del sitio (textos, imágenes, logotipos, vídeos) es propiedad de Tatiana Babich y está protegido por las leyes de propiedad intelectual. Queda prohibida su reproducción sin autorización escrita.</p>
+<h3>Limitación de responsabilidad</h3>
+<p>La titular no se hace responsable de fallos técnicos, indisponibilidad temporal del sitio o inexactitudes en el contenido.</p>`,
+    en: `<h2>Legal Notice</h2>
+<p>In compliance with Law 34/2002, of July 11, on Information Society Services and Electronic Commerce (LSSI-CE), the following information is provided:</p>
+<p><strong>Site owner:</strong> Tatiana Babich</p>
+<p><strong>NIE:</strong> Y8454138L</p>
+<p><strong>Address:</strong> Calpe, Av. Diputación s/n — Av. País Valencia, 2, Alicante, Spain</p>
+<p><strong>Email:</strong> tatibabich1343@gmail.com</p>
+<p><strong>Phone:</strong> +34 692 917 242</p>
+<p><strong>Activity:</strong> Personal fitness training and digital product sales</p>
+<h3>Intellectual property</h3>
+<p>All site content (texts, images, logos, videos) is the property of Tatiana Babich and is protected by intellectual property laws. Reproduction without written permission is prohibited.</p>
+<h3>Limitation of liability</h3>
+<p>The owner is not responsible for technical failures, temporary unavailability of the site or inaccuracies in content.</p>`
+  },
+  cookies: {
+    ru: `<h2>Política de Cookies / Политика cookies</h2>
+<h3>Что такое cookies?</h3>
+<p>Cookies — это небольшие текстовые файлы, которые сохраняются в вашем браузере при посещении сайта.</p>
+<h3>Какие cookies мы используем</h3>
+<p><strong>Технические (необходимые):</strong> сохранение выбранного языка сайта (localStorage). Эти данные не передаются третьим лицам и не используются для отслеживания.</p>
+<h3>Сторонние cookies</h3>
+<p>Сайт содержит встроенную карту Google Maps, которая может устанавливать собственные cookies. Подробнее: <a href="https://policies.google.com/privacy" target="_blank">Политика конфиденциальности Google</a>.</p>
+<h3>Как управлять cookies</h3>
+<p>Вы можете отключить cookies в настройках вашего браузера. Это может повлиять на функциональность сайта (например, выбор языка не будет сохраняться).</p>`,
+    es: `<h2>Política de Cookies</h2>
+<h3>¿Qué son las cookies?</h3>
+<p>Las cookies son pequeños archivos de texto que se almacenan en su navegador al visitar un sitio web.</p>
+<h3>Cookies que utilizamos</h3>
+<p><strong>Técnicas (necesarias):</strong> almacenamiento del idioma seleccionado (localStorage). Estos datos no se comparten con terceros ni se usan para rastreo.</p>
+<h3>Cookies de terceros</h3>
+<p>El sitio incluye un mapa de Google Maps que puede establecer sus propias cookies. Más información: <a href="https://policies.google.com/privacy" target="_blank">Política de privacidad de Google</a>.</p>
+<h3>Cómo gestionar las cookies</h3>
+<p>Puede desactivar las cookies en la configuración de su navegador. Esto puede afectar a la funcionalidad del sitio (por ejemplo, la selección de idioma no se guardará).</p>`,
+    en: `<h2>Cookie Policy</h2>
+<h3>What are cookies?</h3>
+<p>Cookies are small text files stored in your browser when you visit a website.</p>
+<h3>Cookies we use</h3>
+<p><strong>Technical (necessary):</strong> storing the selected site language (localStorage). This data is not shared with third parties or used for tracking.</p>
+<h3>Third-party cookies</h3>
+<p>The site includes an embedded Google Maps map, which may set its own cookies. More info: <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</p>
+<h3>How to manage cookies</h3>
+<p>You can disable cookies in your browser settings. This may affect site functionality (e.g., language selection will not be saved).</p>`
+  }
+};
+
+function openLegal(type) {
+  const content = legalDocs[type] && legalDocs[type][currentLang];
+  if (!content) return;
+  document.getElementById('legalContent').innerHTML = content;
+  document.getElementById('legalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLegal() {
+  document.getElementById('legalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('legalOverlay').addEventListener('click', (e) => {
+  if (e.target === document.getElementById('legalOverlay')) closeLegal();
+});
+
+// Cookie banner
+if (!localStorage.getItem('cookies_accepted')) {
+  document.getElementById('cookieBanner').style.display = 'block';
+}
+function acceptCookies() {
+  localStorage.setItem('cookies_accepted', '1');
+  document.getElementById('cookieBanner').style.display = 'none';
 }
 </script>
 
