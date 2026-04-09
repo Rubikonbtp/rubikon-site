@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://rubikonbtp.ru/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://rubikonbtp.ru/products.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://rubikonbtp.ru/products/btp.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://rubikonbtp.ru/products/btp-uzel-vvoda.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://rubikonbtp.ru/products/btp-otoplenie.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://rubikonbtp.ru/products/btp-gvs.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://rubikonbtp.ru/products/raschet-btp.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rubikonbtp.ru/products/raschet-pto.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rubikonbtp.ru/industries.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rubikonbtp.ru/about.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rubikonbtp.ru/contacts.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+</urlset>

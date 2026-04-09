@@ -103,21 +103,9 @@
 </span></span>
 <span><a href="tel:+78003017978">8 (800) 301-79-78</a> · Бесплатно по РФ · Пн–Пт 9:00–18:00</span>
 </div></div>
-<header class="hdr"><div class="hdr-in">
-<a href="/" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none"><img loading="lazy" src="/img/logo-icon.png" alt="Рубикон" style="height:36px;width:36px"><span style="font-size:22px;font-weight:900;color:#D42B2B;letter-spacing:-0.02em">РУБИКОН</span></a>
-<nav class="nav">
-<a href="/products.html" class="active">Продукция</a>
-<a href="/industries.html">Применение</a>
-<a href="/#insights">Проекты</a>
-<a href="/about.html">О компании</a>
-<a href="#contact">Контакты</a>
-</nav>
-<button class="mob-menu-btn" id="mobMenuBtn" onclick="document.getElementById('mobNav').classList.toggle('open');this.classList.toggle('open')"><span></span><span></span><span></span></button><a href="https://kbb.expert/demo" target="_blank" class="btn btn-red btn-pulse" style="padding:13px 28px;font-size:15px">🖥️ Программа расчёта</a>
-</div></header>
-<div class="mob-nav" id="mobNav">
-<a href="/products.html">Продукция</a><a href="/industries.html">Применение</a><a href="/#insights">Проекты</a><a href="/about.html">О компании</a><a href="#contact">Контакты</a>
-<a href="https://kbb.expert/demo" target="_blank" style="color:#D42B2B">🖥️ Программа расчёта</a>
-</div>
+<div id="site-header"></div>
+<script src="/nav.js"></script>
+
 <div style="background:var(--bg);border-bottom:1px solid var(--brd)"><div class="container"><nav class="breadcrumb"><a href="/">Главная</a><span>→</span><a href="/products.html">Продукция</a><span>→</span>Расчёт ПТО</nav></div></div>
 <section class="pg-hero"><div class="container"><div class="pg-hero-grid">
 <div>
@@ -268,4 +256,4 @@
 document.getElementById("cf-file").addEventListener("change",function(){var list=document.getElementById("fileList");list.innerHTML="";for(var i=0;i<this.files.length;i++){var d=document.createElement("div");d.style.cssText="display:flex;align-items:center;gap:8px;padding:6px 10px;background:#f0f2f5;border-radius:8px;margin-top:4px;font-size:13px";d.innerHTML='📎 '+this.files[i].name+' <span style="color:#aaa;margin-left:auto">'+Math.round(this.files[i].size/1024)+'KB</span>';list.appendChild(d);}});
 var drop=document.querySelector(".file-drop");
 if(drop){drop.addEventListener("dragover",function(e){e.preventDefault();this.style.borderColor="#D42B2B";this.style.background="rgba(212,43,43,.03)"});drop.addEventListener("dragleave",function(){this.style.borderColor="#ddd";this.style.background=""});drop.addEventListener("drop",function(e){e.preventDefault();this.style.borderColor="#ddd";this.style.background="";document.getElementById("cf-file").files=e.dataTransfer.files;document.getElementById("cf-file").dispatchEvent(new Event("change"))});}
-document.getElementById("contactForm").addEventListener("submit",function(e){e.preventDefault();var f=this;document.getElementById("cf-success").style.display="block";f.querySelector("[type=submit]").textContent="✓ Отправлено";f.querySelector("[type=submit]").disabled=true;fetch("/api/contact",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:f.name.value,phone:f.phone.value,email:f.email.value,company:f.company.value,system_type:f.system_type.value,power:f.power.value,replacement:f.replacement.value,model:f.model.value,message:f.message.value,page:"raschet-pto"})}).catch(function(){});if(typeof ym!=='undefined'){ym(98030264,'reachGoal','pto_form_submit');}setTimeout(function(){f.reset();document.getElementById("fileList").innerHTML="";document.getElementById("cf-success").style.display="none";f.querySelector("[type=submit]").textContent="Отправить заявку на расчё�
+document.getElementById("contactForm").addEventListener("submit",function(e){e.preventDefault();var f=this;document.getElementById("cf-success").style.display="block";f.querySelector("[type=submit]").textContent="✓ Отправлено";f.querySelector("[type=submit]").disabled=true;fetch("/api/contact",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:f.name.value,phone:f.phone.value,email:f.email.value,company:f.company.value,system_type:f.system_type.value,power:f.power.value,replacement:f.replacement.value,model:f.model.value,message:f.message.value,page:"raschet-pto"})}).catch(function(){});if(typeof ym!=='undefined'){ym(98030264,'reachGoal','pto_form_submit');}setTimeout(function(){f.reset();document.getElementById("fileList").innerHTML="";document.getElementById("cf-success").style.display="none";f.querySelector("[type=submit]").textContent="Отправить заявку на расчё
