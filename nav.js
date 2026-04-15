@@ -87,11 +87,11 @@ var html = `<style>
         <div class="n-card-body">
           <div class="n-card-title">Клапаны и электроприводы</div>
           <div class="n-card-links">
-            <span class="n-card-link">Регулирующие клапаны</span>
-            <span class="n-card-link">Электроприводы Рубикон</span>
+            <a class="n-card-link" href="/products/klapan-rvf2.html">Клапан регулирующий RVF2</a>
+            <span class="n-card-link">Электроприводы RAD (скоро)</span>
           </div>
         </div>
-      </div>
+      </a>
       <div class="n-card soon">
         <div class="n-card-img"><img src="/img/btp-node-gvs.png" alt="Контроллеры"><span class="n-badge">Скоро</span></div>
         <div class="n-card-body">
