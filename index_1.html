@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="yandex-verification" content="ec725703b645a836" />
+<title>Блог Рубикон — статьи об инженерных системах теплоснабжения</title>
+<meta name="description" content="Экспертные статьи о блочных тепловых пунктах, пластинчатых теплообменниках, узлах отопления и ГВС. Практические руководства от производителя Рубикон.">
+<link rel="canonical" href="https://rubikonbtp.ru/blog/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(98030264,'init',{webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script>
+<style>
+:root{--dark:#0F1923;--red:#D42B2B;--red-lt:rgba(212,43,43,.08);--white:#fff;--bg:#F8F9FB;--t1:#1a1a1a;--t2:#5A6578;--t3:#8B95A5;--brd:#E5E8ED;--r:10px;--shl:0 8px 30px rgba(0,0,0,.12)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'DM Sans',system-ui,sans-serif;color:var(--t1);background:var(--white);-webkit-font-smoothing:antialiased}.container{max-width:1200px;margin:0 auto;padding:0 24px}a{color:var(--red);text-decoration:none}img{max-width:100%}
+.topbar{position:sticky;top:0;z-index:1001;background:#0F1923;padding:8px 0;font-size:13px;color:rgba(255,255,255,.45)}.topbar-in{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:0 24px;flex-wrap:wrap;gap:6px}.topbar a{color:rgba(255,255,255,.8)}
+.soc{display:flex;gap:8px;align-items:center}.si{color:rgba(255,255,255,.5);transition:color .2s;display:flex}.si:hover{color:#fff}
+.breadcrumb{padding:12px 0;font-size:13px;color:var(--t3)}.breadcrumb a{color:var(--t3)}.breadcrumb a:hover{color:var(--red)}.breadcrumb span{margin:0 6px}
+.page-hero{background:linear-gradient(135deg,var(--dark) 0%,#1a2d42 100%);padding:56px 0 48px;color:#fff;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:-40%;right:-10%;width:600px;height:600px;border-radius:50%;background:rgba(212,43,43,.05);pointer-events:none}
+.page-hero h1{font-size:40px;font-weight:800;letter-spacing:-.02em;margin-bottom:12px}
+.page-hero h1 em{font-style:normal;color:var(--red)}
+.page-hero p{font-size:16px;color:rgba(255,255,255,.6);max-width:560px;line-height:1.7}
+.stag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--red);margin-bottom:10px}.stag::before{content:'';width:18px;height:2px;background:var(--red)}
+.sec{padding:64px 0}
+/* FILTERS */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px}
+.filter-btn{padding:8px 18px;border-radius:20px;border:1px solid var(--brd);background:var(--white);font-family:inherit;font-size:13px;font-weight:600;color:var(--t2);cursor:pointer;transition:all .2s}
+.filter-btn:hover,.filter-btn.active{background:var(--red);border-color:var(--red);color:#fff}
+/* ARTICLE GRID */
+.articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.article-card{border:1px solid var(--brd);border-radius:16px;overflow:hidden;transition:box-shadow .2s,border-color .2s;display:flex;flex-direction:column}
+.article-card:hover{box-shadow:var(--shl);border-color:rgba(212,43,43,.2)}
+.article-card-img{height:200px;background:var(--bg);overflow:hidden;position:relative}
+.article-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.article-card:hover .article-card-img img{transform:scale(1.04)}
+.article-card-img-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,var(--dark),#1a2d42)}
+.article-tag{position:absolute;top:12px;left:12px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:4px 10px;border-radius:20px;color:#fff}
+.article-card-body{padding:20px 24px;flex:1;display:flex;flex-direction:column}
+.article-meta{display:flex;align-items:center;gap:12px;font-size:12px;color:var(--t3);margin-bottom:10px}
+.article-meta span{display:flex;align-items:center;gap:4px}
+.article-card-title{font-size:17px;font-weight:700;color:var(--dark);line-height:1.35;margin-bottom:10px;flex:1}
+.article-card-title a{color:inherit;text-decoration:none;transition:color .15s}
+.article-card-title a:hover{color:var(--red)}
+.article-card-desc{font-size:13px;color:var(--t2);line-height:1.6;margin-bottom:16px}
+.article-card-footer{display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--brd)}
+.read-more{font-size:13px;font-weight:700;color:var(--red);display:flex;align-items:center;gap:4px;text-decoration:none}
+.read-more:hover{text-decoration:none;gap:6px}
+.read-time{font-size:12px;color:var(--t3)}
+/* CTA */
+.cta-block{background:var(--dark);border-radius:16px;padding:48px;display:flex;align-items:center;justify-content:space-between;gap:32px;margin-top:48px}
+.cta-block h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:8px}
+.cta-block p{font-size:14px;color:rgba(255,255,255,.5);max-width:400px;line-height:1.6}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;border:none;cursor:pointer;text-decoration:none;border-radius:var(--r);transition:all .2s;font-family:inherit;font-size:14px;white-space:nowrap}
+.btn-red{background:var(--red);color:#fff;padding:14px 28px}.btn-red:hover{background:#b82525;color:#fff;text-decoration:none}
+/* FOOTER */
+.ftr{background:var(--dark);color:rgba(255,255,255,.6);padding:48px 0 24px;font-size:13px}.ftr a{color:rgba(255,255,255,.6)}.ftr a:hover{color:#fff}.ftr-g{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px}.ftr h5{color:#fff;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px}.ftr-l{display:flex;flex-direction:column;gap:6px}.ftr-b{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;font-size:11px}
+@media(max-width:1024px){.articles-grid{grid-template-columns:1fr 1fr}.ftr-g{grid-template-columns:1fr 1fr}.cta-block{flex-direction:column;align-items:flex-start}}
+@media(max-width:768px){.page-hero h1{font-size:28px}.articles-grid{grid-template-columns:1fr}.ftr-g{grid-template-columns:1fr}.cta-block{padding:28px 24px}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="topbar-in">
+<span style="display:flex;align-items:center;gap:14px">🇷🇺 Россия · <a href="mailto:info@rubikonbtp.ru">info@rubikonbtp.ru</a>
+<span class="soc">
+<a href="https://vk.com/pto_rubikon" class="si"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14C20.67 22 22 20.67 22 15.07V8.93C22 3.33 20.67 2 15.07 2m3.08 14.27h-1.46c-.55 0-.72-.44-1.71-1.45-.87-.83-1.24-.94-1.45-.94-.3 0-.38.08-.38.49v1.33c0 .35-.11.56-1.03.56-1.52 0-3.2-.92-4.39-2.64C5.83 10.74 5.4 8.96 5.4 8.57c0-.21.08-.4.49-.4h1.46c.37 0 .5.16.65.55.71 2.04 1.9 3.83 2.38 3.83.18 0 .27-.08.27-.54v-2.1c-.05-.95-.55-1.03-.55-1.37 0-.16.14-.33.35-.33h2.3c.3 0 .4.16.4.52v2.84c0 .3.13.4.22.4.18 0 .34-.1.68-.44 1.05-1.18 1.8-3 1.8-3 .1-.21.27-.4.63-.4h1.46c.44 0 .53.22.44.52-.18.83-1.94 3.33-1.94 3.33-.15.25-.21.36 0 .64.15.2.66.64 1 1.04.63.71 1.11 1.31 1.24 1.72.14.4-.07.61-.49.61"/></svg></a>
+<a href="https://t.me/+79681828346" class="si"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg></a>
+</span></span>
+<span><a href="tel:+78003017978">8 (800) 301-79-78</a> · Бесплатно по РФ · Пн–Пт 9:00–18:00</span>
+</div></div>
+
+<div id="site-header"></div>
+<script src="/nav.js"></script>
+
+<div style="background:var(--bg);border-bottom:1px solid var(--brd)"><div class="container">
+<div class="breadcrumb"><a href="/">Главная</a><span>›</span>Блог</div>
+</div></div>
+
+<section class="page-hero">
+<div class="container">
+<div class="stag" style="color:rgba(255,255,255,.4)">Экспертный блог</div>
+<h1>Статьи об <em>инженерных системах</em></h1>
+<p>Практические руководства, разборы схем и технические обзоры от инженеров Рубикон. БТП, ПТО, узлы отопления и ГВС — без воды и рекламы.</p>
+</div>
+</section>
+
+<section class="sec">
+<div class="container">
+
+<div class="filters">
+<button class="filter-btn active" onclick="filterArticles('all',this)">Все статьи</button>
+<button class="filter-btn" onclick="filterArticles('btp',this)">БТП</button>
+<button class="filter-btn" onclick="filterArticles('pto',this)">ПТО</button>
+<button class="filter-btn" onclick="filterArticles('proekt',this)">Проектирование</button>
+<button class="filter-btn" onclick="filterArticles('ekspluataciya',this)">Эксплуатация</button>
+</div>
+
+<div class="articles-grid" id="articlesGrid">
+
+<!-- Статья 1 -->
+<div class="article-card" data-cat="btp proekt">
+<div class="article-card-img">
+<div class="article-card-img-ph">🏢</div>
+<span class="article-tag" style="background:#D42B2B">БТП</span>
+</div>
+<div class="article-card-body">
+<div class="article-meta">
+<span>📅 Апрель 2026</span>
+<span>👁 Новое</span>
+</div>
+<div class="article-card-title"><a href="/blog/btp-dlya-mkd.html">БТП для многоквартирного дома: как выбрать, рассчитать и сэкономить</a></div>
+<div class="article-card-desc">Полный разбор: какой БТП нужен для МКД, как рассчитать мощность, какие узлы включить и сколько реально экономит автоматика.</div>
+<div class="article-card-footer">
+<a href="/blog/btp-dlya-mkd.html" class="read-more">Читать →</a>
+<span class="read-time">⏱ 8 мин</span>
+</div>
+</div>
+</div>
+
+<!-- Заглушки будущих статей -->
+<div class="article-card" data-cat="btp proekt" style="opacity:.5;pointer-events:none">
+<div class="article-card-img">
+<div class="article-card-img-ph">⚖️</div>
+<span class="article-tag" style="background:#475569">Скоро</span>
+</div>
+<div class="article-card-body">
+<div class="article-meta"><span>📅 Скоро</span></div>
+<div class="article-card-title"><a>Рубикон vs Ридан: честное сравнение БТП двух производителей</a></div>
+<div class="article-card-desc">Сравниваем комплектацию, цены, сроки и техподдержку. Что выбрать для конкретного объекта.</div>
+<div class="article-card-footer">
+<span class="read-more" style="color:var(--t3)">Скоро →</span>
+<span class="read-time">⏱ 6 мин</span>
+</div>
+</div>
+</div>
+
+<div class="article-card" data-cat="pto ekspluataciya" style="opacity:.5;pointer-events:none">
+<div class="article-card-img">
+<div class="article-card-img-ph">🔧</div>
+<span class="article-tag" style="background:#475569">Скоро</span>
+</div>
+<div class="article-card-body">
+<div class="article-meta"><span>📅 Скоро</span></div>
+<div class="article-card-title"><a>Обслуживание пластинчатого теплообменника: периодичность и порядок</a></div>
+<div class="article-card-desc">Когда чистить, как разбирать, какие уплотнения менять и как продлить срок службы пластин.</div>
+<div class="article-card-footer">
+<span class="read-more" style="color:var(--t3)">Скоро →</span>
+<span class="read-time">⏱ 7 мин</span>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="cta-block">
+<div>
+<h3>Нужна консультация инженера?</h3>
+<p>Рассчитаем БТП или ПТО под ваш объект. Ответим в течение рабочего дня.</p>
+</div>
+<a href="tel:+78003017978" class="btn btn-red">📞 8 (800) 301-79-78</a>
+</div>
+
+</div>
+</section>
+
+<footer class="ftr"><div class="container">
+<div class="ftr-g">
+<div>
+<a href="/" style="display:flex;align-items:center;gap:8px;text-decoration:none;margin-bottom:14px"><img src="/img/logo-icon.png" alt="Рубикон" style="height:28px;width:28px"><span style="font-size:16px;font-weight:900;color:#fff">РУБИКОН</span></a>
+<p style="line-height:1.6;margin-bottom:12px">Российский производитель пластинчатых теплообменников и блочных тепловых пунктов</p>
+<p style="font-size:11px;color:rgba(255,255,255,.3)">ООО «Рубикон» · ИНН 7811814395</p>
+</div>
+<div><h5>Статьи</h5><div class="ftr-l">
+<a href="/blog/btp-dlya-mkd.html">БТП для МКД</a>
+<a href="/blog/">Все статьи</a>
+</div></div>
+<div><h5>Продукция</h5><div class="ftr-l">
+<a href="/products/btp.html">БТП Рубикон</a>
+<a href="/products.html">ПТО Рубикон</a>
+<a href="/products/klapan-rvf2.html">Клапан RVF2</a>
+</div></div>
+<div><h5>Контакты</h5><div class="ftr-l">
+<a href="tel:+78003017978">8 (800) 301-79-78</a>
+<a href="mailto:info@rubikonbtp.ru">info@rubikonbtp.ru</a>
+<a href="/contacts.html">Все контакты</a>
+</div></div>
+</div>
+<div class="ftr-b">
+<span>© 2026 ООО «Рубикон». Все права защищены.</span>
+<a href="/privacy.html">Политика конфиденциальности</a>
+</div>
+</div></footer>
+
+<script>
+function filterArticles(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.article-card').forEach(card => {
+    if(cat === 'all') { card.style.display = 'flex'; return; }
+    var cats = card.dataset.cat || '';
+    card.style.display = cats.includes(cat) ? 'flex' : 'none';
+  });
+}
+</script>
+<script src="/voice-widget.js"></script>
+</body>
+</html>
