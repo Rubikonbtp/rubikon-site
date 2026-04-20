@@ -48,8 +48,8 @@
 .hero{background:linear-gradient(135deg,var(--dark) 0%,#1a2d42 100%);padding:60px 0 70px;color:#fff;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-40%;right:-10%;width:600px;height:600px;border-radius:50%;background:rgba(212,43,43,.06);pointer-events:none}
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.hero-img{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;height:420px;display:flex;align-items:center;justify-content:center}
-.hero-img img{width:100%;height:100%;object-fit:contain;padding:24px}
+.hero-img{background:#fff;border-radius:16px;overflow:hidden;height:420px;display:flex;align-items:center;justify-content:center}
+.hero-img img{width:100%;height:100%;object-fit:contain;padding:0;transform:scale(1.15)}
 .hero-tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.5);margin-bottom:14px}
 .hero-tag::before{content:'';width:18px;height:2px;background:var(--red)}
 .hero h1{font-size:36px;font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px}
@@ -145,7 +145,7 @@
 .ftr{background:var(--dark);color:rgba(255,255,255,.6);padding:48px 0 24px;font-size:13px}.ftr a{color:rgba(255,255,255,.6)}.ftr a:hover{color:#fff}.ftr-g{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px}.ftr h5{color:#fff;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px}.ftr-l{display:flex;flex-direction:column;gap:6px}.ftr-b{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;font-size:11px}
 
 @media(max-width:1024px){.hero-grid{grid-template-columns:1fr}.hero-img{height:320px}.features-grid{grid-template-columns:1fr 1fr}.actuator-grid{grid-template-columns:1fr}.sizes-grid{grid-template-columns:1fr}.form-calc-grid{grid-template-columns:1fr;gap:32px}.ftr-g{grid-template-columns:1fr 1fr}}
-@media(max-width:768px){.hero h1{font-size:26px}.hero-specs{grid-template-columns:1fr 1fr}.features-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.ftr-g{grid-template-columns:1fr}.tech-table{font-size:11px}.tech-table th,.tech-table td{padding:8px 10px}.mob-phone-btn{display:flex!important}.btn-cta-hdr{display:none!important}}
+@media(max-width:768px){.hero h1{font-size:26px}.features-grid{grid-template-columns:1fr}.actuator-grid{grid-template-columns:1fr}.protection-grid{grid-template-columns:1fr}.sizes-grid{grid-template-columns:1fr}.compat-card{flex-direction:column}#rvfSlides>div{height:220px !important}.sec-carousel-mobile{display:none}.hero-specs{grid-template-columns:1fr 1fr}.features-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.ftr-g{grid-template-columns:1fr}.tech-table{font-size:11px}.tech-table th,.tech-table td{padding:8px 10px}.mob-phone-btn{display:flex!important}.btn-cta-hdr{display:none!important}.actuator-grid{grid-template-columns:1fr}.sizes-grid{grid-template-columns:1fr}.compat-card{flex-direction:column}}
 </style>
 </head>
 <body>
@@ -243,22 +243,22 @@
 </section>
 
 <!-- PHOTO CAROUSEL -->
-<section class="sec sec-alt">
+<section class="sec sec-alt sec-carousel-mobile">
 <div class="container">
 <div style="max-width:800px;margin:0 auto">
-<div style="position:relative;overflow:hidden;border-radius:16px;background:#fff;border:1px solid var(--brd)">
+<div style="position:relative;overflow:hidden;border-radius:16px;background:#fff;border:1px solid var(--brd);max-height:300px">
 <div id="rvfSlides" style="display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1)">
 <div style="min-width:100%;height:480px;display:flex;align-items:center;justify-content:center">
-<img src="/img/klapan-rvf2-hero.png" alt="Клапан RVF2 — вид спереди" style="max-height:440px;max-width:100%;object-fit:contain;padding:24px" onerror="this.style.display='none';this.parentNode.innerHTML='<div style=\'text-align:center;color:var(--t3);padding:40px\'><div style=\'font-size:64px\'>⚙️</div><p style=\'margin-top:12px;font-weight:600\'>Фото готовится</p></div>'">
+<img src="/img/klapan-rvf2-hero.png" alt="Клапан RVF2 — вид спереди" style="width:100%;height:100%;object-fit:cover;padding:0" onerror="this.style.display='none';this.parentNode.innerHTML='<div style=\'text-align:center;color:var(--t3);padding:40px\'><div style=\'font-size:64px\'>⚙️</div><p style=\'margin-top:12px;font-weight:600\'>Фото готовится</p></div>'">
 </div>
 <div style="min-width:100%;height:480px;display:flex;align-items:center;justify-content:center">
-<img src="/img/klapan-rvf2-2.png" alt="Клапан RVF2 — вид сбоку" style="max-height:440px;max-width:100%;object-fit:contain;padding:24px" onerror="this.style.display='none';this.parentNode.innerHTML='<div style=\'text-align:center;color:var(--t3);padding:40px\'><div style=\'font-size:64px\'>⚙️</div><p style=\'margin-top:12px;font-weight:600\'>Фото готовится</p></div>'">
+<img src="/img/klapan-rvf2-2.png" alt="Клапан RVF2 — вид сбоку" style="width:100%;height:100%;object-fit:cover;padding:0" onerror="this.style.display='none';this.parentNode.innerHTML='<div style=\'text-align:center;color:var(--t3);padding:40px\'><div style=\'font-size:64px\'>⚙️</div><p style=\'margin-top:12px;font-weight:600\'>Фото готовится</p></div>'">
 </div>
 <div style="min-width:100%;height:480px;display:flex;align-items:center;justify-content:center">
-<img src="/img/klapan-rvf2-3.png" alt="Клапан RVF2 — вид сверху" style="max-height:440px;max-width:100%;object-fit:contain;padding:24px" onerror="this.style.display='none';this.parentNode.innerHTML='<div style=\'text-align:center;color:var(--t3);padding:40px\'><div style=\'font-size:64px\'>⚙️</div><p style=\'margin-top:12px;font-weight:600\'>Фото готовится</p></div>'">
+<img src="/img/klapan-rvf2-3.png" alt="Клапан RVF2 — вид сверху" style="width:100%;height:100%;object-fit:cover;padding:0" onerror="this.style.display='none';this.parentNode.innerHTML='<div style=\'text-align:center;color:var(--t3);padding:40px\'><div style=\'font-size:64px\'>⚙️</div><p style=\'margin-top:12px;font-weight:600\'>Фото готовится</p></div>'">
 </div>
 <div style="min-width:100%;height:480px;display:flex;align-items:center;justify-content:center">
-<img src="/img/klapan-rvf2-4.png" alt="Клапан RVF2 с электроприводом" style="max-height:440px;max-width:100%;object-fit:contain;padding:24px" onerror="this.style.display='none';this.parentNode.innerHTML='<div style=\'text-align:center;color:var(--t3);padding:40px\'><div style=\'font-size:64px\'>⚙️</div><p style=\'margin-top:12px;font-weight:600\'>Фото готовится</p></div>'">
+<img src="/img/klapan-rvf2-4.png" alt="Клапан RVF2 с электроприводом" style="width:100%;height:100%;object-fit:cover;padding:0" onerror="this.style.display='none';this.parentNode.innerHTML='<div style=\'text-align:center;color:var(--t3);padding:40px\'><div style=\'font-size:64px\'>⚙️</div><p style=\'margin-top:12px;font-weight:600\'>Фото готовится</p></div>'">
 </div>
 </div>
 <button onclick="rvfSlide(-1)" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.9);border:none;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15)">‹</button>
