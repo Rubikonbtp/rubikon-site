@@ -49,7 +49,7 @@ var html = `<style>
   <nav class="n-nav">
     <button class="n-link" id="nBtnProd" onclick="nToggle('prod')">Продукция<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg></button>
     <a href="/industries.html" class="n-link">Применение</a>
-    <a href="/#insights" class="n-link">Проекты</a>
+    <a href="/blog/" class="n-link">Блог</a>
     <a href="/about.html" class="n-link">О компании</a>
     <a href="/contacts.html" class="n-link">Контакты</a>
   </nav>
@@ -145,7 +145,7 @@ var html = `<style>
     </div>
   </div>
   <a href="/industries.html">Применение</a>
-  <a href="/#insights">Проекты</a>
+  <a href="/blog/">Блог</a>
   <a href="/about.html">О компании</a>
   <a href="/contacts.html">Контакты</a>
 </div>`;
