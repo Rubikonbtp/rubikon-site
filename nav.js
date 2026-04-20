@@ -1,6 +1,6 @@
 (function(){
 var html = `<style>
-.n-hdr{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #E5E8ED;transition:transform .3s ease}
+.n-hdr{position:sticky;top:36px;z-index:1000;background:#fff;border-bottom:1px solid #E5E8ED;transition:transform .3s ease}
 .n-in{display:flex;align-items:center;max-width:1200px;margin:0 auto;padding:14px 24px;gap:32px;position:relative}
 .n-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
 .n-logo span{font-size:22px;font-weight:900;color:#D42B2B;letter-spacing:-0.02em}
@@ -14,7 +14,7 @@ var html = `<style>
 .n-burger{display:none;width:36px;height:36px;border:none;background:none;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px;padding:0;flex-shrink:0}
 .n-burger span{display:block;width:22px;height:2px;background:#1a1a1a;border-radius:2px}
 .n-mega{display:none;position:absolute;top:calc(100% + 1px);left:0;right:0;background:#fff;border:1px solid #E5E8ED;border-radius:0 0 12px 12px;box-shadow:0 8px 32px rgba(0,0,0,.10);padding:24px;z-index:100}
-.n-mega-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:20px}
+.n-mega-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:20px}
 .n-card{border:1px solid #E5E8ED;border-radius:10px;overflow:hidden;text-decoration:none;display:block;color:inherit;transition:border-color .15s,box-shadow .15s}
 .n-card:hover{border-color:#D42B2B;box-shadow:0 4px 16px rgba(212,43,43,.1);text-decoration:none}
 .n-card.soon{opacity:.5;pointer-events:none}
@@ -82,13 +82,13 @@ var html = `<style>
           </div>
         </div>
       </a>
-      <div class="n-card soon">
-        <div class="n-card-img"><img src="/img/btp-node-vvod1.png" alt="Клапаны"><span class="n-badge">Скоро</span></div>
+      <a href="/products/klapan-rvf2.html" class="n-card">
+        <div class="n-card-img"><img src="/img/klapan-rvf2-favikon.png" alt="Клапаны"></div>
         <div class="n-card-body">
           <div class="n-card-title">Клапаны и электроприводы</div>
           <div class="n-card-links">
             <a class="n-card-link" href="/products/klapan-rvf2.html">Клапан регулирующий RVF2</a>
-            <span class="n-card-link">Электроприводы RAD (скоро)</span>
+            <a class="n-card-link" href="/products/elektroprivod-rad.html">Электроприводы серии RAD</a>
           </div>
         </div>
       </a>
@@ -108,20 +108,47 @@ var html = `<style>
       <div class="n-tools">
         <a href="/products/raschet-btp.html" class="n-tool"><span class="n-tool-ico">🖥️</span>Расчёт БТП</a>
         <a href="/products/raschet-pto.html" class="n-tool"><span class="n-tool-ico">📐</span>Расчёт ПТО</a>
-        <a href="/docs/" class="n-tool"><span class="n-tool-ico">📄</span>Документация</a>
+        <a href="/documentation.html" class="n-tool"><span class="n-tool-ico">📄</span>Документация</a>
       </div>
     </div>
   </div>
 </div>
 </header>
+<style>
+.n-mob-acc{border-bottom:1px solid #eee}
+.n-mob-acc-btn{width:100%;text-align:left;padding:14px 0;background:none;border:none;font-family:inherit;font-size:16px;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.n-mob-acc-btn::after{content:"+";font-size:18px;color:#D42B2B;transition:transform .2s}
+.n-mob-acc-btn.open::after{transform:rotate(45deg)}
+.n-mob-acc-body{display:none;padding:0 0 12px 12px;flex-direction:column;gap:2px}
+.n-mob-acc-body.open{display:flex}
+.n-mob-acc-body a{padding:8px 0;font-size:14px;font-weight:600;color:#5A6578;text-decoration:none;border-bottom:none!important}
+.n-mob-acc-body a:hover{color:#D42B2B}
+.n-mob-acc-section{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#D42B2B;padding:8px 0 4px}.breadcrumb{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.breadcrumb{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+</style>
 <div class="n-mob-nav" id="nMobNav">
-  <a href="/products.html">Продукция</a>
+  <div class="n-mob-acc">
+    <button class="n-mob-acc-btn" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Продукция</button>
+    <div class="n-mob-acc-body">
+      <div class="n-mob-acc-section">БТП Рубикон</div>
+      <a href="/products/btp.html">БТП — обзор</a>
+      <a href="/products/btp-uzel-vvoda.html">Узел ввода тепла</a>
+      <a href="/products/btp-otoplenie.html">Узел отопления</a>
+      <a href="/products/btp-gvs.html">Узел ГВС</a>
+      <div class="n-mob-acc-section">ПТО Рубикон</div>
+      <a href="/products.html">ПТО — обзор</a>
+      <a href="/products/raschet-pto.html">Подбор теплообменника</a>
+      <div class="n-mob-acc-section">Клапаны и приводы</div>
+      <a href="/products/klapan-rvf2.html">Клапан RVF2</a>
+      <a href="/products/elektroprivod-rad.html">Электроприводы RAD</a>
+      <div class="n-mob-acc-section">Инструменты</div>
+      <a href="/products/raschet-btp.html" style="color:#D42B2B">Расчёт БТП</a>
+      <a href="/products/raschet-pto.html" style="color:#D42B2B">Расчёт ПТО</a>
+    </div>
+  </div>
   <a href="/industries.html">Применение</a>
   <a href="/#insights">Проекты</a>
   <a href="/about.html">О компании</a>
   <a href="/contacts.html">Контакты</a>
-  <a href="/products/raschet-btp.html" style="color:#D42B2B">🖥️ Расчёт БТП</a>
-  <a href="/products/raschet-pto.html" style="color:#D42B2B">📐 Расчёт ПТО</a>
 </div>`;
 
 document.getElementById('site-header').innerHTML = html;
@@ -135,7 +162,7 @@ window.nToggle = function(which) {
 };
 
 document.addEventListener('click', function(e) {
-  if(!e.target.closest('.n-in')) {
+  if(!e.target.closest('.n-in') && !e.target.closest('.n-mob-nav') && !e.target.closest('.n-burger')) {
     var m = document.getElementById('nMegaProd');
     var b = document.getElementById('nBtnProd');
     if(m) m.style.display = 'none';
@@ -143,13 +170,6 @@ document.addEventListener('click', function(e) {
   }
 });
 
-var lastY = 0;
-window.addEventListener('scroll', function() {
-  var hdr = document.querySelector('.n-hdr');
-  if(!hdr) return;
-  var y = window.scrollY;
-  hdr.style.transform = (y > lastY && y > 80) ? 'translateY(-100%)' : 'translateY(0)';
-  lastY = y;
-}, {passive:true});
+
 
 })();
