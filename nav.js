@@ -14,11 +14,11 @@ var html = `<style>
 .n-burger{display:none;width:36px;height:36px;border:none;background:none;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px;padding:0;flex-shrink:0}
 .n-burger span{display:block;width:22px;height:2px;background:#1a1a1a;border-radius:2px}
 .n-mega{display:none;position:absolute;top:calc(100% + 1px);left:0;right:0;background:#fff;border:1px solid #E5E8ED;border-radius:0 0 12px 12px;box-shadow:0 8px 32px rgba(0,0,0,.10);padding:24px;z-index:100}
-.n-mega-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:20px}
-.n-card{border:1px solid #E5E8ED;border-radius:10px;overflow:hidden;text-decoration:none;display:block;color:inherit;transition:border-color .15s,box-shadow .15s}
+.n-mega-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:20px}
+.n-card{border:1px solid #E5E8ED;border-radius:10px;overflow:hidden;text-decoration:none;display:flex;flex-direction:row;color:inherit;transition:border-color .15s,box-shadow .15s;cursor:pointer}
 .n-card:hover{border-color:#D42B2B;box-shadow:0 4px 16px rgba(212,43,43,.1);text-decoration:none}
 .n-card.soon{opacity:.5;pointer-events:none}
-.n-card-img{height:110px;background:#F8F9FB;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.n-card-img{width:120px;min-width:120px;background:#F8F9FB;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
 .n-card-img img{width:100%;height:100%;object-fit:contain;padding:10px}
 .n-badge{position:absolute;top:6px;right:6px;background:#F1F3F5;color:#8895A7;font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;text-transform:uppercase;letter-spacing:.05em}
 .n-card-body{padding:12px 14px}
@@ -59,7 +59,7 @@ var html = `<style>
 
   <div class="n-mega" id="nMegaProd">
     <div class="n-mega-grid">
-      <a href="/products/btp.html" class="n-card">
+      <div class="n-card" onclick="location='/products/btp.html'">
         <div class="n-card-img"><img src="/img/btp-3d.jpg" alt="БТП"></div>
         <div class="n-card-body">
           <div class="n-card-title">Блочные тепловые пункты</div>
@@ -71,8 +71,8 @@ var html = `<style>
             <a class="n-card-link" href="/products/btp-ventilyaciya.html">Узел вентиляции</a>
           </div>
         </div>
-      </a>
-      <a href="/products.html" class="n-card">
+      </div>
+      <div class="n-card" onclick="location='/products.html'">
         <div class="n-card-img"><img src="/img/pto-3d.jpg" alt="ПТО"></div>
         <div class="n-card-body">
           <div class="n-card-title">Пластинчатые теплообменники</div>
@@ -81,8 +81,8 @@ var html = `<style>
             <a class="n-card-link" href="/products/raschet-pto.html">Подбор теплообменника</a>
           </div>
         </div>
-      </a>
-      <a href="/products/klapan-rvf2.html" class="n-card">
+      </div>
+      <div class="n-card" onclick="location='/products/klapan-rvf2.html'">
         <div class="n-card-img"><img src="/img/klapan-rvf2-favikon.png" alt="Клапаны"></div>
         <div class="n-card-body">
           <div class="n-card-title">Клапаны и электроприводы</div>
@@ -91,7 +91,7 @@ var html = `<style>
             <a class="n-card-link" href="/products/elektroprivod-rad.html">Электроприводы серии RAD</a>
           </div>
         </div>
-      </a>
+      </div>
       <div class="n-card soon">
         <div class="n-card-img"><img src="/img/btp-node-gvs.png" alt="Контроллеры"><span class="n-badge">Скоро</span></div>
         <div class="n-card-body">
@@ -102,7 +102,6 @@ var html = `<style>
           </div>
         </div>
       </div>
-    </div>
     <div class="n-mega-footer">
       <a href="/products.html" class="n-all">Все продукты Рубикон →</a>
       <div class="n-tools">
