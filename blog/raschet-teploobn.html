@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="yandex-verification" content="ec725703b645a836" />
+<title>Расчёт пластинчатого теплообменника: формулы, методика, онлайн | Рубикон</title>
+<meta name="description" content="Полная методика расчёта пластинчатого теплообменника: тепловая мощность, расход теплоносителя, температурный напор, подбор типоразмера. Формулы и примеры от производителя Рубикон.">
+<link rel="canonical" href="https://rubikonbtp.ru/blog/raschet-teploobn.html">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Расчёт пластинчатого теплообменника: формулы и методика","description":"Полная методика расчёта пластинчатого теплообменника: тепловая мощность, температурный напор, подбор типоразмера.","author":{"@type":"Organization","name":"ООО «Рубикон»"},"datePublished":"2026-04-20"}</script>
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(98030264,'init',{webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script>
+<style>
+:root{--dark:#0F1923;--red:#D42B2B;--red-lt:rgba(212,43,43,.08);--white:#fff;--bg:#F8F9FB;--t1:#1a1a1a;--t2:#5A6578;--t3:#8B95A5;--brd:#E5E8ED;--r:10px;--shl:0 8px 30px rgba(0,0,0,.12)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'DM Sans',system-ui,sans-serif;color:var(--t1);background:var(--white);-webkit-font-smoothing:antialiased}.container{max-width:1200px;margin:0 auto;padding:0 24px}a{color:var(--red);text-decoration:none}img{max-width:100%}
+.topbar{position:sticky;top:0;z-index:1001;background:#0F1923;padding:8px 0;font-size:13px;color:rgba(255,255,255,.45)}.topbar-in{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:0 24px;flex-wrap:wrap;gap:6px}.topbar a{color:rgba(255,255,255,.8)}
+.breadcrumb{padding:12px 0;font-size:13px;color:var(--t3)}.breadcrumb a{color:var(--t3)}.breadcrumb a:hover{color:var(--red)}.breadcrumb span{margin:0 6px}
+.article-hero{background:linear-gradient(135deg,var(--dark) 0%,#1a2d42 100%);padding:56px 0;color:#fff;position:relative;overflow:hidden}
+.article-hero::before{content:'';position:absolute;top:-40%;right:-10%;width:600px;height:600px;border-radius:50%;background:rgba(212,43,43,.05);pointer-events:none}
+.article-hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(212,43,43,.15);border:1px solid rgba(212,43,43,.3);padding:6px 14px;border-radius:20px;font-size:12px;font-weight:700;color:var(--red);margin-bottom:20px}
+.article-hero h1{font-size:36px;font-weight:800;letter-spacing:-.02em;line-height:1.2;margin-bottom:16px;max-width:760px}
+.article-meta-row{display:flex;align-items:center;gap:20px;font-size:13px;color:rgba(255,255,255,.5)}
+.article-wrap{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start;padding:48px 0 80px}
+.article-content{font-size:16px;line-height:1.85}
+.article-content h2{font-size:26px;font-weight:800;color:var(--dark);margin:40px 0 16px;padding-bottom:10px;border-bottom:2px solid var(--brd)}
+.article-content h3{font-size:20px;font-weight:700;color:var(--dark);margin:28px 0 12px}
+.article-content p{margin-bottom:18px;color:var(--t2)}
+.article-content strong{color:var(--t1);font-weight:700}
+.article-content ul,.article-content ol{padding-left:24px;margin-bottom:18px}
+.article-content li{margin-bottom:8px;color:var(--t2);line-height:1.7}
+.article-content li::marker{color:var(--red);font-weight:700}
+.callout{padding:20px 24px;border-radius:12px;margin:24px 0;border-left:4px solid}
+.callout-info{background:#EFF6FF;border-color:#3B82F6}.callout-info p{color:#1E3A8A;margin:0}
+.callout-tip{background:#F0FDF4;border-color:#22C55E}.callout-tip p{color:#14532D;margin:0}
+.callout-title{font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+.formula-box{background:var(--dark);border-radius:12px;padding:24px;margin:24px 0}
+.formula-box .formula{font-size:18px;font-weight:700;color:#fff;margin-bottom:12px;font-family:monospace;text-align:center}
+.formula-vars{display:flex;flex-direction:column;gap:6px}
+.formula-var{display:flex;gap:8px;font-size:13px}
+.formula-var span:first-child{color:var(--red);font-weight:700;font-family:monospace;min-width:40px}
+.formula-var span:last-child{color:rgba(255,255,255,.6)}
+.art-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.art-table th{background:var(--dark);color:#fff;padding:12px 16px;text-align:left;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+.art-table td{padding:11px 16px;border-bottom:1px solid var(--brd);color:var(--t2)}
+.art-table tr:nth-child(even) td{background:var(--bg)}
+.art-table td:first-child{font-weight:600;color:var(--dark)}
+.example-box{background:var(--red-lt);border:1px solid rgba(212,43,43,.2);border-radius:12px;padding:24px;margin:24px 0}
+.example-box h4{font-size:15px;font-weight:700;color:var(--red);margin-bottom:12px}
+.example-box p{font-size:14px;color:var(--t1);margin-bottom:8px;line-height:1.6}
+.example-box p:last-child{margin-bottom:0}
+.sidebar{position:sticky;top:100px}
+.sidebar-toc{background:var(--bg);border:1px solid var(--brd);border-radius:14px;padding:24px;margin-bottom:24px}
+.sidebar-toc h4{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--t3);margin-bottom:14px}
+.toc-list{list-style:none;padding:0}
+.toc-list li{margin-bottom:8px}
+.toc-list a{font-size:13px;color:var(--t2);text-decoration:none;display:flex;align-items:flex-start;gap:8px;line-height:1.4}
+.toc-list a:hover{color:var(--red)}
+.toc-list a::before{content:'';width:3px;height:3px;border-radius:50%;background:var(--brd);flex-shrink:0;margin-top:7px}
+.sidebar-cta{background:linear-gradient(135deg,var(--dark),#1a2d42);border-radius:14px;padding:24px}
+.sidebar-cta h4{font-size:16px;font-weight:800;color:#fff;margin-bottom:8px}
+.sidebar-cta p{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:16px;line-height:1.6}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;border:none;cursor:pointer;text-decoration:none;border-radius:var(--r);transition:all .2s;font-family:inherit;font-size:14px}
+.btn-red{background:var(--red);color:#fff;padding:12px 20px;width:100%;justify-content:center}.btn-red:hover{background:#b82525;color:#fff;text-decoration:none}
+.btn-outline-w{background:transparent;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);padding:10px 20px;width:100%;justify-content:center;margin-top:8px;font-size:13px}.btn-outline-w:hover{border-color:#fff;color:#fff;text-decoration:none}
+.related{padding:64px 0;background:var(--bg)}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
+.related-card{background:var(--white);border:1px solid var(--brd);border-radius:14px;padding:24px}
+.related-card-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--red);margin-bottom:10px}
+.related-card-title{font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;line-height:1.35}
+.related-card-title a{color:inherit;text-decoration:none}.related-card-title a:hover{color:var(--red)}
+.related-card p{font-size:13px;color:var(--t2);line-height:1.6}
+.ftr{background:var(--dark);color:rgba(255,255,255,.6);padding:48px 0 24px;font-size:13px}.ftr a{color:rgba(255,255,255,.6)}.ftr a:hover{color:#fff}.ftr-g{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px}.ftr h5{color:#fff;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px}.ftr-l{display:flex;flex-direction:column;gap:6px}.ftr-b{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;font-size:11px}
+@media(max-width:1024px){.article-wrap{grid-template-columns:1fr}.sidebar{position:static}.related-grid{grid-template-columns:1fr 1fr}.ftr-g{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.article-hero h1{font-size:26px}.related-grid{grid-template-columns:1fr}.ftr-g{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="topbar-in">
+<span>🇷🇺 Россия · <a href="mailto:info@rubikonbtp.ru">info@rubikonbtp.ru</a></span>
+<span><a href="tel:+78003017978">8 (800) 301-79-78</a> · Бесплатно по РФ · Пн–Пт 9:00–18:00</span>
+</div></div>
+<div id="site-header"></div><script src="/nav.js"></script>
+<div style="background:var(--bg);border-bottom:1px solid var(--brd)"><div class="container">
+<div class="breadcrumb"><a href="/">Главная</a><span>›</span><a href="/blog/">Блог</a><span>›</span>Расчёт теплообменника</div>
+</div></div>
+
+<section class="article-hero">
+<div class="container">
+<div class="article-hero-tag">🔢 Расчёт · ПТО</div>
+<h1>Расчёт пластинчатого теплообменника: формулы, методика и примеры</h1>
+<div class="article-meta-row">
+<span>📅 Апрель 2026</span><span>⏱ 9 минут</span><span>✍️ Инженеры Рубикон</span>
+</div>
+</div>
+</section>
+
+<div class="container">
+<div class="article-wrap">
+<article class="article-content">
+
+<p>Правильный расчёт теплообменника — залог эффективной работы системы теплоснабжения. Заниженная мощность приведёт к недогреву, завышенная — к перерасходу бюджета и снижению КПД автоматики. Разбираем методику расчёта шаг за шагом.</p>
+
+<h2 id="iskhodnye">Исходные данные для расчёта</h2>
+<p>Прежде чем считать, нужно собрать исходные данные. Без них расчёт невозможен:</p>
+
+<table class="art-table">
+<thead><tr><th>Параметр</th><th>Обозначение</th><th>Где взять</th></tr></thead>
+<tbody>
+<tr><td>Тепловая мощность (нагрузка)</td><td>Q, кВт</td><td>Теплотехнический расчёт, ТУ на подключение</td></tr>
+<tr><td>Температура теплоносителя на входе (первичный контур)</td><td>T1вх, °C</td><td>Температурный график тепловой сети</td></tr>
+<tr><td>Температура теплоносителя на выходе (первичный контур)</td><td>T1вых, °C</td><td>Температурный график тепловой сети</td></tr>
+<tr><td>Температура теплоносителя на входе (вторичный контур)</td><td>T2вх, °C</td><td>Параметры системы здания (обратный трубопровод)</td></tr>
+<tr><td>Температура теплоносителя на выходе (вторичный контур)</td><td>T2вых, °C</td><td>Параметры системы здания (подача)</td></tr>
+<tr><td>Рабочее давление</td><td>P, МПа</td><td>ТУ на подключение, параметры системы</td></tr>
+<tr><td>Тип теплоносителя</td><td>—</td><td>Вода, антифриз (% концентрации)</td></tr>
+</tbody>
+</table>
+
+<h2 id="temperaturny-napon">Шаг 1: Температурный напор (LMTD)</h2>
+<p>Средний логарифмический температурный напор — ключевой параметр теплопередачи. Для противоточной схемы (рекомендуется):</p>
+
+<div class="formula-box">
+<div class="formula">LMTD = (ΔT₁ - ΔT₂) / ln(ΔT₁/ΔT₂)</div>
+<div class="formula-vars">
+<div class="formula-var"><span>ΔT₁</span><span>= T1вх − T2вых (разница температур на горячем конце)</span></div>
+<div class="formula-var"><span>ΔT₂</span><span>= T1вых − T2вх (разница температур на холодном конце)</span></div>
+</div>
+</div>
+
+<div class="example-box">
+<h4>📐 Пример расчёта LMTD</h4>
+<p>Система отопления МКД: T1вх=90°C, T1вых=70°C, T2вых=80°C, T2вх=60°C</p>
+<p>ΔT₁ = 90 − 80 = 10°C (горячий конец)</p>
+<p>ΔT₂ = 70 − 60 = 10°C (холодный конец)</p>
+<p>При равных ΔT: LMTD = ΔT = <strong>10°C</strong></p>
+<p><em>При разных ΔT используют формулу с логарифмом.</em></p>
+</div>
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 Минимальный температурный напор</div>
+<p>Для пластинчатых теплообменников минимальный допустимый LMTD = 5–7°C. При меньшем напоре площадь теплопередачи резко возрастает — теплообменник становится нерационально большим. Пересмотрите температурные параметры или выберите другую схему подключения.</p>
+</div>
+
+<h2 id="raschet-raskhoda">Шаг 2: Расход теплоносителя</h2>
+
+<div class="formula-box">
+<div class="formula">G = Q / (c × ρ × ΔT × 3,6)</div>
+<div class="formula-vars">
+<div class="formula-var"><span>G</span><span>— расход теплоносителя, м³/ч</span></div>
+<div class="formula-var"><span>Q</span><span>— тепловая мощность, кВт</span></div>
+<div class="formula-var"><span>c</span><span>— удельная теплоёмкость воды = 4,187 кДж/(кг·°C)</span></div>
+<div class="formula-var"><span>ρ</span><span>— плотность воды ≈ 0,983 т/м³ при 60°C</span></div>
+<div class="formula-var"><span>ΔT</span><span>— разность температур в контуре (T_вх − T_вых), °C</span></div>
+</div>
+</div>
+
+<div class="example-box">
+<h4>📐 Пример: расход для узла отопления</h4>
+<p>Q = 500 кВт, T1вх = 90°C, T1вых = 70°C, ΔT = 20°C</p>
+<p>G = 500 / (4,187 × 0,983 × 20 × 3,6 / 3600) = 500 / (0,02416) × (1/3600)</p>
+<p>G = 500 × 3600 / (4,187 × 0,983 × 20 × 1000) = <strong>21,8 м³/ч</strong></p>
+</div>
+
+<h2 id="ploshchad">Шаг 3: Требуемая площадь теплопередачи</h2>
+
+<div class="formula-box">
+<div class="formula">F = Q / (k × LMTD)</div>
+<div class="formula-vars">
+<div class="formula-var"><span>F</span><span>— площадь теплопередачи, м²</span></div>
+<div class="formula-var"><span>k</span><span>— коэффициент теплопередачи, Вт/(м²·°C)</span></div>
+<div class="formula-var"><span>LMTD</span><span>— средний логарифмический температурный напор, °C</span></div>
+</div>
+</div>
+
+<p>Коэффициент теплопередачи <strong>k</strong> зависит от конструкции пластины и скорости течения теплоносителя. Для стандартных пластинчатых теплообменников в системах теплоснабжения: <strong>k = 3 000–8 000 Вт/(м²·°C)</strong>. Точное значение определяется производителем теплообменника по расчёту.</p>
+
+<div class="example-box">
+<h4>📐 Пример подбора площади</h4>
+<p>Q = 500 000 Вт, LMTD = 10°C, k = 5000 Вт/(м²·°C)</p>
+<p>F = 500 000 / (5000 × 10) = <strong>10 м²</strong></p>
+<p>По каталогу выбираем теплообменник с площадью пластин ≥ 10 м² с запасом 10–15%: <strong>F_выбр = 11–12 м²</strong></p>
+</div>
+
+<h2 id="podschet-plastin">Шаг 4: Подбор числа пластин</h2>
+<p>Каждая пластина теплообменника имеет фиксированную площадь (зависит от типоразмера): от 0,02 м² для малых до 1,5 м² для крупных промышленных теплообменников. Число пластин:</p>
+
+<div class="formula-box">
+<div class="formula">N = F / f_пл + 2</div>
+<div class="formula-vars">
+<div class="formula-var"><span>N</span><span>— общее число пластин (включая крайние)</span></div>
+<div class="formula-var"><span>f_пл</span><span>— площадь одной пластины, м²</span></div>
+<div class="formula-var"><span>+2</span><span>— крайние (прижимные) пластины не участвуют в теплопередаче</span></div>
+</div>
+</div>
+
+<h2 id="proverka">Шаг 5: Проверка гидравлического сопротивления</h2>
+<p>После подбора числа пластин проверяют гидравлическое сопротивление. Допустимое сопротивление теплообменника — не более 30–50 кПа на контур (уточняется по требованиям системы). Если сопротивление превышает допустимое — увеличивают число ходов или выбирают пластину с меньшим коэффициентом сопротивления.</p>
+
+<div class="callout callout-info">
+<div class="callout-title">ℹ Программный расчёт</div>
+<p>На практике расчёт теплообменника выполняется в специализированных программах производителя (Рубикон использует собственный калькулятор на <a href="/products/raschet-pto.html">kbb.expert</a>). Ручной расчёт по формулам используется для предварительной оценки и проверки результатов программы.</p>
+</div>
+
+<h2 id="primer-polny">Полный пример: узел ГВС двухступенчатая схема</h2>
+
+<table class="art-table">
+<thead><tr><th>Параметр</th><th>I ступень</th><th>II ступень</th></tr></thead>
+<tbody>
+<tr><td>Тепловая мощность, кВт</td><td>80</td><td>120</td></tr>
+<tr><td>T1вх / T1вых, °C</td><td>70 / 40</td><td>90 / 70</td></tr>
+<tr><td>T2вх / T2вых, °C</td><td>5 / 40</td><td>40 / 60</td></tr>
+<tr><td>LMTD, °C</td><td>12,3</td><td>25,0</td></tr>
+<tr><td>Расход первичного контура, м³/ч</td><td>2,3</td><td>5,2</td></tr>
+<tr><td>Расход вторичного контура, м³/ч</td><td>1,6</td><td>5,2</td></tr>
+<tr><td>Требуемая площадь, м²</td><td>1,3</td><td>0,96</td></tr>
+<tr><td>Выбранный теплообменник</td><td>KBB-26/20P</td><td>KBB-20/16P</td></tr>
+</tbody>
+</table>
+
+<div style="background:linear-gradient(135deg,var(--dark),#1a2d42);border-radius:16px;padding:36px;margin-top:40px;text-align:center">
+<div style="font-size:24px;font-weight:800;color:#fff;margin-bottom:8px">Выполним расчёт за вас</div>
+<p style="color:rgba(255,255,255,.6);font-size:15px;margin-bottom:24px">Укажите параметры объекта — инженер Рубикон подберёт теплообменник и предоставит полный расчёт</p>
+<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+<a href="/products/raschet-pto.html" class="btn btn-red" style="padding:14px 32px;font-size:16px;display:inline-flex">Расчёт онлайн →</a>
+<a href="tel:+78003017978" style="display:inline-flex;align-items:center;gap:8px;font-weight:700;color:rgba(255,255,255,.7);font-size:15px;padding:14px 0;text-decoration:none">📞 8 (800) 301-79-78</a>
+</div>
+</div>
+
+</article>
+<aside class="sidebar">
+<div class="sidebar-toc">
+<h4>Содержание</h4>
+<ul class="toc-list">
+<li><a href="#iskhodnye">Исходные данные</a></li>
+<li><a href="#temperaturny-napon">Температурный напор LMTD</a></li>
+<li><a href="#raschet-raskhoda">Расход теплоносителя</a></li>
+<li><a href="#ploshchad">Площадь теплопередачи</a></li>
+<li><a href="#podschet-plastin">Число пластин</a></li>
+<li><a href="#proverka">Гидравлическое сопротивление</a></li>
+<li><a href="#primer-polny">Полный пример</a></li>
+</ul>
+</div>
+<div class="sidebar-cta">
+<h4>Нужен расчёт ПТО?</h4>
+<p>Инженер Рубикон выполнит подбор теплообменника под ваши параметры бесплатно.</p>
+<a href="/products/raschet-pto.html" class="btn btn-red">Расчёт онлайн</a>
+<a href="tel:+78003017978" class="btn btn-outline-w">📞 Позвонить</a>
+</div>
+</aside>
+</div>
+</div>
+
+<section class="related"><div class="container">
+<div style="font-size:28px;font-weight:800;color:var(--dark);margin-bottom:28px">Статьи по теме</div>
+<div class="related-grid">
+<div class="related-card"><div class="related-card-tag">ПТО</div><div class="related-card-title"><a href="/products.html">ПТО Рубикон — обзор</a></div><p>Пластинчатые теплообменники серии KBB. Типоразмеры, характеристики, применение.</p></div>
+<div class="related-card"><div class="related-card-tag">Расчёт</div><div class="related-card-title"><a href="/products/raschet-pto.html">Онлайн-подбор теплообменника</a></div><p>Введите параметры — программа подберёт типоразмер и рассчитает стоимость.</p></div>
+<div class="related-card"><div class="related-card-tag">БТП</div><div class="related-card-title"><a href="/blog/btp-dlya-mkd.html">Расчёт БТП для МКД</a></div><p>Как рассчитать мощность теплового пункта для многоквартирного дома.</p></div>
+</div>
+</div></section>
+
+<footer class="ftr"><div class="container">
+<div class="ftr-g">
+<div><a href="/" style="display:flex;align-items:center;gap:8px;text-decoration:none;margin-bottom:14px"><img src="/img/logo-icon.png" alt="Рубикон" style="height:28px;width:28px"><span style="font-size:16px;font-weight:900;color:#fff">РУБИКОН</span></a><p>Российский производитель БТП и ПТО</p></div>
+<div><h5>Блог</h5><div class="ftr-l"><a href="/blog/">Все статьи</a></div></div>
+<div><h5>Продукция</h5><div class="ftr-l"><a href="/products/btp.html">БТП Рубикон</a><a href="/products.html">ПТО Рубикон</a></div></div>
+<div><h5>Контакты</h5><div class="ftr-l"><a href="tel:+78003017978">8 (800) 301-79-78</a><a href="mailto:info@rubikonbtp.ru">info@rubikonbtp.ru</a></div></div>
+</div>
+<div class="ftr-b"><span>© 2026 ООО «Рубикон». Все права защищены.</span><a href="/privacy.html">Политика конфиденциальности</a></div>
+</div></footer>
+<script src="/voice-widget.js"></script>
+</body>
+</html>
